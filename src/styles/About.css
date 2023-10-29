@@ -7,7 +7,7 @@
   
   .aboutTop {
     width: 100%;
-    height: 45%;
+    height: 80%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,15 +17,41 @@
   .aboutBottom {
     display: flex;
     flex-direction: column;
-    height: 55%;
+    height: 50%;
     align-items: center;
     margin-top: 50px;
   }
   
   .aboutBottom p {
-    width: 1200px;
+    width: 60%;
+  }
+
+  .aboutBottom h3 {
+    width: 55%;
   }
   
+  .aboutBottom a:link {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .aboutBottom a:visited {
+    text-decoration: none;
+    color: purple;
+  }
+
+  .aboutBottom a:hover {
+    text-decoration: none;
+    background-color: #121619;
+    color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .aboutBottom a:active {
+    text-decoration: underline;
+  }
+
   .about .aboutBottom h1 {
     font-weight: 400;
     font-size: 70px;
