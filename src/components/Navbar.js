@@ -12,15 +12,10 @@ function Navbar() {
   return (
     <div className='navbar'>
       
-      <div className='leftSide' id={openLinks ? "open" : "close"}>
+      <div className='leftSide'>
         <Link to='/'> <img src={Pfp}/> </Link>
-        <div className='hiddenLinks'>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
       </div>
-      <div className='rightSide'>
+      <div className='rightSide' id={openLinks ? "open" : "close"}>
         <Link to="/portfolio">Portfolio</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>

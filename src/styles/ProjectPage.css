@@ -1,0 +1,30 @@
+.projectPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;  
+  }
+
+
+.projectPageTop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    margin-top: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.aboutBottom {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+    margin-top: 10px;
+  }
