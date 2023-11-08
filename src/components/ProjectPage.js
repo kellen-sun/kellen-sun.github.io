@@ -28,8 +28,7 @@ function ProjectPage() {
     <div className='projectPage'>
       <div className='projectPageTop' style={{ backgroundImage: `url(${image})` }}></div>
       <div className='projectPageBottom'>
-        <h1>{ name }</h1>
-        <h2>{ short_description }</h2>
+        <h1>{ name }: { short_description }</h1>
         <ReactMarkdown children={ longDescription } />
       </div>
     </div>

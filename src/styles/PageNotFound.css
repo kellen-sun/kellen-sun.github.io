@@ -10,3 +10,25 @@
     background-size: cover;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
+
+  .pageNotFound a:link {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .pageNotFound a:visited {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .pageNotFound a:hover {
+    text-decoration: none;
+    background-color: #121619;
+    color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .pageNotFound a:active {
+    text-decoration: underline;
+  }

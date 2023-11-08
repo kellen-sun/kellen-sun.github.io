@@ -9,9 +9,6 @@ function Home() {
         <div className='headerContainer'>
           <h1>Kellen Sun</h1>
           <p>Welcome to my website!</p>
-          <Link to="/portfolio">
-            <button>Check Out My Projects!</button>
-          </Link>
         </div>
     </div>
   )

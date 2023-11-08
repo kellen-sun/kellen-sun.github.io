@@ -16,6 +16,7 @@ function Navbar() {
         <Link to='/'> <img src={Pfp}/> </Link>
       </div>
       <div className='rightSide' id={openLinks ? "open" : "close"}>
+        <Link to="/resume">Resume</Link>
         <Link to="/portfolio">Portfolio</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>

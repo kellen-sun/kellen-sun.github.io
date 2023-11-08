@@ -1,13 +1,11 @@
 .projectPage {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: left;
     flex-direction: column;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;  
   }
-
 
 .projectPageTop {
     display: flex;
@@ -21,10 +19,57 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.aboutBottom {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    align-items: center;
-    margin-top: 10px;
-  }
+.projectPageBottom {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 20px;
+}
+
+.projectPageBottom code {
+  font-family: "Inconsolata", monospace;
+  background-color: #000;
+  color: #00ff00;
+  padding: 10px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  text-shadow: 0 0 3px #00ff00;
+  white-space: pre-wrap; 
+  display: block; 
+  width: 90%;
+}
+
+
+.projectPageBottom h2 {
+  margin-left: 30px;
+}
+
+.projectPageBottom pre {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.projectPageBottom a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+.projectPageBottom a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+.projectPageBottom a:hover {
+  text-decoration: none;
+  background-color: #121619;
+  color: aqua;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.projectPageBottom a:active {
+  text-decoration: underline;
+}
