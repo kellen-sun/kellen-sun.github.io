@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound';
 import Contact from './pages/Contact';
 import ProjectPage from './components/ProjectPage';
 import Resume from './pages/Resume';
+import Writings from './pages/Writings';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact" exact element={<Contact/>} />
           <Route path="/resume" exact element={<Resume/>} />
+          <Route path="/writings" exact element={<Writings/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       <Footer />

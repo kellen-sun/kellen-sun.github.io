@@ -25,9 +25,16 @@
     color: black;
   }
   
-  .headerContainer p {
+  .headerContainer h2 {
     padding: 0;
     font-size: 40px;
+    font-weight: lighter;
+    color: black;
+  }
+
+  .headerContainer p {
+    padding: 0;
+    font-size: 20px;
     font-weight: lighter;
     color: black;
   }
@@ -77,8 +84,12 @@
       color: white;
     }
   
-    .headerContainer p {
+    .headerContainer h2 {
       font-size: 30px;
+      color: white;
+    }
+    .headerContainer p {
+      font-size: 16px;
       color: white;
     }
   
@@ -92,4 +103,27 @@
       background-color: rgb(225, 225, 225);
       color: #121619;
     }
+  }
+
+
+  .headerContainer a:link {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .headerContainer a:visited {
+    text-decoration: none;
+    color: blue;
+  }
+
+  .headerContainer a:hover {
+    text-decoration: none;
+    background-color: #121619;
+    color: aqua;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .headerContainer a:active {
+    text-decoration: underline;
   }

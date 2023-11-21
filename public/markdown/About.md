@@ -2,9 +2,9 @@
 ### Who are you?
 I'm a first-year computer science student at the University of Waterloo. I'm expecting to graduate in April of 2028 and in the meantime I hope to learn as much as possible about anything and everything.
 ### Why do you do what you do? In other words, what keeps you going?
-write later
+My main motivation is to make a difference a small step at a time. If my work, makes the lives of a few people better, then a few more, day after day, then I'm content. Knowing that tomorrow is better than today which is better than yesterday is enough to get me out of bed and working.
 ### Philosophically, how do you view the world? What's it all about and for?
-write later
+Maybe it's all a simulation and one day it'll get turned off. Maybe the universe will die out a heat death and no one will ever remember anything. What would it all be for if we come to that end? Personally, probably nothing, but we don't know the end results, and we shouldn't assume it. Each day is a day where we can work towards understanding more and posing the right questions. So even though, we might not know yet, I believe chasing the possibility of knowing is worth it in itself.
 ### Outside of your responsibilities, what do you spend time on?
 I like to read books, fiction and non-fiction alike, but I've been trying to read more non-fiction recently. I'm currently keeping book notes [here](https://kellensun.notion.site/kellensun/0e8a5e98906142c3a2bf753233a2e04c?v=50bd49b2d69443a69dddf9e5a10b7833). I'm working on moving those notes to this website. I also like to cube, I'm best at 2x2, but can also solve other cubes. I also like going to the gym (gotta get 'em gains). My favourite sport is soccer and was a fan of Argentina during FIFA 2022. I don't take lessons in piano or guitar, but I like playing them for fun. I'm always open to stepping out of my comfort zone and challenging myself.
 ### How did you make this website?
