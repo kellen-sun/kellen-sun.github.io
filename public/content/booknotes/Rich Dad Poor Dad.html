@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rich Dad Poor Dad</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c98b86ec-aca0-48a1-832c-5bd8e6f12de9" class="page sans"><header><img class="page-cover-image" src="https://www.richdad.com/CMSPages/GetFile.aspx?guid=8768b4f9-b731-458f-97c8-f461b57d7fd1" style="object-position:center 25.749999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💸</span></div><h1 class="page-title">Rich Dad Poor Dad</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Robert T. Kiyosaki</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-orange">Finance</span><span class="selected-value select-value-color-gray">Self-Help</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-yellow">5-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@October 22, 2022 → November 9, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>292</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>1997</td></tr></tbody></table></header><div class="page-body"><h1 id="4197b17a-d36d-4acb-b46f-35aaf2ec9b7c" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="98cb458c-964e-4d82-9cfb-dc9ac2c9ca7f" class="numbered-list" start="1"><li>Invest in your assets first and grow those to pay for your expenses.</li></ol><ol type="1" id="2051d2d0-5d3f-4df1-ab87-e09540f165ec" class="numbered-list" start="2"><li>Learn because your mind is your greatest asset so invest in it.</li></ol><ol type="1" id="c97cde10-c643-4d6e-9e90-ae8c1f7fdc87" class="numbered-list" start="3"><li>Become financially literate so that you can use corporations and pay less taxes and such.</li></ol><h1 id="46419fc7-635c-45de-87fc-06a44ae570cc" class="">🎨 Impressions</h1><p id="2206ac1f-e5ca-43c6-a86e-f60c80dfe56f" class="">Robert writes (often in first person) confidently and sometimes what may appear to be arrogance. This confidence is well received as it conveys his message stronger and makes the reader believe in his lessons to becoming rich more. He pulls from his personal life as an appeal to authority as he walks the reader through countless specific examples of how his rules can be applied.</p><h2 id="7f22809c-e0a8-4b08-9828-ba5c22cdb95a" class="">How I Discovered It </h2><p id="c6d60375-d555-4031-95f3-973d7d35df12" class="">It’s a pretty popular book in personal finance. Not hard to come across in instagram posts, youtube videos, and list rankings. </p><h2 id="2539ba95-9fa8-4463-bbc9-8927c771a769" class="">Who Should Read It? </h2><p id="f6f8a5c1-8d9f-413a-8d93-5dc29ee3c70b" class="">Everyone in my opinion. If you care about leaving the rat race and making some real money and fixing your financial situation, it’s a must. It teaches other skills too, but is heavily applicable and useful for finances. Should be a read for young people beginning their finances.</p><h1 id="0411212e-7942-4222-b508-066f554c460e" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7e141819-a3cd-416a-b5f5-d98fcc4dbdb0"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="b03f237e-d3c3-4148-ba5b-53b9b8f8dd85" class="bulleted-list"><li style="list-style-type:disc">Taught me ideas about finances such as using a corporation properly and investing in assets</li></ul><ul id="fa49156f-0419-4643-9bd1-38d2feede347" class="bulleted-list"><li style="list-style-type:disc">Learned that hands on learning is much more important and that learning through life in general is crucial for success</li></ul><ul id="80d413bd-778c-4e78-8c79-1c95cb3eac3a" class="bulleted-list"><li style="list-style-type:disc">It made me decide that I actually have pretty bad financial literacy.</li></ul><h1 id="3b0a7168-5f25-4e3c-9777-2783dfab6cd6" class="">✍️ My Top 4 Quotes</h1><ul id="26044930-984f-418a-89bb-15e1dd7f4bba" class="bulleted-list"><li style="list-style-type:disc">“Life pushes all of us around. Some people give up and others fight. A few learn the lesson and move on. They welcome life pushing them around. To these few people, it means they need and want to learn something. They learn and move on.”</li></ul><ul id="ecabd472-0fa9-4606-b2a4-a316c59279b1" class="bulleted-list"><li style="list-style-type:disc">“Stop blaming me and thinking I’m the problem. If you think I’m the problem, then you have to change me. If you realize that you’re the problem, then you can change yourself, learn something and grow wiser.”</li></ul><ul id="b0efc8a4-1982-4427-a7dc-82f6053f34cb" class="bulleted-list"><li style="list-style-type:disc">“Winners are not afraid of losing. But losers are. Failure is part of the process of success. People who avoid failure also avoid success.”</li></ul><ul id="6f6da312-b249-4b50-ae61-1656147e15a3" class="bulleted-list"><li style="list-style-type:disc">“most people follow the crowd. They do things because everybody else does them. They conform, rather than question.”</li></ul><h1 id="4cc1204a-9d2a-4073-860d-181ed0aba42a" class="">📒 Summary + Notes</h1><h3 id="b78d724a-ba51-4996-aee3-d65f7fb3119f" class="">Introduction</h3><p id="90f1192f-a195-4737-9529-8d5daf0dc55e" class="">Financial mindset is taught at home not in school and thus parents who are already poor are teaching their kids money skills. Their kids trust their parents and end up also having poor people financial skills.</p><p id="8b859c75-1180-412f-a760-5139b2f5d90e" class="">It’s important to think for oneself.</p><p id="5b6b19ed-609c-4f49-9ff0-5cc294621d41" class="">It’s important to mentally exercise to increase your financial mindset and your wealth. (Similar to exercising in the gym) Keep asking yourself financial questions and stuff.</p><p id="1c16e47d-360c-4429-995a-9ac6c7479bfc" class="">“People really do shape their lives through their thoughts.”</p><p id="2b542706-e0f3-411b-807f-b4f0367bfa6b" class="">“I’m a rich man, and rich people don’t do this”</p><p id="c1b0d247-c85e-47b4-a306-5043ac478c8a" class="">“There is a difference between being poor and being broke. Broke is temporary. Poor is eternal.”</p><p id="96b74443-7d5d-4dfc-a0f7-108e01a33e24" class="">“I don’t work for money! Money works for me!”</p><p id="02166b2d-ef52-4345-90b6-757b7670108d" class="">Often taking the road less traveled by when two roads diverged makes all the difference.</p><h3 id="bbb088b0-1237-4409-8aae-bc17bce72afe" class="">Lesson 1: The Rich don’t Work for Money</h3><blockquote id="6cc20e8c-99ec-4285-8ba5-38cce6935350" class="">The poor and the middle class work for money.<br/>The rich have money work for them.<br/></blockquote><p id="34d8bc30-a1ad-4d93-9fe3-abed29724dc4" class="">You have to be able to make decisions fast in business and finance or else you risk losing opportunities.</p><p id="50570e0c-0f15-40bb-a32c-1be45e8bcb67" class="">“Life pushes all of us around. Some people give up and others fight. A few learn the lesson and move on. They welcome life pushing them around. To these few people, it means they need and want to learn something. They learn and move on.”</p><p id="35970fa6-358d-4bf5-a6bf-723cf9332df1" class="">Stop wanting to change others, “it’s easier to change yourself than everyone else.”</p><p id="3ca0b774-91d5-4580-9f56-b0aa2fac7df6" class="">“Passion is anger and love combined.”</p><p id="d56226ae-4cb0-45d1-8a8f-c810b14a25f2" class="">Many people are not directed by their passion to make money, but by their fear of losing it.</p><p id="b9470aec-038f-46cc-a8fc-1d9362204bf2" class="">People are stuck in the rat race because of fear and greed.</p><p id="b724200d-700d-4154-a96d-41591958276b" class="">“Instead of admitting the truth about how they feel, they react to their feelings and fail to think.”</p><p id="63516580-e6b6-44b5-b6f6-3f0b739cb507" class="">You need to choose your thoughts focusing on the long term.</p><p id="51ed6894-f5ee-4640-bf80-d343ece2bbaa" class="">“Stop blaming me and thinking I’m the problem. If you think I’m the problem, then you have to change me. If you realize that you’re the problem, then you can change yourself, learn something and grow wiser.”</p><h3 id="b5f5fa9e-73d4-4843-b56c-d87f8a4737a5" class="">Lesson 2: Why Teach Financial Literacy?</h3><blockquote id="737cf2dd-0271-41e7-af0e-fd083871cc7d" class="">It’s not how much money you make.<br/>It’s how much money you keep.<br/></blockquote><p id="18ec182c-4318-48fe-b9f2-634190a047bd" class="">Money doesn’t solve problems, intelligence does.</p><p id="fe0539f3-f0fc-44cb-8c3e-49cf171c4262" class="">“You must know the difference between an asset and a liability, and buy assets.”</p><p id="e8f7b2ca-db7d-4882-8d68-4b988cff9683" class="">KISS principle: Keep it Super Simple.</p><p id="2575a43c-cd05-46dd-a12a-0641e40c3951" class="">An asset puts money into your pocket. A liability takes money out of your pocket.</p><p id="266c79b7-0d70-4d02-a629-2c166faea8ef" class="">The rich buy assets, the poor and middle class buy liabilities thinking they are assets.</p><p id="903be5d0-9b11-4a3f-a97c-ff2a1f6e9f4a" class="">If people struggle financially, they usually are illiterate financially.</p><p id="ea5ba86f-441e-4895-ac11-d11b1004713b" class="">“It is the cash flow that shows the story of how a person handles his or her money”</p><p id="857d632b-1f7b-4b19-baf1-45b762b7fa73" class="">“Remember the Golden Rule. He who has the gold makes the rules.”</p><p id="d1d11ed9-7697-472d-937e-feed7415b595" class="">“most people follow the crowd. They do things because everybody else does them. They conform, rather than question.” As the world population grows and social media rises, the crowd becomes larger, easier to follow and harder to question. Those who question the crowd come in such large numbers that they form their own crowd sometimes undermining the purpose of their uprising.</p><p id="14b58f51-5633-4a76-bd9c-9cd62719f092" class="">“when it comes to money, high emotions tend to lower financial intelligence. I know from personal experience that money has a way of making every decision emotional”</p><p id="c7690b13-fa79-4758-9e38-96ab5a998a6b" class="">A home is not an asset but it’s a liability, because it takes money out of your pocket. It requires expenses, to pay of mortgage, taxes, insurance, and utilities. While it doesn’t bring you any income through rent. The cashflow is negative. Additionally, the cost of paying for a house leads to missed opportunity where that money could’ve been invested in assets.</p><p id="b5de4690-557a-41c6-b1a9-32f1f66214c2" class="">Wealth is the number of days one can survive without working. (So you only take income from assets, and deduce them to your expenses)</p><h3 id="947a0867-4e77-4937-b6cb-30f210f3ea65" class="">Lesson 3: Mind your own Business</h3><blockquote id="c979d0fd-f40f-4bd4-aaac-7cc9c2a1cde2" class="">The rich focus on their asset columns<br/>while everyone else focuses on their income statements.<br/></blockquote><p id="734bc745-bfd4-4d84-8b08-f4615aad84ae" class="">Many people after a whole day of work basically get nothing for themselves. No light at the end of the tunnel.</p><p id="855d64ab-b51a-4376-ad97-075acfbab298" class="">“Your business revolves around your asset column.”</p><p id="4d233a08-5f70-4b27-baa2-e2775f4c4513" class="">Your profession revolves around your income column (from salaries)</p><p id="598e8257-c7fa-44fb-973b-aba6a6f40aa5" class="">“Once a dollar goes into your asset column, it becomes your employee.”</p><p id="b0beb3a1-264d-47f0-b99e-45924aa6e777" class="">The rich buy luxuries last paying for it using the income generated from their assets. The poor buy luxuries on credit trying to appear rich.</p><p id="74ea2d9a-b2c4-4276-94f0-db7aca2244d4" class="">To mind your business means working for yourself not your employer, the government (taxes) or others.</p><h3 id="f89051dc-d1d2-4295-8027-0fa021cdbbdf" class="">Lesson 4: The History of Taxes and the Power of Corporations</h3><blockquote id="2e1269cf-168b-4f6b-b1fb-745bd96f8ed2" class="">My rich dad just played the game smart, and he did it through corporations - the biggest secret of the rich</blockquote><p id="5f1f5831-f320-457b-a8ea-ea1eaf1ca953" class="">Corporations allow one to pay for some expenses with pre-tax money and they have lower income taxes. By creating taxes the government merely became greedy in its spending of money (always being valued for spending more and more and higher more people). This lead them to tax lower and lower income brackets. Meanwhile, the rich who are financially literate get taxes less because they outsmart the government officials (who often times are not financially literate) and that’s what makes them rich in the first place. Rich people’s ability to not get tricked by taxes is legal in all manners.</p><p id="df178b5c-69fb-4161-bdd6-eca20a619f9f" class="">The price of taxes is working from January to May for the government.</p><p id="1d0280ea-3297-4841-b6a6-adc21f1fc883" class="">The rich play the game smarter (due to their financial literacy)</p><p id="6b7ed5ec-7faa-4040-8d2c-e52e727a6541" class="">Knowledge is power, “without that knowledge the world pushes you around.”</p><p id="7c15bd01-641c-4cfd-afdd-82c627484e0f" class="">Having money work for you instead of working for money means you keep the power instead of giving it to your employer.</p><p id="6839bc26-155f-4a40-8f53-8fe55ede6579" class="">Robert’s poor dad spoke of studying hard and working hard to climb the corporate ladder (which would make him a docile cow ready for milking). But his rich dad asked, “why not own the ladder?” </p><p id="ba0f19ef-c9a6-45ed-8eea-1e831072008f" class="">“Each dollar in my asset column was a great employee, working hard to make more employees.”</p><p id="1bb6fb8d-037c-4ee2-9125-4f4fe5c74828" class="">Corporations allow you to earn then spend with pretax money then get taxed. (ie: you can buy a Porsche with your corporation as an expense for travel or delivery, have board meetings in Hawaii, buy mansions as investment properties, etc)</p><p id="ab5ecc5b-5fe3-41dd-a735-146ffefa8afa" class="">While as an employee you get taxed before even having the money in your hands.</p><h3 id="74374f54-e26f-45a6-805a-c71410e94649" class="">Lesson 5: The Rich Invent Money</h3><blockquote id="490732bd-103e-426f-8403-773950e92e57" class="">Often in the real world, it’s not the smart who get ahead, but the bold.</blockquote><p id="dce78f6a-bed7-407e-8a8c-8dfbbd3b6fb2" class="">Everyone has a bold personality and a scared, doubting personality and they’re both good in their own ways. Often the one that shows more dictates the way we act and control risks.</p><p id="ac6cd02e-69b2-4931-9e88-95ca0f0b787e" class="">Many people fail to notice that they are the problem and spend too much time blaming others for problems instead of working on themselves/ seeing what they could do different.</p><p id="577d3e26-7acc-4881-919d-f4a02a5d35a7" class="">“Old ideas are their biggest liability. It is a liability simply because they fail to realize that while that idea or way of doing something was an asset yesterday, yesterday is gone.”</p><p id="a3807fb8-5111-49b1-8d61-5f4a4ea05d75" class="">“Few people realize that luck is created, just as money is.”</p><p id="bbee6f48-4712-45c9-823e-0ed7a9d62b24" class="">Our most powerful asset is our mind. As an asset it should bring money into the income statement. </p><p id="e73574e2-c8f6-4ea2-a2e2-e74f2a1a5d60" class="">Money is not real, it is “what we agree it is”</p><p id="009fa237-6dd2-4617-8494-af572354f951" class="">“What is risky for one person is less risky for someone else.”</p><p id="3345486d-e16b-4819-a97f-7e67f5b97a57" class="">When someone said “You can’t do that here” Robert replied with “I don’t know how to do that here — yet” Showing his differing mindset.</p><p id="c809d41b-9ba2-435d-a0e2-d35e672919d4" class="">We as humans are designed to learn by making mistakes, we learn to walk by falling down, (learn handstands through failures). This is not what school teaches us and it certainly is however the way to learn to make money later in life.</p><p id="1f6f6256-445a-4442-a4a3-6d73b91c2963" class="">“Winners are not afraid of losing. But losers are. Failure is part of the process of success. People who avoid failure also avoid success.”</p><p id="55126196-6cfd-458e-9779-469b8f8b1f39" class="">2 types of investors:</p><ol type="1" id="91975fd6-5453-4059-9206-1e2ca57e994e" class="numbered-list" start="1"><li>Buys an off the shelf investment, mutual fund, real estates, bonds, etc (like buying a computer)</li></ol><ol type="1" id="0e86298c-2e98-4655-9326-42eecd2bddaf" class="numbered-list" start="2"><li>Creates investments by assembling opportunities together. (like building a computer)</li></ol><p id="05928738-e92b-420d-844c-ebb56f38018f" class="">To be the second:</p><ol type="1" id="cd7005a7-6c47-43bf-a663-64e72052d3d5" class="numbered-list" start="1"><li>Find an opportunity that everyone else missed.</li></ol><ol type="1" id="7740f747-d4d5-4325-b3f4-e829c0209e0c" class="numbered-list" start="2"><li>Raise money. (Not just at the bank)</li></ol><ol type="1" id="f30b083a-f699-4e85-a6ea-9d13387652e3" class="numbered-list" start="3"><li>Organize smart people.</li></ol><h3 id="5e690830-e888-4d24-a566-2c1799865c4d" class="">Lesson 6: Work to Learn — Don’t Work for Money</h3><p id="1ed352ee-4420-4090-ab55-e433a5fdb8f3" class="">Robert and his wife pick books with an advisor each year to read and discuss together in order to learn more. </p><p id="34370303-90e4-4b36-a039-11a866773d62" class="">By working in a place where you can learn you’ll learn by picking up jargon and stuff through osmosis. Ie be in an accounting department for a bit</p><p id="7ef8ab64-63b9-4bbe-a296-da783a54c4c6" class="">Crucial to know a bit about a lot</p><p id="cccb5c68-3cf9-4431-b110-667267c7eb02" class="">“Workers work hard enough to not be fired, and owners pay just enough so that workers won’t quit”</p><p id="3cd8578f-2bc7-442f-928d-29999c7c1d6c" class="">Seek work for what you learn rather than what you earn.</p><p id="561ff137-6b92-4b23-ad79-6bcbe2d2de14" class="">The more specialized you are the more dependent you are on that specialty.</p><p id="a667599b-95c1-4fdb-9b8a-50f7d843ae85" class="">Main skills to learn are</p><ol type="1" id="3bfe133a-e5f7-40c4-bea8-fffffbfadd5c" class="numbered-list" start="1"><li>Management of cash flow</li></ol><ol type="1" id="e5e5ac02-52c3-4229-9ad4-11ee8dae139f" class="numbered-list" start="2"><li>Management of systems</li></ol><ol type="1" id="ce3b57f1-b0de-4492-80b4-7bbf7d5915f3" class="numbered-list" start="3"><li>Management of people</li></ol><ol type="1" id="e625a5f0-2950-4b1c-81d2-a8899275090a" class="numbered-list" start="4"><li>Sales (Communications)</li></ol><ol type="1" id="463c0b27-c7c3-42ec-a2fb-15f84ab63244" class="numbered-list" start="5"><li>Marketing</li></ol><p id="b7aa5874-7dbe-4aaa-9759-f1d503718bfb" class="">Sales and marketing also teaches you to overcome your fear of rejection</p><h3 id="80b984e6-f057-48d9-91b7-2e78e2e7e309" class="">Chapter 7: Overcoming Obstacles</h3><blockquote id="ecf20ae3-48a6-403a-85c5-5b59b95f9b0a" class="">The primary difference between a rich person and a poor person is how they manage fear.</blockquote><p id="e3cbb2de-63bf-490e-9fbe-059bde48066a" class="">The five obstacles are</p><ol type="1" id="30e6e0a6-caf8-4404-a666-eaba8fd37f99" class="numbered-list" start="1"><li>Fear</li></ol><ol type="1" id="d3a2ac97-f662-494d-920d-c1bd7ae7bb38" class="numbered-list" start="2"><li>Cynicism</li></ol><ol type="1" id="11a984f8-f254-4b9b-8dcd-82deaaa84538" class="numbered-list" start="3"><li>Laziness</li></ol><ol type="1" id="c9b8c8ec-cf90-4378-8d50-327988bcff9f" class="numbered-list" start="4"><li>Bad habits</li></ol><ol type="1" id="ae4e507e-e497-4af6-b2a5-2bc574f2fb4f" class="numbered-list" start="5"><li>Arrogance</li></ol><p id="f3aef338-8597-466a-98e6-41b4afb8b88d" class="">“If you’re going to go broke, go big.”</p><p id="c29c1598-2740-4706-8d11-7cbc98d1518a" class="">No one has ridden a bike without falling down first, no golfer has never lost a gold ball, no one has ever fallen in love without being heartbroken. And no one has ever made money without losing money.</p><p id="ac4e4104-8ec5-41fd-b82d-c8f60c086769" class="">For most people, the pain of losing money is greater than the joy of winning.</p><p id="c04f5c09-7a08-4c17-847f-3cce2f8e9320" class="">A bit of greed for your time will make you more time and won’t have you complaining about being too lazy.</p><h3 id="84f15513-7d26-4e2b-9660-5092fbc069bb" class="">Lesson 8: Getting Started</h3><p id="f9c0c354-f99e-4b6f-b1b6-d191b6035b56" class="">First, find a reason greater than reality. Identify what you don’t wanna do in life and from those create the strong desires for what you want. </p><p id="8ec7f584-447b-446e-956c-379c7f76e9be" class="">Realize that your daily habits add up and lead you to where you end up. If you spend like a poor person, then you’ll end up poor and so on.</p><p id="9af63cb1-10d8-460c-ae16-032c91b827e8" class="">Stop avoiding your main goal. Admit to yourself that you want, face the goal/task and get it fucking done. There’s no point denying it.</p><p id="65e005d2-d673-4b61-bafb-1db3069b7bd6" class="">Make the daily choices that will get you to your goal.</p><p id="fd606803-815b-4976-a74a-401a12f0e03a" class="">You learn from all your friends so care much about who you befriend.</p><p id="cd502f25-dd11-4c32-a79c-9cd14b6e7009" class="">Learn a lot and a lot and repeat because what you know is what you become. Learn different ways to handle money, investments, etc. Learn formulas, methods of doing stuff and try them to see if they work.</p><p id="0705bf5e-4006-485b-ae6d-4ff5ea71b268" class="">Pay yourself first, this makes you self-disciplined. The world pushes you around and pressures you. The rich can resist the pressure. This also means investing into asset columns first before paying bills</p><p id="2cd0264a-ccdb-4985-a8bd-42b1775770b9" class="">Find good brokers, because they make you more money and save your time. Their knowledge and information is worth the price they charge.</p><p id="16183a41-9d02-4c63-8553-b1ba773a5e3e" class="">Give. Give to receive. And give to others. Be generous in your giving.</p><p id="1c6eeabc-f22f-4e11-b3ac-57360f6937d9" class="">Use assets to buy luxuries</p><p id="48317188-a7c1-42ce-9bf3-730505899326" class="">Have heroes, and people you look up to. Learn from them as they inspire you.</p><p id="1909051b-a77d-4451-9110-f161ae96729f" class="">Teach and you will receive, because giving will return.</p><h3 id="2f27047e-d521-4f47-8359-ec36bc8e5a59" class="">Chapter 9: Still Want More? Here are some To Do’s</h3><p id="2436babe-9384-44e1-8205-83c8aa966f2b" class="">stop doing what you’re doing. (take a break to assess)</p><p id="3d5a013b-6389-4c2d-94d7-a9399c80022f" class="">Look for new ideas</p><p id="7d3ee672-acca-4d03-a0d1-a959d8d6758e" class="">Find someone who has done what you want to do</p><p id="226e112a-8b90-41a7-a01e-f6bfadbc52c5" class="">Take classes, read and attend seminars</p><p id="accf7773-2a78-461f-95dc-6e29d7afb2ff" class="">Make lots of offers</p><p id="0a216ae5-6d57-4b38-8c03-4894df3d09f3" class="">Jog, walk, or drive to a certain area once a months for 10 minutes (helps find real estate too)</p><p id="e7d0e6a8-f1e1-4477-8cf8-5c24ab0c8a6a" class="">Shop for bargains in all markets</p><p id="8f539b83-1911-434e-bbc1-59d966b8f586" class="">Look in the right places</p><p id="42a28277-484b-42d4-8d6b-cd17c0019c88" class="">Look for people who want to buy fits. Then look for someone who wants to sell.</p><p id="609e5a85-9c7d-42a7-89b1-c337b3bab730" class="">Think big</p><p id="760a6ea5-2af3-4c2d-91a4-834024597239" class="">Learn from history</p><p id="f4331c7a-f6d5-40c5-8b87-d5525aabf32d" class="">Action always beats inaction</p><p id="722077a5-3c63-41ce-a886-dd6f5308de6e" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

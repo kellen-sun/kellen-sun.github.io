@@ -1,0 +1,679 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sapiens: A Brief History of Humankind</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="33c8d3e0-ff82-4f09-804a-6771005ef65c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🐒</span></div><h1 class="page-title">Sapiens: A Brief History of Humankind</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Yuval Noah Harari</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-gray">History</span><span class="selected-value select-value-color-brown">Science</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@November 27, 2023 → November 27, 2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-green">Currently Reading</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>498</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2014</td></tr></tbody></table></header><div class="page-body"><h1 id="7b6c87ae-56e6-4eb8-85d8-ecd11a2f8ecb" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="1022df1c-d2fc-42b6-92c9-5e40c9de83b7" class="numbered-list" start="1"><li></li></ol><h1 id="6d51ff01-1779-4126-bc53-14b2b5a11d61" class="">🎨 Impressions</h1><p id="cc9c10d4-6375-402d-bb45-c80659e25959" class="">
+</p><h2 id="af7e1775-9bce-4f84-afa5-54a023385eea" class="">How I Discovered It </h2><p id="a55c62dd-7fac-4fa7-b919-f12b6c27f025" class="">
+</p><h2 id="b5aec9ec-c982-41f7-87c4-ce308da03442" class="">Who Should Read It? </h2><p id="d2c3c74a-b1e2-4626-ba52-d01b490f02e4" class="">
+</p><h1 id="c1571fa4-21fc-4508-bda9-6305564f506e" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dc770c33-d6b8-46d7-b6a1-c9321f62872d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="66d79cb8-028b-4bb1-9317-0c6ca3c8f33b" class="bulleted-list"><li style="list-style-type:disc"></li></ul><h1 id="44879165-2564-449e-bab1-230c60cc3071" class="">✍️ My Top 3 Quotes</h1><ul id="d571e499-b210-47d3-bc35-9d94831b5aa3" class="bulleted-list"><li style="list-style-type:disc"></li></ul><h1 id="93d105fb-b2af-4fa5-938f-59edb81bd62b" class="">📒 Summary + Notes</h1><h3 id="0ea01db3-17ac-4caf-aeed-4bc55c7d3a93" class="">Part One: The Cognitive Revolution</h3><h3 id="8edc7cc3-1bbc-43a2-bf59-8f30c6af8ef9" class="">1. An Animal of No Significance</h3><p id="f1d49d94-5a0f-4609-a547-06aa688d0c40" class="">Structure of matter and energy makes up chemistry</p><p id="00ac9511-6d6c-409a-a505-b0ee313c4889" class="">Structure of molecules makes up biology</p><p id="5ac198c3-713f-4750-b03c-e000bbb92d66" class="">Structure of organisms makes up culture</p><ul id="b36354c0-0860-4eb6-bc70-6b2407d93036" class="bulleted-list"><li style="list-style-type:disc">what it means to be different species, bio nomenclature</li></ul><ul id="57802010-0190-48ba-a252-118d93238a7b" class="bulleted-list"><li style="list-style-type:disc">different species of humans (homo …)</li></ul><ul id="1517996d-ef73-4734-97aa-2a1da0214d04" class="bulleted-list"><li style="list-style-type:disc">dwarves: <em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>Homo floresiensis</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></li></ul><p id="f8968fa3-1294-4e14-8efc-52f454ddf3ab" class="">Average mammal our weight had brains of 200 cm^3, early humans had brain size of 600cm^3. Modern Sapiens have brain sizes of 1200-1400cm^3</p><p id="231fdc91-1aab-48ad-abf8-976a87ea6e74" class="">No other species evolutionary selected for bigger brains.</p><p id="d09e42e7-7c0e-4e57-a37d-5aa1e7b467d8" class="">Huge energy cost, 25% of resting energy, when only 2-3% of mass</p><p id="44505378-054d-4e7c-bcc9-a0c7867ec38a" class="">For millions of years big brains weren’t really helpful.</p><p id="3f1e804f-1289-42a0-b711-d8001060274c" class="">Humans were relevant due to sweating ability and waking upright (allowing hands to develop tools and throw stuff)</p><ul id="832389f6-9964-4cef-9212-f9b7c550684a" class="bulleted-list"><li style="list-style-type:disc">Fire: Allowed to cook food (spend less time digesting, more calories → shorter intestines, bigger brains), can be used as weapon. → smaller teeth and jaw</li></ul><ul id="7098e850-75fe-4a4a-a2bb-9e3b556551d9" class="bulleted-list"><li style="list-style-type:disc">Babies born prematurely, due to large brain, thinner hips to run. → Developed importance of social behaviours among humans</li></ul><ul id="be3008df-edfc-4be7-a4ac-578191695738" class="bulleted-list"><li style="list-style-type:disc">Replacement vs Interbreeding Theory: Where did the other species of humans go?</li></ul><h3 id="a38d3d19-0250-42a0-afbb-60069d86e7c4" class="">2. The Tree of Knowledge</h3><p id="440d9582-da3c-438a-9060-c0c47e7a48b9" class="">From around 70,000 years ago to 30,000 years ago, humans developed boats, oil lambs, bows, arrows and needles as well as art, religion, commerce and social stratification.</p><p id="dfcf5dcc-ed05-41b6-864b-5d0ad25b8ea9" class="">This was a period of Cognitive Revolution. Likely caused by humans caring about having information of other humans, in other words gossip.</p><p id="7ffe1f0b-ef7a-40b2-9d7d-252778b88c5b" class="">We can use our language to talk about things that do not exist. → collaborate</p><p id="d0e7c9fc-dc36-4b73-b7b8-829458c09677" class="">“Large numbers of strangers can cooperate successfully by believing in common myths.” those myths include, religion, nationality, money, laws, etc</p><p id="914d52b2-9a82-4325-ab12-b367e83230df" class="">This happens in modern humans too. We can create imaginary things by telling stories (that millions will believe in). We created imaginary entities that today are very powerful like the United States, Christianity, and Google.</p><ul id="7a00c73a-2d68-4067-b14f-18d9fc97a6e6" class="bulleted-list"><li style="list-style-type:disc">Myths can be changed (faster than genes can at least) which opens a fast lane of cultural evolution allowing Sapiens “to revise its behaviour rapidly in accordance with changing needs”</li></ul><ul id="57029161-b8bf-482d-9e6d-458e007ab770" class="bulleted-list"><li style="list-style-type:disc">Eg: <em><em><em><em><em><em><em><em><em><em><em><em>Homo Erectus</em></em></em></em></em></em></em></em></em></em></em></em> didn’t change its tools in 2 million years, in contrast <em><em><em><em><em><em><em><em><em><em><em><em>Homo Sapiens</em></em></em></em></em></em></em></em></em></em></em></em> developed a super wide variety of tools in the 30,000 years from the Cognitive Revolution.</li></ul><ul id="698e34e0-a0b8-4e46-9d11-9c03ace92698" class="bulleted-list"><li style="list-style-type:disc">Composing fiction allows us to work together better. eg: It allowed us to trade by believing in a common value, allowing us to trust strangers</li></ul><p id="39c76a0a-b51b-4257-87c0-611d1dfc9a7c" class="">“The immense diversity of imagined realities that Sapiens invented, and the resulting diversity of behaviour patterns are the main components of what we call ‘cultures’. Once cultures appeared, they never ceased to change and develop, and these unstoppable alterations are what we call ‘history’.”</p><p id="35625e46-bc9d-4be1-86fc-f7071a5625bc" class="">Once the Cognitive Revolution took place, to understand humans required understanding their history as well as biology.</p><p id="012b8f70-4b70-422f-8984-b882fb066977" class="">“The whole of history takes place within the bounds of this biological arena”</p><h3 id="2c6f8710-a4a1-465b-98cd-3e8b245f0022" class="">3. A Day in the Life of Adam and Eve</h3><p id="d0faef1a-c3e5-46bc-9ea5-1f42dffb11bd" class="">The past 200 years of office working to earn a living and the previous 10,000 years of farming for food are a blink in the timescale of <em><em><em><em><em><em><em><em><em><em><em><em>Homo Sapiens </em></em></em></em></em></em></em></em></em></em></em></em>who hunted and gathered food.</p><ul id="1753bcd2-e5bd-495b-b775-8230ae208ed7" class="bulleted-list"><li style="list-style-type:disc">Our brains evolved mostly during hunting and gathering lifestyles, as explained by evolutionary psychology</li></ul><ul id="74a998ef-7e53-48bd-a58f-ddfddd661d34" class="bulleted-list"><li style="list-style-type:disc">Learn about living conditions between Cognitive Revolution (70,000 years ago) and Agriculture Revolution (12,000 years ago).</li></ul><ul id="09149f4d-8a0b-4291-b766-a91e7eb6fb09" class="bulleted-list"><li style="list-style-type:disc">“Ever since the Cognitive Revolution, there hasn’t been a single natural way of life for Sapiens. There are only cultural choices, from among a bewildering palette of possibilities”</li></ul><ul id="9f52c131-1885-4479-b58f-73b0bdf06b2b" class="bulleted-list"><li style="list-style-type:disc">Humans only had dogs as potential pets</li></ul><ul id="49fc102f-a437-46b2-bb0a-8a90b1be1313" class="bulleted-list"><li style="list-style-type:disc">Ate a wide variety of foods, travelled a lot, but had to work hard to survive. Worldviews varied from tribes to tribes.</li></ul><ul id="761b0ddc-fbb4-479d-94c8-0288a51a4c36" class="bulleted-list"><li style="list-style-type:disc">Mainly settled in small groups from dozens to at most a hundred</li></ul><ul id="8a531a76-de45-48e6-ac1b-d821863bf8ff" class="bulleted-list"><li style="list-style-type:disc">Some evidence shows that some humans died violently potentially from murder or wars.</li></ul><ul id="b9e1e97f-51d1-4663-858a-25e1befaa42e" class="bulleted-list"><li style="list-style-type:disc">Hard to interpret the specific religious beliefs and artistic values with the little available evidence</li></ul><ul id="061004a8-fd81-481d-8081-e59c4ee60278" class="bulleted-list"><li style="list-style-type:disc">Researchers believe ancient foragers probably believed in everything (trees, animals, streams, rocks) having a soul and would pray to them individually. (Called animistic)</li></ul><h3 id="f811e534-c4b6-4b86-890a-be3195fb6283" class="">4. The Flood</h3><p id="ce822e52-f9c7-40fd-a949-cb08710b9cc0" class="">45,000 years ago humans developed navigation by sea on rafts and other vessels</p><p id="4fbdf46a-f4c6-48c4-b72b-a1dd53383210" class="">Allowed them to travel to Australia across hundreds of km at sea</p><ul id="1ed87f79-b3bb-4d56-8e45-924f752f9153" class="bulleted-list"><li style="list-style-type:disc">In the millennia that followed humans colonizing Australia, all but 1 of the large mammals inhabiting the land went extinct. This includes Giant wombats (diprotodon), 200kg, 2m tall kangaroos, marsupial lions, giant koalas, birds twice the size of ostriches, dragon-like lizards. </li></ul><ul id="f1118238-712c-41f3-9a26-1f93f10a413c" class="bulleted-list"><li style="list-style-type:disc">“Of the twenty-four Australian animal species weighing fifty kilograms or more, twenty-three became extinct. A large number of smaller species also disappeared.”</li></ul><ul id="3c410d60-1e48-4d2a-a39a-27de0067659e" class="bulleted-list"><li style="list-style-type:disc">Similar extinctions happened, when humans discovered the Americans and other islands in the pacific.</li></ul><p id="3ffe46d5-f721-4ae7-b222-777a25b068f4" class="">“Among all the world’s largest creatures, the only survivors of the human flood will be humans themselves, and the farmyard animals that serve as galley slaves in Noah’s ark.”</p><h3 id="25367aae-6a88-4774-b049-4642d9498612" class="">Part Two: The Agricultural Revolution</h3><h3 id="f1e11c44-e336-4876-abec-5febef524cd5" class="">5. History’s Biggest Fraud</h3><p id="33413a1f-cd11-4119-a133-abfdc6fb382d" class="">Around 10,000 years ago humans went from hunters and gatherers to sowing seeds, watering plants and plucking weeds. They became farmers 🧑‍🌾</p><p id="063b5e50-1d4a-4fc0-af14-77a4c0ae414b" class="">Started around 9500-8500BC in south-eastern Turkey, western Iran and the Levant</p><ul id="4c7ee25b-6cdd-482b-bff2-1d1c8397aa91" class="bulleted-list"><li style="list-style-type:disc">Started with wheat, goats (9000BC) </li></ul><ul id="fa728ea7-0698-473a-b608-8ce0dba19c8c" class="bulleted-list"><li style="list-style-type:disc">then peas and lentils (8000BC), </li></ul><ul id="16dd0a6f-0619-49fe-916e-0d00c7dc6d25" class="bulleted-list"><li style="list-style-type:disc">then olive trees (5000BC), </li></ul><ul id="6a82f9e8-d294-4e38-8fd0-6508fec05852" class="bulleted-list"><li style="list-style-type:disc">horses (4000BC), and </li></ul><ul id="ed339695-a327-427c-a511-2f68ec4fb96d" class="bulleted-list"><li style="list-style-type:disc">grapevines (3500BC)</li></ul><p id="1b185ede-b98d-4db3-8919-844bd9276c57" class="">Almost no other species have been domesticated since 3500 BC, most of our modern food stems from this period of domestication.</p><p id="9e6fca78-e2b8-4b6c-8827-5a5be354ba1e" class="">People in other parts of the world discovered domestication independently at around the same time.</p><p id="aef0ff86-ddad-4471-9188-12fea3f5d010" class="">“Of the thousands of species that our ancestors hunted and gathered, only a few were suitable candidates for farming and herding”</p><p id="41a33a0b-84a7-4615-aac2-ea288dc59729" class="">Which is why we don’t see the domestication of mammoths in Alaska. So only a few places developed agriculture at first.</p><p id="603118f6-fca1-4aa7-a959-53cf57f0f669" class="">“Agricultural Revolution left farmers with lives generally more difficult and less satisfying than those of foragers. Hunter-gatherers spent their time in more stimulating and varied ways, and were less in danger of starvation and disease.”</p><p id="d275c18b-3277-4ce9-a439-0020071625df" class="">From wheat’s perspective, the plant domesticated humans making itself one of the most successful plants ever.</p><p id="22d2efbf-8838-442f-bfdf-0cde536c6ebb" class="">The agricultural revolution made the average human’s life worse:</p><ul id="5581ee6d-4efb-428d-8467-225a33f15844" class="bulleted-list"><li style="list-style-type:disc">Less food, less diverse food</li></ul><ul id="7786d05d-0bf0-4aed-b348-7acf83ee11d6" class="bulleted-list"><li style="list-style-type:disc">More likely to engage in battle against territory (death by violence)</li></ul><ul id="b6323775-4f30-4d87-816c-ce4c28b0567d" class="bulleted-list"><li style="list-style-type:disc">More risk of starving due to natural phenomena</li></ul><ul id="2cd96aa5-3281-4b77-a842-c37a538dbc7b" class="bulleted-list"><li style="list-style-type:disc">More tedious work, less diverse, and work that our bodies weren’t evolved for</li></ul><p id="b5d932ce-2008-4ffd-840a-ac82fa43dc9b" class="">But it benefited <em><em><em><em><em><em><em><em><em><em><em><em><em>Homo sapiens </em></em></em></em></em></em></em></em></em></em></em></em></em>the species. “Cultivating wheat provided much more food per unit of territory, and thereby enabled <em><em><em><em><em>Homo sapiens</em></em></em></em></em> to multiply exponentially.”</p><p id="3788d4dc-6241-4fd8-ab64-26b45a9193d8" class="">The species as a whole benefited, but which individual would voluntarily do that?</p><ul id="f2ad1e4b-a901-4ee7-bd84-05ecbaf0b775" class="bulleted-list"><li style="list-style-type:disc">“Humans, like many mammals, have hormonal and genetic mechanisms that help control procreation. In good times females reach puberty earlier, and their chances of getting pregnant are a bit higher. In bad times puberty is late and fertility decreases.”</li></ul><ul id="aaf5d5fc-ed26-4af7-825b-6e770ba33075" class="bulleted-list"><li style="list-style-type:disc">The global warming after the last ice age, caused more rainfall benefiting wheat</li></ul><ul id="953e5418-ef62-415d-b928-0658821f49d8" class="bulleted-list"><li style="list-style-type:disc">As humans gathered the wheat and brought it back to campsites to process it, a few seeds inevitably got spread</li></ul><ul id="2ed04107-9c59-4154-af04-e9f248293303" class="bulleted-list"><li style="list-style-type:disc">The burning of forests by humans also helped wheat grow.</li></ul><ul id="1d74c196-5299-4a21-a2d0-8bc64b44fd48" class="bulleted-list"><li style="list-style-type:disc">This led to temporary camps by humans, and year by year humans probably stayed to gather wheat for longer</li></ul><ul id="41e33592-2841-46e0-afce-1a2936cba8bc" class="bulleted-list"><li style="list-style-type:disc">They developed more techniques for gathering the wheat until they started planting it too.</li></ul><ul id="ce2282c2-b117-4d3e-b52a-96ed0c1ec5c8" class="bulleted-list"><li style="list-style-type:disc">Not having to move around as much, humans started to procreate more. </li></ul><ul id="6a0d1383-ab99-49c0-804c-5a817dc7a099" class="bulleted-list"><li style="list-style-type:disc">Cause higher child mortality as diseases were more common and each child was looked after less by mothers. Feeding children with more porridge and less breast milk weakened their immune system</li></ul><ul id="96e57800-3f3e-41c7-ae69-fec2555f6d64" class="bulleted-list"><li style="list-style-type:disc">Farmers tried to make small improvements generation by generation not realizing that those improvements made life worse.</li></ul><ul id="be5ef8d9-78df-4967-87c8-f94cc8640696" class="bulleted-list"><li style="list-style-type:disc">People thought - If we work harder, we’ll have an easier life tomorrow, but in reality the food was spread between more mouths, requiring them to work even harder.</li></ul><ul id="c3aaece9-0294-4704-be5d-2e17cab21177" class="bulleted-list"><li style="list-style-type:disc">Permanent settlements were hotbeds of disease, got weakened by droughts and were at risk of being attacked for their land and resources</li></ul><ul id="53fccef8-230f-493d-8138-7a37c29bf978" class="bulleted-list"><li style="list-style-type:disc">Farmers couldn’t go back to hunting and gathering because: the land didn’t have enough resources to support the population increase, and hunting/gathering was so long ago that no one really remembered</li></ul><ul id="c1c73c12-285a-4dcc-96be-f4acb9ad5ba6" class="bulleted-list"><li style="list-style-type:disc">(Even modern humans make the same mistakes in their personal careers)</li></ul><ul id="2049b3eb-3583-4b0d-b5eb-61378d0cda1e" class="bulleted-list"><li style="list-style-type:disc">“Humanity’s search for an easier life released immense forces of change that transformed the world in ways nobody envisioned or wanted.”</li></ul><p id="3fdb274c-cd07-4130-8c88-2710a8c2dcf1" class="">It’s also possible that due cultural reasons, foragers built temples and then had to settle down around the temples long term causing them to switch to agriculture.</p><p id="542bfa56-9c40-4a4b-9803-f6373e5cb6e4" class="">Similar domestication happened for various animals</p><p id="db3b8904-3c08-4be5-a995-76e3c043749d" class="">Even though from an evolutionary perspective a species might be successful, this often comes at the cost of the well-being of the individual organisms</p><h3 id="fd47bc2b-c591-4dad-a066-07fe4ed0942c" class="">6. Building Pyramids</h3><ul id="deface63-abcd-4113-a508-1ce30cd39950" class="bulleted-list"><li style="list-style-type:disc">“Around 10,000 BC, before the transition to agriculture, earth was home to about 5-8 million nomadic foragers. By the first century AD, only 1-2 million foragers remained, but their numbers were dwarfed by the world’s 250 million farmers.”</li></ul><ul id="0ddb56af-b010-4822-a17d-e59eee4e8eee" class="bulleted-list"><li style="list-style-type:disc">Most people farmed and gave some of their crops to a few kings and elites</li></ul><ul id="fcfcbd95-d44a-47be-a4ab-13540a9e40ad" class="bulleted-list"><li style="list-style-type:disc">Those who didn’t spend time farming were the ones writing history</li></ul><ul id="0f8d2bb7-03a1-423d-aae5-2e298589aaf1" class="bulleted-list"><li style="list-style-type:disc">Humans also developed some anxiety as to what the future would bring as worrying about the future was now something in their power to control and affected their lives greatly.</li></ul><ul id="3dc0d3df-8722-4ef5-98ad-6152ec824015" class="bulleted-list"><li style="list-style-type:disc">(Someone who doesn’t worry about and prepare for possible floods or droughts won’t live as long as those who do.)</li></ul><p id="d34fd8dc-1dc7-4867-bee0-bebf441c3054" class="">The greater amount of food and resources provided by agriculture allowed people to form towns, cities, but people still didn’t evolve the necessary skills to cooperate in those settings which is why myths play such a large role.</p><ul id="52faf033-0077-4a8a-8411-e4bfc889b3d8" class="bulleted-list"><li style="list-style-type:disc">8000BC: Villages with a few hundred individuals</li></ul><ul id="8a3e2b2b-12bc-4220-bb79-c8b15e884555" class="bulleted-list"><li style="list-style-type:disc">7000BC: Towns from 5,000 to 10,000 individuals</li></ul><ul id="c263166e-309b-4c2b-8dd5-76448c29c2fc" class="bulleted-list"><li style="list-style-type:disc">4000-5000BC: Cities with tens of thousands of inhabitants</li></ul><ul id="620bf6d9-af56-48aa-a275-3ec3b0531614" class="bulleted-list"><li style="list-style-type:disc">3100BC: First Egyptian kingdom: thousands of square km, and hundreds of thousands of people</li></ul><ul id="e43220cf-ef02-412f-bfbc-5b576937a7a2" class="bulleted-list"><li style="list-style-type:disc">2250BC: First empire, over 1million subjects</li></ul><ul id="80561043-2dae-4522-9dff-55ff7283e868" class="bulleted-list"><li style="list-style-type:disc">1000-500BC, mega empires, with many millions of subjects and tens of thousands of soldiers</li></ul><ul id="7721dfa0-2168-4575-a6c6-f317584119d5" class="bulleted-list"><li style="list-style-type:disc">221BC: Qin dynasty in China, taxes on 40 million subjects paid for huge army and officials</li></ul><ul id="c30d3f29-a113-49ee-91bb-b5e10ace3695" class="bulleted-list"><li style="list-style-type:disc">Roman Empire, taxes from up to 100 million subjects, used for army of 250k-500k soldiers, road network, amphitheatres</li></ul><p id="ae674b09-46e4-44fc-957d-86885aa0f7bd" class="">Those empires weren’t built because everyone wanted to cooperate with each other, often there was slavery and inequalities to make a few people rich. However, the cities were still built through the beliefs in common myths.</p><p id="6bd4a052-a307-4e4e-ac2e-36956a9cc347" class="">c.1776 BC:</p><ul id="2d197be9-f802-4b0c-8639-6bb9b5a96f9b" class="bulleted-list"><li style="list-style-type:disc">Babylon was the world’s biggest city, with a huge Babylonian empire.</li></ul><ul id="07698c28-28ce-467d-86ea-ceec13d67eeb" class="bulleted-list"><li style="list-style-type:disc">King Hammurabi, created the Code of Hammurabi that made him famous</li></ul><ul id="16098f9c-ad3c-478e-a457-4ff67e8b851c" class="bulleted-list"><li style="list-style-type:disc">Collection of laws and judicial decisions whose aim was to present Hammurabi as a role model</li></ul><ul id="436fa41b-8a3d-4a0b-8b92-97b97a4c89dd" class="bulleted-list"><li style="list-style-type:disc">text starts with mentioning that gods appointed Hammurabi to make justice</li></ul><ul id="b0f14fe2-3a15-488b-8a99-3ac9aaefce65" class="bulleted-list"><li style="list-style-type:disc">“Hammurabi’s Code asserts that Babylonian social order is rooted in universal and eternal principles of justice, dictated by the gods. The principle of hierarchy is of paramount importance. According to the code, people are divided into two genders and three classes”</li></ul><ul id="e8a9e0e6-d984-4b08-bd64-b4a58275a6cc" class="bulleted-list"><li style="list-style-type:disc">“If the king’s subjects all accepted their positions in the hierarchy and acted accordingly, the empire’s million inhabitants would be able to cooperate effectively.”</li></ul><p id="6ff06b31-b097-4889-a4ec-d370cef7c381" class="">The American Declaration of Independence did the same and promised that if humans act according to its sacred principles, millions would cooperate.</p><p id="24203680-2a17-409a-a7bf-6abb345545b3" class="">One asserts clear hierarchy while the other claims all humans are equal, but both claim to be sacred justice.</p><p id="75ff5caa-a8eb-41b1-9c7a-28e3d4f58e30" class="">“Hammurabi and the American Founding Fathers alike imagined a reality governed by universal and immutable principles of justice, such as equality or hierarchy. Yet the only place where such universal principles exist is in the fertile imagination of Sapiens, and in the myths they invent and tell one another. These principles have no objective validity.”</p><p id="1613816c-ddd3-4eff-8e68-b9fdc5084177" class="">We might try to argue that the Americans were right, but they state:</p><p id="f3e01716-d1c9-496d-bf93-48f30048f519" class="">“all men are created equal”, equal in what sense? Men obviously evolved to be genetically different from each other, in fact this equality comes from a prior myths from Christianity that states that humans have a soul which is viewed equally by God.</p><p id="139be047-3594-420d-8fc2-4c4f41ccaa21" class="">“We believe in a particular order not because it is objectively true, but because believing in it enables us to cooperate effectively and forge a better society.”</p><ul id="6ad2d969-18eb-4ceb-b944-316876315c8d" class="bulleted-list"><li style="list-style-type:disc">You need true believers in your imagined order for there is always danger of collapse. Thus, effort is taken to embed the imagined order into our minds (educating the young a certain way) and the environment around us (art, music architecture, etc).</li></ul><ul id="aa8b4297-b156-4eec-93a0-15dc5f9215e0" class="bulleted-list"><li style="list-style-type:disc">A majority of leaders (whether military, political, etc) need to believe in the imagined order. The president of the United States needs to believe in human rights and the Pope needs to believe in God.</li></ul><ul id="29147389-609f-44de-b9ba-ff7ff5371f1d" class="bulleted-list"><li style="list-style-type:disc">Never admit that the order is imagined</li></ul><ol type="1" id="eea55e1d-481c-4e4a-b19d-9255ef92bb9c" class="numbered-list" start="1"><li><strong>The imagined order is embedded in the material world.</strong></li></ol><ol type="1" id="b3e3adac-2610-49b5-a64f-7f4c15bb6407" class="numbered-list" start="2"><li><strong>The imagined order shapes our desires</strong>: there’s no real reason to take holidays abroad, other than the myths of romanticism telling us to. “Romanticism tells us that in order to make the most of our human potential we must have as many different experiences as we can.” Or consumerism, which tells us we can fix certain problems by buying new things. Each ad we see is a small myth reinforcing that belief. Most of our beliefs makes us want to build pyramids too, but just of a different kind, and few question why we build them</li></ol><ol type="1" id="34c8c1cb-02f0-4b75-bc1f-fdd54f260a38" class="numbered-list" start="3"><li><strong>The imagined order is inter-subjective.</strong> “The inter-subjective is something that exists within the communication network linking the subjective consciousness of many individuals.”</li></ol><p id="40231dbd-eebd-4c21-abc9-e343434035eb" class="">To break out of the imagined order, we have to break an inter-subjective order, and thus must convince millions and probably billions to believe something else. That’s only possible if we tell more myths to make those humans cooperate, so we end up creating another imagined order.</p><h3 id="d35dc746-b146-4f69-9348-f56bb87afeb4" class="">7. Memory Overload</h3><p id="1be51774-12df-4d45-8743-271c2090d80c" class="">“Because the Sapiens social order is imagined, humans cannot preserve the critical information for running it simply by making copies of their DNA and passing these on to their progeny. A conscious effort has to be made to sustain laws, customs, procedures and manners, otherwise the social order would quickly collapse.”</p><p id="211e1630-26a4-4cb7-a655-b627e7151d21" class="">Large societies generate a huge amount of economic data to gather taxes and track spending which developed into the early development of writing and math.</p><p id="15eb5c59-c0e6-470a-89a5-359317cec495" class="">Writing was necessary for humans to pass down their myths that held society together as no one could memorize it all and the knowledge stored in a human brain disappeared after the individual’s death.</p><p id="f116e303-a5fa-400f-9491-6746d6c9c4e8" class="">Full scripts like the Sumerian system (2500 BC), Egyptian hieroglyphics, China (1200BC), Central America (1000-500BC) started getting developed by adding to partial scripts</p><p id="c44b8799-195f-4425-8fca-3439cebd2ab4" class="">Full scripts spread out from these original centres taking on new forms and people began to write poetry history books, romances, dramas, etc</p><p id="9c7a632a-dd63-49f5-8921-5b3a846fa015" class="">With only a partial script stories like the Bible, and Iliad could still be told by speaking as they aren’t too difficult to remember. The full script isn’t as crucial to a functioning society as a partial script is. (Today we can think of the binary system that computers run on as partial script)</p><p id="3adff9c6-314f-493b-8665-0671c25e3d88" class="">Although we were able to keep records, those records were difficult to search in case of a dispute.</p><p id="a8cc9fb9-682b-4d9f-907a-33e04329c40e" class="">The cultures mentioned above kept their script by inventing techniques of archiving, cataloguing and retrieving written records, making them way more popular.</p><p id="dd87e121-796c-409c-9325-7054fceeb3fa" class="">Although numbers are part of our script for a long time now, humans still don’t inherently have the genes that make them well suited towards working with numbers. </p><h3 id="f7b81935-bf83-4668-ba7c-98ba3a0221ee" class="">8. There Is No Justice in History</h3><p id="03f8dc2d-1f86-43aa-a96d-7a052a2daeef" class="">“Understanding human history in the millennia following the Agricultural Revolution boils down to a single question: how did humans organise themselves in mass cooperation networks, when they lacked biological instincts necessary to sustain such networks? The short answer is that humans created imagined orders and devised scripts.”</p><p id="b42bfef5-ecc0-4d0c-a1bb-9781e7aea391" class="">The imagined order were neither fair nor neutral</p><p id="ad16a084-2442-44dc-b070-a3d4016f1ca6" class="">“Complex human societies seem to require imagined hierarchies and unjust discrimination.”</p><p id="81859dd0-8f3c-463e-8d96-ac20cdf3f9f7" class="">“Hierarchies serve an important function. They enable complete strangers to know how to treat one another without wasting the time and energy to be personally acquainted.”</p><ul id="b68231eb-cfa8-48e4-8426-e352926d5808" class="bulleted-list"><li style="list-style-type:disc">A car dealer might use social cues such as attire, and mannerisms to determine how much effort to put into selling a certain car to people.</li></ul><ul id="261a2c1b-e5b2-4405-bd64-330940c2cbfd" class="bulleted-list"><li style="list-style-type:disc">Differences in natural abilities also play a role, but still a person’s success often depends where in society they are born</li></ul><p id="dd733818-d0b7-424c-b70d-8c72773a688b" class="">“All societies are based on imagined hierarchies, but not necessarily on the same hierarchies. What accounts for the differences?”</p><p id="5a8d273a-d166-4028-bc33-942130baabc0" class="">“Throughout history, and in almost all societies, concepts of pollution and purity have played a leading role in enforcing social and political divisions and have been exploited by numerous ruling classes to maintain their privileges.”</p><ul id="722bb76c-9ac6-4861-a3d6-7e4df6af83a5" class="bulleted-list"><li style="list-style-type:disc">The fear of “pollution” might have its roots in biological instincts surrounding transmission of diseases</li></ul><p id="ea7f93fb-5e06-4afa-9afa-759df80f0cc6" class="">A vicious circle is created where people who are discriminated against have lower chances of succeeding in society which reinforces the basis of their discrimination (”they’re not as smart, etc”)</p><p id="d04234bd-c3a5-4f2f-ac5b-83b4cd1f9fa5" class="">“biology enables, culture forbids”</p><h3 id="116a3c22-4cd8-4ace-a833-08f66dcc1ab4" class="">Part Three: The Unification of Humankind</h3><h3 id="ae0907b5-d78b-4f4c-a57c-88c8673aa0bd" class="">9. The Arrow of History</h3><ul id="238b98f8-e0ca-43d8-8d18-490bdb9110d7" class="bulleted-list"><li style="list-style-type:disc">Culture allowed millions to collaborate.</li></ul><ul id="159d1eb5-fbcc-4d75-ae43-79edf5ab99d4" class="bulleted-list"><li style="list-style-type:disc">Culture constantly changes as it’s full of contradictions and people try to fix those contradictions</li></ul><ul id="306e6687-b90d-440d-8828-46105afe98d0" class="bulleted-list"><li style="list-style-type:disc">Culture also changes when it interacts with other cultures.</li></ul><p id="5971d744-07f0-4f7d-9264-0ed50f789515" class="">As time went on, the number of distinct human societies (ie: societies that do not interact with other societies at all → life wouldn’t change if the other societies didn’t exist) dwindled. From thousands of distinct societies to now just one huge society.</p><p id="1955ea98-1e0a-4273-aa17-6fa9ecc205ea" class="">“Merchants, conquerors and prophets were the first people who managed to transcend the binary evolutionary division, ‘us vs them’, and to foresee the potential unity of humankind. For the merchants, the entire world was a single market and all humans were potential customers. […] For the conquerors, the entire world was a single empire and all humans were potential subjects. And for the prophets, the entire world held a single truth and all humans were potential believers.”</p><h3 id="fff79c3d-1b3e-4e9a-b8b0-98b64734a08a" class="">10. The Scent of Money</h3><p id="8a03d59e-8701-4e2d-a4f7-82a00b5e1b50" class="">Hunter-gatherers did not use money. Instead each band was economically viable and shared between each other. If a certain item couldn’t be gathered they would trade with neighbouring bands that had access.</p><p id="e501f851-c3fc-4201-97c6-0689c9f77099" class="">The issue with barter is that as an economy scales (say a large city), then the pairs of prices grows quadratically. Everyone must keep track of how the value of each item compares to each other item. Additionally, it requires that both people want what the other person has to offer. However, with money, the # of transaction pairs to keep track of is linear and everyone can sell and buy for money.</p><p id="4799e727-6b0b-432a-acb0-ec04416e1cc7" class="">“Money is anything that people are willing to use in order to represent systematically the value of other things for the purpose of exchanging goods and services. Money enables people to compare quickly and easily the value of different commodities (such as apples, shoes and divorces), to easily excahnge one thing for another, and to store wealth conveniently.”</p><p id="adc0a29f-5475-4f2a-a19d-5d49f094f37b" class="">“more than 90% of all money — more than $50 trillion appearing in our accounts — exists only on computer servers”</p><p id="0775936b-53ba-4adc-9214-3108fe13d921" class="">“it’s even better than shiny coins and crips banknotes — lighter, less bulky, and easier to keep track of”</p><p id="d22bb952-0c21-4601-b18c-0ab271183ffe" class="">“Everyone always wants money because everyone else also always wants money, which means you can exchange money for whatever you want or need.”</p><p id="e66e7819-f0cc-4bef-aaca-82756f6a0a7c" class="">“money is thus a universal medium of exchange that enables people to convert almost everything into almost anything else.”</p><p id="343d2964-7637-4264-8ba0-50399d8998de" class="">“Ideal types of money enables people not merely to turn one thing into another, but to store wealth as well. Many valuables cannot be stored — such as time or beauty.” Some things are hard to store or transport, such as foods, real estate, etc. Money solves those problems.</p><p id="f3ad1c7b-f9e8-4c7f-9071-8a5f421c0479" class="">“Because money can convert, store and transport wealth easily and cheaply, it made a vital contribution to the appearance of complex commercial networks and dynamic markets.”</p><p id="b60e5b78-5b5c-483a-a45c-1c4aed064f9c" class="">“Money isn’t a material reality — it is a psychological construct.”</p><p id="e2232e0d-22db-4575-a39c-0db430069e37" class="">“whereas religion asks us to believe in something, money asks us to believe that other people believe in something”</p><h3 id="51421288-a918-44aa-a198-5c73aa8e384e" class="">11. Imperial Visions</h3><p id="b1083a99-6ab7-4d0c-a039-57de69b32345" class="">An empire is a political order with the characteristic of having cultural diversity and flexible borders</p><p id="3c6ed38d-57df-451a-b8db-2d8068bfa95a" class="">Empires will invade smaller territories and force upon its people a common standardized culture</p><p id="1eb2bec4-9750-4302-8725-2d0c29757c06" class="">It’s usually a blend of all the cultures it has invaded, such as Romans using Greek culture, Christianity and other cultures in the roman empire</p><p id="37080586-822c-497c-b155-dc4c318b3ef9" class="">“It is tempting to divide history neatly into good guys and bad guys, with all empires among the bad guys.” This is because of human’s natural us vs. them mentality</p><p id="4f9392c0-7e10-426a-9b23-e468a6d2d576" class="">We’ve sometimes followed the “bad guys” or those whom we labelled that way (empires).</p><p id="3e701ec2-0a96-467b-8977-8207a361a57c" class="">“A multi-ethnic global society is forming over and above the individual states.”</p><blockquote id="c2d939f5-355c-4ea4-89ec-27d4973f377d" class="">For 2,500 years since Cyrus the Great numerous empires promised to build a universal political order for the benefit of all humans. They all lied, and they all failed.</blockquote><h3 id="b05dacf7-2fc3-4bf8-b930-918932cdb9ac" class="">12. The Law of Religion</h3><p id="2edc0858-ee4d-4a86-94b9-89891a632d90" class="">Def: “a system of human laws that is founded on a belief in superhuman laws.”</p><p id="7ef8190f-97fc-4b81-9e71-3eac0a12b164" class="">At first people were animist, believe that all animals, rocks, trees, streams, rivers had a spirit in them and humans viewed themselves as equal to those spirits.</p><p id="67e9ab8f-516c-4f80-87ef-73d171038833" class="">They would pray to those and make rules as they hunted and gathered.</p><p id="59641d13-cdb7-4d02-955d-c7b3c1428714" class="">But never was there need to spread their specific rules to others because those rules only applied to the specific valley a band inhabited</p><p id="1d979d48-bf65-45df-9b1e-0e727bd7a132" class="">Then when agriculture rolled around people needed mastery over certain plants and animals (ie: those weren’t viewed as equals anymore) and they prayed to polytheist gods to have good mastery over their crops</p><p id="adab45a1-6481-4585-8a4d-6672b9729368" class="">The need for multiple gods is because</p><ul id="f1d30af2-1da0-4ef6-b27b-c6b27a4997eb" class="bulleted-list"><li style="list-style-type:disc">more gods, meant each had partial powers, and they’re each more approachable</li></ul><ul id="861ae805-731e-4653-9ba4-8fe1be596082" class="bulleted-list"><li style="list-style-type:disc">an all powerful god might not take interests or biases from human worships</li></ul><ul id="336be3be-9084-446f-9906-6d380c326e68" class="bulleted-list"><li style="list-style-type:disc">however, some humans started believing in the power of a single all powerful god</li></ul><ul id="decbc4b4-23be-4e5f-b719-6a227879a88c" class="bulleted-list"><li style="list-style-type:disc">those religion were missionary in nature and believers tried to spread it to as many people as possible. Since they regarded it as the ultimate truth</li></ul><p id="dbc2c049-cd77-4c0b-b7bf-ef5956384540" class="">Those who believed in a monotheist religion:</p><ul id="44aa5c5f-e88a-45b5-a614-58460a193216" class="bulleted-list"><li style="list-style-type:disc">Face the problem of why is there evil in the world if God is all knowing, powerful and good</li></ul><ul id="514b91bf-3242-4f24-8e54-949d55e4ec65" class="bulleted-list"><li style="list-style-type:disc">And if there is a Devil type force, then why is there order in the world. In other words, why does the Devil and God fight in an equal stable playing field. </li></ul><ul id="dd4b908a-836c-4619-8da8-e26e70eefc6d" class="bulleted-list"><li style="list-style-type:disc">A possible conclusion is that there is a God, and he is evil at least somewhat.</li></ul><p id="90e251b2-3ba2-4bbe-a3f7-589e52eb2f65" class="">“Religion is a system of human norms and values that is founded on belief in a superhuman order. The theory of relativity is not a religion, because there are no human norms and values that are founded on it. Football is not a religion because nobody argues that its rules reflect superhuman edicts. Islam, Buddhism and Communism are all religions, because all are systems of human norms and values that are founded on belief in a superhuman order. (superhuman not supernatural)”</p><p id="23081daa-b04b-405d-9c1f-cb8a80f8874d" class="">Humanist Religions — Religions that Sanctify Humanity</p><table id="921592bd-008b-4459-bbe7-564eb202b8c4" class="simple-table"><tbody><tr id="48c36a2b-229a-47d7-ad82-5d77464cb660"><td id="q^kl" class="" style="width:245.77779134114584px">Liberal Humanism</td><td id="Y{b@" class="" style="width:245.77779134114584px">Socialist Humanism</td><td id="Jwfg" class="" style="width:245.77779134114584px">Evolutionary Humanism</td></tr><tr id="cdb38219-eaeb-4e85-9f04-10c02baaa7d8"><td id="q^kl" class="" style="width:245.77779134114584px">Humanity is individualistic and resides within each individual Homo sapiens</td><td id="Y{b@" class="" style="width:245.77779134114584px">Humanity is collective and resides within the species Homo sapiens as a whole</td><td id="Jwfg" class="" style="width:245.77779134114584px">Humanity is a mutable species. Humans might degenrate into subhumans or evolve into superhumans</td></tr><tr id="fae2c54a-24c9-48e3-9a42-8389af8ef7c1"><td id="q^kl" class="" style="width:245.77779134114584px">Belief in protecting the freedom of each individual Homo sapiens</td><td id="Y{b@" class="" style="width:245.77779134114584px">Belief in protecting equality within the species Homo sapiens</td><td id="Jwfg" class="" style="width:245.77779134114584px">Protect humankind from degenerating into subhumans and to encourage its evolution into superhumans</td></tr></tbody></table><h3 id="c696c9fe-a1f6-4dfb-bca7-389963627231" class="">13. The Secret of Success</h3><p id="1c706020-9325-41ad-8f5f-8de0ac30b4d5" class="">A single global society seems inevitable as societies grew</p><blockquote id="d84ec929-de58-4e0c-9bea-87ceb4b7a878" class="">Every point in history is a crossroads. A single travelled road leads from the past to the present, but myriad paths fork off into the future. Some of those paths are wider, smoother and better marked, and are thus more likely to be taken, but sometimes history — or the people who make history — takes unexpected turns.</blockquote><p id="9e8333dc-94d9-43f9-986b-70a76791d333" class="">“Cultures are mental parasites that emerge accidentally, and thereafter take advantage of all people infected by them.”</p><ul id="d939fc43-95b3-4c6f-8846-eabbb50365aa" class="bulleted-list"><li style="list-style-type:disc">memetics</li></ul><p id="8f7c3d37-ec07-4085-ad3b-a44c84e34d8f" class="">History is unpredictable, and we often cannot explain why a certain result happened (instead of something else) while we can explain how it happened. Specifically, those who know most about the history we discuss (ie: those who lived in that time) have the least idea of what the future would hold. (Similar to a dunning-kruger effect, those who know little of history seem to think that the “why” certain things happen is obvious)</p><h3 id="2657aeaa-e704-44dc-b3ab-82ef6594433a" class="">Part Four: The Scientific Revolution</h3><h3 id="1934fd75-0cfa-4204-8f8b-caccc1bff1c2" class="">14. The Discovery of Ignorance</h3><p id="cef16604-2c75-48c7-967b-71f77ea36f37" class="">“Science needs more than just research to make progress. It depends on the mutual reinforcement of science, politics and economics. Political and economic institutions provide the resources without which scientific research is almost impossible.”</p><p id="ab286588-d539-4529-9121-c23d2f344e4f" class="">Modern science is different from previous endeavours from humans to obtain knowledge in three ways:</p><ol type="1" id="86a478b0-dd29-408a-8368-6c4ea7962b46" class="numbered-list" start="1"><li>The willingness to admit ignorance (no knowledge is sacred and all can be challenged)</li></ol><ol type="1" id="0c5e6a32-fa59-4cb0-a7f4-32f4f854e0ca" class="numbered-list" start="2"><li>The centrality of observation and mathematics (use mathematical tools to connect observations into theories)</li></ol><ol type="1" id="072309ff-502c-44f1-b936-581cb29b76e4" class="numbered-list" start="3"><li>The acquisition of new powers (develop new technology)</li></ol><p id="0425a245-0d9e-4e28-a844-bb51e33eab2d" class="">Before modern science people asserted that there was nothing more to learn and God gave humans all the required knowledge in the Bible, (similarly for other religions)</p><p id="d33fe4cf-a43f-487b-b129-d8822b4de91c" class="">However, the fact that science admits its ignorance means that if it is ever changed it would change the myths that hold society together. Sociopolitical order has been conserved with 2 unscientific methods</p><ul id="32c7e8f6-0b79-4650-aeb7-d3b5eeb54a41" class="bulleted-list"><li style="list-style-type:disc">Take a scientific theory and declare that it is a final and absolute truth.</li></ul><ul id="39c755b6-97a8-4a65-8d2c-fbc50555a403" class="bulleted-list"><li style="list-style-type:disc">Leave science out and live in accordance with a non-scientific absolute truth.</li></ul><p id="4eec65aa-b410-4445-8b0f-52b4058f0ab2" class="">Science wasn’t always tied with the development of technology</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

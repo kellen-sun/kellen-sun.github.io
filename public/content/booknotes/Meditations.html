@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Meditations</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4ba7ec87-af25-4bc8-9893-c82357b0db34" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🧘‍♂️</span></div><h1 class="page-title">Meditations</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Marcus Aurelius</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-yellow">Philosophy</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-gray">4-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@September 24, 2023 → November 8, 2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>99</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>180</td></tr></tbody></table></header><div class="page-body"><h1 id="2670a48a-0281-4452-9206-3961a5914d4d" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="7c70fec1-63e2-4e95-a21c-a4bf0770d87d" class="numbered-list" start="1"><li>Do good, but not to impress others, since you really aren’t that special of a person.</li></ol><ol type="1" id="a1250376-7599-4b27-a172-34bb2ef9e14a" class="numbered-list" start="2"><li>Life isn’t that long, but even then we can spend our time doing good for society.</li></ol><ol type="1" id="56bffd15-9880-4887-ba90-b515968b39c1" class="numbered-list" start="3"><li>I should judge others less, even if they judge me or speak ill of me.</li></ol><h1 id="0daaccf5-33ba-4ee5-b3c4-b6ef7c9fc1e4" class="">🎨 Impressions</h1><p id="451fd646-a8b1-49cc-974d-a16ddf9beaea" class="">Language feels a bit old. Very repetitive, some very boring and long passages. The important parts are interesting.</p><h2 id="72785d8e-737b-4408-a5ca-15faa1cabb76" class="">How I Discovered It </h2><p id="dd2abe82-7dd8-453c-9f6b-f03bcb51b001" class="">Bought it from a gift store when I visited Italy.</p><h2 id="5a46bbc2-730c-409c-a713-d4bd23c489b2" class="">Who Should Read It? </h2><p id="6292f8f8-9788-41a7-903f-418f7dd93db8" class="">It’s a classic in stoicism</p><h1 id="efb879ed-4dcd-4bf7-8078-9ff6672fabfb" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4fe77d21-e48a-459e-aaea-2623651942d9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="9130715d-a1ac-43cf-a44a-be4962a14142" class="bulleted-list"><li style="list-style-type:disc">It’s making me slightly more religious/spiritual.</li></ul><ul id="d282df4f-557d-47b0-9e67-2c54f68036dc" class="bulleted-list"><li style="list-style-type:disc">A lot of things don’t matter as much as we think they do.</li></ul><ul id="d4609ab5-73c5-4307-a5aa-310251e152e6" class="bulleted-list"><li style="list-style-type:disc">I should judge others less, even if they judge me or speak ill of me.</li></ul><ul id="53fd8e6c-e743-47f2-bb7b-040e3b2239e2" class="bulleted-list"><li style="list-style-type:disc">To keep your ego in check and still do good.</li></ul><h1 id="f70dbf05-4ebc-4962-b499-453f351549d2" class="">✍️ My Top 7 Quotes</h1><ul id="38ec6588-5ac4-481a-8f32-e159ff10165c" class="bulleted-list"><li style="list-style-type:disc">“disposition to do good, and to give to others readily, and to cherish good hopes, and to believe that I am loved by my friends”</li></ul><ul id="c764ff60-24f8-4d75-9271-ba3cde4d776f" class="bulleted-list"><li style="list-style-type:disc">“No concealment of his opinions with respect to those whom he condemned, and that his friends had no need to conjecture what he wished or did not wish, but it was quite plain”</li></ul><ul id="dcbfd07b-794c-4c14-a2d1-f5aabde51392" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background">“he considered himself no more than any other citizen”</mark></li></ul><ul id="9c8ec9be-cab3-4c90-800c-a6070ff9a970" class="bulleted-list"><li style="list-style-type:disc">“freedom of will and undeviating steadiness of purpose”</li></ul><ul id="c71cdb81-8415-4c4f-bd8e-1640d8a22563" class="bulleted-list"><li style="list-style-type:disc">“Never value anything as profitable that compels you to break your promise, to lose your self-respect, to hate any man, to suspect, to curse, to act the hypocrite, to desire anything that needs walls and curtains.”</li></ul><ul id="dcb4abdd-9851-4018-9afc-efe1d389fe37" class="bulleted-list"><li style="list-style-type:disc">“If any man is able to convince me and show me that I do not think or act right, I will gladly change; for I seek the truth by which no man was ever injured. But he is injured who abides in his error and ignorance.”</li></ul><ul id="8745133b-40a3-4819-9b05-606b156dd75a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow_background">“how he bore with those who blamed him unjustly without blaming them in return”</mark></li></ul><h1 id="4e7156d1-b1a1-4c27-8a42-d42e06f09112" class="">📒 Summary + Notes</h1><h3 id="8a67755c-e920-4662-9640-07661f1f2e06" class="">Book I</h3><p id="1899a342-6708-4a34-b7ce-7a280a709279" class="">Modesty</p><p id="f5f6feaa-6bc5-431a-8878-fac292745931" class="">“abstinence, not only from evil deeds, but even from evil thoughts”</p><p id="3d1443c2-033d-4a6e-8e46-68fe88e085a3" class="">“endurance of labor, and to want little, and to work with my own hands, and not to meddle with other people’s affairs, and not to be ready to listen to slander”</p><p id="f5331bab-57a8-43bd-ae62-be02d58888a6" class="">“not to breed quails for fighting, nor to give myself up passionately to such things; to endure freedom of speech”</p><p id="9d65a986-58ba-4a24-b53d-51f46f6a3182" class="">“nor to showing myself off as a man who practices much discipline, or does benevolent acts in order to make a display”</p><p id="0f5f9c34-4517-4853-8850-7af4f478ea9b" class="">write simple letters that get to the point</p><p id="93be2585-7889-4b5b-be82-993087aec929" class="">respect those who offended you</p><p id="74a83f17-755f-4455-8780-4c500eba9dcf" class="">be disposed to be reconciled as long as others are ready to be reconciled</p><p id="fb066f93-cb8a-4725-b3bf-a19074344d68" class="">don’t give assent immediately to those who talk too much</p><p id="7a5094c2-fd82-4610-ad34-2440748369f4" class="">“freedom of will and undeviating steadiness of purpose”</p><p id="f45336ba-7008-4eda-b078-2c96f426a690" class="">To not change who you are when you’re in pain</p><p id="5a4b0046-2642-4792-b81d-32d3d31e78c4" class="">“how to receive from friends what are esteemed favors, without being either humbled by them or letting them pass unnoticed.”</p><p id="ab8f8438-a44c-48c5-912c-056e7a931e30" class="">“look carefully after the interest of friends, and to tolerate ignorant persons”</p><p id="a45a1853-5ecd-4082-a5d1-083ad213fc7d" class="">“refrain from fault-finding”</p><p id="d59a9ebe-a26d-4f64-a695-fca6d9651f8f" class="">to not “chide” other’s accent</p><p id="e781031b-4491-477e-bc7e-57ba975d0a60" class="">observe effect of envy in tyrants</p><p id="ab1541bb-1c2d-4185-9e34-366770d4512a" class="">“nor continually to excuse the neglect of duties required by our relations to those with whom we live, by alleging urgent occupations”</p><p id="693dc5bf-e49d-42d0-b07f-0d0f3e25b0d6" class="">speak well of teachers</p><p id="be0fee2d-a311-4ede-bcfd-4535005d59c1" class="">love my children truly</p><p id="8b38967c-5c67-4d39-a494-dc952df1115b" class="">try to restore friends to their usual disposition when they’re at faults</p><p id="f78ebd85-ccb6-4f1d-8256-e39b978417de" class="">love my kin</p><p id="d872a67e-93d4-42ec-8f27-47bdef630f9a" class="">to love truth</p><p id="879549e3-6934-4b19-85fe-1ed771f53cbf" class="">to love justice</p><p id="796f9a02-d5b0-4724-9020-370b7e9afef8" class="">same law for all</p><p id="e7ea872f-23a5-4b5c-b888-1a6b5b9ddb8f" class="">“disposition to do good, and to give to others readily, and to cherish good hopes, and to believe that I am loved by my friends”</p><p id="2fd272bf-d27c-4384-ba7c-780150e69356" class="">“No concealment of his opinions with respect to those whom he condemned, and that his friends had no need to conjecture what he wished or did not wish, but it was quite plain”</p><p id="db950745-5e8b-4709-8abd-cbf2ec8a1550" class="">do what was set before me without complaining</p><p id="235115b0-b164-4be0-9ca2-684611b642ed" class="">nor did he ever laugh to disguise his vexation</p><p id="a6584d0b-c6c5-4ff7-b239-7c3ad400ed58" class="">“he was accustomed to do acts of beneficence, and was ready to forgive, and was free from all falsehood;”</p><p id="4ff27627-530c-4faf-a2b2-64f7ca7072fb" class="">unchangeable resolution</p><p id="e1d90001-fe6a-4b17-b7ba-b55d873bc714" class=""><mark class="highlight-yellow_background">“he considered himself no more than any other citizen”</mark></p><p id="00d24144-8993-43a6-bf41-256859d0f46e" class="">respected others ideas, but not easily led by them</p><p id="6ad1a2f9-da64-4275-ab7f-1c4593358e07" class="">took good care of his physical health, not for appearance, but to not rely on doctors</p><p id="3865e30e-55b7-43bf-b018-c2b6fac90855" class="">look at what ought to be done, not at the reputational risks and benefits</p><p id="d66a7e53-5b59-40b6-8612-3f3dc3b8c90f" class="">indebted to the gods (for every good person in his life)</p><h3 id="12158c48-d4d5-416f-b4ad-28dbc334492a" class="">Book 2</h3><p id="dc2c3ef2-6248-4baf-a75b-949f54d3af88" class="">“still your soul reveres not itself, but seeks your well-being in the souls of others”</p><p id="7e73ccc7-e778-4004-9c44-739747dd1ca8" class="">“how quickly all things disappear”</p><p id="6990e198-5227-4f2f-9d60-8202aae07491" class="">“the longest and shortest [lives] are thus brought to the same”</p><p id="acdc7c71-c4c3-4c23-8e41-3726b93e2d72" class="">a man cannot lose the past or the future as how can one lose what one doesn’t have</p><h3 id="dc55392f-127c-4321-a3a3-9c8c9d697eb0" class="">Book 3</h3><p id="0fb59607-a479-49e3-81c2-23fc4d115204" class="">“we must make haste then, not only because we are daily nearer to death, but also because the conception of things and the understanding of them cease first”</p><p id="2a267cd2-939a-4c3b-a942-5f81559f69ac" class="">“do not waste the remainder of your life in thoughts about others, when you do not refer your thoughts to some object of common utility. For you lose the opportunity of doing something else when you have such thoughts as these.”</p><p id="26176d75-4091-4ac6-9d9d-9cce26eaecfe" class="">“he does not value at all the praise that comes from such men, since they are not even satisfied with themselves”</p><p id="823bba4f-b7a4-43a2-9dd0-63748397c9ec" class="">“a man then must stand erect, not be kept erect by others”</p><p id="52d0d5a1-5d2e-4655-84c5-a144587ec487" class="">“Never value anything as profitable that compels you to break your promise, to lose your self-respect, to hate any man, to suspect, to curse, to act the hypocrite, to desire anything that needs walls and curtains.”</p><p id="aa839fd7-078c-4e48-989c-c5367d89fbed" class="">“On every occasion a man should be able to say this comes from god”</p><p id="ede4f459-a0dc-4e00-b8eb-1f379060f608" class="">“if you apply yourself to the task before you, following right reason seriously, vigorously, calmly, without allowing anything else to distract you, but keeping your divine part pure, as if you might be bound to give it back immediately…you will live happily.”</p><h3 id="3a5f654c-5347-4d7a-a61c-067bac9010f0" class="">Book 4</h3><p id="18ac1ee2-816b-4113-ad20-23468c4ac65f" class="">“Let no act be done without a purpose”</p><p id="28612770-86a4-408f-acf7-3e87f7d10b94" class="">“there is no retreat that is quieter or freer from trouble than a man’s own soul, especially when he has within him such thoughts that by looking into them he is immediately in perfect tranquillity”</p><p id="81381281-b49c-4a1a-9d52-cb2a9423fa89" class="">Find a calmness within yourself to brace yourself against anything you find in life. </p><p id="a06cbfa9-869c-44c4-954e-d210e028c649" class="">“It is natural that certain things should be done by a certain kind of person”</p><p id="2c1cd42c-e8c0-42ca-868d-a02c66e8e107" class="">“everything that happens, happens justly”</p><p id="05aa3153-1706-4377-afb9-c296fe51c7d5" class="">many grains — one falls before, one falls after, but it makes no difference</p><p id="1804adbd-531d-47d6-b529-76eb5f7abdad" class="">“Do not act as if you were going to live ten thousand years. Death hangs over you. While you live, while it is in your power, be good.”</p><p id="68e41e26-c66a-4022-b297-c7697c19a261" class="">Don’t look around at the morals of others, but follow your own straightly.</p><p id="38a6a92d-30bb-4313-a316-9b48f08845c9" class="">What good does it give you that you remain famous well after your death? It has no effect on your dead self, and arguably no effect on your living being.</p><p id="fed5d8ce-90d0-4a72-8103-7d4ba0cb8549" class="">Be a man who is satisfied with his portion of the whole, and satisfied with his benevolence.</p><p id="7e74cfd8-be13-4461-b17e-0a1254d96426" class="">The world constantly changes: “It is no evil for things to undergo change, and no good for things to subsist in consequence of change.”</p><p id="019fe19a-6d49-4f04-820e-5ca6be488cad" class="">“Not that this is misfortune, but that to bear it nobly is good fortune.” (Unfortunate things happen to everyone, that is not misfortune, but not everyone can deal with it well, so dealing with it well is good fortune.)</p><p id="4857df3f-6249-4d04-83d8-179b74bf7223" class="">“Look to the immensity of time behind you and to the time that is ahead of you, another boundless space. In this infinity, then, what is the difference between him who lives three days and him who lives three generations?”</p><h3 id="e4224ef3-937e-4b2f-9bff-b19955326c0c" class="">Book 5</h3><p id="76cae8c4-2cb8-4f54-b2a1-9036d9e8a5f9" class="">When you rise in the morning, you do so to do the work of a human being, no matter how hard that is. You weren’t made to stay under your blankets all day long. If you do not follow your natural order to rise and do the work, then you do not love yourself. You do not love your own nature.</p><p id="96b508e5-6cff-431c-8640-d47ab6eb0e1c" class="">“Do not be disgusted, discouraged, or dissatisfied if you do not succeed in doing everything according to right principles; but when you have failed, return again, and be content if the greater part of what you do is consistent with man’s nature, and love this to which you return;”</p><p id="fc39f74f-5db6-46a1-a61c-3fa280bcb10d" class="">“where a man can live, there he can also live well”</p><p id="f9d20bf7-0e4d-427a-ba9c-9286e89708ec" class="">“you must not be angry with him who does harm the state. Show him where his error is”</p><p id="c1e41382-1c5c-4101-886f-8d85160b5598" class="">We’re a very small part of the whole universal substance and time.</p><p id="ea3f9935-ca4a-4aff-83f3-eacae9e8d3ca" class="">Behave in such a way that everyone around you says this of you, “Never has he wronged a man in deed or word.”</p><p id="6bff04cb-22b2-44a7-9764-dc2a1da6a134" class="">Why are you troubled by something that you wasn’t caused by your own badness, and doesn’t harm the common weal?</p><h3 id="71c25bc3-b290-4dc0-b438-bf04f6791cab" class="">Book 6</h3><p id="dce17577-ca84-4407-a423-fa96371b9e80" class="">Whether you’re cold or warm or drowsy or satisfied with sleep or ill-spoken of or praised, you should still do your duty.</p><p id="2f66baa8-bc89-43d0-9d8d-3a40f3c7ab20" class="">The universe is not evil in itself</p><p id="7488937d-1156-4002-b7b8-f7d8c924e15d" class="">All existing things will change and be gone</p><p id="b777af55-711b-4f7d-823b-7925107a8e88" class="">“If it is difficult to accomplish something by yourself, do not think that it is impossible for man: but if anything is possible for man and conformable to his nature, think that this can be attained by you, too.”</p><p id="c71e1be8-c9bf-4fc2-8290-05f8937df375" class="">If you get hurt by someone and they weren’t intentionally trying to hurt you. Don’t show any signs of vexation or be offended, nor should you suspect them as a treacherous fellow. However be on guard against him.</p><p id="73706ed6-a421-4cd0-8c4a-b6ab25dbd3e4" class="">“If any man is able to convince me and show me that I do not think or act right, I will gladly change; for I seek the truth by which no man was ever injured. But he is injured who abides in his error and ignorance.”</p><p id="a2fa1798-d1ff-4f30-abd9-ac10231d5a72" class="">You must finish your duty and not be disturbed or show anger towards those who are angry with you.</p><p id="45d5cc50-e631-4b34-80ed-5ee444b1683d" class=""><mark class="highlight-yellow_background">“how he bore with those who blamed him unjustly without blaming them in return”</mark></p><p id="235c9b27-849e-4eed-8c98-e3803e66f8c9" class="">“You are not dissatisfied, I suppose, because, you weigh only so many pounds and not three hundred. Do not be dissatisfied then that you must live only so many years and not more; for as you are satisfied with the amount of substance that has been assigned to you, so be content with the time.”</p><p id="6caa14c8-60c5-4ca2-9ef9-3337ce7cb6a6" class="">What is good for you? Those who love fame think it is that of other’s admiring him. Those who love pleasure think it’s their own sensations. But those who understand consider their acts good.</p><p id="1d08c8d4-b7c7-4c88-8ebf-646683003696" class="">“He who loves fame considers another man’s activity to be his own good; and he who loves pleasures, his own sensations; but he who has understanding considers his own acts to be his own good.”</p><h3 id="63f2ddb4-cf45-4047-901a-4f77809c38c0" class="">Book 7</h3><p id="fa4bd765-0bcc-4941-a49c-1e952045c060" class="">“Do not be ashamed to be helped; for it is your business to do your duty.” No shame in being helped if you’re doing what you must do.</p><p id="f656fa89-7d29-4983-80a3-733794990740" class="">Don’t be discouraged by the future. </p><p id="887484b5-16d2-469a-8048-9cc701a78238" class="">“Be upright, or be made upright.”</p><p id="8bd157b0-a0ca-4447-88df-fe61d2301443" class="">Change is always necessary, burning wood for a hot bath, or digesting food are all changes. So do not be afraid of changes in yourself for it is the play of the universal nature.</p><p id="19fd3d6f-eb34-4e57-83ff-f808e4761c47" class="">Be satisfied by the peace that your own mind brings</p><p id="c292f96d-0092-4651-b86c-e9ca63426f2f" class="">Pardon easily and pity those who have done wrong, but do not blame them as it’s often not their fault.</p><p id="5cd3f73e-ac80-40b4-bc72-e5efd96d4385" class="">Consider the universal scale, of stars moving around, galaxies forming and dying and use it to purge away the filth of our earthly life</p><p id="de792b91-5258-41a1-8268-ce4a34deca4c" class="">“We must endure, and toil without complaining.”</p><p id="6dbc83be-13f1-4c15-9c44-d77d54108961" class="">“Consider yourself to be dead, and to have completed your life up to the present time; and live, according to nature, the remainder that is allowed you.”</p><p id="6951f8b3-de57-45da-83c5-8d194e7a86ae" class="">Once you’ve done a good act to someone, do not expect anything in return as the reputation (of knowing yourself) that you did good should be enough to you.</p><h3 id="bc0fc3d5-d83e-4aad-a136-1cb663f4b8e1" class="">Book 8</h3><p id="e8ce3e13-2e1d-42dd-8d14-895bc9f7d0f6" class="">“Pleasure then is neither good nor useful”</p><p id="bab64853-8b9c-4667-80a3-969b6748dd2c" class="">“Attend to the matter before you, whether it is an opinion or an act or a word.”</p><p id="35b84f5e-1faf-4d40-8fa9-acc025b17f6b" class="">To let your soul think that pain is an evil is an evil in itself as the soul should maintain its own “serenity and tranquility”</p><p id="dda0a72c-6060-4816-b23f-d99ada56c3ab" class="">It’s in your power to not let bad things affect you internally</p><p id="dabb712d-ca2e-4deb-9e8d-199718f9b997" class="">Everyone dies.</p><p id="95023757-1de4-4e38-b1d7-01bccb3dcb47" class="">“Receive wealth or prosperity without arrogance; and be ready to let it go.”</p><p id="2fde812b-3a0c-4d96-8496-98fd1d8fa820" class="">“It is not fit that I should give myself pain, for I have never intentionally given pain even to another.”</p><p id="a67dcaf3-e365-4001-b368-0b2cdefdedf1" class="">“And what is it in any way to you if these men of tomorrow utter this or that sound, or have this or that opinion about you.” Don’t search posthumous fame?</p><p id="cc4584ce-c063-456b-8b77-01cf9e9ada20" class="">“Therefore the mind that is free from passions is a citadel, for man has nothing more secure to which he can fly for refuge and repel every attack.”</p><p id="bdc10bd5-9f4f-4212-889b-1b4e72c04346" class="">“He who fears death fears either the loss of sensation or a different kind of sensation. But if you shall have no sensation, neither will you feel any harm; and if you will acquire another kind of sensation, you will be a different kind of living being and you will not cease to live.”</p><h3 id="bd7142a9-daf2-4b36-a5b4-0f812982531f" class="">Book 9</h3><p id="0a5dd43e-ed5c-4c6c-bc14-4d8e2cc4b44b" class="">“He who does wrong does wrong against himself. He who acts unjustly acts unjustly to himself, because he makes himself bad.”</p><p id="e2c14978-7010-4526-ab44-0be7e4671b1a" class="">“in wars, there are treaties and armistices”</p><p id="b7780730-06d9-4d54-92df-aebe5d0ec5c7" class="">All trouble is from within.</p><p id="06895280-4799-476e-bfd7-b1100c4c08e4" class="">When others blame you or hate you, analyze what kind of person they are and discover that there’s no reason to be concerned about their opinions of you. However, still be well disposed toward them.</p><p id="0bc9f1e2-cf26-475a-8659-6a9c692bdfcf" class="">If the gods don’t exist or have no power, there’s no point praying to them. If they do exist, then why do we assume they have the power to grant us things we want. Why not instead pray for the gods to give us the power to achieve our goals or not be distracted. For example “One may pray thus: How might I sleep with that woman? Do you pray: How shall I not desire to sleep with her? Another prays thus: How shall I be released from this? Another prays: How shall I not desire to be released?”</p><p id="681d2790-54df-4324-a426-bbae5955a5d5" class="">If you’re offended by a man’s shameless behaviour, ask yourself if shameless should not be in the world. Obviously, there’s always going to be shameless men. Then, this man is just acting of their nature and you have the ability to oppose every wrongful act. You may teach the man who has gone astray. </p><p id="52c4ebcf-f1af-45e6-9efb-d52fcf73469e" class="">When you’re kind as a man, do not act like you deserve something for acting kind. It’s of the nature of a man to be kind and grateful, the same that eyes are for seeing and feet are for walking, yet they do not get paid.</p><h3 id="9e4cff0b-34c3-485f-85e0-51b86478da7b" class="">Book 10</h3><p id="5f03df64-b572-4ed9-a9c6-a60d5afef9f1" class="">“Remember, however, that you are formed by nature to bear everything whose tolerability depends on your opinion to make it so, by thinking that it is in your interest or duty to do so.”</p><p id="5f00bec0-6716-42e6-96fa-f208bd2b4db4" class="">Remember that you are a part of nature, that follows strict causality laws.</p><p id="c0a95284-2193-43e1-83ac-18332e3eee15" class="">Assume the name of being “good”, “modest”, “truthful”, “rational”, “equanimity” and “magnanimous” without wanting to hear others call you that.<div class="indented"><p id="ca2646c0-c8c5-4ca0-af46-4a001754f40f" class="">Equanimity: voluntary acceptance of the things that were assigned to you by the common nature</p><p id="970600a5-a083-4eb6-a5fc-28320691c60c" class="">Magnanimity: elevation from pleasure or pain of the flesh and above fame, and death.</p></div></p><p id="393fec86-ba4d-49fc-bce0-4bdb1b7abd62" class="">“Inquire of yourself as soon as you wake from sleep, whether it will make any difference to you if another does what is just and right. It will make no difference.”</p><p id="3f134577-3667-4dde-afa5-12f6d5d62e87" class="">“No longer talk at all about the kind of man that a good man ought to be, but be such.”</p><p id="d532f810-ef37-4274-953d-327e1c2fa66e" class="">“When you are offended at any man’s fault, immediately turn to yourself and reflect in what manner you yourself have erred”</p><p id="e6f267ad-9135-49af-b0a5-823aa5242df8" class="">“be free from grief and fear”</p><p id="22fe6ff3-0c48-4afa-abe8-1cb63d1e5cbe" class="">The healthy ought to be prepared for everything that happens and can recognize truth for what it is. The unhealthy wish that truth and reality be different. (An unhealthy eye would wish to have seen differently)</p><h3 id="3540c3e2-9ef2-45bf-b79d-46302610084b" class="">Book 11</h3><p id="46c8f23e-8561-4d2e-8c50-d69a48156723" class="">The soul must be ready to leave the body anytime, in a way without making it seem tragic</p><p id="8eb89e59-9f08-4285-8abd-44b5eff102c6" class="">“Have I done something for the general interest? Well then I have had my reward.”</p><p id="257b5b9c-c055-4932-8128-2ce6f6edf1c8" class="">Doing the good is the reward</p><p id="f1beabd8-ba24-47dd-984b-a1bbe4207c8d" class="">“If the things do not come to you, the pursuit and avoidance of which disturb you, still in a manner you are seeking them out. Let then your judgment about them be at rest, and they will remain quiet, and you will not be seen either pursuing or avoiding”</p><p id="aa3feebd-f245-4131-bc4c-d61d4d4d4eab" class="">Must show it by acts, not by saying it</p><p id="47fec1b3-4cff-4c26-9d49-b7f296561274" class="">“consider that you also do many things wrong”</p><h3 id="4e503c63-6886-4d6e-ba86-dc81372c0970" class="">Book 12</h3><p id="7b4b67ee-ff68-4123-8b09-05197e1d5bca" class="">“I have often wondered how it is that every man loves himself more than all the rest of men, but yet sets less value on his own opinion of himself than on the opinion of others.”</p><p id="4809bce0-7d9c-4612-8971-ec0578fba671" class="">“If it is not right, do not do it: if it is not true, do not say it. For let your impulse be in your own power.”</p><p id="deb54c27-6fe1-454b-9b8b-d27ad0cde03d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

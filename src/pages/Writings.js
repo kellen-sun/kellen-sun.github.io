@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Writings() {
 
   return (
     <div>
         <h1>Some writings...</h1>
-        <p>I mean what even is writing.</p>
-        <p>lorem ipsum</p>
+        <Link to="/writings/schoolnotes">School Notes</Link><br></br>
+        <Link to="/writings/booknotes">Book Notes</Link>
     </div>
   )
 }

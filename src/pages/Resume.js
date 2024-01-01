@@ -1,13 +1,12 @@
 import React from 'react'
 
 function Resume() {
-  const pdfUrl = "../../Resume.pdf";
+  const pdfUrl = "../../content/resume/Resume.pdf";
 
   return (
     <div>
-        <h1>My Resume:</h1>
       <iframe
-        title="PDF Viewer"
+        title="Resume"
         width="100%"
         height="800"
         src={pdfUrl}

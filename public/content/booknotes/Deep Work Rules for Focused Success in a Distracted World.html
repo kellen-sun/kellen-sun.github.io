@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Deep Work: Rules for Focused Success in a Distracted World</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9bfb015f-8a11-49bc-94fe-d52d9a157433" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💼</span></div><h1 class="page-title">Deep Work: Rules for Focused Success in a Distracted World</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Cal Newport</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-orange">Productivity</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-yellow">5-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@June 19, 2023 → June 27, 2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>296</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2016</td></tr></tbody></table></header><div class="page-body"><h1 id="f1809916-7d3f-4c44-ad49-a426623c4ac8" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="9e9e5789-1b73-4dea-b207-ce626b467c85" class="numbered-list" start="1"><li>Deep work is becoming more valuable (in the current economy) as it becomes rarer</li></ol><ol type="1" id="0455f8af-1dbd-43cc-bb2c-1bbdb232d006" class="numbered-list" start="2"><li>Focus on deep work without distractions for large periods of your day.</li></ol><ol type="1" id="b5d2624f-afd3-481f-bdec-569ab7d9e228" class="numbered-list" start="3"><li>Shy away from as much shallow work/ distractions as possible</li></ol><h1 id="6a93e9be-9d03-474d-9d52-f6df2c3eaeba" class="">🎨 Impressions</h1><p id="649f4589-fdcf-4608-a7d3-f3ca1faf6916" class="">Well written, convincing argument, interesting information about his perspective as a professor in academia</p><h2 id="771ab527-7f7f-4c32-88ca-24937251d000" class="">How I Discovered It </h2><p id="67f4a9f0-99bc-460d-9ca2-0d734b4819cf" class="">Don’t remember</p><h2 id="cbdcbde1-2966-4372-8e37-7135bbdd4b80" class="">Who Should Read It? </h2><p id="1c6d915a-4015-42b4-b162-c4909311aa41" class="">It seems to be aimed at people earlier in their career who want to be successful. I’d say around 30 years old.</p><h1 id="5c015b2d-add5-4205-ab3f-db70829cc4f5" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8019063a-b878-4f85-b38f-d1d2d4cc52c2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="c531af57-329b-4afb-9bd9-b29d2f01081b" class="bulleted-list"><li style="list-style-type:disc">Convinced me to spend less time distracted and to work deeper. </li></ul><ul id="179c7d27-9924-4a03-a8b7-e4b46c053ac2" class="bulleted-list"><li style="list-style-type:disc">I’ll be using a lot of his tips in my life.</li></ul><h1 id="363e14f3-25ac-4130-8043-5cc9348088c0" class="">✍️ My Top 3 Quotes</h1><ul id="06077a55-7b2f-4370-9d62-89fbbdd8f4f2" class="bulleted-list"><li style="list-style-type:disc">“Clarity about what matters provides clarity about what does not”</li></ul><ul id="d3975492-34ad-452c-9933-6d6b001f581a" class="bulleted-list"><li style="list-style-type:disc">“Don’t take breaks from distraction. Instead take breaks from focus.”</li></ul><ul id="7a62ecef-ce98-43dc-8535-e80716535851" class="bulleted-list"><li style="list-style-type:disc">“The ability to concentrate is a skill that gets valuable things done.”</li></ul><h1 id="df123352-5b4f-4549-bf0d-6c0de356dbc8" class="">📒 Summary + Notes</h1><h3 id="6957834a-8319-4aab-adb9-a9ce7df4b782" class="">Introduction</h3><p id="c37b4dc7-c5da-4fc2-86bc-22b8e90bc213" class=""><strong>Deep Work</strong>: Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.</p><p id="c0d33f4f-2391-414a-b452-3379fc9c59e1" class="">If instead of writing a ton of short messages (like DMs) one spent their time consecutively they could write a novel.</p><p id="e5beec53-2709-4a92-b1cb-5b71d932b63c" class="">All influential and successful people use deep work.</p><p id="cda7fd7a-a4bc-4580-96e9-e71e6a2366a8" class=""><strong>Shallow Work</strong>: Noncognitively demanding, logistical-style tasks, often performed while distracted. These efforts tend to not create much new value in the world and are easy to replicate.</p><p id="c75adefe-2720-4c99-9c98-6db8b7979d67" class=""><strong><strong><strong><strong>The Deep Work Hypothesis: </strong></strong></strong></strong>The ability to perform deep work is becoming increasingly <em><em><em><em><em><em>rare </em></em></em></em></em></em>at exactly the same time it is becoming increasingly <em><em><em><em><em><em><em>valuable</em></em></em></em></em></em></em> in our economy. As a consequence, the few who cultivate this skill, and then make it the core of their working life, will thrive.</p><h3 id="6d6b7ab8-c4e5-4505-b1d4-67ffe7ef3daa" class="">Chapter One: Deep Work Is Valuable</h3><p id="dc05d195-6cfd-4b0d-a162-e16d364b447b" class="">Three type of people will become more valuable as the economy changes to an intelligent machine age. </p><ol type="1" id="185c2288-3aeb-4b8f-921e-aa6de29e2c63" class="numbered-list" start="1"><li>High-Skilled Workers: Work well with the machines</li></ol><ol type="1" id="870e5d82-8e3d-40fb-8876-10caeceda652" class="numbered-list" start="2"><li>Super stars: Are the best at what they do</li></ol><ol type="1" id="c8a651ba-d0cb-46ca-8cda-e9a744989465" class="numbered-list" start="3"><li>Owners: Have access to capital</li></ol><p id="bfc58d78-10b1-45e9-9019-9a07c7ce48a9" class="">To get into one of the first 2 groups of people we need two skills:</p><ol type="1" id="df571bf9-3755-4ff8-a704-4a622e265206" class="numbered-list" start="1"><li>The ability to quickly master hard things</li></ol><ol type="1" id="f55c42a6-2686-48be-8c30-02cbc5b97aec" class="numbered-list" start="2"><li>The ability to produce at an elite level, in terms of both quality and speed</li></ol><p id="a9631e4c-0db0-409d-ba6b-0eb0fa456f8b" class="">To learn quickly and to produce at an elite level requires deep work.</p><p id="db202079-5ea0-4541-acb4-99f1ab6d5fd7" class="">High-Quality Work Produced = Time Spent x Intensity of Focus</p><h3 id="e4c2bdea-174b-45c2-88d2-74921b3a06a2" class="">Chapter Two: Deep Work Is Rare</h3><p id="168c7513-55d2-46ed-8348-dc100f042893" class="">Metric Black Hole, It’s impossible for a business to specifically measure the impacts of deep and shallow work which is why shallow work is so prevalent and deep work is so rare. There aren’t clear metrics indicating that deep work will bring more profit.</p><p id="83c20ebd-2637-410d-85ea-a9d00e07165c" class="">“Clarity about what matters provides clarity about what does not”</p><p id="45a3210b-4f5d-4716-8cab-f57899c13668" class="">Busyness as Proxy for Productivity: In the absence of clear indicators of what it means to be productive and valuable in their jobs, many knowledge workers turn back toward an industrial indicator of productivity: doing lots of stuff in a visible manner.</p><p id="d97c2d33-88a9-4d0b-807d-6218764f90d7" class="">Deep work is rare because its advantages cannot easily be measured, because shallow work is easier and makes us appear more productive and things associated with the internet (emails and instant messages) are associated with being good in today’s society.</p><h3 id="89687891-8545-493b-b520-d5bc5a95f27c" class="">Chapter Three: Deep Work Is Meaningful</h3><p id="88e25c25-b307-4c5a-9d6b-b94075e59c6f" class="">Referencing programming (or to any physical or cognitive task): “Within the overall structure of a project there is always room for individuality and craftsmanship…One hundred years from now, our engineering may seem as archaic as the techniques used by medieval cathedral builders seem to today’s civil engineers, while our craftsmanship will still be honored.</p><p id="56e07fcc-83c8-4b9a-bad5-a0fe62f04581" class="">Depth resonates at a deeper human level than the points argued previously as to why it’s important.</p><p id="2802c9a3-3ac6-424e-8913-324e917f2e58" class="">Depth has a strong connection with meaning, with producing, with achieving and succeeding</p><p id="5713c153-7e6a-4d05-8ebf-7991b94e4e54" class="">“A deep life is a good life”</p><h3 id="3efcfde3-5adf-4fdc-9a0f-f969e7e37a17" class="">Part 2: The Rules</h3><h3 id="f42bab24-2a38-4a41-b890-c9e53babdfeb" class="">Rule #1: Work Deeply</h3><p id="d72e256c-31c9-4bb2-bdd3-4533256e8c71" class="">“You have a finite amount of willpower that becomes depleted as you use it.”</p><p id="f3ca635b-ad98-45cf-a965-b6df51f7a4ea" class="">Therefore we have to be careful how we use our willpower and should form a schedule/habits that minimize willpower spent while still being able to do deep work. This will also preserve more mental energy for the deep work itself.</p><p id="76077ab7-94f0-4429-8ba5-1e484beb9de6" class="">There are a couple approaches for this:</p><ol type="1" id="45ef42cf-b801-4ec1-89ca-c241de77387b" class="numbered-list" start="1"><li>Monastic Philosophy: Always in a state of deep work constantly removing distractions. Someone who works deep year round and every hour of the day. No emails, no social media.</li></ol><ol type="1" id="32625831-3dae-4d48-9262-c0dabdcc13af" class="numbered-list" start="2"><li>Bimodal Philosophy: Alternating between long stretches (often full days or weeks) and times where one isn’t doing deep work. This could be 4 days of deep work followed by 3 regular days or alternating every week or every month.</li></ol><ol type="1" id="38d86e60-0520-4042-9f92-f0b2085f8018" class="numbered-list" start="3"><li>Rhythmic Philosophy: Doing deep work for a couple hours every day then returning to normal work. This is easier to fit in a general office schedule where one has other expectations to meet.</li></ol><ol type="1" id="37007436-77c9-4ee3-9921-803f7f74893a" class="numbered-list" start="4"><li>Journalistic Philosophy: To do deep work whenever it’s possible. This requires a high level of skill to switch into a deep work mode and a great confidence in one’s own ability to achieve with their deep work. It’s best suited for those with an unpredictable schedule.</li></ol><p id="88a8ae6a-a83a-4b21-b345-d783326d174b" class="">To achieve deep work people will form habits to make the process easier. To have set times to work deep without distractions.</p><p id="d25029e9-ff3e-4cff-839f-1694f3cdf530" class="">Some other people will make a radical change such as reserving a hotel just to work which will force them to work deeper. The psychology of committing to a deep task is what allows people to achieve great things during their deep work.</p><p id="cb1232b1-1f58-4508-9805-cc9a583de049" class="">Disciplines:</p><ol type="1" id="696bee2b-9a62-452d-b385-867da3bc7c14" class="numbered-list" start="1"><li>Focus on the Wildly Important: Instead of focusing on a lot of important things focus on a few very important ones.</li></ol><ol type="1" id="c0109f89-183a-49ac-8fd1-d940523ad223" class="numbered-list" start="2"><li>Focus on Lead Measures: Things you can measure that are within your direct control. Most notably: “hours spent in deep work state”</li></ol><ol type="1" id="db006bd3-60d9-45e2-b0c0-1bb651599b9d" class="numbered-list" start="3"><li>Keep a Compelling Scoreboard: Keep an easy to see scoreboard of your lead measure. If working on a team have everyone contribute to it to stir competition.</li></ol><ol type="1" id="98a00c7e-44ba-49b2-a979-d9a56e6651b3" class="numbered-list" start="4"><li>Create a Cadence of Accountability: If there’s a team of people with wildly important goals. They should have short regular meetings discussing where they expect to be on their scoreboard by the next meeting and how the previous goals they set turned out.</li></ol><p id="c8508108-8d6c-4c2a-87f6-5f20bfbbb6e7" class="">Why being lazy and relaxing sometime is beneficial to deep work (have a strict endpoint to your work day after which you no longer ‘work’ check emails, etc):</p><ol type="1" id="4982d557-81f6-4a79-ba1d-82fff787e7e5" class="numbered-list" start="1"><li>Downtime Aids Insights: While your conscious mind is relaxing, the unconscious mind can tackle more complex problems and come up with solutions.</li></ol><ol type="1" id="8a36ba63-4044-4d8c-b1a8-f826c614c42b" class="numbered-list" start="2"><li>Downtime Helps Recharge the Energy Needed to Work Deeply: Relaxing helps you focus deeper next time by recharging the finite resource that is your focus.</li></ol><ol type="1" id="ad1a248b-3345-4c11-a4b3-a9c5077ea014" class="numbered-list" start="3"><li>The Work that Evening Downtime Replaces is Usually Not That Important: The work one does in the evening instead of taking time off is usually not deep work that brings value. Research shows that humans have a limit of deep work they can do each day.</li></ol><p id="d5803180-1293-4cd7-9efa-847020795769" class="">When going for downtime after a day of work, it’s important to have a plan for how you’ll pick up so that work thoughts don’t flood your mind and distract you.</p><h3 id="8e998014-5655-41e8-a410-e59066941131" class="">Rule #2: Embrace Boredom</h3><p id="cbe4fdb7-db12-4dc1-ac27-4165e5c69894" class="">When your brain is distracted too much for a long period of time (of social media or trying to multitask, etc) the brain loses the ability to enter a state of laser focus. </p><p id="bf82df2f-4636-43f0-98b0-f57d950a1e46" class="">Being able to work deeply is something that has to be trained, it’s not innate in everyone.</p><p id="ebb82d44-1242-46f8-a695-9031df941391" class="">IE: If every 5 minutes of waiting like at a restaurant waiting for a friend or for a bus leaves you on your phone then your brain is probably already in a “mental wreck” and you can’t focus anymore.</p><p id="0e5ff0a6-d5a8-4650-8f86-dc0935bb5594" class="">“Don’t take breaks from distraction. Instead take breaks from focus.”</p><p id="12fece07-660f-465f-8250-60bd76c9678f" class="">Strategy: Schedule clear blocks where you use the internet and distractions and spend the rest of your time away from it.</p><ol type="1" id="dd4a77a9-d48c-40e4-8f25-7e7a3bd447d2" class="numbered-list" start="1"><li>This strategy works even if your job requires lots of Internet use and/or prompt e-mail replies.</li></ol><ol type="1" id="260d3c97-bd87-4672-8727-8ad7b023ca88" class="numbered-list" start="2"><li>Regardless of how you schedule your Internet blocks, you must keep the time outside these blocks absolutely free from Internet use. If you absolutely must use the Internet (ie: pressing work problem and must search up answer) during a no Internet block, then wait 5 minutes at least before searching it up as this will train your brain into knowing there’s resistance on going online. Avoid at all costs though, if you can work on something else that doesn’t require the Internet.</li></ol><ol type="1" id="0cdc6ba8-2b36-410f-b614-011b0c72b426" class="numbered-list" start="3"><li>Scheduling Internet use at home as well as at work can further improve your concentration training.</li></ol><p id="01636ea3-a1ee-4ae4-9790-6c1089074d44" class="">Sometimes we’ll want to distract ourselves, but to be bored can be rewarding in many ways in cultivating thoughts, and relaxing. (Veritasium video on this); the more you resist such urges the easier it is to resist.</p><p id="f3ae7b53-aa75-4779-8970-1c1337c86a63" class="">Roosevelt, used to study at Harvard and do quite well while only studying for very little time, because every time he studied he was in utmost focus.</p><p id="f83b16ab-2d77-4d13-899c-02077c234caa" class="">To setup: Have tasks that you must complete before a timer runs out (or commit publicly to the deadline) and make the time very hard to achieve requiring your full focus to succeed. Have one of those concentration sprints once a week to start to train yourself and slowly increase the frequency. The deadline should be so hard to reach that any amount of distraction whatsoever would make you fail.</p><p id="ee422236-7758-4e0b-8c79-98eb9ba22f66" class="">Productive meditation: To take time where your mind isn’t doing anything to focus on a problem in your mind and meditate on it. Similar to mindfulness meditation your attention should return to the problem whenever you go off track. This will help build your distraction-resisting muscles.</p><h3 id="b4d74e4b-4b75-4ea5-8eab-f546b7779866" class="">Rule #3: Quit Social Media</h3><p id="1aedfafa-0c79-4ca3-b7e6-d05c4685460d" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>The Any-Benefit Approach to Network Tool Selection: </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>You’re justified in using a network tool if  you can identify <em><em><em>any</em></em></em> possible benefit to its use, or <em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>anything</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em> you might possibly miss out on if you don’t use it.</p><p id="84c8ff4c-113d-4bf2-b73a-e2e63dbcf1bf" class="">Obviously this is wrong as it doesn’t consider the cons of a tool and only its pros.</p><p id="f9153dc7-5a6b-48b5-a323-ccd1354452d6" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>The Craftsman Approach to Tool Selection: </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>Identify the core factors that determine success and happiness in your professional and personal life. Adopt a tool only if its positive impacts on these factors substantially outweigh its negative impacts.</p><p id="fbb943e1-88c2-46dc-a4ce-3aabc018eec5" class="">The goal here is to abandon the any-benefit mindset and apply the craftsman approach more often</p><p id="01aad321-b124-41b9-aeb6-772a24b3b73a" class="">List a few professional and personal goals. (They should be slightly general and not specific down to numbers) Then for each goal list 2-3 supporting activities that will make achieving this goal possible. For each activity figure out if the use of network tools, (social media, internet, etc) has a net positive or negative on the task.</p><p id="af1a4c29-f90d-4469-9bc3-9043e95d43fb" class="">The reason why we should focus on less goals and make them more specific is because of the law of the vital few.</p><p id="88019ff1-cb2a-4e4c-a32c-7d8989cb8995" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>The Law of the Vital Few: </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>In many settings, 80 percent of a given effect is due to just 20 percent of the possible causes.</p><p id="23583f70-b391-4757-969d-4fc0b215b4c9" class="">Quit all social media for 30 days (without announcing it to others) then ask yourself:</p><ol type="1" id="bf5b736d-1035-4882-86e3-8e025aa7b618" class="numbered-list" start="1"><li>Would the last thirty days have been notably better if I had been able to use this service?</li></ol><ol type="1" id="4cdf8bdd-7ea2-4ead-9735-4fcf8feed2a1" class="numbered-list" start="2"><li>Did people care that I wasn’t using this service?</li></ol><p id="73b59773-b884-4860-b178-bec31933d1ec" class="">Then decide whether or not to keep that service.</p><p id="67e92c82-99e3-40b3-aba1-3cb57f267c0c" class="">Instead of Internet entertainment (reddit, youtube, etc) consider planning the day outside of working hours so that you have something else and specific to do that is both relaxing and specific. </p><h3 id="5a235c37-6007-44ee-b743-e050989ba9a3" class="">Rule #4: Drain the Shallows</h3><p id="b49df66d-1d00-484d-867d-b701e1b4c894" class="">“For most businesses, if you eliminated significant amounts of this shallowness, their bottom line would likely remain unaffected.”</p><p id="a9afc4ee-cc6c-4cd7-a9da-22d1b2d7f73e" class="">“Treat shallow work with suspicion because its damage is often vastly underestimated and its importance vastly overestimated.”</p><p id="41e40c97-8664-4d96-bba0-46fdae8d5c4a" class="">People underestimate the amount of time wasted/in the shallows and overestimate the time spent doing deep work.</p><p id="70fb05b3-1243-42b6-8c9f-7ed71b718deb" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Schedule Every Minute</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>: Make a schedule down to the minute of blocks of tasks you want to do throughout your day. Use a page of a lined notebook and have the times written out on the left side. You might sometimes be forced to change the schedule which is fine. You can cross out the current task blocks and make a new schedule on the right of it if you can’t finish a task in time or something pops up that requires attention.</p><p id="59d5ddd7-1633-4b56-87e2-942260b856e4" class="">This is not for sticking to a schedule constantly, but rather to treat your time with respect.</p><p id="133ae61c-f4dc-4430-99d0-3763cfc8307f" class="">To figure out if a task is deep or shallow work ask yourself: “How long would it take (in months) to train a smart recent college graduate with no specialized training in my field to complete this task?”</p><p id="546a3e44-f0da-4a00-844d-63d4caabd3f2" class="">The more months the deeper the task; you should prioritize tasks that are deep.</p><p id="f20b8efc-9e9b-43fc-acdf-76cbea62854e" class="">Then decide on a fixed ratio of shallow vs deep work (usually around 30 to 50%). </p><p id="39b53a80-1289-4e4f-bb67-b75661790ead" class="">Fixed Schedule Mindset: The mindset that you’re only going to work for so many hours a day or a week. And that any time taken away from it doing shallow work probably isn’t the best. This leads one to reject shallow work such as “jump on a call” and stuff. This usually means after a certain time (say 5:30) you just don’t work anymore and take the time to relax. (no answering emails, etc)</p><p id="5fc0b175-2d11-4a66-b570-f19a4dd3af99" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Become Hard to Reach</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>:</p><ol type="1" id="e8808c33-cbfe-4f3f-ac47-0c93d74f2269" class="numbered-list" start="1"><li>Make People Who Send You E-mail Do More Work: Add a sender filter, make those who want to email you filtered out by lowering their expectation of getting a response and letting them know that you only care about important emails. Set their expectations so that you probably won’t respond: “I’ll only respond to those proposals that are a good match for my schedule and interests.” It’s psychologically freeing to feel like you don’t have to answer all your emails.</li></ol><ol type="1" id="b3c1dec6-1cee-42aa-ba52-678a1dce4b15" class="numbered-list" start="2"><li>Do More Work When You Send or Reply to E-mails: For many emails people get they’ll try to quickly dash out a response to get it out of their inbox as soon as possible. However, this might be counter-productive as the lack of details and advancement on their reply might actually lead to more back and forth to figure things out. Try asking yourself: “What is the project represented by this message, and what is the most efficient (in terms of messages generated) process for bringing this project to a successful conclusion?”</li></ol><ol type="1" id="5ffc1f52-7215-4f0e-aced-38586684b10d" class="numbered-list" start="3"><li>Don’t Respond: Not worth the time if the email is ambiguous, not a question or interesting proposal, or nothing really good would happen if you did respond and nothing really bad would happen if you didn’t.</li></ol><h3 id="81ea5e76-9e35-468f-ac8f-f281f918640a" class="">Conclusion</h3><p id="fd39b92d-2ecf-44e1-9bcf-1ed349371371" class="">“The ability to concentrate is a skill that gets valuable things done.”</p><p id="945ea2d4-234b-47e1-a0bf-dd3d57743558" class="">Deep work allowed Cal Newport to go from 4 published academic papers to 9 + publishing a book in 1 year.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

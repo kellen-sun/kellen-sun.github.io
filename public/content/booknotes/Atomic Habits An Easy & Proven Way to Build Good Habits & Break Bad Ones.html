@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="acdc7306-ce31-49e4-a833-66ae8e86fda3" class="page sans"><header><img class="page-cover-image" src="https://jamesclear.com/wp-content/uploads/2020/11/atomic-habits_gallery_hi-res_01.jpg" style="object-position:center 47.519999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🙏</span></div><h1 class="page-title">Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>James Clear</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-gray">Self-Help</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-yellow">5-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@January 22, 2022 → February 3, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>320</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2018</td></tr></tbody></table></header><div class="page-body"><h1 id="8a44c4e8-ffb1-4e08-a3ee-3b2b6765e9cd" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="1545c511-b0a3-4996-a5e1-19556eb492a3" class="numbered-list" start="1"><li>Habits form through repetition, they first need to be observed (cue), then wanted (craving), then acted upon (reaction), then receive a reward.</li></ol><ol type="1" id="03c8f74b-e430-4929-a0a1-db50bbf733e1" class="numbered-list" start="2"><li>We introduce 4 ways to make each step easier: Make it obvious, make it attractive, make it easy, make it satisfying.</li></ol><ol type="1" id="102f94f0-1254-4651-8b24-7dd8d097c1c9" class="numbered-list" start="3"><li>When we get used to our habits, it makes it harder to improve so we must look back and review.</li></ol><h1 id="c92aea59-0b2a-48d9-85e5-a56c296f1cdb" class="">🎨 Impressions</h1><p id="34a95b9f-0da3-48e0-9b41-dfafaeec9906" class="">Provided deep insight into the formation of habits. James Clear’s explanation of habits, how they form, their advantage and disadvantage and how to use them is very structure. The book is also very inspiring and delves into how anyone can make better habits and become a better person.</p><h2 id="a0cc9c54-7495-4dbb-b978-10f8800056fe" class="">How I Discovered It </h2><p id="611018e2-d462-4fdf-85b7-8596a7eab59e" class="">Some Instagram post and my YouTube feed.</p><h2 id="58e07617-c960-4f18-bdd1-cec2acf8cca4" class="">Who Should Read It? </h2><p id="8655e971-eee3-4060-b2b1-3b332db7288c" class="">I think this book is well suited for anyone from teens to adulthood. It heavily focuses on developing habits and the advantages of doing so. I think anyone who wants to become a better person should read this book. </p><h1 id="78eea640-4e3e-4fde-ba16-4f7d3471f82b" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3a70858d-9db5-4022-948a-cbfe6b694ad3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="57e7b83a-b350-452e-9e65-150f2cf06de3" class="bulleted-list"><li style="list-style-type:disc">The book gave me lots of applicable tricks in life such as the two jars with marbles to see progress of accomplishing a task</li></ul><ul id="a08ac247-cd85-43b2-ba98-20ff2ad62189" class="bulleted-list"><li style="list-style-type:disc">It allowed me to view most behaviours as habits/development with the 4 steps</li></ul><ul id="9762f197-7af1-4226-8682-a69bb8223c6d" class="bulleted-list"><li style="list-style-type:disc">Gave the idea and importance of testing things and reviewing for a feedback loop for improvement</li></ul><ul id="551c0186-d9d7-44d3-9aed-2a3e189f473f" class="bulleted-list"><li style="list-style-type:disc">Made me review what happiness is as well as views on satisfaction, expectations, etc.</li></ul><ul id="aaa2551f-a2e0-4a97-8409-8adff27d08b7" class="bulleted-list"><li style="list-style-type:disc">With enough purpose, how we do something does matter.</li></ul><ul id="2724e23f-01ad-4a0e-8d8b-aa63f1e6d030" class="bulleted-list"><li style="list-style-type:disc">It obviously also made me more keen and knowledgeable on habits, how to start some, how to keep them and how to make them good, etc.</li></ul><h1 id="a0f00b67-705b-4db2-b39a-817c6db4b4d2" class="">✍️ My Top 8 Quotes</h1><ul id="4caf335b-7267-4d6b-9f59-52abef1dbba8" class="bulleted-list"><li style="list-style-type:disc">“Once we fit in, we start looking for ways to stand out.”</li></ul><ul id="f9c0974a-2cef-4115-a4d2-9b50d14eb084" class="bulleted-list"><li style="list-style-type:disc">“Behavior is a function of the person in their environment or B=f(P,E)”</li></ul><ul id="87f4650d-a4d8-43c7-b78b-6d290b8157f2" class="bulleted-list"><li style="list-style-type:disc">“Feelings and emotions transform the cues we perceive and the predictions we make into a signal that we can apply.”</li></ul><ul id="579fc80b-6b63-4979-9a73-1b6c00b9022e" class="bulleted-list"><li style="list-style-type:disc">“The predictions leads to a feeling.”</li></ul><ul id="24d4b430-426a-4baf-83b5-47eb56a1984b" class="bulleted-list"><li style="list-style-type:disc">“The costs of your good habits are in the present. the costs of your bad habits are in the future.”</li></ul><ul id="75283550-4ed0-4526-8f69-0659d1756ab4" class="bulleted-list"><li style="list-style-type:disc">“When you cling too tightly to one identity, you become brittle. Lose that one thing and you lose yourself.”</li></ul><ul id="fdd616ca-3608-455a-b702-7d44081b8d43" class="bulleted-list"><li style="list-style-type:disc">“Reflection and review is a process that allows you to remain conscious of your performance over time” This taught me to not always look ahead, but to also look back. Past mistakes are a great way to structure future success.</li></ul><ul id="fd7ac1bd-d5dd-48f6-912c-9799a15fd523" class="bulleted-list"><li style="list-style-type:disc">“Success is not a goal to reach or a finish line to cross. It is a system to improve, an endless process to refine... This is a continuous process. There is no finish line.”</li></ul><h1 id="1e889792-ccc5-4f1d-bf4c-ec4771d65c78" class="">📒 Summary + Notes</h1><p id="e99c2ab3-ce83-4646-b6e0-81b0c99db4b2" class="">“Time magnifies the margin between success and failure.”</p><p id="8771574d-7063-45a1-b548-f68a045c6173" class="">If we keep doing something right we get better, if we keep on doing something wrong we get worse. Time is the solution to distill everything and through which true results and hidden secrets can be revealed.</p><p id="2359a9c4-9fc2-492b-b2a0-52e14ae1c5dd" class="">“Ultimately, it is your commitment to the process that will determine your progress.”</p><p id="8744860e-f4f9-46b4-8d16-3ae5fe83f09d" class="">It’s important to do the right things in the right way and commit to them for long periods of time. This is what determines the outcome.</p><p id="59c8396d-c752-4d4a-bfba-d563d159b0b3" class="">“You do not rise to the level of your goals. You fall to the level of your systems.” </p><p id="fe104acd-a4d1-40fa-9058-48f55d3bf5ce" class="">The way we decide to do something is more important than what we wish to achieve by doing it. Additionally, the whole system designed around achieving our system is more important. </p><p id="77f0b881-de67-4770-89e9-627e58eedbef" class="">“The cue triggers a craving, which motivates a response, which provides a reward, which satisfies the craving and, ultimately becomes associated with the cue”</p><p id="dfc5078f-5a36-497f-ba07-e1e8abcfc22f" class="">“habit is a behavior that has been repeated enough times to become automatic.”</p><p id="847c1697-3f1f-4ab3-a827-50550ba18bcd" class="">“Ultimate purpose of habits is to solve the problems of life with as little energy and effort as possible.”</p><p id="9c8703fc-8740-4aae-a23d-20bc11cf81b9" class="">This allows us to save energy which can be redirected to other stuff which are more worthwhile.</p><p id="bb628d8e-7f0c-4cde-bd34-092d4b61e1d0" class="">“They are (1) make it obvious, (2) make it attractive, (3) make it easy, (4) make it satisfying.” The 4 laws.</p><p id="c180e0ce-cf3a-403c-a587-f2c250825e0c" class="">“We must begin with the process of behavior change with awareness.” We cannot change a behavior if we aren’t first aware of it.</p><p id="614e791a-3e3a-4c88-a951-6639f305242f" class="">“Behavior is a function of the person in their environment or B=f(P,E)”</p><p id="2b5d076e-c1aa-4964-95a3-549e94af9fe5" class="">“You can break a habit, but you’re unlikely to forget it.” Habits are deeply rooted into our being even unconsciously. Years after we stop performing a habit, it can still return if the right cues are presented. Even after we  are not consciously aware that we still have the habit.</p><p id="6ecdf155-6fc2-4b83-914d-55b3d89d1472" class="">“we become a product of the environment that we live in.” Our nature becomes so integrated into the environment that we are merely a change upon the environment in which we are in. <br/>”Make the cues of your good habits obvious and the cues of your bad habits invisible.”<br/></p><p id="99da5813-2ade-4487-979d-04b6cbccb2bf" class="">“It’s easier to avoid temptation than resist it.” If we are not tempted, we don’t have to resist it.</p><p id="2e78d210-e3c8-48c2-aeae-b65335afb647" class="">“It is the anticipation of a reward-not the fulfillment of it-that gets us to take action. The greater the anticipation, the greater the dopamine spike.” We take action when expecting a reward, but when we receive it we do not experience a dopamine spike. </p><p id="489d9df3-f6a1-4e55-b970-0428e0a67a07" class="">“Surround yourself with people who have the habits you want to have yourself. You’ll rise together.” Ties into how the environment influences us.</p><p id="e24e799a-6785-4064-9ef6-b1864ac5a0a0" class="">“The shared identity begins to reinforce your personal identity.”</p><p id="d37b33dd-81e8-468c-bf9d-0b3ab72d6ee4" class="">“Most days, we’d rather be wrong with the crowd than be right by ourselves.” We are usually scared of not conforming to social norms and standing out. We would rather be wrong with people supporting us than be right without them. Most people care too much about what others think of them and there is experiments that show this.</p><p id="a5edde1d-a030-411c-90d8-01dad56c2992" class="">“Once we fit in, we start looking for ways to stand out.”</p><p id="222fa31e-7936-4302-80cc-4fe75bf0816e" class="">“Feelings and emotions transform the cues we perceive and the predictions we make into a signal that we can apply.” Feelings can change the way we perceive and make observations. It will also alter the way we make decisions. Decisions made when particularly emotional will not be as logical.</p><p id="30de93f8-229d-4073-b857-aa979927a933" class="">“Your transition from seeing these behaviors as burdens and turn them into opportunities.”</p><p id="480853c4-1877-4bc0-af7d-2e3983ac851b" class="">“I am nervous to I am excited”</p><p id="bfb2598a-9c46-49a6-92c4-2863acda766c" class="">“Every behavior has a surface level craving and a deeper underlying motive.” (Underlying motive might be like our physical needs, survival, reproduction, etc.)</p><p id="7c5687ef-ede0-4d74-8819-add0cad9b9cb" class="">“The predictions leads to a feeling.” Making any prediction will bring emotion into play.</p><p id="2fe82a09-41b2-49b2-b0d4-0aea22c9c320" class="">“Voltaire once wrote, “The best is the enemy of the good”” Trying to attain the best will often not allow us to achieve what is already good.</p><p id="fa223d17-eef4-4ea1-bb4d-85170516be3c" class="">“Most effective form of learning is practice, not planning” It’s better to practicing something instead of planning for it and trying to make all of our practice perfect.</p><p id="81b9fa96-6be9-4b4f-a863-fde64df5c6cc" class="">“Prime your environment to make future actions easier.”</p><p id="0d2b0c5b-f4a7-4f3b-a776-82e25cbcbde8" class="">“Habits can be completed in a few seconds by continue to impact your behavior for minutes or hours afterward.”</p><p id="6306afad-827c-4172-b9b3-8cd2b498075c" class="">“Many habits occur at decisive moments-choices that are like a fork in the road- and either send you in the direction of a productive day or an unproductive one.”</p><p id="0a1996b0-ecb8-4fd1-b560-677228be5de0" class="">“Standardize before you optimize. You can’t improve a habit that doesn’t exist” same applies to other stuff. We should aim to do something before doing it well this ties into the “best is the enemy of the good”</p><p id="2a244c06-6701-4c9e-ad90-38ad7092f469" class="">“The ultimate way to lock in future behavior is to automate your habits.”</p><p id="b10df5ab-1941-4d4e-808a-2cb3ee1cbf3d" class="">“The human brain did not evolve for life in a delayed-return environment. The earliest remains of modern humans, known as homo sapiens sapiens, are approximately, two hundred thousand years old. These were the first humans to have a brain relatively similar to ours. In particular, the neocortex-the newest part of the brain and the region responsible for higher functions like ...”</p><p id="7063c80d-6684-41eb-8a51-3f7cd871d5f7" class="">“You live in what scientists call a delayed-return environment because you can work for years before your actions deliver the intended payoff. The human brain did not evolve for life in a delayed return environment”</p><p id="ccf460be-852f-42ec-a4b9-f50b1ed715db" class="">“The world has changed much in recent years, but human nature has changed little”</p><p id="e55924ed-6f1c-4272-a4f7-ce0e7541d26d" class="">“The costs of your good habits are in the present. the costs of your bad habits are in the future.”</p><p id="29250145-cf73-41be-8d27-3b59f980939b" class="">“The more immediate pleasure you get from an action, the more strongly you should question whether it aligns with your long-term goals.”</p><p id="a5db77cd-1312-42be-96dc-20b50c6c4e89" class="">“What is immediately rewarded is repeated. What is immediately punished is avoided”</p><p id="dc43e77e-9799-4700-9be8-210d78dd77d5" class="">“When a measure becomes a target it ceases to be a good measure” If the way we measure ourselves becomes a target we try to hit, then it no longer is a good way to compare ourselves</p><p id="6ca0620f-0a7a-4722-a69e-98a85c14d269" class="">“We wat to get good grades and graduate from top schools to impress potential employers and mates and our friends and family.”</p><p id="cbb6a7f5-cf3e-4763-98fa-46930fbd1dae" class="">“We care deeply about what others think of us, and we do not want others to have a lesser opinion of us. A habit contract can be used to add a social cost to any behavior. It makes the costs of violating your promises public and painful. Knowing that someone else is watching you can be a powerful motivator.”</p><p id="27a69536-efaf-475b-bf07-8f4b2eddb412" class="">“Genes can predispose, but they don’t predetermine.”</p><p id="c8256ec5-8103-452e-b397-6ea6724bc81f" class="">“Genes have been shown to influence everything from the number of hours you spend watching television to you likelihood to marry to divorce to your tendency to get addicted to drugs, alcohol or nicotine.”</p><p id="ac09f43b-fcca-4027-8860-ee96362756bc" class="">“good players works hard o win the game everyone else is playing. A great player creates a new game that favors their strengths and avoids their weaknesses.” Relates to 95% of people compete for 5% of resources or something like that</p><p id="830baf5e-c994-4eab-9841-f065484420ea" class="">“The secret to maximizing your odds of success is to choose the right field of competition...Pick the right habit and progress is easy. Pick the wrong habit and life is a struggle.”</p><p id="92bf8a4c-90ec-43b8-965e-20f3c2d81ddb" class="">“Habits are easier when they align with your natural abilities.”</p><p id="ffe40ac2-a565-4bcd-a282-a388198d7b87" class="">“Play a game that favors your strengths. If you can’t find a game that favors you, create one.” We can all create our own fields as humans diversify due to the ever increasing fields of knowledge we have.</p><p id="1e4528b1-8244-42fd-ad68-0e75bbb4dfac" class="">“The greatest threat to success is not failure but boredom.” Failure can help improve, when bored we don’t do anything nor do we have motivation</p><p id="7a0b3e3f-f4e2-45ad-a7d4-9694f2cd90b7" class="">“you have to fall in love with boredom” this is the only way to keep working hard and be ‘motivated’ when bored. </p><p id="8ac486e9-9130-45b8-a1a7-5edd80acba6c" class="">“But stepping up when it’s annoying or painful or draining to do so, that’s what makes the difference between a professional and an amateur.”</p><p id="af7c9d22-e1e7-444d-a27e-17fba8276a0c" class="">“When a habit is truly important to you, you have to be willing to stick to it in any mood.” reminds me of the Elon Musk quote, something like paraphrase: when something is important enough you do it even if the odds aren’t in your favor.</p><p id="5f3fff79-8441-4cd9-9ffa-0445a151f840" class="">“become excellent is to be endlessly fascinated by doing the same thing over and over.”</p><p id="95638322-2174-4e27-a790-a9fffa05d4f3" class="">“The Goldilocks Rule states that humans experience peak motivation when working on tasks that are right on the edge of their current abilities.”</p><p id="1a242b44-095f-4f36-9c5c-e1ab26660c5d" class="">“Habits+Deliberate Practice = Mastery”</p><p id="8d0b8289-ac5b-4236-869f-2d13e15afacb" class="">“The more deeply it is tied to our identity-the more strongly we will defend it against criticism.”</p><p id="2e529787-4404-4219-923f-3d3dbdfa7d64" class="">“The more you let a single belief define you, the less capable you are of adapting when life challenges you.” It’s like being reliant on just one thing.</p><p id="3fb68037-c683-4a91-b746-af6bf0cb4f74" class="">“When you cling too tightly to one identity, you become brittle. Lose that one thing and you lose yourself.”</p><p id="39ddf344-1f53-438d-ba3d-8a4ceb37f8e5" class="">“The upside of habits is that we can do things without thinking. The downside is that we stop paying attention to little errors.” we can get locked into our previous methods of thinking which will not allows us to improve and become even better.</p><p id="2953ae1b-87d1-4087-9aeb-12c4614c73f5" class="">“Reflection and review is a process that allows you to remain conscious of your performance over time” This taught me to not always look ahead, but to also look back. Past mistakes are a great way to structure future success.</p><p id="c9f3d1d0-e407-4828-9770-e69d21097e32" class="">Sorites Paradox: A typical formulation involves a heap of sand, from which grains are removed individually. With the assumption that removing a single grain does not cause a heap to become a non-heap, the paradox is to consider what happens when the process is repeated enough times that only one grain remains: is it still a heap? If not, when did it change from a heap to a non-heap?</p><p id="6af51f1f-4c21-4b28-8909-376579afab34" class="">“Success is not a goal to reach or a finish line to cross. It is a system to improve, an endless process to refine... This is a continuous process. There is no finish line.”</p><p id="4186b3c0-a80c-4686-bdf2-19e62a8b0591" class="">“That’s the power of atomic habits. Tiny changes. Remarkable results.”</p><h3 id="a206ddd0-f6cc-4080-b490-884a23ae0c40" class="">The quotes under here are all pretty good. (not too related to the book)</h3><p id="24dafbfa-2eb1-45db-88c5-dec572df3d36" class="">“Happiness is simply the absence of desire.” It is “the space between one desire being fulfilled and a new desire forming. Likewise, suffering is the space between craving a change in state and getting it.”</p><p id="78933578-62a6-4c3a-ab23-4e93619ad6a9" class="">“It is the idea of pleasure that we chase.” We don’t actually chase pleasure.</p><p id="f80267b5-2fcd-4f74-a227-cf4184586d24" class="">“Peace occurs when you don’t turn your observations into problems.”</p><p id="997ad869-935a-4292-a414-bd6312badf6d" class="">“With a big enough why you can overcome any how.” Re reminded me of the Elon Musk quote.</p><p id="9a704268-acb7-43d6-a533-3d33e6500029" class="">“He who has a why to live for can bear almost any how.”</p><p id="d7dd4bb2-90b0-4b60-8ff7-56ae235cbafb" class="">“The feeling comes first, and then the behavior. We can only be rational and logical after we have been emotional.”</p><p id="459d6eeb-72d5-442f-8efd-dc75b9ba1e01" class="">“Suffering drives progress” It makes us want to change something which improves the system</p><p id="975974cf-2142-4588-91bd-8e7a1b9272fb" class="">“Your actions reveal how badly you want something.”</p><p id="f12f68ed-8a7d-4fb4-a581-cbb5de25e8c1" class="">“The reward only comes after the energy is spent.”</p><p id="91e5d763-30f0-4cbc-858e-41bebcec1be2" class="">“our expectations determine our satisfaction” Low expectations can mean that we’ll get better and be more satisfied this can written with the following formula “Satisfaction = Liking-Wanting”</p><p id="1d026400-04bf-4157-94b5-8bf07bed5a71" class="">“Hope declines with experience and is replace by acceptance.” Another great quote.</p><p id="10337b3d-07f7-42f0-a579-9702c8833bcc" class="">
+</p><h2 id="3c8b43a1-4bfc-4174-866c-e31ae433868e" class="">Ali Abdaal’s Notes:</h2><h3 id="69677cc6-b5a7-469f-8d62-e32b33a5f0ac" class="">🔁 What are habits?</h3><blockquote id="c7d54ca5-a930-4e1f-93a0-acb57d9fd9dd" class="">Habits are the compound interest of self-improvement.</blockquote><p id="09d234e7-13f5-4077-b574-b9ef19d08f34" class="">And when we repeat 1% errors, day after day, through replicating poor decisions, duplicating tiny mistakes, and rationalising little excuses, our small choices compound into toxic results.</p><h3 id="b8d9bfc5-f684-4c56-9b93-2e2725ee03f3" class="">🧑‍⚖️ There are 4 laws of behaviour change that we can use to create good habits and break the bad ones</h3><p id="e062036a-9bde-45db-898a-035c1852a423" class="">A single habit is made of a <strong>cue, craving, response, and reward</strong>. And these components are formed according to the 4 laws of behaviour change:</p><ol type="1" id="2dd69aad-c5d3-4cc0-8ef6-4ed61232bc7a" class="numbered-list" start="1"><li><strong>Make it obvious </strong>the habit needs to be effortless for us and require no active thinking. For example, when I had a hard time remembering to take my Vitamin D pills. I realised that the problem was that I kept these pills on the other side of the kitchen. Once I put them in the obvious spot that I couldn’t miss, I started taking them more regularly.</li></ol><ol type="1" id="0ca80ba6-7845-4f61-babe-13256a6943f2" class="numbered-list" start="2"><li><strong>Make it attractive</strong> - if the habit is unattractive we likely won’t have enough willpower to do it over and over. Therefore, you should come up with some ways to make the habit attractive even if it’s something hard like going to a gym or studying for long hours. For me, it was restricting my fantasy audiobooks listen-time to when I was at the gym which made the whole workout thing much more pleasurable.</li></ol><ol type="1" id="f17e3bd7-4044-46f5-98af-59202520ecf1" class="numbered-list" start="3"><li><strong>Make it easy</strong> - the less friction there is between you and the habit, the greater the chances are that you’ll actually do it. This applies to simple things like packing your gym bag a day before you want to go to the gym or preparing a healthy meal to make sure that you don’t order another takeaway.</li></ol><ol type="1" id="4529559c-2880-48f5-bc3b-069a44ca17a1" class="numbered-list" start="4"><li><strong>Make it immediately satisfying</strong> - our brain rewards immediate returns so it’s good to come up with something simple that brings us joy right after we perform our habit. Every time I go to the gym, I hop into a pool and spend 10 to 20 minutes in a spa. I know that it sounds a bit excessive but this little routine makes me much more optimistic about spending an hour or two in the gym.</li></ol><h3 id="a90241c5-2216-401f-8f37-da0de36f2148" class="">⏳ It takes time to build a habit or break a bad one and that’s why most people quit halfway</h3><blockquote id="077ca823-f2eb-4aba-a7ce-150caa82a48d" class="">Time magnifies the margin between success and failure. It will multiply whatever you feed it. Good habits make time your ally. Bad habits make time your enemy.</blockquote><p id="c6a40919-8432-4f6c-bf01-4335538667d9" class="">If you find yourself struggling to build a good habit or break a bad one, it is not because you have lost your ability to improve. It’s often because you’ve not yet crossed the Plateau of Latent Potential. Complaining about not achieving success despite working hard is like complaining about an ice cube not melting when you heated it from twenty-five to thirty-one degrees. Your work was not wasted, it’s just being stored. All the action happens at thirty-two degrees.</p><p id="23f24a77-f295-4fbb-bad9-9e9502eaa42d" class="">San Antonio Spurs, one of the most successful teams in NBA history, have a quote from social reformer Jacob Riis hanging in their locker room:</p><blockquote id="02b5c7af-f8d1-4b33-8d3b-e4b6f27d2b25" class="">“When nothing seems to help, I go and look at a stonecutter hammering away at his rock, perhaps a hundred times without as much as a crack showing in it. Yet at the hundred and first blow it will split in two, and I know it was not that last blow that did it—but all that had gone before.”</blockquote><h3 id="c50d5273-de37-4c0a-8f1e-2ff47183b735" class="">⚙️ Adopt a systems-first approach instead of focusing on goals</h3><p id="dade2b08-cb36-4adb-a964-094422e62119" class="">Goals are about the results you want to achieve. Systems are about the processes that lead to those results.</p><p id="6006d281-7d05-4d57-921f-a4f1e800c0cf" class="">The goal in any sport is to finish with the best score, but it would be ridiculous to spend the whole game staring at the scoreboard. The only way to actually win is to get better each day. In the words of three-time Super Bowl winner Bill Walsh, “The score takes care of itself.” The same is true for other areas of life.</p><p id="3b4d9e24-56e7-4c75-8e15-95fe5f95ee83" class="">If you want better results, then forget about setting goals. Focus on your system instead.</p><p id="51035c5d-01ef-4faf-9011-630957ec3917" class="">Goals are good for setting a direction, but systems are best for making progress. A handful of problems arise when you spend too much time thinking about your goals and not enough time designing your systems.</p><p id="5466c2ba-b7d9-4b04-8cf6-3c7f974f3671" class="">A systems-first mentality provides the antidote. When you fall in love with the process rather than the product, you don’t have to wait to give yourself permission to be happy. You can be satisfied anytime your system is running. And a system can be successful in many different forms, not just the one you first envision.</p><p id="3861db44-f391-4f62-8949-a43edf546bb6" class="">The purpose of setting goals is to win the game. The purpose of building systems is to continue playing the game. True long-term thinking is goal-less thinking. It’s not about any single accomplishment. It is about the cycle of endless refinement and continuous improvement. Ultimately, it is your commitment to the process that will determine your progress</p><blockquote id="efb3d2bc-075f-4d98-b1ef-e3507b5e43ba" class="">You do not rise to the level of your goals. You fall to the level of your systems.</blockquote><h3 id="2247c939-e502-4acf-bf0b-c23e8a0adc9d" class="">🪞 To form good habits, make them a part of your identity</h3><p id="f5645e8a-1957-4454-b3e6-c9bf94758d50" class="">Our habits should be a part of our identity and the starting point of building it. Most of us get this wrong - we start with outcomes and work backwards towards our identity. But when a habit comes from who we are, it serves as the best form of intrinsic motivation.</p><p id="8f0813c5-7179-4f94-8f34-2f55a56533ee" class="">For example, I had to change my thinking regarding eating healthy. Before reading Atomic Habits I was thinking that if I want to reduce my belly fat, I must follow Tim Ferriss’ Slow Carb diet which will make me a healthy person (outcome -&gt; identity).</p><p id="99fa087e-d6aa-4db5-aa5a-b201684b3e51" class="">But a correct identity-based approach would be for me to think that I’m a healthy person therefore, as a healthy person, I’ll eat wholesome food and exercise regularly which will then lead to reduced belly fat (identity -&gt; outcome).</p><p id="0b0dfc4a-4ab9-4d5b-81c9-29ba4cec4c36" class="">Most people don’t even consider identity change when they set out to improve. They just think, “I want to be skinny (outcome) and if I stick to this diet, then I’ll be skinny (process).”</p><p id="c14e5537-d484-4073-97e3-0de0a8e4caad" class="">They set goals and determine the actions they should take to achieve those goals without considering the beliefs that drive their actions.</p><p id="f023a4e7-c8ee-4784-a6ee-8bef2e402187" class="">They never shift the way they look at themselves, and they don’t realise that their old identity can sabotage their new plans for change. Behind every system of actions is a system of beliefs.</p><ul id="946ae5a7-eefa-4c5a-83a7-12509cf5a57f" class="bulleted-list"><li style="list-style-type:disc">The goal is not to read a book, the goal is to become a reader.</li></ul><ul id="342a1894-2782-4c6b-a507-aa7318e2a1b9" class="bulleted-list"><li style="list-style-type:disc">The goal is not to run a marathon, the goal is to become a runner.</li></ul><ul id="a77d8d76-3949-411d-ba41-5d6be0a62fda" class="bulleted-list"><li style="list-style-type:disc">The goal is not to learn an instrument, the goal is to become a musician.</li></ul><p id="a570ef1e-57a8-4536-81a1-1d926457ac8e" class="">Many people walk through life in a cognitive slumber, blindly following the norms attached to their identity.</p><ul id="bb2ef51d-7136-42a9-b68b-42b8450005f3" class="bulleted-list"><li style="list-style-type:disc">“I’m terrible with directions.”</li></ul><ul id="1d2df45f-658d-4efa-899b-72843511a7d7" class="bulleted-list"><li style="list-style-type:disc">“I’m not a morning person.”</li></ul><ul id="8733c409-252a-41b0-b2fc-ac9cc54fb259" class="bulleted-list"><li style="list-style-type:disc">“I’m bad at remembering people’s names.”</li></ul><ul id="0fd6dc8e-2a4f-4c39-b069-e778597b5445" class="bulleted-list"><li style="list-style-type:disc">“I’m always late.”</li></ul><ul id="b751d3de-4b89-4f96-9c87-2b5680020b82" class="bulleted-list"><li style="list-style-type:disc">“I’m not good with technology.”</li></ul><ul id="8d37f0e0-0713-49fe-9402-24fb02c202e6" class="bulleted-list"><li style="list-style-type:disc">“I’m horrible at math.” … and a thousand other variations.</li></ul><p id="b8afe602-e898-4986-98e6-8c30fc51a695" class="">When you have repeated a story to yourself for years, it’s easy to slide into these mental grooves and accept them as a fact.</p><blockquote id="10154856-ccdb-4d6f-8d54-dba296c51cc8" class="">Over the long run, however, the real reason you fail to stick with habits is that your self-image gets in the way. This is why you can’t get too attached to one version of your identity. Progress requires unlearning. Becoming the best version of yourself requires you to continuously edit your beliefs, and to upgrade and expand your identity.</blockquote><blockquote id="47cd5a8d-6bfb-4280-9786-6fa652ce0df6" class="">Your identity emerges out of your habits. You are not born with preset beliefs. Every belief, including those about yourself, is learned and conditioned through experience.</blockquote><p id="c6ac7d1a-9337-4124-9139-d3d848f15d3f" class="">More precisely, your habits are how you embody your identity. When you make your bed each day, you embody the identity of an organised person. When you write each day, you embody the identity of a creative person. When you train each day, you embody the identity of an athletic person.</p><p id="9e2e4311-4079-42eb-aeb3-fd5d54d00b7f" class="">Whatever your identity is right now, you only believe it because you have proof of it. If you go to church every Sunday for twenty years, you have evidence that you are religious. If you study biology for one hour every night, you have evidence that you are studious. If you go to the gym even when it’s snowing, you have evidence that you are committed to fitness. The more evidence you have for a belief, the more strongly you will believe it.</p><p id="3edea180-b3fd-444b-ab40-446fb1a6b56d" class="">This is a gradual evolution. We do not change by snapping our fingers and deciding to be someone entirely new. We change bit by bit, day by day, habit by habit. We are continually undergoing microevolution of the self.</p><p id="8a3b1649-df19-47d4-81e2-d6f0b329fade" class="">Each habit is like a suggestion: “Hey, maybe this is who I am.” If you finish a book, then perhaps you are the type of person who likes reading. If you go to the gym, then perhaps you are the type of person who likes exercise. If you practice playing the guitar, perhaps you are the type of person who likes music.</p><p id="eee4dd02-f25f-4087-ab58-1c3198d12508" class=""><em>Every action you take is a vote for the type of person you wish to become.</em></p><p id="75e161be-3366-477c-8378-d24139003393" class="">Building better habits isn’t about littering your day with life hacks. It’s not about flossing one tooth each night or taking a cold shower each morning or wearing the same outfit each day. It’s not about achieving external measures of success like earning more money, losing weight, or reducing stress. Habits can help you achieve all of these things, but fundamentally they are not about having something. They are about becoming someone.</p><blockquote id="d48880be-5f58-4273-be3a-fa3d931306e5" class="">Ultimately, your habits matter because they help you become the type of person you wish to be. They are the channel through which you develop your deepest beliefs about yourself. Quite literally, you become your habits.</blockquote><p id="45a9d500-39f4-4fb3-bec6-88d7d29953cd" class="">If you’re still having trouble determining how to rate a particular habit, here is a question I like to use: “Does this behaviour help me become the type of person I wish to be? Does this habit cast a vote for or against my desired identity?” Habits that reinforce your desired identity are usually good. Habits that conflict with your desired identity are usually bad.</p><p id="e816edfb-0cdc-43c0-af22-df12a9d5e5cf" class=""><strong>Many people think they lack motivation when what they really lack is clarity. It is not always obvious when and where to take action.</strong></p><p id="53768dd1-b62e-4e7b-abaa-69f1128e0d02" class="">“Disciplined” people are better at structuring their lives in a way that does not require heroic willpower and self-control. In other words, they spend less time in tempting situations.</p><p id="ca30e145-b1e4-4e63-91a9-fc935e967c68" class="">The people with the best self-control are typically the ones who need to use it the least. It’s easier to practice self-restraint when you don’t have to use it very often.6 So, yes, perseverance, grit, and willpower are essential to success, but the way to improve these qualities is not by wishing you were a more disciplined person, but by creating a more disciplined environment.</p><p id="661020c2-4887-4c45-b6e3-324d733c4399" class="">It is easy to get bogged down trying to find the optimal plan for change: the fastest way to lose weight, the best program to build muscle, the perfect idea for a side hustle. We are so focused on figuring out the best approach that we never get around to taking action. As Voltaire once wrote, “The best is the enemy of the good.”</p><p id="3aae793a-9be2-4688-83a4-f724f399a78a" class="">If the motion doesn’t lead to results, why do we do it? Sometimes we do it because we actually need to plan or learn more. But more often than not, we do it because motion allows us to feel like we’re making progress without running the risk of failure.</p><p id="85ca49da-a2ca-4208-b930-dc3b86f670e2" class="">Most of us are experts at avoiding criticism. It doesn’t feel good to fail or to be judged publicly, so we tend to avoid situations where that might happen. And that’s the biggest reason why you slip into motion rather than taking action: you want to delay failure. It’s easy to be in motion and convince yourself that you’re still making progress. You think, “I’ve got conversations going with four potential clients right now. This is good. We’re moving in the right direction.” Or, “I brainstormed some ideas for that book I want to write. This is coming together.” Motion makes you feel like you’re getting things done. But really, you’re just preparing to get something done. When preparation becomes a form of procrastination, you need to change something. You don’t want to merely be planning. You want to be practicing.</p><p id="3690b592-2823-434e-b2ac-5f3e51266bbc" class="">If you want to master a habit, the key is to start with repetition, not perfection. You don’t need to map out every feature of a new habit. You just need to practice. This is the first takeaway of the 3rd Law: you just need to get your reps in.</p><p id="c37c22c6-2240-4b77-be35-14fc5c950f8f" class="">The greater the obstacle—that is, the more difficult the habit—the more friction there is between you and your desired end state. This is why it is crucial to make your habits so easy that you’ll do them even when you don’t feel like it. If you can make your good habits more convenient, you’ll be more likely to follow through on them.</p><p id="5d5f1573-2b63-4c51-ad14-8995f24194c6" class="">Certainly, you are capable of doing very hard things. The problem is that some days you feel like doing the hard work and some days you feel like giving in. On tough days, it’s crucial to have as many things working in your favour as possible so that you can overcome the challenges life naturally throws your way. The less friction you face, the easier it is for your stronger self to emerge.</p><p id="4952d9ec-56e0-4078-a844-ff9b686d98eb" class="">“When I walk into a room everything is in its right place,” Nuckols wrote. “Because I do this every day in every room, stuff always stays in good shape …. People think I work hard but I’m actually really lazy. I’m just proactively lazy. It gives you so much time back.”</p><p id="34a560ec-60a9-41d0-94e7-8d713d238abe" class="">We are more likely to repeat a behaviour when the experience is satisfying. This is entirely logical. Feelings of pleasure—even minor ones like washing your hands with soap that smells nice and lathers well—are signals that tell the brain: “This feels good. Do this again, next time.” Pleasure teaches your brain that a behaviour is worth remembering and repeating.</p><p id="c5cfd233-2abe-4606-a85e-a897e6fbd586" class="">Every habit produces multiple outcomes across time. Unfortunately, these outcomes are often misaligned. With our bad habits, the immediate outcome usually feels good, but the ultimate outcome feels bad. With good habits, it is the reverse: the immediate outcome is unenjoyable, but the ultimate outcome feels good. The French economist Frédéric Bastiat explained the problem clearly when he wrote, “It almost always happens that when the immediate consequence is favourable, the later consequences are disastrous, and vice versa… Often, the sweeter the first fruit of a habit, the more bitter are its later fruits.”</p><p id="dc18de1d-e125-4b90-bbc4-8547af61e099" class="">Put another way, the costs of your good habits are in the present. The costs of your bad habits are in the future.</p><p id="bd80f960-1d72-4a1f-8f81-07682a9fda81" class="">The brain’s tendency to prioritise the present moment means you can’t rely on good intentions. When you make a plan—to lose weight, write a book, or learn a language—you are actually making plans for your future self. And when you envision what you want your life to be like, it is easy to see the value in taking actions with long-term benefits. We all want better lives for our future selves. However, when the moment of decision arrives, instant gratification usually wins. You are no longer making a choice for Future You, who dreams of being fitter or wealthier or happier. You are choosing for Present You, who wants to be full, pampered, and entertained. As a general rule, the more immediate pleasure you get from an action, the more strongly you should question whether it aligns with your long-term goals.</p><p id="1d2eb93f-82d6-4cc5-a561-bd075fc9644c" class="">Here’s the problem: most people know that delaying gratification is the wise approach. They want the benefits of good habits: to be healthy, productive, at peace. But these outcomes are seldom top-of-mind at the decisive moment. Thankfully, it’s possible to train yourself to delay gratification—but you need to work with the grain of human nature, not against it. The best way to do this is to add a little bit of immediate pleasure to the habits that pay off in the long run and a little bit of immediate pain to ones that don’t.</p><p id="57c1310c-14e5-4ae6-b1b6-1d51ab76e9c8" class="">The vital thing in getting a habit to stick is to feel successful—even if it’s in a small way. The feeling of success is a signal that your habit paid off and that the work was worth the effort. In a perfect world, the reward for a good habit is the habit itself. In the real world, good habits tend to feel worthwhile only after they have provided you with something. Early on, it’s all sacrifice. You’ve gone to the gym a few times, but you’re not stronger or fitter or faster—at least, not in any noticeable sense. It’s only months later, once you shed a few pounds or your arms gain some definition, that it becomes easier to exercise for its own sake. In the beginning, you need a reason to stay on track. This is why immediate rewards are essential. They keep you excited while the delayed rewards accumulate in the background.</p><p id="d6df617c-2e9c-4da6-8c07-e7cba76c2dc8" class="">Immediate reinforcement can be especially helpful when dealing with habits of avoidance, which are behaviours you want to stop doing. It can be challenging to stick with habits like “no frivolous purchases” or “no alcohol this month” because nothing happens when you skip happy hour drinks or don’t buy that pair of shoes. It can be hard to feel satisfied when there is no action in the first place. All you’re doing is resisting temptation, and there isn’t much satisfying about that.</p><p id="b969620a-12dc-451c-a0b1-dd030ef02702" class="">One solution is to turn the situation on its head. You want to make avoidance visible. Open a savings account and label it for something you want—maybe “Leather Jacket.” Whenever you pass on a purchase, put the same amount of money in the account. Skip your morning latte? Transfer $5. Pass on another month of Netflix? Move $10 over. It’s like creating a loyalty program for yourself. The immediate reward of seeing yourself save money toward the leather jacket feels a lot better than being deprived. You are making it satisfying to do nothing.</p><p id="26e8fa5f-42b9-40ac-8ff1-46f3a672d797" class="">It is worth noting that it is important to select short-term rewards that reinforce your identity rather than ones that conflict with it. Buying a new jacket is fine if you’re trying to lose weight or read more books, but it doesn’t work if you’re trying to budget and save money. Instead, taking a bubble bath or going on a leisurely walk are good examples of rewarding yourself with free time, which aligns with your ultimate goal of more freedom and financial independence. Similarly, if your reward for exercising is eating a bowl of ice cream, then you’re casting votes for conflicting identities, and it ends up being a wash. Instead, maybe your reward is a massage, which is both a luxury and a vote toward taking care of your body. Now the short-term reward is aligned with your long-term vision of being a healthy person.</p><p id="7f524539-b812-4430-8112-54f7ee6573b5" class="">Eventually, as intrinsic rewards like a better mood, more energy, and reduced stress kick in, you’ll become less concerned with chasing the secondary reward. The identity itself becomes the reinforcer. You do it because it’s who you are and it feels good to be you. The more a habit becomes part of your life, the less you need outside encouragement to follow through. Incentives can start a habit. Identity sustains a habit.</p><p id="ad137d8d-26ac-43f5-895a-6044e273d3f1" class="">In summary, a habit needs to be enjoyable for it to last. Simple bits of reinforcement—like soap that smells great or toothpaste that has a refreshing mint flavour or seeing $50 hit your savings account—can offer the immediate pleasure you need to enjoy a habit. And change is easy when it is enjoyable.</p><p id="7e441eb2-db3b-4bf7-af34-0b7259f6d1e2" class="">“Don’t break the chain” is a powerful mantra. Don’t break the chain of sales calls and you’ll build a successful book of business. Don’t break the chain of workouts and you’ll get fit faster than you’d expect. Don’t break the chain of creating every day and you will end up with an impressive portfolio.</p><p id="efb288d7-b334-4157-89ac-71fd3cab68a0" class="">The first mistake is never the one that ruins you. It is the spiral of repeated mistakes that follows. Missing once is an accident. Missing twice is the start of a new habit.</p><p id="3914f2ad-b0d7-440f-9e3a-a72ebf0d1c3c" class="">You don’t realise how valuable it is to just show up on your bad (or busy) days. Lost days hurt you more than successful days help you. If you start with $100, then a 50 percent gain will take you to $150. But you only need a 33 percent loss to take you back to $100. In other words, avoiding a 33 percent loss is just as valuable as achieving a 50 percent gain. As Charlie Munger says, “The first rule of compounding: Never interrupt it unnecessarily.”</p><p id="3a3eff92-6f88-48dc-a742-f67c51ca7c51" class="">This is why the “bad” workouts are often the most important ones. Sluggish days and bad workouts maintain the compound gains you accrued from previous good days. Simply doing something—ten squats, five sprints, a push-up, anything really—is huge. Don’t put up a zero. Don’t let losses eat into your compounding.</p><p id="8738ddb7-50b3-463f-894a-c2ea280a817f" class="">Furthermore, it’s not always about what happens during the workout. It’s about being the type of person who doesn’t miss workouts. It’s easy to train when you feel good, but it’s crucial to show up when you don’t feel like it—even if you do less than you hope. Going to the gym for five minutes may not improve your performance, but it reaffirms your identity.</p><p id="54b52643-9866-4316-a698-b299d4f8bc83" class="">The secret to maximising your odds of success is to choose the right field of competition. This is just as true with habit change as it is with sports and business. Habits are easier to perform and more satisfying to stick with when they align with your natural inclinations and abilities. Like Michael Phelps in the pool or Hicham El Guerrouj on the track, you want to play a game where the odds are in your favour.</p><p id="a3c73201-b976-4bc9-b9ed-153caee83ce4" class="">When you can’t win by being better, you can win by being different. By combining your skills, you reduce the level of competition, which makes it easier to stand out. You can shortcut the need for a genetic advantage (or for years of practice) by rewriting the rules. A good player works hard to win the game everyone else is playing. A great player creates a new game that favours their strengths and avoids their weaknesses.</p><blockquote id="fd7caf59-a908-4725-ba4e-7d612bfe03e5" class="">“At some point it comes down to who can handle the boredom of training every day, doing the same lifts over and over and over.”</blockquote><p id="48c5b7a6-f78c-4b74-95ef-6f6743b1e581" class="">People talk about getting “amped up” to work on their goals. Whether it’s business or sports or art, you hear people say things like, “It all comes down to passion.” Or, “You have to really want it.” As a result, many of us get depressed when we lose focus or motivation because we think that successful people have some bottomless reserve of passion. But this coach was saying that really successful people feel the same lack of motivation as everyone else. The difference is that they still find a way to show up despite the feelings of boredom.</p><p id="0935fddb-f289-4bee-b0ab-17f0e4a8fdbc" class="">As Machiavelli noted, “Men desire novelty to such an extent that those who are doing well wish for a change as much as those who are doing badly.”</p><p id="780df9f0-19f3-4384-8e2b-9bc4af26b3e3" class="">I can guarantee that if you manage to start a habit and keep sticking to it, there will be days when you feel like quitting. When you start a business, there will be days when you don’t feel like showing up. When you’re at the gym, there will be sets that you don’t feel like finishing. When it’s time to write, there will be days that you don’t feel like typing. But stepping up when it’s annoying or painful or draining to do so, that’s what makes the difference between a professional and an amateur.</p><p id="8e883733-be70-4bc6-8ec6-0d25957378e1" class="">Professionals stick to the schedule; amateurs let life get in the way. Professionals know what is important to them and work toward it with purpose; amateurs get pulled off course by the urgencies of life.</p><p id="d80dec92-d012-4626-a508-13ac83703b54" class="">David Cain, an author and meditation teacher, encourages his students to avoid being “fair-weather meditators.” Similarly, you don’t want to be a fair-weather athlete or a fair-weather writer or a fair-weather anything. When a habit is truly important to you, you have to be willing to stick to it in any mood. Professionals take action even when the mood isn’t right. They might not enjoy it, but they find a way to put the reps in.</p><p id="4c2165a7-18c3-4291-99f2-6a5a804fee9b" class="">There have been a lot of sets that I haven’t felt like finishing, but I’ve never regretted doing the workout. There have been a lot of articles I haven’t felt like writing, but I’ve never regretted publishing on schedule. There have been a lot of days I’ve felt like relaxing, but I’ve never regretted showing up and working on something that was important to me.</p><p id="dc949b9e-6c31-46da-ac5d-25fdec3b0a10" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

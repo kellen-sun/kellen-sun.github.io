@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Think and Grow Rich</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="adea9ad6-9195-4084-9a77-10ddaf294e3e" class="page sans"><header><img class="page-cover-image" src="https://m.media-amazon.com/images/I/51Uw5tYiqsL.jpg" style="object-position:center 13.160000000000005%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💸</span></div><h1 class="page-title">Think and Grow Rich</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Napoleon Hill</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-orange">Finance</span><span class="selected-value select-value-color-gray">Self-Help</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-blue">Lifechanging</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@August 8, 2022 → September 5, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>374</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>1938</td></tr></tbody></table></header><div class="page-body"><h1 id="67801561-334f-4127-8493-9179b9b53b2b" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="58f7b817-b48a-4e8b-adec-02d42d378be8" class="numbered-list" start="1"><li>If you think and desire something intensely it will happen to you, whether good or bad (ie constantly fearing something)</li></ol><ol type="1" id="121b06cc-aee9-4124-ba56-95ae140a76f4" class="numbered-list" start="2"><li>We take advantage of this by controlling our thoughts, conscious and subconscious and how they give us new ideas relating to the supreme intelligence.</li></ol><ol type="1" id="dd2cc9a5-a1d2-4be9-9634-4106b4e2708c" class="numbered-list" start="3"><li>But to make the good happen, we need hard work, a team and discipline. But the bad thoughts will just happen on their own without work.</li></ol><h1 id="e76b35de-5b6e-42e4-af25-bcba36a552f1" class="">🎨 Impressions</h1><p id="5ce8fdd4-8bd1-4750-84fb-335824caa108" class="">Very good book, with a clear purpose and idea. That seems to be well supported by evidence of various successful people throughout history.</p><h2 id="2d4d7de5-9d7f-42e3-b85c-54881cbc7661" class="">How I Discovered It </h2><p id="64b21838-21c2-4a98-a80b-e3f12ad9a367" class="">Various self-improvement book lists on YouTube, Instagram, etc. A recommendation from Steven Mark Ryan and many others.</p><h2 id="1ba69192-8a69-4e68-a527-bb5df7e0466f" class="">Who Should Read It? </h2><p id="f0795220-0ee0-47f9-9c01-94187cfb0e9f" class="">Everyone who has a goal and wants to succeed.</p><h1 id="d028226a-4389-42eb-94bb-5bbb7ef94b0a" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b692dcdd-fd66-43d9-8bb1-8a8115ace730"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="80af651a-0838-44b8-ba32-91d4487ffcf8" class="bulleted-list"><li style="list-style-type:disc">Your conscious mind can influence the subconscious by repeatedly telling it what you want it to believe to be reality. The subconscious will then make it reality. You have to tell your subconscious in a way that you act like you already have what you want so that it makes it more realistic.</li></ul><ul id="689c770c-45d0-439b-8aad-4f780a54b20b" class="bulleted-list"><li style="list-style-type:disc">The section on how faith will turn the business world upside down strikes a chord with how Elon Musk is so successful with his business. First, he finds issues in reality and has FAITH he can fix them. Then he projects that faith onto thousands of employees each making them believe that they are making great contributions to the mission. This makes them all work harder and better and have faith in the employer especially through the reward of stock compensation.</li></ul><ul id="cfcf3abb-4fbc-4c20-80b1-1430db809cb3" class="bulleted-list"><li style="list-style-type:disc">Offering to work on probation is a nice way to enter a job you greatly desire. Sell your qualities as you would on your resume, but also offer working a week or a month without getting paid. (Obviously, when applying for a job also do research on what the employer is like.)</li></ul><ul id="0afd1f5d-0c8e-43cd-8628-b0b2cbc67ec5" class="bulleted-list"><li style="list-style-type:disc">It’s important to self analyze yourself at the end of each year to see where you are heading. (maybe with something SMART)</li></ul><ul id="adec5a8c-5cf2-458d-a2aa-e0f9249967b6" class="bulleted-list"><li style="list-style-type:disc">Maybe concept map the book?, reflect on how others maybe without noticing use concepts from this book in their lives</li></ul><ul id="38e0cf0f-abdc-433e-9c62-98397e6cc702" class="bulleted-list"><li style="list-style-type:disc">Spend more time thinking of success than failure. To beat the woke mind virus it’s important to think from first principles.</li></ul><h1 id="66cbd6f2-23b0-4dd7-98b7-ed9b5d3e4ded" class="">✍️ My Top 3 Quotes</h1><ul id="efa353c5-eb08-4a5c-b02b-4b46a3c16db8" class="bulleted-list"><li style="list-style-type:disc">“If this be treason, then make the most of it.”</li></ul><ul id="96bb3727-9c58-4e49-9f29-3842f8e720fb" class="bulleted-list"><li style="list-style-type:disc">“Success requires no apologies, failure permits no alibis.”</li></ul><ul id="6ee493db-eab3-473c-8c28-1b475d4a1303" class="bulleted-list"><li style="list-style-type:disc">“A quitter never wins — and — a winner never quits.”</li></ul><h1 id="7289a8f3-ef10-4e4f-b84b-6729c30a2381" class="">📒 Summary + Notes</h1><h3 id="541523c9-dac5-45f0-beb0-a9be7f8d4bf0" class="">Chapter 1; Introduction: The Man Who “Thought” His Way into Partnership with Thomas A. Edison</h3><p id="05e01d90-f13e-4b57-a445-5b328b2492b4" class="">When someone truly wants something it shows to their very appearance, actions, vibe. They will be determined to do what they seek even if it takes them the rest of their lives. When people desire something that much, it allows them to find opportunities where others usually don’t see them.</p><p id="c4295802-7a54-4698-82df-37d286a4de8b" class="">“An intangible impulse of thought can be transmuted into its physical counterpart” </p><p id="93db7ae8-1b0e-4e7b-822b-a3d7509ee356" class="">This is what think and grow rich means. Thinking can directly lead us to riches.</p><p id="ea9b7f78-b68d-475b-ad37-ebba8eb9dc13" class="">Starting with nothing except ”Know what he wanted, and the determination to stand by that desire until he realized it.” Is more than enough</p><p id="a11ed765-1a13-48c0-9fe0-291d115afba9" class="">“Before success comes in any man’s life, he is sure to meet with much temporary defeat, and, perhaps, some failure. When defeat overtakes a man, the easiest and most logical thing to do is to QUIT. That is exactly what the majority of men do.” But does the majority succeed?</p><p id="adea5dd0-fc41-496a-94bc-af679c69c7d4" class="">Not giving up → best way to success. </p><p id="0929fd18-f78f-4ff0-abe7-291f794de9f1" class="">“When you begin to THINK AND GROW RICH, you will observe that riches begin with a state of mind, with definiteness of purpose, with little or no hard work.”</p><p id="fed50b7e-5426-4506-8ed0-714ec0b459e8" class="">“One of the main weaknesses of mankind is the average man’s familiarity with the word “impossible.” He knows all the rules which will NOT work. He knows all the things which CANNOT be done.”</p><p id="88f55d0d-0066-4083-99c9-7cdb38939ab9" class="">“Success comes to those who become SUCCESS CONSCIOUS; Failure comes to those who indifferently allow themselves to become FAILURE CONSCIOUS.”</p><h3 id="121ee24d-6044-45b5-a609-66e770392f7f" class="">Chapter 2; Desire: The Starting Point of All Achievement. The First Step toward Riches</h3><p id="c4a6cc04-39ef-4ee9-9029-9bc66d22149d" class="">“Barnes succeeded because he chose a definite goal, placed all his energy all his will power, all his effort, everything back of that goal.”</p><p id="5e973b51-fffb-4980-a189-8adb24c3abda" class="">One has to use their desire for success to keep working towards the desire even when “not one ray of hope, not one promise of attainment” was held out.</p><p id="d5e88fb9-0806-4af8-82d7-a3b8df9ccb6b" class="">Barnes succeeded because he wanted it, more than he wanted anything else.</p><p id="6057e4bd-06c7-4b5d-a3f5-8382dc862ab6" class="">He also didn’t rewrite his true definite desire into something “more realistic” or “more achievable.” If he truly believes in it, he doesn’t have to make it easier and he will succeed.</p><p id="876ac7d5-4c02-4d06-9414-629418eb958a" class="">When one makes sure that retreating is not an option. ie: they won’t quit no matter how hard it is. Then they will perish or win and when actually faced with the chance of perish without possibly retreating, one will find the true mindset, and strength to succeed.</p><p id="3d19dbb0-1dba-4406-bfe8-c4b9c5b9828c" class="">To truly achieve riches.</p><ol type="1" id="fab41c8e-11fb-4150-9e55-d1fe4feb8428" class="numbered-list" start="1"><li>Determine how much money you desire</li></ol><ol type="1" id="2b5f84a0-1eb4-4ef2-abe3-638b7c4bdb67" class="numbered-list" start="2"><li>Determine what you intend to give in return for the money</li></ol><ol type="1" id="66380286-290a-485c-911d-0fe306b8318c" class="numbered-list" start="3"><li>Establish a definite date when you intend to have made the money</li></ol><ol type="1" id="5314f6b6-a0de-4868-bcb4-212a52a5e18e" class="numbered-list" start="4"><li>Create a plan to achieve your goal</li></ol><ol type="1" id="99f87191-9ac0-44e0-a51a-8cc095ba95ed" class="numbered-list" start="5"><li>Write out a clear concise statement of the amount of money, when you will get, what you will give for it, and what your plan is to achieve it</li></ol><ol type="1" id="92cbf9cb-e9fb-4a7a-93b7-917c28477975" class="numbered-list" start="6"><li>Read the statement twice a day before sleeping and when you just wake up. See and feel and believe yourself already in possession of the money. (Read until you’ve memorized then just go from memory&gt;&gt;)</li></ol><p id="bdf2d26d-3045-46a8-bc3c-044a9002fb5f" class="">To succeed one must have “DEFINITENESS OF PURPOSE, the knowledge of what one wants, and a burning DESIRE to possess it”</p><p id="758dc402-a343-4fb3-941c-a7d1fcd73bbf" class="">“Success requires no apologies, failure permits no alibis.”</p><p id="a734ad6c-e2f0-4f85-918b-5e9d8bd74e98" class="">The desire allows us to not quit. “The world is filled with an abundance of opportunity which the dreamers of the past never knew”</p><p id="0b4e6ae3-cb86-42c0-9a28-dbb16dfeb8db" class="">“No one ever is defeated until defeat has been accepted as reality.”</p><p id="0ababccf-99c1-40e4-b29d-a71dda0230bf" class="">“No one is ready for a thing, until he believes he can acquire it.”</p><p id="c9b8d34d-e491-47dd-b282-7c3862e0eebc" class="">“Our only limitations are those we set up in our own minds.”</p><p id="5ae94616-d762-4e1e-b244-1a370ee4037f" class="">We can achieve what we desire, if we truly desire it.</p><h3 id="26e2b993-b3dc-4b85-a366-7d56fcc601ea" class="">Chapter 3; Faith: Visualization of, and Belief in Attainment of Desire. The Second Step toward Riches</h3><p id="2703d458-ced6-4871-bdaf-c512cc127bd9" class="">By suggesting to yourself often that you can achieve something you tell your subconscious mind to believe you are capable and then the subconscious will give you back faith.</p><p id="b0f82cba-c761-4dcc-a521-9b4d63be3629" class="">When suggesting/deceiving you subconscious make it more realistic by telling the subconscious as if “you were already in possession of the material thing which you ae demanding.”</p><p id="235acbd6-b7bf-40bf-98b4-487c87a93b42" class="">“faith is a state of mind, and that it may be induced by self-suggestion”</p><p id="2fb88c3a-2b84-4d54-893a-ed3b11704408" class="">“Faith is the eternal elixir which gives life, power, and action to the impulse of thought!”</p><p id="6242db57-19fb-46b3-a67f-445cd8d445d7" class="">Self-Confidence Formula</p><ol type="1" id="247e055e-8d6c-4469-ab34-93734afd02ea" class="numbered-list" start="1"><li>“I know that I have the ability to achieve the object of my Definite Purpose in life, therefore, I DEMAND of myself persistent, continuous action toward its attainment, and I here and now promise to render such action.”</li></ol><ol type="1" id="e86be3ee-b902-464b-baa5-371df582c3b9" class="numbered-list" start="2"><li>Spend 30minute a day to imagining the person you know you can become that you desire to become. Knowing that the thought of it will make it reality.</li></ol><ol type="1" id="ff204d8e-a91c-4765-b78e-f8986bcd3017" class="numbered-list" start="3"><li>10 Minutes a day will be dedicated to self-confidence because that will allow you to achieve what you want to.</li></ol><ol type="1" id="4efa1cc4-76c1-4c40-a359-ab3c0f70cd86" class="numbered-list" start="4"><li>Your aim in life was written down and you will not stop working until you have the confidence to achieve it.</li></ol><ol type="1" id="2f35b99b-d62c-4e20-bc61-f43328d77689" class="numbered-list" start="5"><li>You acknowledge that your confidence and success will mean nothing if your morals are broken. Thus you will only operate through cooperation with others and do what is best for others as well as yourself. You will remove any hatred, envy, jealousy from your line of actions.</li></ol><p id="6c0b331a-6f47-4dc0-b187-b4da8c3a0f27" class="">Suggesting the wrong thing to your subconscious mind will spiral you down negativity.</p><p id="a865f46a-e929-40ae-86a9-02072a3cdae4" class="">“But soon or late the man who wins is the man who thinks he can!”</p><h3 id="986f887f-9d5e-4831-812f-f2c91a853497" class="">Chapter 4; Auto-Suggestion: The Medium for Influencing the Subconscious Mind. The Third Step toward Riches</h3><p id="1fcc0cfb-8a18-4aef-9587-24db688d2efb" class="">“There are no limitations to the mind except those we acknowledge.”</p><p id="29d269ad-2b27-40b8-9319-77b180796781" class="">“Both poverty and riches are the offspring of thought”</p><p id="de12d9c6-0990-479f-829d-f827bd326605" class="">Auto-suggesting also known as self-suggesting is the only way for thoughts to enter the subconscious mind.</p><p id="4e92a038-6726-4307-a5da-fc71d5680367" class="">The conscious mind controls what enters the subconscious mind whether it’s positive thoughts or negative thoughts.</p><p id="a65fd418-7c22-46ca-9829-c9bd73dba285" class="">By repeating to ourselves the thoughts we want they will enter the subconscious. “Your subconscious mind recognizes and acts upon only thoughts which have been well-mixed with emotion or feeling.” This should be a feeling of belief, of faith.</p><p id="3447ec1b-1c5d-47e1-a13b-627b38e08dbf" class="">Auto-suggestion will work best when you can concentrate on a desire and make it a burning obsession. When you have the persistence to work hard towards it and when you put in the effort.</p><p id="55fd98dc-66f6-44cd-a4be-5f91678cd424" class="">By influencing your subconscious, you present it to a greater Infinite Intelligence from which it can seek similar thoughts and ideas the same way that a seed will eventually bring more seeds of the same kind. Through this ether that the subconscious is connected by you gain power immeasurable.</p><p id="8b688cae-f89f-4055-b190-5bf3cd676c30" class="">By self suggesting you trick your self conscious by giving it the kind of seed you want it to replicate. Seeds of good fortune, and thoughts of riches will then descend into the physical world from the ether and through your subconscious through ideas, thoughts and intuition. </p><p id="fceec9e0-55d4-4214-b2d4-f7ff07ff6853" class="">Constantly repeat your goals to engrave them in your mind.</p><h3 id="76356c36-34eb-454e-8d80-f6a9eb7b8993" class="">Chapter 5; Specialized Knowledge: Personal Experiences or Observations. The Fourth Step toward Riches</h3><p id="b597aa02-080d-405e-81bc-aaad6ceee106" class="">“Knowledge will not attract money, unless it is organized, and intelligently directed, through practical plans of action, to the definite end of accumulation of money.”</p><p id="5f3ea9f4-88be-42ad-bca0-cca0f47bd48c" class="">“Knowledge is only <em>potential</em> power”</p><p id="62ccfb51-5a3a-42b0-86a2-2faa8535b081" class="">Specialized knowledge when well applied leads to the accumulation of money and power. When such knowledge is lacking and one still desires to accumulate riches, one can make a group of people who have the general and specialized knowledge needed, a master mind group (like a group of important employees)</p><p id="87e61873-a11c-423e-8285-c77fdc7e436c" class="">Knowledge not applied = useless</p><p id="413ca94f-bf15-4420-8ca4-e7539bb4b0f8" class="">“One of the strange things about human beings is that they value only that which has a price. The free schools of America, and the free public libraries, do not impress people because they are free.”</p><p id="af757f03-06d6-4063-b95d-71835bb44440" class="">“The way of success is the way of continuous pursuit of knowledge.”</p><p id="97be9829-65e3-45d0-b73f-e3db29dc1e74" class="">By stepping up, you place yourself in a position where you can see opportunity and where opportunities can see you. You then let yourself improve and obtain more riches instead of being at the bottom of the socio-economic ladder and being in a rut. It’s often important to make that jump into the higher rungs and take the necessary risks/put in the effort.</p><p id="ff580fa7-d135-457d-a2dd-0a2d58969463" class="">“we rise to high positions or remain at the bottom because of conditions we can control if we desire to control them”</p><p id="48e438ed-38bb-4b2d-afd1-4c067fcf017d" class="">One can you use specialized knowledge to form a business (if they have the business skills) along with using their knowledge to create the idea that makes the business come alive.</p><h3 id="a60c50cf-776d-4f04-8307-712bdefb2510" class="">Chapter 6; Imagination: The Workshop of the Mind. The Fifth Step toward Riches</h3><p id="f83bb779-96ae-493e-8814-dcfb67503893" class="">Imagination is the tool in the mind that gives shape to your desires.</p><p id="c009c40b-2b7d-4c9d-92d9-a07b7e56f182" class="">Man can basically create anything that he can imagine</p><p id="1026c104-cc62-4ec4-b6a6-9ca05b3b2d5a" class="">“Man’s only limitation, within reason, lies in his development and use of his imagination.”</p><p id="13a1d042-3478-4766-9154-63bb1f97a9d3" class="">There’s two types of imagination:</p><ol type="1" id="a99309b2-7e00-4e53-8831-ab4c776bb695" class="numbered-list" start="1"><li>Synthetic: Use old information and knowledge/ideas and combine them in new or different ways.</li></ol><ol type="1" id="70223934-4a84-4d1c-868f-9b957234eb15" class="numbered-list" start="2"><li>Creative: How new ideas are generated. Through strokes of brilliance, genius and inspirations</li></ol><p id="1afd5011-5952-47d3-9063-ac6af56307f9" class="">The creative imagination will get best stimulated by a strong desire for something.</p><p id="7b17c735-b3ca-4c6a-89c2-c70692e3a3b7" class="">The more we use our imagination, the better it becomes.</p><p id="1786239c-4c7c-4036-8c76-5af10811e967" class="">Use your imagination to write a plan about how you will achieve your desires. This will give your desires a concrete form.</p><p id="0cc1dc72-b080-4a7f-8aa7-51ed434dce63" class="">“Ideas can be transmuted into cash through the power of definite purpose, plus definite plans.”</p><p id="64a6ae67-937a-4a87-9989-1108edbf0a09" class="">“The creator of ideas makes his own prices, and, if he is smart, gets it.”</p><blockquote id="2352ff8e-7337-48ae-9c80-d4dc552da67f" class="">First you give life and action and guidance to ideas, then they take on power of their own and sweep aside all opposition. Ideas are intangible forces, but they have more power than the physical brains that give birth to them.</blockquote><h3 id="32d54c52-fb05-44b8-8790-db719c4236c0" class="">Chapter 7; Organized Planning: The Crystallization of Desire into Action. The Sixth Step toward Riches</h3><p id="939d6fc7-1015-4cd1-bd57-10302bc8834f" class="">“Success requires no explanations, failure permits no alibis.”</p><p id="a0b7c4b9-17f0-41c5-864f-b3d04b22066f" class="">How to make a plan for your desire once your imagination has given you the idea:</p><ol type="1" id="57926e79-a186-4f2c-8e1a-d36c796413ce" class="numbered-list" start="1"><li>Ally yourself with key people who have specialized knowledge and can help you succeed and achieve your desire</li></ol><ol type="1" id="d0716f0a-9280-490e-b0c7-182a2a6b4302" class="numbered-list" start="2"><li>Think about how you can compensate these people to work on your team</li></ol><ol type="1" id="211fc03b-8503-4455-974c-1d4541b2c098" class="numbered-list" start="3"><li>Meet with this group at least twice a week until a plan has been made to accumulate the money</li></ol><ol type="1" id="0a3bdfed-a823-4fe9-b0dc-0658f1893043" class="numbered-list" start="4"><li>Maintain perfect harmony within the group</li></ol><p id="c4bcc082-0e21-4f69-97e7-8c9b96a54c17" class="">Make a plan, if it doesn’t work replace it, if it still doesn’t work replace it again, etc</p><p id="352fa352-50b1-49ac-8696-5f676601c439" class="">“A quitter never wins — and — a winner never quits.”</p><p id="782170e6-1ff9-4acd-9a77-629ebcfe0e21" class="">When selecting people for your group people who don’t quit and don’t accept defeat easily.</p><p id="9eff58a3-edf4-4085-9060-2575c373d4a0" class="">There are two types of people leaders and followers. Leaders obviously get compensated more, but followers are more lax, easier work to do and have the opportunity to become leaders and to learn from their leaders. Intelligent followers who use their position as a follower well will be the ones to become efficient leaders. Important attributes for leadership include:</p><ol type="1" id="a78e78d4-2a39-4b50-beaa-4922ff394e1f" class="numbered-list" start="1"><li>Unwavering Courage based on knowledge of self.</li></ol><ol type="1" id="4395fce6-55fa-4628-a405-0b277ab9ed0f" class="numbered-list" start="2"><li>Self-Control: If you can’t control yourself, you can’t control others. (The ways you stop yourself from indulging in bad habits, etc should be the same as those for others)</li></ol><ol type="1" id="e34927af-bbd4-483a-96b0-3fb6174e5e4c" class="numbered-list" start="3"><li>Sense of justice: Makes the followers respect you as you are fair to each one of them and yourself.</li></ol><ol type="1" id="ba39fa13-f13a-4937-8b2d-af9006351534" class="numbered-list" start="4"><li>Definiteness of decision: Shows that you are confident in your decisions and won’t waver on them.</li></ol><ol type="1" id="d53fd176-ef2f-491d-b59a-263be7704d8e" class="numbered-list" start="5"><li>Definiteness of plans: Has to be able to plan his work and work his plans. Otherwise others won’t trust him</li></ol><ol type="1" id="77218da9-2247-4f83-a9ab-15f4e291d12d" class="numbered-list" start="6"><li>Habit of doing more than paid for: Should do more as a leader than those who follow you.</li></ol><ol type="1" id="d3e1d9fd-1f38-459b-b544-354ba938595c" class="numbered-list" start="7"><li>Pleasing personality</li></ol><ol type="1" id="84ddfee7-940a-4734-8eb8-fa6aa7bef52a" class="numbered-list" start="8"><li>Sympathy and understanding</li></ol><ol type="1" id="da8b68da-6e53-49d5-86f8-c1de572bf80f" class="numbered-list" start="9"><li>mastery of details of your position, your responsibilities, your plans, etc</li></ol><ol type="1" id="c0acfcb5-1061-429c-8458-6d42f99c4a72" class="numbered-list" start="10"><li>Willingness to assume full responsibility: If someone on the team fails the leader must be willing to take responsibility for the mistakes thus earning greater respect, better cooperation, etc</li></ol><ol type="1" id="c2757b4c-49b3-483f-822e-5ac8b25c84da" class="numbered-list" start="11"><li>Cooperation: Must work cooperatively with the followers and get the followers to also cooperate.</li></ol><p id="4a91365c-bf1e-42f1-a5a5-df5c3bf09408" class="">Leading by force will not work</p><p id="c06809f8-890f-4dfc-9281-ca461535664f" class="">Errors in leadership:</p><p id="4ceb2a8a-31df-4890-a7e5-c5bf8c597f5f" class="">If a leader is “too busy” to organize details and take care of emergencies then they aren’t efficient enough in their work and might want to delegate some tasks to capable lieutenants. A leader won’t be efficient if they keep on worrying that one of his followers will take his position. He’ll also not succeed if he expects to be paid by what he knows and not what he does. Selfish. → The leader should claim none of the honor, but be ready to take all the blame. Another mistake is to remind the followers of the power and authority you hold as “THE” leader, doing that will just make you lead by fear. Also don’t be disloyal.</p><p id="12a7ec65-1730-4008-af69-4e418fc1c062" class="">Employment is similar to a partnership between the employer, the employee and the public they serve. The real employer is the PUBLIC. </p><p id="8cfa8150-60ef-4718-b041-3bbec3f8d5b4" class="">Biggest source of failure is not having a well defined purpose in life.</p><p id="f4f8d310-87e8-43e6-b2b4-f30a34737920" class="">Wanting more money is not enough. You have to earn it by being worth more. When applying for jobs seek to increase your worth not salary.</p><p id="e4bf432a-cf2c-456a-b02b-fb89443b4d28" class="">It’s important to self analyze (through questions) at the end of each year to see where you are heading. (maybe with something SMART)</p><p id="a39200c4-6744-448d-bf4f-58cf45810316" class="">Track your answers over the years to see how you are improving.</p><p id="b8630d4b-5b1e-41f6-aad1-c6ad98e60736" class="">Money put in an useful and organized manner is what renders most of our current goods and services at their prices. A cheap banana, a slice of bread, etc. Those would all be immensely difficult to procure without the organized infrastructure providing them. This system also allows for efficiencies where profits can be made.</p><p id="726dd5ba-a395-4ee1-9cb1-e40e47bb28ff" class="">At the end of the day, you cannot get without giving.</p><p id="40043056-1dc6-46c3-97be-801b5e64c93b" class="">“Capitalistic America insures every person the opportunity to render useful service, and to collect riches in proportion to the value of the service.”</p><h3 id="9961655c-544f-47f2-a23b-36f67b3038e4" class="">Chapter 8; Decision: The Mastery of Procrastination. The Seventh Step toward Riches</h3><p id="cdcc7420-8f92-4582-806a-93f9d0c1e0ce" class="">People who accumulate riches reach decisions fast and don’t change them often.</p><p id="041b11a4-9322-4624-a9d4-e54ac220c8c8" class="">Those who don’t take a long time to reach decisions if at all and change them often.</p><p id="d261bdb3-e734-4db7-b4e5-8db34e84b59b" class="">Those who make decisions slowly are influenced by the opinion of others:</p><ol type="1" id="85de137a-acf7-4322-97cd-28259ac13f0b" class="numbered-list" start="1"><li>Letting others ideas and opinions make the important decisions for them instead of critically thinking themselves</li></ol><ol type="1" id="ce59adab-c819-4a1a-890e-366b1343cf79" class="numbered-list" start="2"><li>Caring about other people’s opinions when it doesn’t matter</li></ol><p id="9202f7da-dc6b-4ae7-b082-34d39e5f56a9" class="">The opinion of others is not your own desire.</p><p id="5c87e17f-7093-4eea-b1dc-c7787c53c616" class="">If you need facts or information to make your decisions, acquire them promptly, but don’t reveal your purpose because otherwise people will drop their ideas and opinions to you.</p><p id="4c59d35e-e2d0-4756-8f7b-d20dd3f322b8" class="">Keep a closed mouth, Listen more intently.</p><p id="e4557a43-f48f-466d-919b-b194f0319dff" class="">“Tell the world what you intend to do, but first show it.”</p><p id="2ce01871-89c6-459a-968a-fa672949a47b" class="">Making a decision often requires faith and courage</p><p id="8c56a0a8-cbab-4d2e-9b1c-d7198f3e834b" class="">The given example was that of the signing of the declaration of independence. The master mind group at that point being 56 people signed the declaration and made the difficult decision knowing full well that if they lost the war against Britain they would be hanged. The faith and courage required to make that decision is what eventually led them to win the war.</p><h3 id="2a5f8cb7-6a29-4cbc-9487-43a0eddd010b" class="">Chapter 9; Persistence: The Sustained Effort Necessary to Induce Faith. The Eighth Step toward Riches</h3><p id="929d8e03-0931-4ff4-8261-823be9d4c88f" class="">A greater desire makes persisting through difficulty easier as well as faith that you will succeed will keep you going</p><p id="9b5b7f9e-c1e1-4c57-942a-b26ce11c027e" class="">The vast majority of men lack persistence meaning they will quit at the slightest obstacle in their way. However, attaining riches and for that matter any goal is not a laid out path without difficulties.</p><p id="b1495186-1db1-4f48-92a9-2d36ab34f6e2" class="">“Fortunes gravitate to men whose minds have been prepared to attract them.” (same is probably true for girls)</p><p id="f4d25639-1bc4-400c-a501-6e01654dacf5" class="">“Every failure brings with it the seed of an equivalent advantage.”</p><p id="e331c59c-1108-40c1-af24-13ef2f561ddc" class="">Everyone’s persistence gets tested and when you pass the test you win and all the success you ever wanted and more come to you.</p><p id="a5aceb7d-82f8-4f19-856a-ee9831e02650" class="">“The majority of people permit relatives, friends, and the public at large to so influence them that they cannot live their own lives, because they fear criticism.”</p><p id="544afc01-b8be-490d-9747-a4fdc96f8751" class="">if fear of criticism is stronger than your desire for success, then you won’t get anything done, won’t succeed</p><p id="64d38744-515d-421b-b213-21ccde006aea" class="">Every idea, desire for success, etc grows stronger by the minute that it stays alive. It should be nurtured and kept alive the second it is formulate otherwise fears and other causes will kill the idea off.</p><h3 id="4269127f-fecb-49af-980c-813bd0d78ec4" class="">Chapter 10; Power of the Master Mind: The Driving Force. The Ninth Step toward Riches</h3><p id="34cb0085-0934-4112-9414-f87d5ade9f75" class="">Power is organized knowledge</p><p id="ec168854-3a59-48b5-8005-95dc4a282b74" class="">One can increase their amount of organized knowledge through</p><ol type="a" id="13326619-35d2-460e-9e35-47ecbe449141" class="numbered-list" start="1"><li>infinite intelligence: creative imagination</li></ol><ol type="a" id="d290461e-196d-4c32-88ef-b58c2c7afd23" class="numbered-list" start="2"><li>accumulated experience: which are found in libraries, schools, etc</li></ol><ol type="a" id="ccd8343d-9f2d-4462-8baf-91159a7ae32f" class="numbered-list" start="3"><li>experiment and research: discovering new facts</li></ol><p id="3185c1d7-ca02-4782-97ad-389ca912756e" class="">Knowledge organized into plans and put into action lead to power.</p><p id="e1c0d235-3eb8-4ae6-96e8-30f3f6b6affd" class="">Master Mind: “Coordination of knowledge and effort, in a spirit of harmony, between two or more people, for the attainment of a definite purpose.”</p><p id="af8e83b2-a2a7-4ae8-b1eb-c21d12989413" class="">The Master Mind principle: “When a group of individual brains are coordinated and function in harmony, the increased energy created through that alliance, becomes available to every individual brain in the group”</p><p id="30c7455c-db9e-45e4-96d1-2efc7986d8a0" class="">“Men take on the nature and the habits and the Power of thought of those with whom they associate in a spirit of sympathy and harmony.”</p><p id="bb6c0b8e-8454-4d90-ae0e-dc35a84177d9" class="">&quot;Money is as shy and elusive as the &quot;old time&quot; maiden. It must be wooed and won by methods not unlike those used by a determined lover, in pursuit of the girl of his choice.&quot;</p><p id="a0156643-2ee2-4fca-9f70-0b3a2c3dadfc" class="">“Poverty may, and generally does, voluntarily take the place of riches. When riches take the place of poverty, the change is usually brought about through well conceived and carefully executed plans. Poverty needs no plan. It needs no one to aid it, because it is bold and ruthless. Riches are shy and timid. They have to be ”attracted.””</p><p id="90a5d59d-4532-4689-bba6-93e9791b8c9f" class="">“Anybody can wish for riches, and most people do, but only a few know that a definite plan, plus a burning desire for wealth, are the only dependable means of accumulating wealth.”</p><h3 id="10851fdd-1db0-4afa-b7b8-e22438984a65" class="">Chapter 11; The Mystery of Sex Transmutation. The Tenth Step toward Riches</h3><p id="2dcbaa7b-3e08-4985-b1c5-fa5b914baed8" class="">“Sex desire is the most powerful of human desires” when men are under this desire they develop abilities usually unavailable to them.</p><p id="6101193a-9bfa-4d15-9bce-52c62972266f" class="">The transmutation means switching the minds thoughts from the physical to thoughts of some other nature.</p><p id="5911ba4b-4def-4990-abb7-237ab53d3741" class="">The sexual desire cannot be stopped completely, but it can be channeled into better forms which aren’t purely physical.</p><p id="28afbfd6-124e-44d3-a22e-a20080dc42bb" class="">Geniuses have a sixth sense that of creative imagination. We get more creative imagination when the brain is stimulated.</p><p id="42eb64d0-741a-44d7-9712-7e5f7abf096d" class="">Mixing the emotions of sex and love makes it calmer and more controlled. Without the emotion of love, men can still achieve success, but not many will hold on to their riches and enjoy them. “Love is spiritual while sex is biological.”</p><p id="3a0740b8-8481-4bf4-ad8d-304e2ab6dd94" class="">Sex transmutation put simply is when a man tries to please a women by accomplishing something. This gives him a greater degree of success than would be otherwise impossible.</p><p id="5ba11415-7842-4714-9a30-4d8e6a7df7b1" class="">“Memories of love never pass. They linger, guide and influence long after the source of stimulation has faded. Every person, who has been moved by genuine love, knows that it leaves enduring traces upon the human heart. The effect of love endures, because love is spiritual in nature. The man who cannot be stimulated to great heights of achievement by love, is hopeless — he is dead thought he may seem to live.”</p><p id="678b1582-773b-458f-8919-93a6dfa2a006" class="">“one who has loved truly, can never lose entirely.”</p><p id="ef2a636c-92cc-4aa8-91cb-b7555934fed1" class="">“[Love] comes when it pleases, and goes away without warning. Accept and enjoy it while it remains, but spend no time worrying about it’s departure. Worry will never bring it back.”</p><p id="67b8f884-f3b0-4ee1-8ec0-c953d06f2766" class="">“Man’s greatest motivating force is his desire to please women.” ie without women many men don’t have much to do with great wealth. This is why the right women has a greater control over a man and that degree of control is what allows a man to achieve success.</p><h3 id="66fe3666-dfed-4b88-859c-07fcfd196d81" class="">Chapter 12; The Subconscious Mind: The Connecting Link. The Eleventh Step toward Riches</h3><p id="9fd40937-2cf8-499e-ac1e-a62199d8b210" class="">The subconscious mind transmutes one’s desires into reality by tapping into infinite intelligence and working day and night nonstop.</p><p id="b496b0c2-386b-40d5-acc1-f9636d1b0eeb" class="">What the subconscious mind does cannot be controlled, but you can hand it over the habits, desires, and plans that it will play with and with faith it will achieve stupendous results for you.</p><p id="34739755-616a-415c-a87a-4c6e1e3945c4" class="">The goal is to shut off negative influences to the subconscious mind while feeding it with more positive desires.</p><p id="504d920b-00f1-4bf5-be6e-a9523fa09d08" class="">The subconscious mind responds more promptly to thoughts imbued with emotion. The negative emotions try to insert themselves on their own into the subconscious while the positives need effort to be added in.</p><p id="a81ba696-7c6d-4795-90bf-93d9b4ceaa1a" class="">Strongest positive emotions: Desire, faith, love, sex, enthusiasm, romance, hope</p><p id="3834b68f-0c37-46d1-b0a0-27dce21c8417" class="">Strongest negative emotions: Fear, jealousy, hatred, revenge, greed, superstition, anger</p><p id="e656f5a7-b44b-44d1-8736-a1e58e93bf4f" class="">The subconscious mind translates one’s desires into a different frequency of thought and to the infinite intelligence which will then reply to it and the information translated back to your subconscious. From there, the idea, plan, etc will appear as a new thought to you. </p><h3 id="04606dd4-ea9f-4d03-bda5-30556d629654" class="">Chapter 13; The Brain: A Broadcasting and Receiving Station for Thought. The Twelfth Step toward Riches</h3><p id="e139feda-5060-482d-b53a-dd3ed3938074" class="">By combining thoughts and emotions the brain can broadcast ideas to the unconscious mind.</p><p id="fc6a36a5-f8ea-40ff-8837-a5696e6d1323" class="">“The “depression” was a blessing in disguise. It reduced the whole world to a new starting point that gives everyone a new opportunity.”</p><h3 id="e7db148e-91eb-417c-8df0-4986eabb1ba0" class="">Chapter 14; The Sixth Sense: The Door to the Temple of Wisdom. The Thirteenth Step toward Riches</h3><p id="57061c9f-f683-4752-8690-e72ed814a6b1" class="">The sixth sense is what allows us to receive the thoughts of infinite intelligence through our creative imagination. It gives us a receiving set to greater thoughts and blesses us with imagination as if our thinking is brought to a higher plane of existence.</p><p id="309b6157-c8f8-4fd0-93b3-586c4b96c78c" class="">“All men have become what they are because of their dominating thoughts and desires.”</p><p id="49f1a8ba-884f-4627-92cd-071521416d39" class="">The sixth sense cannot be accessed unless prepared for many years using the previous principles and a lot of deep thought.</p><h3 id="e4bdd515-3898-4dc9-b00c-d2f9dce0b3ef" class="">Chapter 15; How to Outwit the Six Ghosts of Fear. Take Inventory of Yourself, as You Read this Closing Chapter, and Find out how many of the “Ghosts” Are Standing In Your Way.</h3><p id="ed96ffba-d1a8-43d6-b2bd-aef75ee5e891" class="">The three enemies are indecision, doubt and fear.</p><p id="f8e729df-0163-4228-bea9-15979e6d2adf" class="">The six basic fears are:</p><ol type="1" id="3bc5e681-96e8-49ed-9946-a184dd6ad97f" class="numbered-list" start="1"><li>Fear of poverty</li></ol><ol type="1" id="014740fc-6cc5-464c-b080-1b63f3005503" class="numbered-list" start="2"><li>Fear of criticism</li></ol><ol type="1" id="1a005603-d265-4b6d-9e3d-703d2e47e862" class="numbered-list" start="3"><li>Fear of ill health</li></ol><ol type="1" id="14766fc2-bde9-4242-8569-8b8a7c3a5570" class="numbered-list" start="4"><li>Fear of loss of love of someone</li></ol><ol type="1" id="80c943a0-218a-4fc4-bcb3-0a8358f24fec" class="numbered-list" start="5"><li>Fear of old age</li></ol><ol type="1" id="d4d4eb05-1790-4d87-8fac-90c1c4e3c636" class="numbered-list" start="6"><li>Fear of death</li></ol><p id="5a5e0f39-532f-47d1-9c4a-f51b0bcf8bf7" class="">“Fears are nothing more than a state of mind. One’s state of mind is subject to control and direction.”</p><p id="671041ae-8e8f-48dd-ac01-494c01bbf37f" class="">“Man’s thought impulses begin immediately to translate themselves into their physical equivalent, whether those thoughts are voluntary or involuntary.” Those thought impulses can be received from the greater ether or be created from within by ourselves. </p><p id="d77baa0d-21ce-4150-a7fe-66fe35e8be29" class="">The 6 basic fears get translated into a state of worry by indecision.</p><p id="7c6d383a-3680-44a5-97b4-cb8557700f9a" class="">The 7th is an evil, it is being susceptible to negative influences.</p><p id="ed8cee72-5f33-472d-b88b-718e7d68c556" class="">This 7th is the worse of all the other fears. It’s the root. It’s the woke mind virus. It’s not being able to stick to your desires, your plans, and your actions when you need to because other off tracked you.</p><p id="85131754-96bf-4c0b-94a2-0969601abcfb" class="">Having this weakness allows others to influence you. Allows others to use you for their purpose and gains.</p><p id="0b8c3aca-1b0f-45ff-9883-516d800bc72a" class="">When others give you advice, WHAT IS THEIR MOTIVE?</p><p id="3165f17b-1621-42c4-923e-dd887acd7979" class="">You either control your mind or it controls you.</p><p id="0791a0d4-ab04-4b72-b3ae-26eb9449438e" class="">Building alibis to why you can’t succeed is pointless. It’s much better to make plans on how to succeed.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
