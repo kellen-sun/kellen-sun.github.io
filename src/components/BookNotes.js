@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import '../styles/About.css';
 
 function BookNotes() {
     const { id } = useParams();
@@ -22,9 +23,11 @@ function BookNotes() {
     fetchHtml();
   }, [filePath]);
 
-  return (
+  return (      
+  <div>
     <div style={{ minHeight: '800px', padding: '10%' }}>
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    </div>
     </div>
   );
 };

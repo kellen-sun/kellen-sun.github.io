@@ -13,6 +13,7 @@ import Writings from './pages/Writings';
 import SchoolNotes from './pages/SchoolNotes';
 import ClassNotes from './components/ClassNotes';
 import BookNotes from './components/BookNotes';
+import BookNote from './pages/BookNote'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/writings" exact element={<Writings/>} />
           <Route path="/writings/schoolnotes" exact element={<SchoolNotes/>}/>
           <Route path="/writings/schoolnotes/:id" exact element={ <ClassNotes/> } />
+          <Route path="/writings/booknotes" exact element={<BookNote/>}/>
           <Route path="/writings/booknotes/:id" exact element={ <BookNotes/> } />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
