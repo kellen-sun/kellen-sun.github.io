@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Fifth Business</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f2a316c4-18c1-41d8-bf32-e99771e32907" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👞</span></div><h1 class="page-title">Fifth Business</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Robertson Davies</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-blue">Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-red">Biography</span><span class="selected-value select-value-color-yellow">Philosophy</span><span class="selected-value select-value-color-blue">Psychology</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-brown">3-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@February 23, 2023 → March 10, 2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>273</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>1970</td></tr></tbody></table></header><div class="page-body"><p id="aa6faee6-ee3f-4d79-bfb2-b18b142a1a6c" class="">
+</p><h1 id="fc15c5c4-a05c-42db-9275-313aa7d9e8fc" class="">⛰ What It&#x27;s About </h1><p id="24f85e5e-798b-40e1-9b80-f276d41bd88a" class="">Fifth Business: A fifth character that is neither the main character or his love interest, nor the villain and his love interest. However, this fifth character is crucial to the development of the plot and even holds the key that will solve the conflict.</p><p id="9571f3cb-2c7e-473b-82ef-8160301f9f8e" class="">Book spans a long time: starts in 1908 December 27th, (narrator in 10 years old and ends in 1970)</p><p id="54abb89c-dbca-4f66-bee0-d3d7bb7f8d34" class="">Telling the story from the perspective of an older man looking back on the man he was.</p><p id="d1c3c795-1f63-46cd-a6e6-a4bf7ab23327" class="">He was offended by something during his retirement. He got offended because of a news article? was published by the prestigious private school he worked at. He’s writing the report/book to the school’s headmaster. He’s trying to prove to the headmaster that he is more than what the story makes him to be, that he lived a life worth living, that he loved, hated, and experienced many aspects of life that the article tries to deny. Dunny tries to prove that he’s fifth business.</p><p id="c4dd3ec4-8214-4d92-80cf-89631d363970" class="">The fifth business character has the key to the mystery</p><p id="a368b5f4-3316-496d-aa84-51e8b8d1f913" class="">Town is Deptford</p><p id="778e9f15-eef2-42da-afd6-e7dcbc0ee7f0" class="">Narrator is Dunny (Dunstable), his frenemy is Percy Boyd Staunton.</p><p id="41eca27d-c1fb-4af8-a39f-aa48a0cf3f58" class="">When he’s 10 years old (+7months), Percy aimed a snowball at him, he dodged, it hit Mrs. Dempster who the night of gave birth to Paul Dempster. Later Mrs. Dempster goes crazy. Percy refuses to take responsibility for the affair and this leads Dunny to take most of the guilt of causing the early birth of Paul.</p><p id="f174a6c9-88dd-4df6-b9d0-5ca483acba54" class="">Mr. Dempster (Amasa Dempster) isn’t very masculine and Mrs. Dempster lacks the femininity known of those who can do chores around the house. → Maybe unpolarized relationship</p><p id="7326c514-76f3-417e-9789-6743af95f3ff" class="">The Dempsters got a lot of help from Dunny and his mother.</p><p id="f49d9109-92d2-41cf-bffe-481913e01534" class="">Dunny spending time helping Mrs. Dempster (decently young) makes him develop some love for her. He also likes a classmate.</p><p id="8f6ca168-44b4-42d2-a348-a16c09265479" class="">Dunny starts working at the library and reads of a book teaching magic from which he tries learning tricks (including making an egg appear out of no where). His mom beats him for stealing her egg and denying it. </p><p id="68da39a8-488e-4e06-a3db-3ae081ec49a7" class="">Dunny continues pursuing magic. Learns card tricks and coin tricks. Shows them to Paul who learns the sleight of hand really quickly. Paul remains grateful for his ability and that Dunny can teach him as Paul still cannot read. (Paul 4yo now) Dunny at some times considered killing Paul to “rid the world of a precocious nuisance” (p39) However, Dunny was in a part of his life where he strongly valued gratitude and admiration towards him as he lacked it from other people. he got that admiration from paul. (Maybe cause of the beating from his mother)</p><p id="46b276d9-e27d-4613-9941-b8628c05f7dd" class="">Paul’s father learns that he’s trained in some kind of ‘witchcraft’ from Dunny. And orders Dunny to stay away from his family.</p><p id="170705ce-27c0-402f-8ad2-d0e3095881a0" class="">One day, Mrs. Dempster is gone and Mr. Dempster and other men of the village are sent to try and find her. This group includes Dunny. They search a small granite mountain near their village that’s abandoned because of the railroad system. Dunny finds Mrs. Dempster in the midst of having sex with a beggar. When asked why she did it she says: “He was very civil, ‘Masa. And he wanted it so badly.” p48</p><p id="c1b6535b-eca0-480f-985d-9a49ddb27893" class="">Then Willie, Dunny’s brother gets terribly sick basically dies, and Dunny fetches for Mrs. Dempster who somehow brings him back to life.</p><p id="f201da96-0780-4999-b511-914dd9b97fc1" class="">Dunny leaves for the war (before which he dated Leola Cruikshank). He almost dies and loses consciousness for 5 months after he rushed for a machine gun and took it out at the third battle of Yvres in November of 1917.</p><p id="debac2dd-cb27-4e05-8474-8ed1e0889187" class="">p87: When receiving medals of victoria cross from the king. “We are public icons, we two: he an icon of kingship, and I an icon of heroism, unreal yet very necessary; we have obligations above what is merely personal, and to let personal feelings obscure the obligations would be failing in one’s duty” …. “I have tried to think charitably of people in prominent positions of one kind or another; we cast them in roles, and it is only right to consider them as players, without trying to discredit them with knowledge of their off-stage life—unless they drag it into the middle of the stage themselves.” (He’s about 20)</p><p id="c0348f3c-54b1-412e-b056-1f4f8bea922f" class="">His relationship with Diana has the dynamic that Diana nursed him back to life and taught him so many things helping him on his way back to normalcy after he got injured in the war. Therefore, she’s more of a mother to him than wife.</p><p id="29d934b3-1f93-4c06-92ba-d4dc9b79a34f" class="">Diana is a couple years older than Dunny</p><p id="efdb73ef-6426-4cf2-9990-30771997fa90" class="">Dunny returns to Deptford and is warmly welcomed (Percy and Leola are engaged now)</p><h1 id="5accb5a8-9650-4ab2-8fe2-a40f0cac2ade" class="">🔍 How I Discovered It</h1><p id="ab0dbe0b-3278-4497-b328-2bda10fc4950" class="">💀 English book.</p><h1 id="28a5fb1d-e325-4929-99d3-89c631cfe210" class="">🧠 Thoughts</h1><p id="c4ddde9f-bf1f-4bf5-a39a-8814f2ca440c" class="">The fifth business definition given at the start has the main characters/villain as male.</p><p id="7f8ea94b-c732-409f-80ab-d9e448c2b89f" class="">Dunny stealing egg and getting beaten for it incident and the way his mother tried to apologized creates confusion in him about how people truly act. He seeks maternal love that he needs, but cannot create a coherent belief system with what reality presents to him. “But what I knew then was that nobody—not even my mother—was to be trusted in a strange world that showed very little of itself on the surface.” (p36)</p><p id="5313fea4-25bf-4f13-ba24-4b0c4c2ed851" class="">Religion seems to play a big role in the book.</p><p id="5c2fff5a-8a63-499c-b676-dfb41f282b82" class="">Themes of the characters as adults denying and hiding their truth.</p><p id="053b6ad1-6db8-4b7a-936f-05fc93004f67" class="">Page 167-169?</p><p id="469a2615-6b5d-4211-8ea9-d2e5e6428149" class="">“I cannot make saints, nor can the Pope. We can only recognize saints when the plainest evidence shows them to be saintly. If you think her a saint, she is a saint to you. What more do you ask? That is what we call the reality of the soul; you are foolish to demand the agreement of the world as well.” Later on that page talking about miracles: “Miracles depend much on time, and place, and what we know and do not know. […] <strong>Life itself is too great a miracle</strong> for us to make so much fuss about potty little reversals of what we pompously assume to be the natural order.” p 174</p><p id="59156c95-d4c4-441a-aab4-05e7e22a5da1" class="">Psychology, biblical allusions, male-female dynamics: Percy-Leola, Dunny-Mary, Dunny-Diana, Dunny’s parents, etc</p><p id="fcb9fa82-35dc-4a38-a876-3b3efe5999d4" class="">To tie the dark side/ shadow of people in Jungian psychology to roles to bear in society</p><p id="52c56ad5-d947-4af2-b381-b34344eacaaf" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>The shadow must be hidden to play out our roles in society</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><p id="e14d8f86-1dce-4795-bd06-52621de215e4" class="">Why is Amasa’s view of religion and saints more right than what Dunny was teaching Paul about saints and magic? (+ Amasa prays for strength, but looks weak)</p><p id="f1bc58a6-22bb-4b86-a094-52e845f2ccd7" class="">The retelling of the story is heavily biased in how Dunny portrays the character even if he admits trying his best to tell just the truth. He’s in fact telling his how psychological truth. (Can be seen that he suggests Mary to be a saint since the start, and paints characters in the way they turn out to be)</p><p id="75294f35-12cd-46b1-b0f6-32b6765aa2db" class="">Liesl as his devil?</p><p id="0e283310-f804-4bcd-9c16-bcc31dd6f803" class="">Keeping secrets destroys Dunny and makes him inhumane, when he does start sharing he does so with the devil, (fulfills the Dunstan name)</p><p id="7f519378-9f2a-4b71-b83b-da8556b93102" class="">Eisengrim is more like Boy, they both like themselves and how they look, and do not care about their partners?</p><p id="c8aad815-afb2-442c-bc95-cbb3d3fc74d1" class="">Dunny objectifies Faustina (misogyny), he can’t remember how her face looks like and constantly thinks she’s stupid, but has good looks.</p><p id="a5264335-5234-4bf2-b22a-0d428fc19e71" class="">Strong themes about putting up a correct appearance. Percy cares a lot about his appearance. The town thinks Boy and Leola is a great romance, the people think Dunny to be a great hero, but that is not all true. Relating to internal vs external perception and reality, personal psychology.</p><p id="b7fc4186-cdfd-4bf2-bebb-d709f23edc8b" class="">ie psychological truth has a physical manifestation in the ways characters wish to be seen by the greater public (people always need something to look up to/believe in). An interpretation of one’s personal reality into their personal mythology creates the way they act and the roles they fulfill in life.</p><blockquote id="1ce0d794-4fd6-4818-8a7c-4ee825306989" class="">“I am deep in the old man’s puzzle, trying to link the wisdom of the body with the wisdom of the spirit until the two are one” 178<br/>Forgive yourself for being a human creature<br/></blockquote><p id="54c557ef-a377-425c-bf58-9b13d4810777" class="">“Dunstan has spent his life observing but not participating in marriage, love, strife, vice—the whole cast of irrational—but vital—human behaviors.” -LitCharts</p><p id="d83797ae-1bd6-463d-8321-e01fe3b1d998" class="">Twice born means living more than one life and having a second identity</p><p id="7acae57c-3109-4e12-be52-eed50714e599" class="">Around page 178, Dunny and Boy both do not fear God. Boy because he has constructed his own image and belief system of who God is (his personal mythology) and Dunny because he cannot forgive himself for being a human creature. (He still thinks it wrong to be ‘just’ a human and believes his constant analysis of himself and his psychological torture to some degree makes him greater than human)</p><h3 id="0fe562c8-cb4c-470e-ab2e-a84155e0abcf" class="">Characters:</h3><p id="6106a754-7343-4017-8bdd-237a9b7a187d" class="">Mary Dempster</p><p id="2dee0dd1-bbfc-4c9d-9034-b6c1bfec75e0" class="">Amasa Dempster</p><p id="2863e67f-58bf-4112-a938-fdfb7f88387f" class="">Percy Boyd Staunton</p><p id="e263da61-112c-4c1b-ba23-123fb547ef43" class="">Diana Marfleet</p><p id="1bcd2cf3-0fb5-4e63-a13d-7d03d68e9b7f" class="">Dumbledum Ramsay Dunstable (Dunny) → Dunstan</p><p id="b7cc97a6-2239-41cd-b7bc-89160bb67407" class="">Liesl (Manager for Paul’s magic show)</p><p id="0bc3ac07-a444-4cc6-bec9-ffbe5e172cb2" class="">Paul (stage name: Eisengrim)</p><p id="b40046ee-6d36-42b2-85eb-4dc8a5f7db8b" class="">Faustina</p><p id="01bca538-cfee-44a1-87f9-0bfa9d1ce432" class="">Leola</p><p id="ebe57c89-527e-49c8-8498-c89d5d9f43bf" class="">Surgeoner</p><p id="5ea66900-721e-497f-a533-d8e6dc21120a" class="">Reverend Leadbeater</p><p id="cea276df-b0b2-48ea-9664-1ff8b4bba131" class="">
+</p><h3 id="e2e46c27-b02d-4617-9551-3937fb841f4c" class="">Location</h3><p id="0a261ee9-19fa-4def-b9ba-5c473a959870" class="">Village of Deptford (Around 800 inhabitants, in southern Ontario, 5 churches)</p><h3 id="07ec5464-0a60-4b63-8d5d-96d7f185a428" class="">Religions:</h3><p id="3aa8e1ec-5fe7-4fa6-a506-d84c57a1419d" class="">Creates small communities within Deptford</p><p id="8a03b9db-f2fa-4719-92c1-8eb4ef63bb5d" class="">Christianity<div class="indented"><p id="723250b2-ee34-4074-8f8e-8dd5c5f66365" class="">Catholic: Pope, priests, Bishops, etc Believe in saints.</p><p id="832e7e1e-b4d4-4da8-b202-22c54343e883" class="">Protestant:<div class="indented"><p id="ecd1bc11-a3f4-43be-832d-8cec052edc3d" class="">Anglican (social supremacy, they think they’re better than everyone else)</p><p id="12b46bb5-cd95-495f-97a2-28da779cee07" class="">Methodists</p><p id="03725bd3-c2c9-465c-89ae-2a2f91899d18" class="">Presbyterian (Dunny’s religion)</p><p id="e9d925aa-df30-4f91-b8c1-b37e403abebf" class="">Baptists (Dempsters)</p></div></p></div></p><h2 id="5fd3cc17-4f39-490f-a40f-ea98190af27f" class="">Summary:</h2><h3 id="a96c3387-f66c-4cb2-af75-73c47bcd1089" class="">Part 1: Mrs. Dempster</h3><p id="e46bee83-8e7d-43ce-af25-8160360820c4" class="">December 27th 1908 (snowball incident) to 1915</p><p id="0bfc900d-2d75-472e-bddb-ca77920680fd" class="">The fifth business is the character in a play who has key information to resolve the plot. </p><p id="e38d4a67-d32d-4e07-a80d-e5b596004f94" class="">Percy is predictable and Dunny is able to guess what he does.</p><p id="b5dddec4-ec92-4390-bcdf-c3f204512e24" class="">Students call him corky because he lost his leg in the war.</p><p id="17ffd53e-71de-4dfc-9af1-4ed55b96f9ca" class="">“he taught history as he sees it”</p><p id="0650ffcf-785c-440c-9c97-5f093322f1ce" class="">“I have been cast by fate for the vital though never glorious role of fifth business” (p15)</p><p id="7e7987d2-c0ca-42cd-b9e4-b43f8961777a" class="">He’s writing from a place where he needs to recover from something</p><p id="2474ba4f-c755-440f-bfde-46ecbbb31d5d" class="">He’s biased while writing his life story</p><p id="b14bec83-abe2-462d-9a8a-f3da7df8505e" class="">Solvent means you can pay your bills; you have more money than you owe.</p><p id="1869b45b-0ec5-40c8-aa51-26dea19e1b0f" class="">Anglican higher social hierarchy, presbyterians see themselves as smarter</p><p id="bb17b75e-fffc-46c5-aa26-c47c6d8c47ae" class="">They have two doctors. (One is Percy’s dad, McCausland)</p><p id="b77ede21-6e64-435c-96f9-889633c7aa2f" class="">Dunny’s dad owns the local newspaper. (they’re decently off, but not super rich)</p><p id="d21d7753-14d2-4308-a283-d288bf7a7fe3" class="">Dunny’s family are holding tight to their Scott heritage</p><p id="e16002ae-bde9-4438-9446-fd9337dd9776" class="">Most other people from the town are from England</p><p id="5999847c-656c-49df-93f6-a83c0e3a854b" class="">Doctor credits Dunny’s mother with the survival of Paul and she’s constantly helping the Dempsters out which feeds into her ego</p><p id="01549651-62f0-426e-92e4-faacb06917a6" class="">Paul was 80 days premature</p><p id="0589e268-881f-4741-9d9f-b79cb5bb20be" class="">Amasa prays for his wife and child so they go to heaven which shows he’s deeply religious</p><p id="78a2f65b-ce1d-4143-bf80-e7a0d5885ad7" class="">“He was one of those people who seem fated to be hurt and thrown aside in life, but doubtless as he knelt by Mary’s bed he thought himself as important an actor in the drama as any of the others. This is one of the cruelties of the theatre of life; we all think of ourselves as stars and rarely recognize it when we are indeed mere supporting characters or even supernumeraries” (p21-22)</p><p id="4192eb71-e04b-4c40-895e-dea53a37150b" class="">Dunny’s mother is above his dad in the household power structure?</p><p id="6d652bda-bc34-40b2-8fd3-79dd56ab47c1" class="">heavily builds Carl Jung’s psychology theories</p><p id="6da4d531-a510-4903-84de-b6b72e90d6a1" class="">Dunny carries guilt throughout the book (p22-23) Percy refuses to share that guilt (he has a high ego) which put more pressure on Dunny. He began to believe that if someone found out about the snowball incident then his mother would reject him.</p><p id="7563f099-6628-40e4-87fd-f9305f885d71" class="">Mrs. Dempster physically recovered, but she didn’t recover mentally well. She got called “simple”</p><p id="cdf5590f-680d-4fa8-9011-2ad238681a7c" class="">His mom is strict, overbearing while his father is kind and trusting</p><p id="d6513528-8765-4f28-9015-83f075974a97" class="">Mrs. Dempster has a gentleness of expression</p><p id="bb995a2a-7112-466d-b177-d49307ce8a5b" class="">Dunny and Percy are rivals at school. Dunny had a sharp tongue. Dunny gets bullied because of his association with the Dempster’s. (Dunny knows that Percy hates it when he calls him pidgy boy-boy (what his mother called him when he was young).) They’re character foils.</p><p id="05d97c7b-decd-4e25-aa7a-0205c552dd61" class="">Dunny hella sexist</p><p id="6a9e1c9d-64a5-478f-a58b-f2f345cd52a5" class="">Leola dumb but pretty</p><p id="38aa12e7-4d54-4156-a80b-c0dd3f134a8d" class="">Dunny becomes a volunteer librarian</p><p id="55f3f430-5808-4add-a497-481d00f6230f" class="">He’s infatuated with Leola and loves Mrs. Dempster (but not romantically) → relationship similar to that of Dunny and Diana in part 2</p><p id="0b7fafcb-7f43-4989-a221-29b5de39938c" class="">thought if he learned magic he’d get bitches</p><p id="ae3c294b-2f46-4c49-9a96-2e5d51ce23e5" class="">synchronicity: fate lined things up for the right people to cross path and the right things to happen. He believes those books he found about magic would skyrocket him to fame</p><p id="48513da5-36ac-4f6a-8501-5bc757d2fe8d" class="">“Everyone wants to be delightfully bamboozled by an elegant slightly sinister but wholly charming master of the art” (p33, Dunny is 13)</p><p id="8ec3f3dd-5c3e-418a-aeee-e9ae304c91f6" class="">Dunny lacked in skills so he practices with an egg</p><p id="47e03695-cb40-4996-95dd-5621426144a8" class="">The fight is about his defiance of her, his lying and refusal to answer questions in her household. She’s at the top of her household hierarchy even higher than god. After the egg incident, Dunny apologizes and begs for forgiveness and then his mom accepts and calls him “My own dear laddie” This was trauma to him because he still remembers in his thirties</p><p id="a6011a9a-4035-45d5-97c4-7479e23ec34e" class="">He can’t reconcile the difference of her motherly nature and her beating: “Nobody was to be trusted in a strange world that showed very little of itself on the surface” reflects Carl Jung’s psychological theory.</p><p id="86d09fbe-62aa-449a-816f-2344ab2f0e76" class="">Dunny starts practicing card tricks (he’s 14yo now). He goes with Paul and teaches Paul. Paul has insane dexterity with his hands.</p><p id="8c66797c-c8d7-4ceb-8a70-b91e782fe8b0" class="">Paul’s home life is not stable and his childhood outside is poor because he was an easy target to be bullied</p><p id="1faa14cc-5705-4df4-bc44-af85fe1eb0c4" class="">Amasa scolds Dunny for teaching Paul magic<div class="indented"><p id="4cf5b2e1-c565-4015-8923-2cfeeb4767a8" class="">“<strong>Brought the devil into Paul’s life</strong>”</p></div></p><p id="d18766e4-6636-4332-b082-4fc54a368371" class="">Dunny gets banned from ever seeing the Dempsters</p><p id="fa18b0c7-28b6-4ea8-9acf-83e1fd926b76" class="">Dunny is 15 when Mrs. Dempster disappeared.</p><p id="73080937-cf0d-4500-a5ca-5554e726b6c0" class="">Dunny’s father asks Dunny to help them search for her which in turn acknowledges that he’s a man.</p><p id="8364c6f5-b1a1-4ebf-8728-b6de52570849" class="">The gravel pit is compared to hell. </p><p id="9337d790-ed07-4242-9575-56e266943790" class="">Mary wasn’t sexual assaulted and she gave consent to the tramp. So all the blame is put on her.</p><p id="6f026473-feae-45cf-8302-d2dec92c8f93" class="">Amasa resigns from his position at the church.</p><p id="080f1073-df1c-4779-8d4f-50f9aa2438c8" class="">The town is enveloped in hypocrisy as instead of helping Mary for doing something ‘indecent’ they, in the name of decency, aren’t kind and even resort to violence. (this is reflected in Amasa who keeps Mary tied with a rope in the name of love → his religion doesn’t make him lead a morally right and spiritual life. Religion is supposed to help him make better decisions and think clearer, but for Amasa it stops from doing that.) This contrasts Mary and Amasa’s display of faith.</p><p id="46cade7d-be9f-4f64-918e-7f5b24fabf0a" class="">Most people in the town at the time find it scandalous that Mary Dempster had sex with a tramp just because he wanted it badly. They all hypothesized that if there was free love marriages and society would be destroyed. “If women began to yield for such reasons as that, marriage and society would not last long” (p52)</p><p id="af73e3f4-cf86-4840-bd21-8adfaec7a95c" class="">Dunny started visiting Mary Dempster to atone to his ‘sin’ of the snowball. But Mrs. Dempster was the one helping Dunny. Her simple nature and lack of fear felt different. “She lived by a light that arose from within” (p52) She didn’t resent people, have fear, or cynicism. She’s at peace and calm and it all radiates from her like light. There’s something spiritual about her similar to religion.</p><p id="98325965-9146-4f17-a188-6f2f8e012d27" class="">Everyone else saw the bad about her, but Dunny could see the good.</p><p id="c646cf8f-33b3-46ce-9ed3-6a1c259d611a" class="">Dunny compares Mrs. Dempster to a taproot to his spiritual soul. He’s spiritually enriched</p><p id="85083378-455c-44cf-9adf-b3076b701c56" class="">Compares Mary to Mary in the bible (both Jesus’ wife and his friend (Mary Magdelene), who was possibly a prostitute)</p><p id="1ecfc1c0-b685-4fdf-9065-5161d010e0b8" class="">Mary Dempster has both sides</p><p id="5580f2cb-20e4-4cc9-a659-226a5a9f6507" class="">Dunny works on becoming a polymath (know-it-all) and does that by reading the encyclopedia (this is a development of an identity he carries throughout his life, where he’s not close to anyone but Mrs. Dempster)</p><p id="411b05df-f55b-4072-b029-15267faf2f93" class="">Dunny became closer to his father who’s deliberately trying to kindle a relationship with him</p><p id="b2d88386-7726-48f5-bc36-7ea0c3fa06a6" class="">Dunny always characterizes his parents in specific ways<div class="indented"><p id="e6c5cc14-b675-43bb-ba89-c630c46a0116" class="">Father: nice, kind, compassionate: not scared of anything but his wife</p><p id="eb521266-f654-43a4-ad11-eb2940a3c785" class="">Mother: Strict, strong, etc</p></div></p><p id="364d44f2-4776-49c0-afde-0b5039260999" class="">Percy Boyd Staunton and Leola are understood to be together</p><p id="570ff8c2-7df4-4318-8f59-3e4fc4515622" class="">Percy cheats on Leola, but Leola forgave him and Dunny’s now cynical on women (foreshadowing of Percy’s affairs)</p><p id="09ae40a0-304e-44ec-8cf5-338bffdb2d50" class="">Percy gets sent to a private boarding school. (Collborn college, inspired by Upper Canada college) Where Dunny ended up teaching there and Percy got on the board of the school</p><p id="8fcb9b2b-dc4f-48ef-9df1-5d0d0b703042" class="">Willie gets sick because he got hit by a heavy object at the printing press. He needs baths to relieve and heal him</p><p id="7266a7af-ba94-4722-be25-eb2b1e48ade8" class="">Then Willie dies, Dunny fetches for Mrs. Dempster and she revives Willie</p><p id="d7a16e57-4219-4910-8e61-b9e3e4f318c0" class="">Willie gets well and goes to the war and dies there (1916).</p><p id="2209ac7c-7d1c-46de-96aa-862b459d591e" class="">Mary Dempster’s calling of Willie back to life is considered her second miracle.</p><p id="9cd659cf-f0a4-4050-83a9-5bbec72f14c4" class="">Dunny gets berated by his mom for the incident and he loses status among his peers.</p><p id="783f832e-5228-4ea0-980f-934ec8cd54b4" class="">Dunny loves his mother, but they have differing viewpoints and can’t tolerate the way she is. He cannot accept her controlling his life. He feels miserable to defy her. He has to defy her because to defy her meant to live to make himself happy and not to defy her meant that he was living to make his mom happy. She believes love = loyalty</p><p id="157cf708-2003-4822-9446-26e724b0c401" class="">Dunny starts seeing Leola and heads off to war. Mary tells him that whatever happens it doesn’t help to be afraid.</p><p id="95e2b227-fdca-4713-b033-848e9dbb4e70" class="">Leola “she had confided that in spite of her best efforts to keep the image of Percy bright in her heart, she had discovered that she really loved me, and would love me forever, and wait until I return from the battlefield of Europe” (p66)</p><h3 id="dad063b3-9600-490d-853e-d278510a0ba6" class="">Part 2: I am born again</h3><p id="5384acb3-ee48-4462-bf34-f7f374fa1c3b" class="">1915-1919</p><p id="7fd88e96-ae3a-47cf-91b7-55dc37e28425" class="">He didn’t really know about the grand scheme of the war as he was only in infantry</p><p id="4de371c6-8340-4d34-ad9e-00a32b2c05bd" class="">He left Deptford for the first time to join the army (went to training camp)</p><p id="88794ce2-a77e-4c32-ba37-e3616d3c5bb0" class="">“own dear laddie” Dunny’s mom calls him that only when he’s under her control</p><p id="4dcf9b49-78c7-4677-9034-8fdf68c202d5" class="">He was a good soldier, but was lost in his life</p><p id="377c75e2-8991-4642-980b-3750fd08bb3b" class="">Not only was he lonely, but also fearful</p><p id="d7d47cf3-e32e-4154-8891-0901e8f741d3" class="">Comparing ww1 to ww2, he believes ww1 is basically ancient history</p><p id="79044118-397a-4c3c-8b21-926394e9cfdc" class="">He likes to read whatever he can, but can’t really carry many books</p><p id="cc9eceb1-bf1e-4696-80aa-4dac6ec93af5" class="">He kept the new testament to read. (His favourite part is the book of revelation)</p><p id="1f675034-5cb4-4c4e-a2be-401cda0cb3fe" class="">He gained a reputation as very religious, but he’s very spiritual</p><p id="5f09d425-3f50-47f6-b09b-52ed6d7e7560" class="">He calls the grouping of all the things he found meaningful throughout his life his “personal mythology” </p><p id="7c27b754-6248-42e0-aa95-81f405986c3b" class="">“Later I was able to say that they both psychologically rather than literally true, and that psychological truth was really as important in its own way as historical verification; but while I was a young soldier…” (p71) Maybe ties into Percy’s different truth perception of the snowball incident later in life (psychology, memory retrieval)</p><p id="6062da1a-7856-413e-9970-6f4ccde12f9b" class="">Crown women with the moon between her feet??</p><p id="35ca6881-b80c-4aee-bf7b-15e1934f5ac1" class="">What really astonished me was the surprise of the men who didn’t believe they couldn’t have different sides of their characters. “Their astonishment is what astonished me.” (p72)</p><p id="750cac78-de62-48a6-9d12-5088f9b02813" class="">Third battle of Ypres, Canadians brought in to try and take Passchendaele</p><p id="f808ef75-23aa-470b-8b64-8e8f6699c464" class="">Great terror was the mud, if a man sank, his chances of survival were poor.</p><p id="6645bef7-354a-4355-baa9-fece9eb8d80d" class="">There were several German machine guns stopping their advance</p><p id="1af5b3bf-4d33-4fa3-950b-98c0eba13e8f" class="">A few men and Dunny were sent on a night raid to knock out the machine gun.</p><p id="22245162-f249-4e4f-ad7e-11a53f9ae15d" class="">Someone shoots out a flare which illuminates the battlefield. The Canadians are seen and being shot on</p><p id="7185745f-efc8-4c5e-893d-64ba8d78455c" class="">They were crawling through the mud and need to get up and run.</p><p id="71ec5f1f-e1ba-4f48-b39a-634486eb8bab" class="">Dunny makes it to the machine gun tower and killed the three Germans there. The telephone starts ringing so he has to leave<br/>shrapnel in his left leg (badly wounded)<br/></p><p id="76611dec-2a72-4850-a9ec-0b0e58a7513c" class="">He crawls to a bombed church and his leg is in pain.</p><p id="ab2cf136-0a1f-48b1-b544-8f899a6fcedf" class="">He thought of Mrs. Dempster and Deptford (and not his mother, so Mrs. Dempster is a motherly figure)</p><p id="2d1339fc-a30f-41a4-9b7c-3b03cb2098e0" class="">The virgin Mary was holding the baby and standing on a crescent moon on a globe holding sceptre with lily. (He misremembers this with the crowned women with the moon) which ties back to the memory retrieval. The the statue’s face is that of Mary Dempster. → Mary is his saint?</p><p id="7f92a6ad-7fee-411b-9d52-9351de746c41" class="">Flare lands on him and he loses consciousness, he’s badly burned + broken leg</p><p id="76ba9067-61b2-4720-8852-c59f8c6f6ed6" class="">He wakes up, 6 months later</p><p id="91673574-3fc1-41c3-8834-357e1c280ee0" class="">Asks for water and nurse asks for his name</p><p id="5973534d-123b-4c48-a934-b8247782de52" class="">He gets out of a comma and is at peace</p><p id="bc05f92f-9376-45aa-bc60-35a9073ac24f" class="">Madonna another word for virgin Mary. He kept thinking of Mary Dempster in his comma</p><p id="3774a594-c1c1-4741-8bae-81dfeebadc64" class="">He got moved to England, in a luxurious mansion type of house that’s being used as a hospital</p><p id="ae4d9792-b3b3-4938-a404-de86279cc606" class="">Jumped to 12th of May 1918</p><p id="9a47edf6-7228-4b18-81ad-538cec2d205d" class="">He believes Mary Dempster was responsible for his survival as well as that of Willie’s</p><p id="c05844ea-fe3d-4795-804d-ab02239e4b2a" class="">The flare took off his ID tags</p><p id="c2a51698-ad43-4d2e-a4b6-440fcaa12466" class="">His injury are all on his left side, his burns are on the left<div class="indented"><p id="0bef8316-a83e-4207-ae30-4072a14df031" class="">Right usually represents the good, virtuous side</p><p id="8fc5afb5-50f5-441a-a020-2f28ab2de7b8" class="">Replaced by the artificial</p></div></p><p id="4e42ddb3-e05e-4cbd-b780-e7d2443d74e0" class="">The nurse’s name is Diana Marfleet (p80) Roman goddess of hunting, and about fertility (means divine or heavenly)</p><p id="de1661af-9503-454f-af3e-5b401b2a6d7f" class="">She’s a volunteer nurse, not a professional: beautiful, intelligent, amusing, upper class, charming, 24yo, engaged before his fiance was killed</p><p id="da144235-5878-4ed1-b706-936f0bd2af56" class="">Dunny is 20. They were on tremendous terms in no time as she took care of him for a long term.</p><p id="d330124e-c2ef-4173-96c1-db16d3a728d0" class="">Dunny got better at an unusual rate to please her. She’s being taken care of like a motherly figure. (can draw connections to actual mother-son dynamics)</p><p id="2cabd089-cb35-4b9e-9fdd-85b998548270" class="">He was awarded the VC posthumously for clearing out the machine gun post.</p><p id="d8757d9a-eb09-4ba9-8e3a-754206fb4cad" class="">His parents both died in the influenza pandemic. He felt the loss very little. It felt like a relief for him (didn’t need to be his mother’s own dear laddie)</p><p id="e3e9e4a8-b490-4f55-a1ef-9dba078ef891" class="">He has deeply rooted opinions on strong, confident women which he rejected from his own life at a young age.</p><p id="d92e99dc-0b29-4007-9b91-a41a3f0f9469" class="">Diana corrects him on some habits, but Dunny’s fine and appreciates it. (contrasts with Leola and Percy)</p><p id="9f47a991-ada9-499c-a639-ede1c7a31256" class="">She takes him to see her parents which implies it was a very serious relationship and was heading to marriage.</p><p id="8993659f-473b-4087-9668-c79e544e7fff" class="">November 11th, 1918</p><p id="8becf9de-ce6b-4048-9e96-16810c8f0e2e" class="">Doctor takes Dunny, Diana and another man to London to celebrate the end of the war. It induces anxiety in him. They have a night alone (loses his virginity). He juxtaposes going to the theatre for the first time, his night with Diana and getting his VC from the king (George the fifth).</p><p id="e6d0b2d1-652f-490e-acc0-9f965e0dbfac" class="">When he receives his VC he realizes that their both playing roles. Him as a hero and he’s happy to fill that role. He knows it wasn’t heroic, but people need heroes in life. But the same can be said for the king. “Unreal but very necessary” They have obligations and duty to fulfill. Psychology → Role theory?</p><p id="24f4c873-ec3f-44f3-a698-8cd30df8cfd9" class="">Dunny never manages to walk without a limp</p><p id="b4a0647b-7433-4ef9-aeeb-dd71944ff2e2" class="">He’ll have to make a decision about Diana and couldn’t be blind about the fact that she regarded him as her own creation.</p><p id="4aa89021-dff9-4d62-aa2c-58779f587a5c" class="">He doesn’t want to be anyone’s “own dear laddie” ever again</p><p id="2f557bb1-94cf-4406-9685-090b8111dffc" class="">Oedipus play</p><p id="9dd19a2d-d295-4c1a-b6d0-44303560094c" class="">He decided to not be with Diana and works out what he would have when he returned to Canada.</p><p id="e63f54a2-7558-4a2b-8ba1-73d69b9434bb" class="">He wanted his life to be his own and wants to live for his own satisfaction</p><p id="bf87e71b-4eac-4d71-acd4-1739552f427c" class="">There are no expectations on him because his parents are gone. He’s basically high school education though.</p><p id="13cafd03-7953-41e5-8a3f-01f274b83fa5" class="">She assumed they would get married though</p><p id="381dff41-0815-420f-94fd-e9891c9bdaf7" class="">He’s tortured about what Leola letters meant. (not able to interpret texts 101)</p><p id="fcd59d2c-48a6-4208-aa84-3f3a05711a44" class="">He tells Diana that he’s not in love with Leola</p><p id="03ea983b-ca92-4901-a6a6-8805dc86e5ea" class="">Diana asks him what their future holds and Dunny doesn’t have a clue. So they break up and make up, etc. He knew there was more in him than that, but he didn’t know what and he wanted to do. He wants to figure out if the statue is actually Mary Dempster. He made it clear that he needed to mature, burned on one side and raw on the other (he dealt with the cruelty of humanity and didn’t discover the normal side yet, connects to the literary left and right) and that he had to discover stuff on his own.</p><p id="ebbb8687-92d2-4459-badb-be485f23eda3" class="">Diana changes his name to Dunstan. (Saint Dunstan, they have many connections) page 93</p><p id="add29dac-2f50-44a4-a0c9-84a2ba813523" class="">Dunstable was his mother’s maiden names. And he loses it. (Completes Diana’s role as a mother figure in the rebirth process) Symbolism of being free of his mother.</p><p id="b17b3ce6-85cc-457e-ae2b-105f24db8f59" class="">May 1919 Went back to Canada</p><p id="d3f24ba8-b496-43a7-b0c1-ebdc67d0949d" class="">There’s a welcome back ceremony when he gets back, Parade and ceremony at the hall where there’s speeches and stuff.</p><p id="b0c1eddf-a2db-4a4e-af7d-a2015fdf5adb" class="">He thought Leola was a sneak to not inform him that she got engaged with Percy. Dunny was relieved though that he didn’t need to deal with her</p><p id="26da63c0-02c4-4b4b-9553-827464638233" class="">Dunny was jealous of Percy because he outranked him in the army.</p><p id="72467bf7-5dba-4dbf-9f8d-4d73e74eea39" class="">He kisses Leola vigorously to create a scene and some conflict between them</p><p id="78cbf59d-e8b9-43a4-9054-9178e376341b" class="">He didn’t particularly want Leola, but more resented that anyone got her</p><p id="f31e6e0a-1307-43e5-8845-fadda17fb3a8" class="">He realizes that his role is that of a wounded hero that people can admire and that Percy’s role was different (to be with Leola)</p><p id="f83fbfb7-b9c9-43e7-bd14-f7180b60b5e7" class="">They burn the puppet of the Kaiser and Dunny is sickened that people are celebrating violence (+ ptsd from the flare)</p><p id="46b4791d-8182-4be5-a142-b1a6243b672d" class="">There’s no glory in the violence</p><p id="3633576d-d18d-474f-b6a4-80f17e8ccbbb" class="">(Mirrors what happens with his mother and the egg, because the good people always have a horrible side to them, He’s seeing their dark side)</p><p id="26877463-9b32-492c-b889-64c4df0c7756" class="">All the life from the his old house now that his family is dead</p><p id="30f7daa8-adcb-4d8b-9cbc-0a65fac4214e" class="">He went to the house and took one thing that he long kept hidden</p><p id="375784b0-4b8a-40ab-a72d-4a456399b473" class="">He gets a haircut, Milo Papple fills him on the news</p><p id="d3cef009-6b2a-422a-b1a2-d96c99a5cf34" class="">The other students at school bullies Paul and is calling his mom a hoor. + physical bullying</p><p id="61a5f6a6-0822-419c-9c80-50b40a084624" class="">So Paul runs away before he’s 10 by joining a circus.</p><p id="894f2b28-5b1b-4c16-aeac-c1929db4a3d3" class="">Mrs. Dempster left after her husband died and she’s taken away by her aunt</p><p id="b95c1b53-ed54-41ad-bbbd-47a8fe9b41dc" class="">He leaves Deptford physically, but never left it from his spirit. (Cannot completely leave the past behind)</p><h3 id="4162d364-c25d-4da2-a288-1b1c6cb4901b" class="">Part 3 1919-1929</h3><p id="c9da209a-100e-42ef-a890-91662fc10caa" class="">Dunny is 21.</p><p id="83662ceb-591e-408e-97a0-3cf713e0d27b" class="">Mainly focuses on character foil.</p><p id="c874e059-7953-402f-87d8-6e672fca02b6" class="">Enters UofT for history major → then for Masters</p><p id="6e70afda-b3d7-40dc-aef0-a0cad83f5921" class="">He does simple work during the summer</p><p id="6885b331-8b2c-4b1a-8a46-20dd763dadf5" class="">He sold his house and family business for a couple thousand</p><p id="7885556c-2a81-4cd1-a5bf-42dd12d46f7d" class="">He was intrigued in history because what happened to him during the war. He couldn’t understand what his role was during the war. He loves knowledge and hates ignorance</p><p id="6fcc265b-d1c2-4aa2-a74e-1ca6ddcf7b04" class="">He’s interested in learning languages to study primary sources in their original languages</p><p id="42e674d5-23ae-446c-b88e-71eee26f6dab" class="">He made no close friends, but got on well with others</p><p id="ab8918ac-0ed2-4c2a-a202-7ef97ec18355" class="">“Youth was not my time to flower” (110)</p><p id="6c9d7372-353b-4e99-9cab-0db06b2f9cdc" class="">Percy flowered brilliantly</p><p id="e0149f83-8424-49b2-b77b-8c8bca7747c4" class="">Percy changed his name from Percy Boyd to Boy</p><p id="64ea8fa2-f3a4-4a83-8a3f-27c78fcb5a67" class="">(The epiphany of youth)</p><p id="7d5b77dd-2ecb-46d2-bf1b-b7066b79e8d7" class="">Percy renames himself, but Diana renames Dunny</p><p id="66d7f8c0-fd19-4bc7-8dad-fa1e12f605f9" class="">He appears perfect outside. Very intent on developing his outwards persona</p><p id="acc6af6b-3dfc-495f-87af-08d3677707e2" class="">Boy made himself out of nothing</p><p id="ca11941f-6950-4c4d-9f94-a5f91b2e6f3e" class="">He wants people to think that his money is from a long time ago, and that he’s in the upper class aristocracy, but he just shot up with ‘new money’.</p><p id="79c354f3-d884-4d81-b872-ad60f2520cb2" class="">He chooses the prince of Wales (Prince Edwards) to be his role model.</p><p id="3fb3f8be-8dde-4360-954e-42a8a957428c" class="">King George the fifth → Prince Edwards (Nazi sympathizer) → King George the sixth (Edward’s younger brother) → Elizabeth second</p><p id="77f20a6b-d67e-4bb5-8410-b9e0886f85e1" class="">Boy idolizes him, tries to dress, act like him, speak like him, develop his mannerisms, etc</p><p id="1d817bcf-b215-47df-aec2-ba465e57aa59" class="">Boy goes to law school. Getting ready to become a really rich man. He always has a plan to be moving forward</p><p id="7eff093d-a6ef-498a-a982-da346163a773" class="">He gets a decent allowance, but wants more so he invests in stocks.</p><p id="067510e9-3ae3-4476-9a88-61f3271cb4dd" class="">Dunny lives modestly (no taste for expensive stuff, wears the same stuff many times before washing stuff)</p><p id="dc7fa6c8-13fc-4d89-9af7-b6f881456dbf" class="">Boy gives Dunny investment tips.</p><p id="6a590acd-5c19-4ec4-8581-d123377b4368" class="">Dunny was jealous of Boy. (because he had advice to give)</p><p id="26bf8a19-8837-4cb3-b1b9-31d2f60f562a" class="">“To him the reality of life lay in external things, whereas form me the only reality was of the spirit - of the mind” (114)</p><p id="4bd838d0-e545-4033-a25b-fc85c1fc39b5" class="">Book foreshadows that Percy will later reject Dunny’s help for something.</p><p id="0a4ec850-0d31-4e01-8958-43d31693f695" class="">Dunny compares Boy to the Great Gatsby. (He’s like a copycat, trying to be what’s fashionable and trendy at the time)<div class="indented"><p id="53739f22-6897-444d-a909-f9b237b6e7bb" class="">“He was the quintessence of the jazz age … something that somebody else had recognized and defined” (114)</p></div></p><p id="3a39f60b-8540-47ea-8165-3c1f4c3225ff" class="">He was with a lot of women while engaged with Leola</p><p id="096448c3-6380-4041-bcba-dcf72f965abd" class="">Dunny doesn’t want what Boy has, but is jealous that Boy is engaging them.</p><p id="e8c24b9c-b912-41e9-bb06-c5e85580bdf4" class="">Boy confides in Dunny because he knows Dunny can keep secrets (Dunny never told anyone about the snowball incident) Also dunny isn’t surrounded by other important people</p><p id="1bcc9ba4-f033-4ebc-981c-ab1929842327" class="">Dunny teaches boys. (Shows some misogyny too in not wanting to teach girls)</p><p id="02da61b8-903f-4e5b-8be5-48d96bdf0b5a" class="">He has some not serious sexual escapades. Which he claims to have treated them well</p><p id="db486966-cddc-4e8e-8dbf-40b2d9157a97" class="">He saves up a lot of money after finishing university. (More than he started with)</p><p id="a446b1ba-1a3b-48a9-9117-af2113a38952" class="">1924:</p><p id="4f9f06cb-d70d-44f8-937f-baebc5383bcb" class="">Boy and Leola get married</p><p id="f109b955-e094-41ca-bd07-02b22ec91439" class="">Most fashionable wedding in Deptford history</p><p id="918b0b56-68ac-4165-b001-8c4bf0c98d9b" class="">Boy has invited a lot fashionable friends, but his parents are still the richest people in the role.</p><p id="b30c81df-c7a2-4274-8f81-986985f2763c" class="">Reverand Leadbeater in pg120</p><p id="36e817f4-54e5-4ba5-96fd-e5fd14f7f71a" class="">Percy is fascinated by this man</p><p id="80e6e5de-b2a3-41e9-ba54-b609b214ec54" class="">He envisioned Jesus as a successful carpenter, businessman who travelled and had a lot of connections</p><p id="0986d934-fe99-4add-bf0c-843040d5accc" class="">Boy feels comfortable with that vision of Jesus and religion</p><p id="505d533c-f5b0-434e-9e29-81a6406e7c0d" class="">Boy wants Leola to fit into his lifestyle and wants to shape her to be who he wants her to be</p><p id="77beeb47-28b2-4c34-be1a-956f4026b079" class="">Boy makes his money in sugar which symbolizes greed, (having a sweet tooth) and wanting more</p><p id="8f9197ac-b41d-4530-b43e-708699ad0559" class="">Dunny goes to EU to look at the battlefields and try to find the little Madonna. Becomes super obsesssed and he’s able to describe the statue that he saw.</p><p id="1329bdf3-5163-4c0c-8021-78ae17071fbb" class="">He becomes a hagiologist</p><p id="ffc00f2e-e53d-46e1-ade0-e1ff1744dba0" class="">Leola gets ‘trained’ by Boy</p><p id="970a2a9c-39a0-4462-b634-b533fc7de5d2" class="">Synchronicities: Meaningful coincidence, feels like fate brought them together</p><p id="95c8c2ae-f41a-4804-bee4-7a8f44099c3a" class="">In spite of Boy’s disappointment and boredom with Leola, Leola is still in love with him.</p><p id="bd9dccd7-01da-4ca4-a7ba-0ac867353f08" class="">“Never have I ever seen a women so absorbed with her love for a man, and I was happy for her and heartily wished her well.” When he talks about Boy and Leola Dunny is jealous. When he talks about Leola and Boy Dunny is happy for her.</p><p id="ec9a5245-3cbe-4801-b560-c4d7f88cd81a" class="">The Staunton settled down and had children. (one named after the prince, which forces the prince to acknowledge that)</p><p id="d35e4ead-e883-469e-81e9-69ac05e0e95d" class="">Boy switches to the Anglican church</p><p id="e9c786c4-4ddc-4e73-a33d-5a02cc3d810b" class="">Boy’s irritated that Dunny gets obsessed with saints.</p><p id="635ba901-c615-43f7-bffd-d54bb8c62451" class="">The tramp (Surgeoner) who was in the gravel pit with Mary Dempster gives a speech at the school where Dunny teaches.</p><p id="60f3bbc8-c451-4884-a5f9-307cabf27e5f" class="">The tramp had hit rock bottom and then had run into Mary Dempster. He claims it wasn’t rape and that she consented.</p><p id="c311b15d-b7a4-45fb-80e4-0503dec372a4" class="">He was treated as an actual person by Mary and that reforms him (because he can’t believe), he feels like he was touched by an angel and causes a religious shift in him. Which is why he got into running a shelter in Toronto for homeless man.</p><p id="c1cd0dfe-1586-49de-8537-2316314bf8c2" class="">There was no release without Deptford in Dunny’s opinion.</p><p id="92fd0bd2-01a2-4eb9-9da3-2009096bf822" class="">Dunny goes back to talk to Mr. Mahafey and wants to know where Mary ended up. She’s living with her aunt Bertha Shanklin (who’s rich).</p><p id="bc748f41-0030-4d46-9f3d-8e291888558b" class="">She’s in worse condition now and doesn’t understand the passage of time so still believes that Paul is a child.</p><p id="689ed299-9fda-4f96-814e-a3b1f227fbbc" class="">Talks with Father Regan: To ask if Mary could’ve been a saint. (He tells her if she’s anything, then she’s a fool-saint)</p><p id="6a0d5f84-0aff-4a5a-9a89-9ae2f4afddd7" class="">!928: Dunny is 30</p><p id="08e4692b-13eb-4337-ba1b-c6cc690d2802" class="">Dunny always describes Ms. Dempster’s looks as peaceful and sweetness.</p><p id="e5768d5b-7d1f-429b-bac6-a74ec4a6f42b" class="">She didn’t remember Dunny, but still recalls Paul. She still thinks that Paul is a small boy</p><p id="1e79dd4e-7104-400c-90a4-c1f3d12e8c69" class="">Ms Shanklin doesn’t want Dunny to come back and visit Dempster, but then she allows only if he doesn’t bring back the past.</p><p id="fab6bd6c-9345-4cc1-a341-355d1074dfd2" class="">Boy calls Dunny and advises him what stocks he needs to sell in 1929. (He tells Dunny to buy more in Alpha)</p><p id="74dc210c-21fd-4000-ad61-eeda7b31817f" class="">Dunny was well off when the crash came. (Boy helped Dunny because Dunny kept his secret about the snowball incident and Boy might still feel guilt about it)</p><p id="9f8162c9-d20e-4418-8f8e-ff647d9a4112" class="">Dunny goes to Europe every summer to research Saints and becomes an expert in hagiology.</p><p id="dd4e4348-9452-49b7-81d7-79b7ef37787a" class="">He’s researching Wilgefortis, a saint by being a martyr. (Dies by valuing religion?)</p><p id="5d9101f0-c1d6-4161-bcb3-5d0d499b4f09" class="">Paul gets a new name Faustus Legrand → Allusion to a deal with the devil. A magician sold their soul to the devil for great magical power, OR The great magician</p><p id="9c596b35-f356-4728-a6e9-a92dd03e9959" class="">All three of the main character gets a new name and rebirth which is a motif.</p><p id="570e9e98-3689-44e6-b34b-990a12b01126" class="">The first name change is symbolic of rebirth, but when it occurs many times in a book then it’s a motif.</p><p id="89abb891-bb0b-4305-83ed-aa98819d2426" class=""><strong>Motif usually used to develop theme</strong></p><p id="650bba98-3700-4366-802e-d6c232b18a1a" class="">Paul ran away because of the guilt that his father instilled on him. </p><h3 id="bb50fab1-4bd9-4e5c-8d4f-0fb226a2c2c5" class="">Part 4 1930-1936</h3><p id="4cebd6fd-53d0-4fa8-a944-670ed7f68665" class="">Gyges and Candaules</p><p id="8934e0ee-654a-4830-9ea3-6c93b3544b06" class="">Boy made a lot of money during the depression. People are buying his sugary food as it costs less than healthy food.</p><p id="76c80d89-8d99-4281-92e5-bf75092e1530" class="">He hasn’t gotten into alcohol yet in his business. (Out of respect for his father)</p><p id="f0191c1f-bdd3-45f5-9130-76732ee3ce4f" class="">Boy is now one of the richest man in Canada. He’s famously rich in Canada.</p><p id="b5252766-2377-4220-9ddc-51bb75622726" class="">Dunny hasn’t told anyone that he had a close ‘friendship’ with Boy. (especially where he works at school)</p><p id="d7551d9f-d7e7-4061-a732-b3f695840cc3" class="">Dunny was the only person that Boy could talk about Leola. Boy was a genius at making money. He seems to have the Midas touch.</p><p id="e165cb65-c0d6-41ae-a300-fa5f19722aac" class="">Boy on the other hand introduces everyone to Dunny, and likes to drop names to everyone. (Mentioning the prince of Wales).</p><p id="9a17e45e-6ca7-4295-9eda-ebb795d57f30" class="">In Boy’s view, Leola is doing everything wrong. (Dressing wrong, etc)</p><p id="2c89cb42-62c4-4994-82e3-2e8a0989e443" class="">Leola has stopped fighting back against Boy’s requirements.</p><p id="03eb9718-e9a6-47f2-9f91-9779f8d47515" class="">Dunny’s characterization of Leola after she became a mother is misogynistic. </p><p id="57f50118-480f-4f74-95f5-e7b2d37f4ca5" class="">Dunny only realizes later than their relationships was abuse.</p><p id="c390aa6e-3551-4c14-928c-a67d32b3b7cb" class="">153: Dunny doesn’t fight back for Leola because that would imply business: That he wants to take Leola away from Boy</p><p id="7e5c4c8e-e79c-457f-91df-d74f1b48a049" class="">Dunny is quite critical of the “I’m getting better everyday” repeating that Leola had to do.</p><p id="fae22f5b-788d-4765-bb8c-58d15c50236b" class="">Dunny came between Leola and Boy a second time. There’s 3 ways to interpret this:</p><ol type="1" id="76ce5afb-6dd9-4c48-840e-92e877aa2477" class="numbered-list" start="1"><li>Boy considers Dunny too asexual to do anything</li></ol><ol type="1" id="ec17590e-a32d-48c5-8a31-d043df115858" class="numbered-list" start="2"><li>Boy tries to flex how beautiful Leola is</li></ol><ol type="1" id="00cab418-6fb8-4ace-9895-75b1ee2d169c" class="numbered-list" start="3"><li>Boy tries to tempt Dunny into taking Leola away from him</li></ol><p id="7409c352-3ab8-4399-bf0c-c5a43a7c7d72" class="">Brings us to Gyges and King Candaules. </p><p id="2867b3ea-1996-4bfe-9727-78db236fade5" class="">Ms. Shanklin dies (Feb 1932) and a lot of money is left to Mrs. Dempster (Dunny is manage the fund for her) Dunny’s also gets paid 5000 a year for managing it.</p><p id="7707ac35-3fd6-4605-a63a-889654f87bba" class="">Orpheus (Shanklin’s lawyer) kills himself because he was heavily in debt. Which means that Dunny has to look after Mrs. Dempster with his own money. (1932-1959)</p><p id="c4bc4bbf-747f-4320-bd21-8aea80017572" class="">She had a bed in a long ward. Mrs. Dempster is back to a depressive looking place. With dirty dresses, etc (Similar to her worst days in Deptford.)</p><p id="3178f87a-e4de-481b-8453-7b4175948d03" class="">p164: Dunny’s work in hagiology</p><p id="8a2f7a96-6bdd-4299-bb5c-a131c3997c3f" class="">Dunny is invited to visit the Bollandists, a group of jesuits? They’re working on an encyclopedia of the Saints which they started working on since 1643. Published in 1940. Dunny visited in 1932 (they’re at November, they’re doing 1 Saint per day of the year) Every year they also publish a yearbook of the most interesting things they’ve learned. They ask Dunny if they can publish his work in their yearbook. That was a moment of great pride for Dunny. Dunny is an outcast from his colleagues.</p><p id="c61e6c33-b8b6-4826-8411-2a6f94d0e2ef" class="">He also mentions it to Boy. But Boy doesn’t care. Now Dunny can be invited to the dinner parties. Because Boy can introduce Dunny with impressive facts. </p><p id="9e6212e1-9629-45a8-bc16-89f980df42bc" class="">Dunny joins the Jesuits in Europe and learns a lot from their library and stuff, but sometimes Dunny wonders where his life is leading him. (But he also wants fate to lead him wherever he wants)</p><p id="f6e2320c-44a5-4703-b188-683bdbd9fccc" class="">talks about motivation at the top of page 169.</p><p id="c9010787-6376-4800-8a9b-6cb3c2c1b421" class="">Dunny believes that if he dives fully and completely into one body of human work then it will give him insight into the fundamental nature of life. (ie: he’s tryna find some meaning of life)</p><p id="84f2350d-9880-4ae9-9115-6e155e245745" class="">Dunny wants to leave himself open and let fate guide him. He wants to let synchronicities guide him</p><p id="04baa9b8-52f7-401e-91ec-31709fff3004" class="">There’s some distance between Dunny and the Jesuits. Dunny is pretty lonely and hoping for connections.</p><p id="f6c9a3fb-4e79-4e8f-a1de-43cf2c0a466e" class="">He meets Padre Blazon: Ignacio Blazon: “Father ignite the flame”</p><p id="8971ec6c-7711-4f2c-b95f-38dc30bb7e84" class="">He’s 76, jesuit priest. he was dedicated to God before he was born. He’s an extremely priestlike dressed guy</p><p id="3d7c07b8-911d-4e8f-9665-42de2128e4ab" class="">He loves to talk, eat and drink. Blazon is obsessed with the shadow of Saints</p><p id="0e8a3a8a-b0c7-4568-9489-0abbefac5525" class="">Blazon gives Dunny interesting knowledge. Dunny asks Blazon if Mary is a saint</p><p id="ab4bfeef-bf3c-43c5-a028-4d1179b6c6b4" class="">Blazon answers with “why does it matter?” If it matters to you, then honour it as a saint.</p><p id="fe002fbe-9c0a-4337-a70a-0921e2a47ae0" class="">Things that might’ve been perceived as miracles in the past are common now. Therefore, it depends on the situation and point of view.</p><p id="0bedc015-d637-4e54-9e41-23a1e8a461f8" class="">What if taking the hit for the snowball was her first miracle?</p><p id="bc198b7a-8a86-4cbd-921d-a3eb0d7bce11" class="">He wishes that if Jesus ever comes again then he would be an old man to give knowledge and guidance to those who are old.</p><p id="e5777c19-c3e3-46ea-a36e-1849f1afc70c" class="">What role does Mary Dempster play in Dunny’s personal mythology (his own spirituality)? p177</p><p id="c02af7f7-bf2d-4797-bfb5-14f993cd3f1a" class="">Why was she the one who appeared to you when you were about to die.</p><p id="42dcf3be-4557-44ec-bb35-afe6b130e411" class="">Psychological truth.</p><p id="50dd05c9-177a-45c5-af07-2c311630b07a" class="">“I am deep in the old man’s puzzle, trying to link the wisdom of the body with the wisdom of the spirit until the two are one” 178</p><p id="7c3e6405-c3a5-4a73-ab50-d74b7cf01a38" class="">“You are still young enough to think that the torment of the spirit is a splendid thing, a sign for a superior nature, but you are no longer a young man; you are a youngish middle aged man, and it is time you found out that these spiritual athletics do not lead to wisdom. Forgive yourself for being a human creature, Ramezay. That is the beginning of wisdom, that is part of what is meant by the fear of God; and for you it is the only way to save your sanity. Begin now, or you will end up with your saint in the madhouse.” p178</p><p id="ff9efb0c-d5ce-4f74-8f39-c7c0127457b6" class="">Now visiting Mrs. Dempster is torture. She’s unwell, worsening, etc</p><p id="878103c0-76c6-415d-b4e1-a92c8b80f794" class="">“It was as though I were visiting my own soul that was condemned to live in hell” p180</p><p id="37cfb69d-7591-4a19-b05d-0804d9e46a7c" class="">Dunny didn’t ask for money from Boy because he might deny and would take more possessive control over Mary</p><p id="b9d3902b-4d69-45dd-be60-bc1cc7d1e959" class="">He still goes to Europe because he doesn’t want to torture himself just for Mary</p><p id="5cf52197-0861-4b07-b825-a816e2ca32ad" class="">He writes a new book on why people need saints (partly) and relates to how people needed heroes when he came back from the war.</p><p id="8e44831a-4931-4816-b6fc-137d224a5b74" class="">Boy likes to have Dunny around because it gives a nice tone to the place. He can use Dunny as a last minute guest (transactional relationship)</p><p id="98339f82-80bd-4b48-8099-cc07cf9a160a" class="">Jungian psychoanalysis all the way through the book</p><p id="98d6cf6f-463c-482d-abb5-17d43ab9041b" class="">He’s sexist in the way he raises his children</p><p id="9f279f8a-8ddd-480f-acd7-7361403f6b6f" class="">He’s barely tolerating of Leola, but she still loved him completely</p><p id="ff36aedb-5709-4edc-a98b-447728f98cc7" class="">Fated Christmas 1936: That’s when Prince of Wales who became the king gave away the throne.</p><p id="ff70f82a-8da6-496d-9ab1-ebd9114f37be" class="">Boy is extremely upset about King Edwards dethroning. (Especially as it was for a women which he cannot comprehend)</p><p id="cabc9ad7-7db4-41ba-a6df-1a658029816d" class="">Leola finds a note which proves that Boy was cheating on her. Leola tries to get Dunny who doesn’t love her anymore and then attempts suicide.</p><h3 id="1b3fbd7d-c2ae-401e-bac5-01a0b512ffb9" class="">Part 5 1939-1948</h3><p id="5ef27f26-838a-492c-b93d-57f6032c21a0" class=""><em>The part where Fifth Business comes into effect</em></p><p id="06e833b2-2089-401e-a2f8-9da790964d69" class="">Boy involved in politics through minister of food, and knows his stuff well about nutrition and vitamins, etc.</p><p id="29d42e3f-c27d-4864-a0af-606754b3c30b" class="">Barely saw Leola or his children during war</p><p id="1da9d3ef-14b0-49df-b729-bd30fb051466" class="">Boy is now the chair of the school. (And a parent of the school, David is going to Colbourne College)</p><p id="8b9e67df-3b2b-403c-b548-0e78922988af" class="">She lost heart in everything after she discovered Boy’s cheating.</p><p id="e29d4100-cfa3-4275-bb77-a857bc8f8f5f" class="">She fell ill in 1942 of pneumonia</p><p id="38fe69ed-52ca-4728-8c8d-285b1d7c4ce7" class="">She dies (after purposefully leaving a window open, cold air)</p><p id="f837328b-bee0-441a-95ca-3692effdd9ce" class="">Boy wasn’t at the funeral</p><p id="ad919d5d-6072-4c05-85c9-140000e85fd3" class="">Milo is the barber (He’s there because he’s a town gossip, knows all the secrets, but unlike Dunny he gives out all the secrets) The people in Deptford think that its a great marriage and that Dunny didn’t marry because he couldn’t get over Leola</p><p id="ffc834d2-a546-4b34-9501-515e7a4648c9" class="">Boy was always fussing that David would not be a real man. (The old headmaster had died by being hit by a truck, Dunny is the new headmaster)</p><p id="9e01a8df-423f-4835-91c5-b0a718402a9a" class="">Boy in 1947 pays Dunny an awkward visit to demote him as headmaster.</p><p id="0b5414c6-65a9-4218-a055-ed4c933050b0" class="">They don’t really like Dunny’s fascination with saints.</p><p id="d019b04a-4b30-4d51-b7f0-461fd032e9ba" class="">Dunny requests paid leave for 6months and he goes to Mexico where he meets Eisengrim on tour</p><p id="fd919ebc-3b04-46b2-acc4-951abf853801" class="">Eisengrim is more of a dark and mysterious magician, mystery, elegant, and maybe a hint of terror</p><p id="31a9e843-720e-4064-9d8a-c43374f8cc0e" class="">He was a novel magician (Paul’s new role) The completion of his rebirth process.</p><ol type="1" id="c984b360-2c6d-41aa-afca-759356f3e069" class="numbered-list" start="1"><li>Illusions: Pours everyone a different drink from one bottle.</li></ol><ol type="1" id="883e681b-9ddf-47f7-96f9-0f09739e7775" class="numbered-list" start="2"><li>Hypnotism: He never made anyone do something that would compromise them. He tried to make those men retain their dignity</li></ol><ol type="1" id="0d70eaca-f900-4401-bc00-e66dc0caee6a" class="numbered-list" start="3"><li>Escapes: Robes and straps, From milk can from underwater tank</li></ol><ol type="1" id="db61376b-04ff-4a85-96a5-caea3230d329" class="numbered-list" start="4"><li>Dream of Midas: Everything he touches is gold. Then when he breaks his want they turn back from gold into real people. (The girl’s hand is missing and bleeding afterwards)</li></ol><ol type="1" id="498aa4bd-2cc6-4f3b-8672-68de4325cf3b" class="numbered-list" start="5"><li>The vision of Dr. Faustus: Makes a girl appear in two different cabinets without seeming to pass in between each of the two cabinets. (deal with the devil allusion) Two beautiful women are struggling for his love, one is angelic and the other is a devil. (Struggle of his soul for good and evil) Faustus kills himself and is dragged down to hell by Mephistopheles. <strong>Eisengrim plays both Faustus and Mephistopheles</strong></li></ol><p id="f370379b-9694-4e8d-8acd-bff3477d7aed" class="">Dunny tries to talk with Eisengrim, but meets Liesl (pronounced: Lee-sol) and gets invited.</p><p id="1dad850e-c8cb-450b-8fea-8d848e0a8cfc" class="">She’s the ugliest human creature than Dunny has ever seen. Big hands and feet, tall. </p><p id="18ed6e91-db82-4f21-a170-4567492a5a27" class="">He doesn’t sound like a native English speaker anymore</p><p id="17f79d53-95cd-43de-b227-8430408058ab" class="">Eisengrim returns Dunny’s money that he stole with interest.</p><p id="91667890-54f0-4ff1-a7f7-9e10085b9624" class="">Dunny doesn’t finish his tour of the shrines of South America</p><p id="86252ddb-ad0b-493d-a871-87bff5ef4021" class="">Faustina is the most beautiful women he has ever seen.</p><p id="73e723a2-afd4-4f53-84d3-a2d32a68e3ee" class="">Liesl is ugly, but she’s charming and graceful and smart. Everyone has to stay in character to maintain the mystery of the show</p><p id="5216188d-84af-4dfd-9198-9f6f92b14ecc" class="">Eisengrim wants to be wondered at, and people want to wonder at other.</p><p id="2ac98d68-9840-42de-b3cb-6b0153966cd0" class=""> Liesl wants Dunny to write an autobiography of Eisengrim, and she flatters him with the best of compliments</p><p id="8664f8d2-fb32-4543-bad9-68a41ad9fb58" class="">Eisengrim means like the great wolf</p><p id="06ba655d-ec6e-4cf7-b9e2-f4e24fcc2681" class="">Dunny beings to detest working with them</p><p id="02581318-0ce4-4767-965e-f21043630039" class="">They’re talking about what’s in the show and what should get cut. They cut the underwater escape, and add Brazon Head of Friar Bacon (allusions to make predictions and tell the future) making predictions of audience members</p><p id="a0066c21-7e07-403f-bf55-4bb9b9def7ea" class="">Eisengrim isn’t very educated, but he’s very confident.</p><p id="1a82ecba-01a8-4aca-9002-d4b4ac1d2b01" class="">Dunny helped make Eisengrim one of the most celebrated magician ever. He contributed the sawing a person in half trick with a member of the audience.</p><p id="6f1b0567-1afc-4afa-8086-f063e379e64a" class="">Dunny is becoming a like a child again, he’s boasting and lying and going through a midlife crisis.</p><p id="ab726d6f-2b85-4c61-86f2-e29bc1b34b1f" class="">He identifies that two things which are wrong is that he’s in love with Faustina and became an indiscreet talker. (Started to pass on gossip)</p><p id="225e9ee6-a9bb-4c9a-b926-b7911c70059b" class="">“Almost from the earliest days of my childhood I had been close-mouthed; I never passed on gossip if I could help it, though I had no objection to hearing it; I never betrayed a confidence, preferring the positive pleasure of being a repository of secrets.” 215</p><p id="ce6803a7-a278-4718-bab4-0a249dcc6d34" class="">Dunny tells Liesl a lot of the info. (Mary’s miracles and how Paul ran away)</p><p id="0497db70-d784-46f0-9838-3298625c91ed" class="">Pay a high price to not tell secrets.</p><p id="8ef0b032-ad8f-4bc0-8ba2-7bae3a4db38c" class="">Liesl is saying that you’re being too hard on yourself by forcing yourself to hold on the secrets in and that’s preventing Dunny to be a more open person with relationships and a normal person, etc</p><p id="34027b9b-a1de-4587-ae54-413be4e7e531" class="">“You made her carry the affection you should have spread among 50 people” Liels calls Dunny a moral monster.</p><p id="d61d3ef4-75ab-4bf8-a280-c64adce47d13" class="">Dunny’s like trying to atone for his sins</p><p id="10e3b16f-ecc6-4bed-ad5a-d5d0b464ae49" class="">Liesl sees Dunny better than he does himself, she’s trying to free her of his prison of atonement</p><p id="43a05c70-20af-442b-a505-799b9f3d6da9" class="">Eisengrim wants everyone to put up a mask on when they went out into the world. So maybe when Dunny goes in he removes his mask that he always had.</p><p id="6aaa9368-a175-41ae-b00b-a1275c704ab5" class="">Midlife crisis</p><p id="2e6ad944-c602-4b85-b4b4-abfa0a83ec8d" class="">Fifth business is introduced</p><p id="82b60d3e-3504-4c09-b96d-4f3779fd0a9a" class="">Describes Dunny as a man of 15 with his life’s secrets in a glass bottle that’s exploding, splashing acid everywhere</p><p id="5af64583-8ce4-4b9c-a2ea-0676a754a993" class="">“You don’t know her, but far worse you don’t know yourself” p222</p><p id="f8eec229-79b3-4cdc-b6f4-d2c8f6454249" class="">The nose crack symbolises fighting off his personal devil. (Liesl symbolically represents his internal devil and acquaints him with his dark side.)</p><p id="edd9d837-9e36-42d9-82c4-52c9ff284bc1" class="">Liesl did something similar to Magnus Eisengrim.</p><p id="2e866179-7861-48e2-9721-91bbbf7326b3" class="">Liesl comes back after losing the fight and they make up</p><p id="4ec3c121-6f72-4bf6-931b-221c05aedbc4" class="">Liesl tells Dunny that he’s a human just like everyone else. </p><ul id="e4625046-1a9e-4f7f-bc60-0d6ace95339c" class="bulleted-list"><li style="list-style-type:disc">He doesn’t fulfill his own needs, closes off everyone and tries to be responsible for others</li></ul><ul id="d745025f-a15b-45f6-a130-166cbc6f99d7" class="bulleted-list"><li style="list-style-type:disc">He’s nice to everyone except himself</li></ul><p id="4f4f58da-b8ad-4be5-ac7e-5578f74cf6c7" class="">He should allow his shadow to live. (He’s not willing to acknowledge his own shadow)</p><p id="ee0c56f3-db0b-4bd2-a94e-5d61d62e0a01" class="">“But you - there is a whole great piece of your life that is unlived, denied, set aside. That is why at fifty you can’t bear it any longer and fly all to pieces and pour out your heart to the first real intelligent woman you have met… This is the revenge of the unlived life, Ramsay. Suddenly it makes a fool of you.”</p><ul id="4589a1b9-6f24-4d9b-8f18-6903232892ee" class="bulleted-list"><li style="list-style-type:disc">What Liesl says is only for the twice born. Where they have to figure out where they have to fit in poetry and myth.</li></ul><p id="6b0be01c-0c84-416f-bf0c-d0e8d7b28acb" class="">Paul’s rebirth (takes on a second development, a start and then a finish) Where at one point he’s trying to get away from the first life and the second rebirth is to fit into the new life.</p><p id="a83013ca-c8cd-44b2-805f-aaaafffaa36c" class="">Liesl also had a rebirth</p><p id="6ff11103-e6a4-4db3-92ae-c78e833cb72e" class="">Liesl’s name is that of a minor devil</p><p id="f6c5ca31-44cb-45a9-a1cb-b3bec1805f6a" class="">Symbolism of shaking hand with the devil? (Deal with the devil)</p><p id="84b81bcb-15a7-4ed9-a5b2-35375151fa35" class="">Faustina and Liesl symbolises the vision of Dr. Faustus. (Dunny was forced to confront it by Liesl)</p><p id="9fce98ba-1e84-4b3a-a10a-50154337b6ea" class="">End of his midlife crisis.</p><p id="dcc361f0-5155-4384-9446-f9e6fd1d97f5" class="">Dunny needs Liesl an intellectual women, who can push him and make him grow.</p><p id="2020cda4-79ca-4847-8cd2-359dbdf7db9f" class="">Liesl and Blazon lots of connection. His only close people in adult life, they’re both telling him the same thing.</p><p id="91934230-a70c-43b1-bb88-f4e93779baca" class="">“That is the beginning of wisdom” (to forgive yourself)</p><h3 id="d5e21a4a-aa29-42e9-9eea-6c06c9479ec9" class="">Part 6 (1948-1968) The Soiree of Illusions</h3><p id="fd32faa8-ca55-4870-baf6-3b3d99c03310" class="">He finishes to write the autobiography of Magnus and it sells well (in 1948)</p><p id="fdd55e2c-0040-4bee-b56c-7a1f7ed73025" class="">He leaves Eisengrim and his group, and gives them gifts.</p><p id="0e0450a6-4794-4cae-86a3-39cabb260402" class="">He eventually falls in love (said in part 3). so therefore assumed to be Liesl</p><p id="dd98e2f1-0803-4475-8ced-aa78e04714f2" class="">Eisengrim helps contribute to Mary Dempster (with Liesl assistance)</p><p id="06802174-11f9-41fd-910d-ed75ee10ec35" class="">He moved her to a nice private hospital (Mary is doing better).</p><p id="ca2b96b3-4002-4812-bb10-4a73a161a49e" class="">Dichotomy in Dunny’s life: Mary his personal saint, Liesl his personal devil</p><p id="f911a9d6-8d99-4072-aab9-3b722d25901a" class="">Dunny tells her that he met Paul, but that strongly distresses Mary. Dunny tries to reason with her and starts to believe that she’s in prison in the hospital. She starts seeing Dunny as an enemy. She gets sedated, and strapped into bed. Her health goes downhill and then she dies.</p><p id="869cafd6-eca4-4108-82c8-aa7fd13d7e19" class="">Boy gets remarried, and the new wife hates Dunny. (They can only meet up at the club, so Dunny’s not getting invited to their home anymore)<br/>Boy goes for politics, but isn’t successful (as the public sees his shadow)<br/></p><p id="57488bd3-cfc6-4380-81d0-154aada9be9b" class="">Denyse is a powerful feminist politician. She’s been married before has a daughter and is divorced</p><p id="899cc118-d5cf-4a9a-a9a6-5b1180ec7a5c" class="">She’s a lieutenant commander and made a big travel agency</p><p id="6918022e-889a-4a3a-869d-ca6158145826" class="">(Intelligent, capable, strong women)</p><p id="1ddd9d6a-c442-4d2e-9815-165dfa20a112" class="">She seems to manipulate Boy into marrying her.</p><p id="589bb920-af8b-4c64-83da-a692f735bc73" class="">Boy can also give her political status.</p><p id="c02b0ab9-7890-4bba-8412-c94069147063" class="">Shows Boy’s innate sexism. (Boy’s compliment of Denyse is that she has a masculine mind)<br/>She tries to get Boy into a Lieutenant-Governor of Ontario<br/></p><p id="7157a228-7efe-4e65-8115-b856d2441f90" class="">It will be a long campaign, but well planned</p><p id="33c2a49c-aa52-4f0a-b7b4-4a59d831e33c" class="">She has to make him think that its his idea to run for Lieutenant-Governor and that he’ll need a wife for it</p><p id="ae85c5d4-2b9b-47c4-8daa-2615a7a1ead8" class="">Boy decided that he wanted Denyse</p><p id="bc325af1-7a4d-40eb-a3b5-6dfce62a0921" class="">She’s giving Boy reasons he shouldn’t marry her to convince him that he should.</p><p id="a8395f8f-1acc-41f3-824a-2de13c1b4605" class="">He got married in around 1958</p><p id="c1a1d367-5ccb-429d-82b4-6c2a21ce0434" class="">She dislikes Dunny (maybe because of his misogyny and how Dunny recognizes her manipulation)</p><p id="6bdafb35-8fac-4701-a3be-dab9097bf771" class="">She has external interests just like Boy (money, power, etc)<br/>She condemned church rites but they still married in a church<br/></p><p id="6b43b667-b394-4c64-b9a2-f1ef2a16e317" class="">Dunny can see more of Boy’s shadow poking through</p><p id="79369e3b-2408-45db-959b-f905a50ddea8" class="">Boy starts hating Dunny’s books. And thought Dunny had a triviality of mind</p><p id="82fda243-b6c7-4dd5-931f-b008fe30567d" class="">page 242: “I feel rotten. I’ve done just about everything I’ve ever planned to do, and everybody thinks I’m a success. And of course I have Denyse now to keep me up to the mark, which is lucky - damned lucky, and I don’t imagine I don’t feel it. But sometimes I wish I could get into a car and drive away from the whole damned thing”</p><p id="4801a746-42d4-4a6d-a1b8-de5e0702b427" class="">Boy destroys his own image of God because he exceeded his vision of God he becomes an atheist. He has nothing to believe in anymore (he feels empty).</p><p id="14a4c9ad-d03c-46da-aaf3-736cfa26a8c7" class=""><strong>People need something to believe in</strong></p><p id="87386b00-b8d7-490a-a9f9-4991c36e231f" class="">Dunny calls it psychological suicide. (he killed off his internal self, everything good in him)</p><p id="9c2d26ec-af7a-4389-8ead-2d1062c8f070" class="">Dunny interprets it that Boy doesn’t know how to grow old. (significant in his name)</p><p id="44eaf806-0fc7-494f-8875-9c8755391345" class="">Traits of people when they were young show up again when people get older. The cloaks people wrap around people become thin as people get older. Their shadows are emerging. 242 (year: 1958)</p><p id="21eb2698-88c0-4ed4-bb91-cf7db563ca37" class="">Mrs. Dempster dies in March 1959. (Been 10 years since he told her about Paul in Mexico) she got various issues, heart trouble, kidneys, etc. She dies of a heart attack?</p><p id="d5133ab3-8209-4705-ade1-1623615f5978" class="">Her last words: “Are you Dunstable Ramsey? I thought he was a boy.”</p><p id="e9979a56-c2de-4a1f-b907-8f68e185bffc" class="">Shows that he was meaningful to her as well. Not just one-sided</p><p id="caf7c98a-9f79-4276-9041-98b32afa6b0c" class="">Dunny cried after she died (the two times he lost his mother). He dreamed where his mother appears to him in a terrible form.</p><p id="f0fc939f-ddd8-426e-ad8e-a87929ccb684" class="">He sniffs her corpse to check if she’s a saint. But she doesn’t give off a scent of violets like saints usually do.</p><p id="2f5bcd1c-120b-4674-95e2-cc7e18eb839c" class="">(Her funeral contrasts with Percy’s)</p><p id="6ab1a05c-76dd-4d66-8c6c-e5d34bfe4463" class="">He visits the Bollandists (summer of 1959). Blazon is still alive and he visits him. Dunny is 61. Blazon is 103.  He asks Dunny if he’s met the devil yet. The devil tempted Dunny with success. (Dunny is not a saint, he’s no longer trying to be perfect anymore) Dunny learned a lot about himself from Liesl.</p><p id="c16f75dd-07dc-4400-aa92-da57a77fcd15" class="">Dunny has no fear of losing himself to the devil. Someone else in the book has made a deal with the devil</p><p id="c0f4e9bc-1af9-44e2-ba55-3101853df2df" class="">He finally finds the little Madonna again. It’s not the face of Mary. He accepts that Mary isn’t a saint but just a saint to himself. He recognizes her loving perception of forgiveness and mercy, etc (on the statue) that he felt comforted by. (The search for the statue was a search for himself, a discovery of his shadow)</p><p id="0da971a0-93a2-49d8-a5fa-aaa2fa513122" class="">Since he found true self knowledge he can now find the statue again.</p><p id="2f3a8a86-d997-4c7c-9daa-21f9fd0d153e" class="">Death of Boy Staunton was a 9 day wonder. (something that’s briefly famous)</p><p id="863b4999-4ecd-4119-bf00-4964ff702db9" class="">They’re 70 years old. 1968</p><p id="634ddbce-41cf-4b60-a5c7-b7b4f55121e1" class="">At 4oc his car was recovered from the Toronto Harbour (20ft from the side). He was gripping the wheel strongly and the windows and doors were closed. There was a stone in his mouth.</p><p id="6ddace2a-dc3b-4b92-98cd-14ac70578417" class="">Boy had achieved beyond his own aspirations and no longer had goals. (But he recently got lieutenant governor position)</p><p id="5bf38e52-8d4a-41ba-a9a2-3b61aac45cc6" class="">Not heavy mention of Leola Cruikshanks. (her name was spelt wrong in the newspaper, showing how insignificant she was)</p><p id="44ec5f3d-651d-4b6d-82a9-0845b5fd3298" class="">Denyse asked Dunny to write his official life. “It was not as much an inquiry but a flick of the whip”</p><p id="ae493eee-a693-4a7f-bdf0-01aa4631478d" class="">Dunny doesn’t want to write it because he doesn’t think he can write honestly and not write about his shadow.</p><p id="ccd2f410-b3ff-4916-9f18-fa33f904f45e" class="">Magnus went to Canada in 1968 (He was on Times for the greatest magician in history)</p><p id="1e715b11-7c5d-48d2-b178-025d08f04fda" class="">Dunny saw a good deal of him and his company and he talked with Liesl a lot.</p><p id="cfb26e96-d6d2-4920-9d17-56f2f9a74042" class="">Eisengrim goes to the school to do a presentation on hypnotism.</p><p id="c248eaaf-c2f3-4e11-82ee-f1c1173b7df0" class="">“Nobody can be made to do anything under hypnotism that is contrary to their wishes. Although of course people have wishes that they are unwilling to admit even to themselves” page 255</p><p id="3ea3006c-f9aa-4d6e-a0c4-ddc7fb9a1d02" class="">Boy uses a bullying technique from childhood by try to drop Dunny to a lower peg in order to get on good terms with Eisengrim.</p><p id="50a540ce-1d1a-4515-ab8c-ededcfeed3c9" class="">“Before I discovered who I was I was called Paul Dempster.”</p><p id="db617e23-439c-40b7-a7f7-a38ca207a2a8" class="">Willard the wizard → Le solitaire (drug addicted pedophile)</p><p id="de57bfba-8b67-4635-a119-cb4911a52e7f" class="">Paul was loyal to Willard. </p><p id="2f1217a7-2f8e-43e8-8734-f5698d087bbf" class="">Paul has a lot of hatred for Boy. He’s been holding on to the pain of his childhood. (holds to his past?) He was also getting forced guilt on him by his father. He escaped with a circus but got into worse, a hellish circus.</p><p id="4358c3cd-f613-4641-8cd6-b9caa4fe891e" class="">Boy doesn’t remember the Dempsters. Dunny wonders if Paul only remember pain from his childhood and Dunny wonders what he forgot.</p><p id="8171f536-6e5c-4228-a474-bb9acf9c5fa8" class=""><strong>(Dunny in his childhood spilled secrets to Paul, which shows up again as his shadow when he grows up)</strong></p><p id="2aba4a47-c316-4687-98da-48581293f0c1" class="">Boy removed that from his memory to fit into his persona better</p><p id="0b464908-c62a-4d29-bc02-d59b3f822e7d" class="">“We all forget many of the things we do, especially when they do not fit into the character we have chosen for ourselves.” 262</p><p id="1609353d-de18-4306-b573-241980387c85" class="">A snowball with a stone inside looks innocent (his name is Boy) but the snowball is hurtful and that’s characteristic of Percy for his life</p><p id="cde153cf-73c4-4b06-8e07-d83f2cbb2f94" class="">What do the ashes symbolize?</p><p id="3b875516-105c-4a07-941f-0ffe5a6ff13f" class="">Boy only indulges his sweet tooth. So by bedtime, he was coyed. Too much ‘good’ isn’t good anymore?</p><p id="ec726225-3f73-4001-8879-08d81aa75116" class="">He’s greedy af</p><p id="823a4691-78db-444c-b04a-3f06c9291ff4" class="">Paul wanted to put his stamp on the murder by putting the stone there. </p><p id="b37c2b6b-0f54-49c1-be14-da495daf08d6" class="">Paul went through so much guilt as a child that he’s numb to it in his adulthood</p><p id="b2db8d5f-a22e-42e8-affd-a38f58461304" class="">Stone has a literal and symbolic function</p><p id="5b3c828a-ec5d-41aa-b8ce-7a239ca29030" class="">“Integration of self”</p><h2 id="9dc16311-e5d8-4819-8080-2c3ad78ddadb" class="">What I Liked About It</h2><p id="29a986c0-5c5d-4722-9ab8-fcf139e9b374" class="">
+</p><p id="3eae114b-afd8-4fef-9cc3-99eead27e44a" class="">
+</p><h2 id="7589755b-cf24-41f5-ae31-33a2344f7938" class="">What I Didn&#x27;t Like About It </h2><p id="6bb0710f-f5e3-4f1b-91df-c1bde7088802" class="">
+</p><h1 id="2e927659-96e2-4ea7-8918-104c7ae9352b" class="">🥰 Who Would Like It?</h1><p id="c9142767-a2f3-4e67-92d7-f5ab24fdb7ee" class="">
+</p><h1 id="dd109295-ec45-4954-b399-4a0cffe0ad24" class="">📚 Related Books</h1><p id="92ae86dd-6229-451e-b766-b501f71af572" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

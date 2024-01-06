@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Algorithms to Live By</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4580f1a5-e1f2-4b55-aed7-a765e8b9dc49" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💻</span></div><h1 class="page-title">Algorithms to Live By</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Brian Christian, Tom Griffiths</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-purple">Computer Science</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-gray">4-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@April 30, 2023 → July 6, 2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>351</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2016</td></tr></tbody></table></header><div class="page-body"><h1 id="a864e538-a9fb-4ce8-9a15-2fe3259457f5" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="f02669f0-a1f1-4d27-b217-78c9c0620b79" class="numbered-list" start="1"><li>There are several algorithms from computer science that we can apply in real life</li></ol><ol type="1" id="69eb4763-f514-4ad3-b42c-7e1fdfdb076f" class="numbered-list" start="2"><li>Those algorithms will help us be more rational in difficult situations might cloud our judgment</li></ol><ol type="1" id="28727c66-0973-4a06-94d5-a088e52427f1" class="numbered-list" start="3"><li>However, when the problem is intractable to be rational might mean to leverage randomness, guesses, estimation and so on to make tradeoffs between accuracy, memory and time.</li></ol><h1 id="129ac492-4cfb-4f41-9119-18160908e6be" class="">🎨 Impressions</h1><p id="7053cf81-7663-4cef-bab5-8908a7c814d7" class="">Well researched book, contains interesting advancement in algorithms and computer science.</p><h2 id="053bdfeb-8bfa-41d5-a67e-26f9c481d09a" class="">How I Discovered It </h2><p id="7da0b5fb-67d3-4a1b-9ee4-06523fb920ef" class="">Recommended by a Youtube (specifically Zach Star IIRC)</p><h2 id="e075f123-6310-4434-8c54-ff9052d05b22" class="">Who Should Read It? </h2><p id="083d25d7-4103-4ad9-9b6c-d3495653f363" class="">People with an interest in computer science. Doesn’t seem too useful for actual in real life applications.</p><h1 id="06faf079-057d-467e-bc74-cd023b72f527" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4af230af-e77e-4f57-aafa-41af5ee1ddfe"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="c0cc88da-97d2-484c-b97c-d7f84de6a25f" class="bulleted-list"><li style="list-style-type:disc">Not much, some of the algorithms like 37% rule feels like they can be used in my life</li></ul><h1 id="b418cab2-fff5-44bd-b158-8052c1e6cd00" class="">✍️ My Top 3 Quotes</h1><ul id="519310c0-0093-4ca6-a62a-d98f5b1e0eac" class="bulleted-list"><li style="list-style-type:disc">“Beggars can’t be choosers”</li></ul><ul id="a43b9d5b-2ebf-414e-82d4-1259030f8cc4" class="bulleted-list"><li style="list-style-type:disc">“In the long run, optimism is the best prevention for regret.”</li></ul><ul id="7f31a589-d6ec-4a04-87c1-8fbc3fc7cc40" class="bulleted-list"><li style="list-style-type:disc">“The optimist proclaims that we live in the best of all possible worlds; and the pessimist fears this is true”</li></ul><h1 id="38b70d9e-805b-414b-8aba-6f124c49415d" class="">📒 Summary + Notes</h1><p id="8fd5acbc-6474-447a-baf6-94012b83a6b0" class="">37% is the optimal stopping solution. This means you should spend 37% of your time scouting offers then the rest taking the best offer when you see it. </p><h3 id="8823ef90-7508-46e0-9a59-48de9a80e1a4" class="">1. Optimal Stopping</h3><p id="efd859a4-792e-4428-8ee0-b3ed930941ab" class="">Scenario:</p><p id="d693fdf5-1496-49a8-8d84-909879994d39" class="">You interview applicants for a job in random order, one at a time. You can decide to offer the job to an applicant at any point an they are guaranteed to accept, terminating the search. But if you pass over an applicant, deciding not to hire them, they are gone forever.</p><p id="a655403e-40a7-4185-a655-54888f55e6cf" class="">Answer: We should look for 37% of the time then take the next best applicant after that line. This gives us a 37% chance of picking the best applicant too.</p><p id="4c078c4a-d748-42b5-a814-1d24e682f570" class="">This scenario has variations where you might be rejected 50% of the time in which case you should offer at around 25% of the way through.</p><p id="1a6ed74e-f94b-428c-93c6-c4e7c8da11dd" class="">Similarly, if there’s a 50% chance an old applicant would still accept then the looking period should get extended to 61% of the time (giving a 61% chance of picking the best person). If you just interviewed a person they’re still guaranteed to accept your offer.</p><p id="08c9d97d-12dd-46f8-8e56-fd68cbe5a61c" class="">If you have “full information” ie: which percentile your applicant is in, then you should use the Threshold Rule, where we immediately accept an applicant if she is above a certain percentile.</p><p id="305aaea7-4a2a-4093-aeb1-c0d28639ef0c" class="">Next version: Each time you wait to sell a house it costs you a bit of the mortgage. When is the optimal price to sell at? This only depends on how much waiting for one offer costs and the range where you can possibly get offers. For 2000%/offer and a range of 400k to 500k then wait until there’s an offer above 480k. (In this version, even if you could go back to a previous offer never do so, because sunk cost can’t be gained back and you should stick to the leaping amount that the math suggests.) Also if waiting for a single offer takes more than 50k then you must accept the very first offer.</p><p id="d3c76df8-aae3-476e-9650-de7250f06329" class="">“Beggars can’t be choosers”</p><p id="e7f9128a-493c-48cd-9a95-4ff53d0736b0" class="">“As for planning on ‘unexpected traffic,’ I think you should plan on expected traffic.”</p><p id="1e540f27-e321-46f4-a597-8b1d6e581650" class="">This problem also applies to parking. Where one has to decide how close to get to the destination before taking the empty spots and walking. This is a difficult optimization as the process takes searching time, fuel, walking time and depends on if there are competitors, how the road is shaped and occupancy rates.</p><h3 id="a89c29b9-9f1f-4a60-b9cd-c482a4070f87" class="">2. Explore/Exploit</h3><p id="76e15628-2f6f-407b-8917-d3e6773e0f38" class="">“Every day we are constantly forced to make decisions between options that differ in a very specific dimension: do we try new things or stick with our favorite ones? … Life is a balance between novelty and tradition, the latest and the greatest, between taking risks and savoring what we know and love.”</p><p id="8531503f-af95-4681-a4c0-84a9acf18c05" class="">The explore, exploit problem is one where we have limited time and must spend some time gathering information (exploring) and some time using that information (exploiting). We wish to strike the balance that helps us out the most.</p><p id="2061a2d9-3776-4df6-a838-1ed7019343a0" class="">An example would be: being in a casino with just 2 slot machines each with different odds of payouts. You want to play them a bit to know which one is better then spend the rest of your time playing the better slot machine.</p><p id="cb5f2e50-cbfc-40c3-aca7-e865dcaf961a" class="">When you have a lot of time left, it’s better to explore a bit more, but when time is running out it’s best to start cashing in with the best you’ve found so far.</p><p id="82c48626-5f6d-461e-9b0a-2424bd2bf490" class="">This problem is unsolved, but a general strategy is that if you win then you stay. (Win-stay)</p><p id="f669173d-b9c0-4611-870e-0226b119a374" class="">“To try and fail is at least to learn; to fail to try is to suffer the inestimable loss of what might have been”</p><p id="7b0c2de1-607f-4697-9425-f809b12ad7e9" class="">A decent human solution to this problem is to consider what would minimize regret. Think or yourself as the 80 year old looking back on your life.</p><p id="900c51a2-b6cc-467b-aff1-a2c0034e401f" class="">Actually minimizing regret is solved to be regret increasing at a logarithmic rate.</p><p id="9e55f3b5-322a-454d-aa77-e9505f2a7086" class="">Basically this relates to confidence intervals in statistics, as a machine that hasn’t been played that many times might have the same expected value as a machine that was played more, but have larger confidence intervals. </p><p id="da2d35ee-110c-4781-be63-9ab1ec978da4" class="">The <strong><strong><strong><strong><strong><strong><strong>Upper Confidence Bound</strong></strong></strong></strong></strong></strong></strong> algorithm tells us to pick the slot machine with the highest top of the confidence interval. This is an optimistic algorithm that considers what a slot machine might realistically give out as best choice.</p><p id="cdd32021-2ee9-40e1-94b7-e69d5f60f2aa" class="">“In the long run, optimism is the best prevention for regret.”</p><p id="fe24830f-985f-4acb-b7f0-53a9fe25ba4a" class="">A/B testing: Where a company can put out different versions of a website to different random set of users and see if their interactions are statistically different. Metrics such as engagement, money spent, etc are tracked and subtle tweaks are made to optimize.</p><p id="653284c8-8ce3-4306-88cf-bd447b540d1e" class="">This also shows itself in how old and young people deal with life. Young people like exploring a lot as they have so much time left to live, but old people would prefer exploiting whatever they have accumulated throughout their life.</p><h3 id="adf0fdc1-f044-4fd6-90d7-cab6c2f01c6c" class="">3. Sorting</h3><p id="6a4ff559-76a2-4c7b-94eb-f5f109dcfa26" class="">There are many ways to sort including, bubble sort, insertion sort, merge sort, and bucket sort.</p><p id="986011d4-be6c-4e55-ab0a-1527188b2b5c" class="">Sorting is just useful as a preparation for faster searching</p><p id="3d98482d-e421-49b8-a45e-e37aa8f603fa" class="">Sometimes mess is optimal. (not sorting might be better than sorting)</p><p id="d8711741-be08-4216-b6f7-d5de8c721a35" class="">Some animals naturally develop an instinct of where they are in the hierarchy and use it to know when they should just give away food, water, and other resources to animals higher up in the hierarchy.</p><p id="6b599664-80e6-4222-a83e-17dbf3142b5c" class="">→ Maybe modern humans kind of forgot how to do this a bit.</p><p id="e9c96021-1206-45ae-9b4a-b540b703d31e" class="">“Dominance hierarchies are ultimately information hierarchies.”</p><p id="c122aad0-ade8-4f3b-b047-ea64e0db60f0" class="">→ The animals within a group should have sorted themselves in generally the same way after a few weeks because if there’s any delusion of where one is in a group then a fight can break out. (ie: You think you’re in position 3, but you’re actually in position 5 and you decide to fight the person in position 4 for food.) Thus nature also developed sorting algorithms.</p><p id="0b741506-4526-41ac-ac31-5d9f33c74808" class="">(However this means at least nlogn fights to first determine the hierarchy.</p><p id="f0b2c054-60ab-4a13-9d75-f0cd7ff84eb7" class="">A race is fundamentally different. When we can sort with respect to an objective measure such as time and money, then all countries are considered at the same time and the any country only takes constant time to measure themselves.</p><h3 id="008fbd00-d5d5-4f1d-9467-bf73da69bcb8" class="">4. Caching</h3><p id="bf15b428-7966-4d5b-90ca-f11719a7ed46" class="">“LRU teaches us that the net thing we can expect to need is the last one we needed, while the thing we’ll need after that is probably the second-most-recent one. And the last thing we can expect to need is the one we’ve already gone longest without. Unless we have a good reason to think otherwise, it seems that our best guide to the future is a mirror image of the past. The nearest thing to clairvoyance is to assume that history repeats itself—backward.”</p><p id="d6e7f093-40df-4331-a0a5-75d594f81a64" class="">Caching items to the top of a pile and always searching from the top of the pile is the most efficient method. (Up to constant factor of knowing the future before searching). This algorithm will naturally have items accessed more frequently appear at the top of the pile which means when you search for them the next time it’ll be faster. A pile “might appear to others to be an unorganized mess is, in fact, a self-organizing mess”</p><h3 id="373a8a24-33a9-4124-a790-ce61358718fc" class="">5. Scheduling</h3><p id="5c6cd397-f32e-4d56-bb68-b42c9d2cc5d3" class="">“How we spend our days is, of course, how we spend our lives.”</p><p id="affaf5e4-762f-45d9-b4b2-c15669bac59c" class="">Computer science strives on making explicit clear cut goals.</p><p id="ea312dbe-bdee-4808-8456-755971851f6c" class="">Strategy 1: Earliest Due Date, always do the work that is due earliest. (minimizes maximum lateness)</p><p id="19911483-922e-4b99-9a20-94b12a9a4366" class="">Strategy 2: Shortest Processing Time, always do the quickest task. This will minimize the sum of the completion times</p><p id="1c73aaa0-9f41-4eb3-a466-a238a951c578" class="">Strategy 3: Divide the weight of the task by the time it takes then apply shortest processing time. This will reduce the weights of the to-do list as fast as possible.</p><p id="a6b84274-da3b-439e-8d1d-1ec7249d57d4" class="">The problems then get added complexity by considering what would happen if some tasks must be completed before other tasks. (Most problems with added complexity becomes unsolvable)</p><p id="7d7502d2-cc1f-4afa-8043-b64482c5e93d" class="">Sometimes we can leave a task half finished and return to it later, then even if some tasks can only be started after a certain time the strategies above still work.</p><p id="ed87dcc5-d06c-4603-a5d3-7d9acd474c8d" class="">However, this task switching for humans and computers alike isn’t free. It takes us precious time to get back into our work flow often costing us minutes every time we switch.</p><p id="11b41d3a-5bf7-425c-835b-6a2fa6eb3988" class="">Sometimes the task of figuring out a schedule is itself a task to be schedule and takes time. </p><p id="d14268aa-9959-4874-b397-27d32d9b2d71" class="">Responsiveness: How often you have to check if a switch is required. If you have to pay credit card bills once a month, then pay all of them on one day. If you need to respond to emails in less than 24hours then check once a day.</p><p id="304573ac-ecdc-41cc-b9df-e24e256e29e5" class="">The idea of interrupting coalescence is to block all the similar interruptions together. (office hours, running errands, etc) </p><h3 id="2002aa46-6e24-4bb9-a668-cbe44454c375" class="">6. Bayes’s Rule</h3><p id="b8c219bf-2804-41c5-9291-a7a3e3d283ac" class="">If you pick n raffles and w are winning. Then the most likely percentage of winning raffles is (w+1)/(n+2). We can find this by assuming the probability and seeing how likely our outcome is to occur then find how to maximize it.</p><p id="ba4c1f3e-dfb6-44e1-8f1d-c9ead67db8a6" class="">Bayes’s Rule tells us to multiply the probability that we had expected an outcome to have occurred with the probability that it occurs.</p><figure id="6e350594-2c8e-46e8-a566-4eccfd2207a0" class="image"><a href="Algorithms%20to%20Live%20By%204580f1a5e1f24b55aed7a765e8b9dc49/Untitled.png"><img style="width:418px" src="Algorithms%20to%20Live%20By%204580f1a5e1f24b55aed7a765e8b9dc49/Untitled.png"/></a></figure><p id="80feb556-0976-4304-be8c-ff5cad76a262" class="">Copernican Principle: If you have no clue about other information it’s most likely that when you arrive somewhere at some time, then you are exactly halfway through that thing’s lifespan. This is the most probable outcome. This principle was formulated by Gott after he arrived at the Berlin Wall and thought about it and decided the wall was likely to stay for as long as it had been. Therefore, predicting that the wall would stand for another 8 years.</p><p id="9aba33da-89f3-47af-8429-315ab551fbce" class="">“When Bayes’s Rule combines all these probabilities—the more-probable short time spans pushing down the average forecast, the less-probable yet still possible long ones pushing it up—the Copernican Principle emerges: if we want to predict how long something will last, and have no other knowledge about it whatsoever, the best guess we can make is that it will continue just as long as it’s gone on so far”</p><p id="dadd33ca-e1d2-493d-894e-28245ee299c4" class="">The Copernican principle can be generalized when:</p><p id="c91bc7b5-6789-44cc-9719-9f30a7975ac7" class="">a) we know prior information</p><p id="839cd2eb-1b84-4b6e-83df-780f39502c66" class="">b) the events follow a power law distribution</p><p id="cd33234d-f380-4dee-93ef-17da6d09ac85" class="">In which case, we should guess a constant multiple to when we’ve seen the event.</p><p id="995b5c92-04ea-4aa9-a358-a606d05cb648" class="">IE: For box offices, (power law, and prior info) we use a constant of 1.4. If a movie grossed 6M, it’s likely to top out at 8.4M.</p><p id="14dfe4dd-4b85-44c7-a75a-95b900324645" class="">“Something normally distributed that’s gone on seemingly too long is bound to end shortly; but the longer something in a power-law distribution has gone on, the longer you can expect it to keep going.”</p><figure id="e5a297f6-15f6-423e-bf94-004c894b6408" class="image"><a href="Algorithms%20to%20Live%20By%204580f1a5e1f24b55aed7a765e8b9dc49/Untitled%201.png"><img style="width:628px" src="Algorithms%20to%20Live%20By%204580f1a5e1f24b55aed7a765e8b9dc49/Untitled%201.png"/></a></figure><p id="edb9d23a-0f4b-4efc-89c5-0378cb96ac85" class="">Marshmallow test; young children were given one marshmallow and the supervising adult left the room. They could decide to eat the marshmallow directly or get two when the adult came back. Those who waited scored better in SATs later in life.</p><h3 id="5b181660-eddb-4fda-8a3b-14fc2ac15c16" class="">7. Overfitting</h3><p id="49e648b0-a41a-48f0-8159-712d725bc23b" class="">“Anything you can do I can do better; I can do anything better than you.”</p><p id="4e8145aa-fac3-4063-8295-e7eb07ed0e81" class="">“But a better fit for the available data does not necessarily mean a better prediction.” Basically interpolation vs extrapolation and stuff like that. We can test if a model’s extrapolation is good by adding some noise to the data and sees how big the changes in its predictions are.</p><p id="40b8cb2b-5e54-4f23-8b87-0d6874c3acf9" class="">Overfitting is an issue whenever we deal with noise or mismeasurement</p><p id="5ec1ff5f-1fb1-443e-960a-f82b70a0ef1f" class="">“Cross-Validation means assessing not only how well a model fits the data it’s given, but how well it generalizes to data it hasn’t seen.”</p><h3 id="daa9d781-75bf-4c69-8aef-f2001fbd2f08" class="">8. Relaxation</h3><p id="abbd3fe1-9ce8-4f1b-9385-ea9745e3f3c0" class="">Relaxation is to remove some of the constraints of a problem to make it easier so that we can first solve an easier problem.</p><p id="58a4db01-d589-491b-bb9a-aba6ecb935bb" class="">Often this means relaxing discrete requirements into continuous ones.</p><p id="c56ab66f-adca-49f5-b880-10d1a751487f" class="">Lagrangian relaxation: Relaxing constraints of the form where you must not have something to well what if I do have this and then add a penalty to it.</p><h3 id="be737fa2-47a5-4e9c-975c-03d48e4b7b25" class="">9. Randomness</h3><p id="9a3ff1a4-6dcd-4bb3-98a2-ec20101ab21e" class="">“when we want to know something about a complex quantity, we can estimate its value by sampling from it”</p><p id="cfb1ccd5-1aa9-46e2-bb04-33597829fa5e" class="">For example to calculate the probability that a game of solitaire is winnable, one can just play the game multiple times and test experimentally.</p><p id="c270744d-2f71-4962-8d55-961578775934" class="">Developed into Monte Carlo Method</p><ul id="4e5323ff-0967-414c-a93a-71342861e424" class="bulleted-list"><li style="list-style-type:disc">Algorithms for primes that are nondeterministic</li></ul><ul id="405a7a16-5be7-42ba-a130-e33e1b4b028e" class="bulleted-list"><li style="list-style-type:disc">Algorithms for checking if two polynomials are the same (one’s expanded, one’s factored) We can check very fast, by plugging in random values of x and see if the outputs match.</li></ul><p id="f7e598c4-a727-45b4-930c-7645326b678c" class="">You can trade how sure you are of an answer for time and space complexity.</p><p id="be4a5f33-64af-4dca-8254-0a7bec175c8a" class="">Simulated annealing: using probabilities to calculate whether from a given state one should mix it up a bit or try to “climb” up hills by only considering beneficial local optimizations (which technically leads to a local max) then we decrease the probability over time</p><h3 id="53e808e3-d78d-4f7e-a325-a0fa6af504ed" class="">10. Networking</h3><p id="57152f63-6539-42f7-8e55-f42a85436612" class="">Exponential backoff: To check again on a scenario after double the time as when you last checked in. For example, check if a website is online 1s, then after 2s, then after 4s, then after 8s, etc. This keeps resources in check while never giving up.</p><p id="159751b2-2712-4f0a-a192-c182a7db11f6" class="">AIMD: If an attempt is unsuccessful then the # of packets sent into the network will be halved, if it’s successful it’ll increase linearly. (Additive increase, multiplicative decrease)</p><p id="dd55fab0-2c9f-4ba0-85e8-a79fc7cad297" class="">Tail Drop: Fixes the problem of a buffer (queue of packets to send) getting too long by stop accepting new ones at a certain point to reduce latency. (’Packets’ are always lost in real life, photons that arrive late to the retina aren’t queued up. We used to reject; now we defer. Sometimes never is better than late.)</p><h3 id="7c6e4270-2edc-430c-a5b3-1335014c2dc1" class="">11. Game Theory</h3><p id="728c95b2-b277-42c4-a4e4-42c8020a930b" class="">Sometimes you know that someone else knows, but wonder if they know that you know that they know and it goes forever. We want to try 1 “level” ahead of the opponent here, but it’s difficult.</p><p id="3d3b206e-184a-421f-97ad-110b001a064b" class="">An equilibrium is where if both players had all information then they still wouldn’t change their style of playing. In 1951, John Nash proved that every two-player game has at least one equilibrium. Those are often impossible to find though.</p><p id="7751a3bf-645f-45e9-b44a-84f2835d5fee" class="">Even if there’s an equilibrium that doesn’t mean that it’s good for the players see “the prisoner’s dilemma”</p><p id="9ed6f397-425e-45a4-8c3c-ce0149bb93ad" class="">“The optimist proclaims that we live in the best of all possible worlds; and the pessimist fears this is true”</p><p id="9c53760d-297e-4e8e-81bd-e91f842deab0" class="">“Don’t hate the player, hate the game.”</p><blockquote id="b1954f57-ed1a-43fd-9246-f3fa00eae57e" class="">“Morality is herd instinct in the individual,” wrote Nietzsche. Paraphrasing slightly, we might hazard that emotion is mechanism design in the species. Precisely because feelings are involuntary, they enable contracts that need no outside enforcement</blockquote><p id="1ec31a7a-b62e-4c7c-9268-4bb731375787" class="">Maybe our emotions are useful because game theoretically, our rational thought leads to a losing equilibrium for everyone.</p><p id="5af50d29-54fe-46f1-8508-14e85cee053b" class="">Vickrey auction: Each person places a sealed bet (1 round) and the person who bet the most on the item pays the amount of the second highest bet. This leads to a dominant, equilibrium strategy of betting exactly the true amount you believe the item is worth.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

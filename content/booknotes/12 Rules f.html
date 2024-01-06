@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>12 Rules for Life: An Antidote to Chaos</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+/*
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+*/
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="33766877-68fc-46f5-867d-73d3cf7d0da0" class="page sans"><header><img class="page-cover-image" src="https://i.guim.co.uk/img/media/931f8682237a7258b3dbd2e9d9bf27ec2df31798/0_0_1664_2560/master/1664.jpg?width=300&amp;quality=45&amp;auto=format&amp;fit=max&amp;dpr=2&amp;s=3be85fa774c0679a2f0ce6b6e69211ab" style="object-position:center 39.17%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧬</span></div><h1 class="page-title">12 Rules for Life: An Antidote to Chaos</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Jordan B. Peterson</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-gray">Self-Help</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-blue">Lifechanging</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@March 26, 2022 → April 20, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>370</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2018</td></tr></tbody></table></header><div class="page-body"><h1 id="f8cc4143-3136-4cdd-ad2a-eed9ee361f9a" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="33eac571-a37f-457f-96c4-e0a6642a6944" class="numbered-list" start="1"><li>Aim to make your Being good, and take responsibility for it</li></ol><ol type="1" id="14d01b55-1253-4fe9-89d3-63e142a1b697" class="numbered-list" start="2"><li>Face the harshness of life and make it better/aim for improvement</li></ol><ol type="1" id="817c68be-bb39-4a53-9ef0-eddd81f7a351" class="numbered-list" start="3"><li>Sacrifice the now for a better future</li></ol><h1 id="15fcdf4b-578e-4743-a206-de58bf956648" class="">🎨 Impressions</h1><p id="620b5b63-ca1e-44bf-9b05-3c1e152c7342" class="">very good. Deep, some parts are hard to understand. Applicable, but likely to forget most of the information if not reviewed. </p><h2 id="309fed88-a79f-4b12-a0a7-28f9e228bc6b" class="">How I Discovered It </h2><p id="40747012-1f09-4431-99f4-acf4aa148e4b" class="">Jordan Peterson on Youtube</p><h2 id="61752860-f03a-4a8d-bea1-c7abc13874b1" class="">Who Should Read It? </h2><p id="7d693eee-8b4a-4ab0-bf91-4839d508ab8e" class="">Anyone looking for a better life for themselves and those around them</p><h1 id="d3a5dc66-cedf-45c3-b7ed-37ba5fcc2dfa" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dd545409-ef49-420b-9aee-d130e8c3d81e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="88329859-a663-44e5-a632-81bdeb184ab6" class="bulleted-list"><li style="list-style-type:disc">Started shouldering some responsibility in life more directly. Face the harsh reality on my own in order to achieve the greatness that I want.</li></ul><ul id="ff30d10b-c653-4fde-87cc-fabb9e5e467b" class="bulleted-list"><li style="list-style-type:disc">Made me think about setting some axiomatic morals and building a moral foundation from there as well as meaning in life to guide oneself. The set of morals for axioms can only be found through deep search into the deepest parts (darkest) of human history. </li></ul><ul id="14e66b2e-2f7b-4748-88ad-b0a927513b7c" class="bulleted-list"><li style="list-style-type:disc">Reason loves itself, and what it produces, it becomes and absolute. If the current world keeps evolving towards reason and logical absolutes would one day all progress stop and crash? We must be rational while still keeping an open eye to what isn’t.</li></ul><ul id="fce73f09-72be-4f4c-ae78-0d19b06fd3fd" class="bulleted-list"><li style="list-style-type:disc">When speaking with others pay attention to how the conversation is going. Which type of conversation is it? are they trying to impress, make fun, learn, etc? Listen closely to improve the conversation.</li></ul><ul id="e305633d-d481-4873-bffe-880370deb2fd" class="bulleted-list"><li style="list-style-type:disc">When doing anything basically, learn to have another you analyze yourself and what you are doing so that you can correct yourself, note your errors, and strive to correct them.</li></ul><h1 id="81b984d9-f979-4f67-a7f1-f683d6156af9" class="">✍️ My Top 3 Quotes</h1><ul id="6a8f0fe4-b4cc-459b-9480-dfde054d3c62" class="bulleted-list"><li style="list-style-type:disc">the foremost rule is that you must take responsibility for your own life.</li></ul><ul id="a08d5148-4aae-4915-b4df-38ff4bc8ed87" class="bulleted-list"><li style="list-style-type:disc">“The line dividing good and evil cuts through the heart of every human being.”</li></ul><ul id="40e6e1d2-ebe3-499d-a250-a55d926a5694" class="bulleted-list"><li style="list-style-type:disc">“What you aim at determines what you see”</li></ul><h1 id="ddafe93b-a5fa-4d76-af5e-0e02d8af2b12" class="">📒 Summary + Notes</h1><blockquote id="faa7a146-89c4-4af0-93d7-cb28a375bff0" class="">“I’ve got some good news... and I’ve got some bad news,” the lawgiver yells to them. “Which do you want first?”<br/>“The good news!” the hedonists reply.<br/>”I got Him from fifteen commandments down to ten!”<br/>”Hallelujah!” cries the unruly crowd. “And the bad?”<br/>”Adultery is still in.”<br/></blockquote><p id="6cd0e7d4-e75d-4a52-abb9-eb8c9ab53465" class="">“Perhaps because the adults in their lives had become so naively overprotective that they deluded themselves into thinking that not talking about suffering would in some way magically protect their children from it.”</p><p id="7a4e0dde-1fb7-4e9b-b159-fa997a626453" class="">“That emphasis on tolerance is so paramount that for many people one of the worst character flaws a person can have is to be judgmental.”</p><p id="3e4c5bbb-fd79-4670-ba83-d3dc656c8a85" class="">“Sometimes it seems the only people willing to give advice in a relativistic society are those with the least to offer.”</p><p id="4cb51955-8256-4ca3-b2f0-c2a4a6936f21" class="">“And the foremost rule is that you must take responsibility for your own life.”</p><p id="865b7f8b-91de-4241-99a8-d31e6e6e9f2e" class="">“Sometimes these rules are demanding. They require you to undertake an incremental process that over time will stretch you to a new limit. That requires, as I’ve said, venturing into the unknown. Stretching yourself beyond the boundaries of your current self requires carefully choosing and then pursuing ideals: ideals that are up there, above you, superior to you—and that you can’t always be sure you will reach. But if it’s uncertain that our ideals are attainable, why do we bother reaching in the first place? Because if you don’t reach for them, it is certain you will never feel that your life has meaning. And perhaps because, as unfamiliar and strange as it sounds, in the deepest part of our psyche, we all want to be judged.”</p><p id="dfd506a9-0363-48bc-ba42-8323546915a2" class="">Life has meaning as long as we reach and push ourselves to new meanings that we create even if those meanings are “meaningless” or impossible to achieve.</p><p id="0fdd2815-c564-4ad5-aa12-abaf8b23e341" class="">“The soul of the individual eternally hungers for the heroism of genuine Being, and that the willingness to take on that responsibility is identical to the decision to live a meaningful life.”</p><p id="68abd8c2-77b6-41b1-bffb-cd2a2ce9a26b" class="">
+</p><h3 id="7e07d67a-be1b-412d-9a77-1528c4868650" class="">RULE 1: Stand Up Straight With Your Shoulders Back</h3><p id="825e265c-5430-4f4a-a2c1-32f34927d9d0" class="">All animals develop a social hierarchy, where those at the top are more likely to survive and mate. This social hierarchy is often related to the environment or habitat. Some places are better habitats to live in while others are worse. Those in the better places (more shelter, food, etc) have a better chance of surviving. </p><p id="b057618f-388e-45cf-af9a-838275eb385d" class="">Things aren’t equally distributed in populations. Examples include money where the top 1% own more than the bottom 50%. The same applies to other resources. Additionally, this applies to scientific papers, a small group of scientists write the vast majority of papers and a small group of composers (Mozart, Bach, Beethoven, Tchaikovsky) wrote the vast majority of classical music. Even more surprisingly, a small number of pieces written by these composers make up the vast majority of their music played. The same concept of unequal distribution applies to other populations (animals) and things.</p><p id="09ea3fe8-a9d2-4056-8319-c8d4903b4aca" class="">Even a third of a billion years ago, the neural chemicals to process society and status had developed in animals’ brains.</p><p id="12fa95e9-e2bd-4d82-8ff5-e0514c32986b" class="">“There is very little difference between the capacity for mayhem and destruction, integrated, and strength of character.”</p><p id="df2ee83f-59cf-4ed2-8152-e2dca282d965" class="">“To stand up straight with your shoulders back is to accept the terrible responsibility of life, with eyes wide open. voluntarily accepting the burden of Being. You step forward to take your place in the dominance hierarchy. Thus emboldened, you will embark on the voyage of your life, let your light shine, so to speak, on the heavenly hill, and pursue your rightful destiny. Then the meaning of your life may be sufficient to keep the corrupting influence of mortal despair at bay. May be able to accept the terrible burden of the World, and find joy.”</p><h3 id="c23d9043-5b24-4094-b5cf-f2dd8b08115d" class="">RULE 2: Treat Yourself Like Someone You Are Responsible For Helping</h3><p id="81c2d453-4592-4047-96c8-00c8ff6dc90c" class="">Being is “the subjective experience” roughly speaking</p><p id="c0b1bcbf-6101-4588-9b27-4bde92d7086a" class="">“Well, bucko, you’re good enough for a friend, but my experience of you so far has not indicated the suitability of your genetic material for continued propagation.”</p><p id="31de15bd-8e65-40d5-97cf-a3df071914f9" class="">For men: Direct encounter with chaos when they are rejected for a date. This is the single most shaping force in human evolution.</p><p id="f2f90b15-ff4e-4872-8bae-da28ecdeea42" class="">Music vibrates so much within us because of the order and chaos within it. The clear predictability and unpredictability brings it ever so closer to the most profound depths of your Being.</p><p id="54278a24-9325-4597-8c1f-56a97c004784" class="">We are always longing to be on the edge of order and chaos on the edge of what is known and unknown. In order, to not remain stable and be able to improve while not being overwhelmed by the chaos. “This is where meaning is to be found.”</p><p id="05ed2c75-3087-4f07-9852-265c8fb6afd4" class="">Relates to info in this video.</p><figure id="d8ae02a6-c771-49f4-a3db-406523079bcd"><div class="source"><a href="https://www.youtube.com/watch?v=oyTB-AugMDk">https://www.youtube.com/watch?v=oyTB-AugMDk</a></div></figure><p id="6d67c809-c9c5-4655-9ece-315f1015d125" class="">“The line dividing good and evil cuts through the heart of every human being.”</p><p id="5a7282d5-6049-46e4-8ab4-c1d30c50b994" class="">To add on to the previous part: “Women have been making men self-conscious since the beginning of time. They do this primarily by rejecting them — but they also do it by shaming them, if men do not take responsibility. Since women bear the primary burden of reproduction, it’s no wonder. It is very had to see how it could be otherwise. But the capacity of women to shame men and render them self-conscious is still a primal force of nature”</p><p id="e5f28c9c-19d0-4662-8bb8-0b703288ad58" class="">“Ideals give us a goal to aim for. Something to be better at. We should be proud to feel unworthy in the presence of people like that. (Ideals, god) It’s the price we all pay for aim, achievement and ambition. Unsettled by they vulnerability, eternally fear to tell the truth, to mediate between chaos and order, ad to manifest their destiny. In other words, they are afraid to walk with God.”</p><p id="c0a8cb03-c915-4d72-b2ae-6676d6430a46" class="">“The first man blamed the woman. And then the first man blamed God. (referring to Adam and Eve) This is exactly how every spurned male feels, to this day. First he feels small, in front of the potential object of his love, after she denigrates his reproductive suitability. Then he curses God for making her so bitchy, himself so useless (if he has any sense) and Being itself so deeply flawed. Then he turns to thoughts of revenge.”</p><p id="8640c1e2-989b-4e74-b810-039b9ed8c108" class="">“It is far better to render Beings in your care competent than to protect them.”</p><p id="08a14195-2515-40ca-823b-94b992cf2574" class="">“Self-consciousness. We are aware of our own defencelessness, finitude and mortality. We can feel pain, and self-disgust, and shame, and horror and we know it.” This means we know how others are that way too and can exploit it</p><p id="39f48f04-48a5-440d-ae01-642997594262" class="">Work to bring heaven down to earth and not to make it into heaven from earth. “He whose life has a why can bear almost any how.” </p><p id="dcfc33b4-8371-4b5b-9d2c-c0151b07efd8" class="">“You need to determine how to act toward yourself so that you are most likely to become and to stay a good person.”</p><p id="9903430d-e6bb-45c3-863b-2f0fa44b0e87" class="">Treating yourself like someone you are responsible for, someone you live (a child, partner, friend, etc) means that you are treating yourself with care (caring for yourself) and your belief that you can do something good in the world. That you will shoulder that responsibility, treat yourself well in order to achieve Meaning.</p><h3 id="9eb79695-5643-413f-a26b-de674704e3a7" class="">RULE 3: Make Friends With People Who Want The Best For You</h3><p id="0ef6d926-be85-4758-ab0b-f860960b02f0" class="">Repeated use of the same faulty tools produces the same faulty results. It is in this manner that those who fail to learn from the past doom themselves to repeat it. It’s partly fate. It’s partly inability.”</p><p id="f54272f0-97fa-446d-a10e-2867960c736f" class="">“Down is a lot easier than up”</p><p id="c88918dd-1866-43d6-989d-8bf7eb7413bd" class="">“Assume first that you are doing the easiest thing, and not the most difficult.”</p><p id="56065830-a2e6-410f-8c3a-4cc5d09b1908" class="">“You’ve all decided to sacrifice the future for the present.”</p><p id="ec5b3f55-21a5-4c17-9c89-1e699516be42" class="">“It’s not the existence of vice, or the indulgence in it, that requires explanation. Vice is easy. Failure is easy, too. It’s easier not to shoulder a burden.”</p><p id="6d89a914-6874-4846-bef5-ab46eab8a52d" class="">“Friendship is a reciprocal arrangement. You are not morally obliged to support someone who is making the world a worse place. Quite the opposite. You should choose people who want things to be better, not worse. It’s a good thing not a selfish thing, to choose people who are good for you. ... associate with people whose lives would be improved if they saw your life improve.”</p><p id="5a96732f-db53-4f3f-b3f2-8ab9d3b0be99" class="">Those people would be happy for you and help you succeed. They will try to help you in any way possible, by encouragement and punishment whenever necessary and appropraite. Instead of making it harder for you (giving a prior smoker a cigarette or a beer to a drinker, being jealous, etc.)</p><p id="9429d88e-6d27-468b-9b2d-66934efd8ab5" class="">“You remind them that they ceased caring not because of life’s horrors, which are undeniable, but because they do not want to lift the world up on to their shoulders, where it belongs”</p><p id="dc2baca8-82de-40d8-9779-f38c390d60ba" class="">It’s harder to make friends with good people than bad people.</p><p id="7cb3b029-b531-48b8-8cc7-caaac25e5569" class="">“A good, healthy person is an ideal. It requires strength and daring to stand up near such a person.”</p><h3 id="f8c3ebd3-ef18-4857-bfe1-3212e197a2f8" class="">RULE 4: Compare Yourself To Who You Were Yesterday, Not To Who Someone Else Is Today</h3><p id="43a5db9c-7577-48e6-a460-fca8030a361f" class="">“Failure is the price we pay for standards.”</p><p id="114f8a3b-9e33-4758-ad49-e770236b63c3" class="">“The bottom is not a good place to be. People are unhappy at the bottom. They get stuck there and remain unknown and unloved. They waste their lives there. They die there.”</p><p id="37290146-f559-411b-a007-16ece684f6f5" class="">Against nihilism, Jordan Peterson proposes that within a finite time frame there is always things that matter.</p><p id="00940109-be82-4fc1-951a-560a443a1040" class="">There are always differences which means there is better and worse. We all have an am for the better which is worth doing. If there were no differences there would be no reason to do stuff and thus no meaning. ”Why make an effort if it doesn’t improve anything? Meaning itself requires the difference between better and worse”</p><p id="55b57b77-a02e-4238-96d0-bb9c40096398" class="">“When you have something to say, silence is a lie.”</p><p id="a39646fb-fa66-4a59-83d3-0aa4b58e74d2" class="">“You must decide what to let go, and what to pursue.”</p><p id="26058cdb-b85d-4244-a08b-30698873307c" class="">“The past is fixed, but the future — it could be better... The present is eternally flawed. But where you start might not be as important as the direction you are heading... Much of happiness is hope, no matter how deep the underworld in which that hope was conceived.”</p><p id="88a8c120-f838-4b15-8434-d2599f0be610" class="">“What you aim at determines what you see”</p><p id="01897749-e244-4640-aa9e-762b5630e91c" class="">existence can be justified by it being good. thus should be ready to sacrifice your own life for the good.</p><p id="8c04a92c-2825-40fe-a59f-3b1bd03b3919" class="">Ask yourself: “What is it that is bothering me?” “Is that something I could fix?” and “Would I actually be willing to fix it?” If any of the answers is no, aim lower. search for something easier that you can fix then fix it. repeat and repeat becoming better and better each day. If it’s too hard you can also give yourself benefits for fixing what needs to be fixed, whether it&#x27;s a movie or thanks from people around you.</p><p id="4b521726-a6d9-4c41-9e84-83941af35039" class="">Focus less on others and more on how much you can do. Comparing yourself to others is useless in the vastness of all possible fields that the modern world offers, so focus on improving yourself.</p><p id="537523bc-41bb-47a7-b3c4-ddfcb899707e" class="">No matter how low you are or start, you’ll be moving up</p><h3 id="0510bdb5-4ccc-43bb-8e0e-5ecb5f57a4c2" class="">RULE 5: Do Not Let Your Children Do Anything That Makes You Dislike Them</h3><p id="2d3f4942-acd9-4c58-912b-d5b4e0dffffa" class="">“It is an act of responsibility to discipline a child”</p><p id="08c68f6b-86f6-4af1-abae-2e6d5da3eabb" class="">They will learn and fit better into society. Though children growing up roughly and stuff is often blamed on the parent and society this merely shifts the blame into the past instead of present where it can be fixed and dealt with. In other words, by saying that people do not want to take blame for what the issues are. In fact, most babies when born are not “all good” and sinless, they as many other newborns in different species will exhibit violence, etc... So it’s the parents duty to make them integrate into society and minimize what is not socially acceptable.</p><p id="c3bdf7f9-08e2-4155-af17-7266b945ffba" class="">Children if not discipline will not learn many of what is social correct such as eating healthy, going to bed on time, and not annoying others. Without discipline they have no way of knowing if those things are good or not.</p><p id="07a8992d-b13f-48b2-a239-edf1341c8f6f" class="">People often get basic questions backwards: Why are people violent, is not a mystery, the question is why are some people peaceful. Why do some take drugs, is not a mystery, it’s why do some people don’t always take drugs. Why do some suffer from anxiety, not a mystery, why are some calm.</p><p id="f74ad293-46e6-470b-b78e-4fad3f56985a" class="">Pain is more potent than pleasure, and anxiety is more than hope.</p><p id="03e561b1-3990-47be-a87a-1b7fe029a9d3" class="">It’s impossible to make one’s children escape the negative emotions in life forever, and attempting to do so should not be considered love. It is better to teach them, with punishments, if necessary so that they can learn to deal with the negatives in life, instead of trying to remove the negatives.</p><p id="1a7b9c3d-a765-4052-85d5-6de2ded83b73" class="">“Poorly socialized children have terrible lives. Thus, it is better to socialize them optimally. Some of this can be done with reward, but not all of it”</p><p id="c9b44c5c-cf9d-4414-830f-357400f62099" class="">Principles: “limit the rules” and “use minimum necessary force” and “parents should come in pairs” and “parents should understand their own capacity to be harsh, vengeful, arrogant, resentful, angry and deceitful”, “parents have a duty to act as proxies for the real world”</p><p id="0bb6da72-0471-4b92-ae0b-c52ad61ae1ea" class="">discuss your likes and dislike with regards to your children with your partner.</p><h3 id="1bf57f6d-7e64-48fc-9891-ae24d41ad68b" class="">RULE 6: Set Your House In Perfect Order Before You Criticize The World</h3><p id="071ff9fb-9591-4ba1-84ba-6a271ab52470" class="">Life is in truth very difficult. Everyone is destined for pain. </p><p id="fface2ad-cc41-44cf-9c7d-44368838aa9d" class="">“I knew I could find nothing in the way of rational knowledge except a denial of life; and in fair I could find nothing except a denial of reason”</p><p id="4dc80c9c-4f86-4016-9425-041ed133caef" class="">Reasons that in nihilism if it means nothing it might as well be destroyed to reduce human life’s pain. </p><p id="b88d292f-308f-4763-9a7d-fd8c4f749c2e" class="">In the face of evil (having experienced evil themselves), people need not do evil themselves. Many people can still do good, find and believe in what they’ve done wrong in the past and try to fix it instead of cursing God, the universe or reality for being full of pain and suffering.</p><p id="977068cc-35b7-48dc-b2d1-2e8e766bfbca" class="">Instead of whining about how everything is wrong outside, work on making yourself better. As good as you can be, eliminate everything that you do which isn’t good. Work on fixing your bad habits and gaining good ones. And after all that is done you’ll find that it’s no longer necessary to criticize the world.</p><h3 id="c9215ed5-4e1f-4f45-9c67-e6000fba164a" class="">RULE 7: Pursue What Is Meaningful (Not What Is Expedient)</h3><p id="285a7442-a6b1-4844-830e-7eda63651645" class="">“Reality was structured as if it could be bargained with”</p><p id="8d0bf3c2-bf82-4dde-a4e2-f2c1f81b5427" class="">Work in the present for the good of the future, sacrifice the present for the future</p><p id="d9cbe41d-2e44-422c-9f90-620989f8e26e" class="">”In Franklin’s opinion, asking someone for something was the most useful and immediate invitation to social interaction.”</p><p id="97e40038-b41a-41f8-bb20-7b963785a8c8" class="">“It is better to have something than nothing. It’s better yet to share the something you have. It’s even better than that, however, to become widely known for generous sharing. That’s something that lasts.”</p><p id="4a0e2f77-8f4e-43e5-a050-169009377452" class="">“The successful sacrifice” </p><p id="f1780fea-7f62-423a-a8e7-1ad795ae705e" class="">“If the world you are seeing is not the world you want, therefore, it’s time to examine your values. It’s time to rid yourself of your current presuppositions. It’s time to let go. It might even be time to sacrifice what you love best, so that you can become who you might become, instead of staying who you are.”</p><p id="35a3ed36-0174-4eb5-b79b-6c1d58a5b372" class="">Sacrifice the part to ensure future prosperity of the whole. </p><p id="1de77874-4e19-47d1-8f43-e863794aa391" class="">is it right to bring a child into this terrible world? Mary answers yes ... as do all mothers. If they allow themselves to see it’s an act of supreme courage when undertaken voluntarily. </p><p id="c10658fc-b2a8-4f7c-947a-113214379a8c" class="">Socrates came to understand all that was happening to him as a gift from the gods. </p><p id="5ec73bd5-adee-4aca-b018-45915ddc7894" class="">“If you live properly, fully, you can discover meaning so profound that it protects you even from the fear of death”</p><p id="3847276b-bfa9-4a46-83a6-2e18072c342d" class="">“Once you truly understand such feelings [pain, fear, anger, resentment, etc] in yourself and how they’re produced, you understand how to produce them in others.”</p><p id="cb684707-2811-4ab3-91a1-10a10ffe3ade" class="">“It’s much worse, however, if he had actually foregone the pleasures of the moment—if he had strived and toiled and things still didn’t work out—if he was rejected, despite his efforts. Then he’s lost the present and the future. Then his work—his sacrifice—has been pointless. Under such conditions, the world darkens, and the soul rebels.”</p><p id="15f60fcc-c2f5-47a1-84aa-d7b582d281de" class="">Every human being is capable of the worst sins. We all know what is wrong (taking pleasure in torture, to dehumanize others, etc) and from there we can figure out what is good and aim for the good. From understanding that I, myself, am capable of those things is representative of “take the sins of the world onto oneself” as there is always suffering in the world, an unchangeable moral truth, no matter political alignment or belief.</p><p id="a4b4681e-08d7-4ce8-b3e4-b24113d64b30" class="">“Maybe it’s not the world that’s at fault. Maybe it’s you.”, we are capable of unthinkable sins and so we should aim away from them and upwards, blaming others does not help with that goal. The suffering of everyone and everywhere in the world can be blamed on oneself and thus we should think it’s our fault and work on changing it. Maybe you sinned, maybe you missed the mark, didn’t work up to “god’s glory” and thus caused the chaos and evil and suffering in the world. Thus we can develop an axiom “to the best of my ability I will act in a manner that leads to the alleviation of unnecessary pain and suffering” in this way we “work to bring the Kingdom of God on Earth (heaven)”</p><p id="bbe5890e-98aa-45b2-96c0-40422dd3037f" class="">if the value structure, axiomatic morals, are for the betterment of Being, then it will sustain life and make life better fix suffering chaos</p><p id="40aed8f2-e2e2-4b31-9e9c-829432673d77" class="">“meaning” is what is good, makes better, the path of life more abundant, ultimate balance...</p><p id="fcd4dfc3-2839-40ae-9964-9257d7da93ba" class="">“expedient” is hiding the skeletons in the closest, covering the blood with a carpet, escaping the crimes of Being, not taking responsibility for the wrongs humanity has done and you are capable of, it is following blindly, with no courage, no faith, no sacrifice ...</p><p id="5b06ec15-7110-46b0-84b7-2810031e1d78" class="">&quot;No tree can grow to Heaven unless its roots reach down to Hell.&quot;</p><h3 id="e9423fbd-8378-420c-8332-29d380f5cf9b" class="">RULE 8: Tell The Truth- Or, At Least, Don’t Lie</h3><p id="a12cf6fc-055f-4f6f-8559-672acfe28d9e" class="">“Taking the easy way out or telling the truth—those are. It merely two different choices. They are different pathways through life. They are utterly different ways of existing”</p><p id="66534cde-9367-47d8-abd7-943510b9e4c3" class="">“If you betray yourself, if you say untrue things, if you act out a lie, you weaken your character. If you have a weak character, then adversity will mow you down when it appears, as it will, inevitably.”</p><p id="70c1c89b-c91c-400c-a26b-000aeabf261b" class="">“A vision links action taken now with important, long-term, foundational values. It lends actions in the present significance and importance.”</p><p id="a5de2fa0-72fa-44e7-bf7a-bb874b112f05" class="">Every game has rules:<div class="indented"><p id="746ec390-d1c0-48a0-9b64-ea1505ff4726" class="">The game is important</p><p id="fca341ca-abde-4311-a0f6-479fd7e66f7e" class="">Moves taken are valid if they help you win</p></div></p><p id="8826c21d-ea03-4e04-9f9d-ba8c90f3a134" class="">“Lies warp the structure of Being. Untruth corrupts the soul and the state alike, and one form of corruption feeds the other.”</p><p id="80e7805e-71ef-496e-a23f-3fc7a99d0c27" class="">“Rationality is subject to the single worst temptation—to raise what it knows now to the status of an absolute.”</p><p id="d673148c-bfbd-46ea-aeb1-0d41ddd0ce8c" class="">“It is deceit that fills human souls with resentment and vengefulness... It was deceit that still threatens us, most profoundly today.” Look back at the capability of everyone to do evil because we can all deceive.</p><p id="e055d279-7043-46a9-890a-2ade0a5ef2b8" class="">“The better ambitions have to do with the development of character and ability, rather than status and power.”</p><p id="80785c32-1a8c-4a7a-a7d9-648e9ecd7a19" class="">Speaking the truth, is accepting it, which means we allow ourselves to see new facts and accept new information thus never becoming dogmatic, and outdated. This way we are ever improving and never settle, always sacrificing the present for the future.</p><p id="e85871eb-a6bb-4456-a266-48237cd9bc1b" class="">Pay attention to how you speak and act, have another part of you (your brain) analyze that constantly, to improve. </p><p id="a29bbb68-b965-4c36-b0db-d4b039354559" class="">Always assume that your current ambitions could be an error, or else you won’t be willing to see the possible wrong and will take it for everything making it regulate everything in your life. “If you bend everything totally, blindly and willfully towards the attainment of a goal, and only that goal, you will never be able to discover if another goal would serve you, and the world, better.”</p><p id="cb0ecfa1-05af-4d9c-b31d-a80a558da7eb" class="">If you tell the truth your values will evolve, allows you to be informed and reorient yourself.</p><p id="0e51dbab-b869-4217-b401-678954867ac5" class="">“Lies corrupt the world. Worse, that is their intent.”</p><p id="85e0a832-0ec5-4d90-a1da-c81ccbb2fb73" class="">“Truth makes the past truly past, and makes the best use of the future’s possibilities. Truth is the ultimate, inexhaustible natural resource. It’s the light in the darkness [...] Your truth is something only you can tell, based as it is on the unique circumstances of your life.” </p><h3 id="4c45ffde-bb51-4fa3-9ac7-fbdda67bc67a" class="">RULE 9: Assume That The Person You Are Listening To Might Know Something You Don’t</h3><p id="f70409cd-ded8-49d5-a1e6-45def15fc18d" class="">“Sometimes you have to change the way you understand everything to properly understand a single something”</p><p id="ec69ec10-aeee-4350-b9fd-972dbe845c4b" class="">To think we must imagine two different viewpoints in our minds and make them disagree.</p><p id="9a911c96-9490-4248-acfb-303d10568284" class="">some people will tell you the truth about what they think, which is different from telling you that what they think is the truth.</p><p id="bc55da11-5932-4d7c-b4cf-1c1533d493d6" class="">“Each person can speak up for himself only after he has first restated the ideas and feelings of the previous speaker accurately, and to that speaker’s satisfaction.” -Carl Rogers</p><p id="71d23521-fb99-49c0-be01-dbb9d11b3486" class="">“if the conversation is boring you probably aren’t [listening]” </p><p id="fed010cd-ecee-4bea-9bbe-22b5937755da" class="">“Before a problem can be solved it must be formulated precisely”</p><p id="472eca8e-98d4-43c1-88c8-cce762c9ab25" class="">When delivering a speech, focus on a single person in the audience and speak like you are speaking directly to them and use their feedback to improve what you are saying. This allows you to get a feedback loop on if people are interested, and how they are listening to what you’re saying. Then you can switch people. </p><p id="bce23ab7-f6cf-4933-b302-469fd2696c1b" class="">It’s important to listen to others when they are speaking because they might know things you do not which can help you (learn new things or fix flaws of your thoughts) thus this will be much less painful and time consuming than learning those on your own. You have one foot in order (yourself) and another in chaos (what the other person is saying) you live on the border to expand order and learn more.</p><p id="be6e578c-6ca0-44b5-ae6d-68390664ab65" class="">”Your wisdom consists not of the knowledge you already have, but the continual search for knowledge, which is the highest form of wisdom”</p><p id="feb50bc5-dc53-47ba-b19e-c7c08c77138c" class="">“She described him as the wisest living man, because he knew that what he knew was nothing”</p><h3 id="a247f9b2-d791-440f-aed5-3b354dc0cbc5" class="">RULE 10: Be Precise In Your Speech</h3><p id="a551b33e-fb44-4e2b-a5fe-bc1e688c01c5" class="">“We must be precise in our aim. Absent that, we drown in the complexity of the world.”</p><p id="abae5a74-728e-4594-92df-32d09d97e327" class="">When things go wrong, our perception of everything crumbles (as well as our perception of ourselves). Imagine a car crash, we no longer perceive our car as a machine that can transport us from one place to another. Did we make the correct purchase? Did the car work well? Is the mechanic reliable to fix it? Are we a good driver? etc. Everything gets questioned.</p><p id="77255bbe-6771-487c-bf47-ec182240a2f7" class="">“Don’t confront the chaos and turn it into order—just wait, anything by naive and innocent, for the chaos to rise up and engulf you instead” If nothing is done chaos will move, so we must consistently move ahead to avoid it or confront it. This is why we must take action (speech often) that is precise.</p><p id="adbf3a6c-467c-46de-9782-9a6ea5d8c52a" class="">“When things fall apart and chaos re-emerges, we can give structure to it, and re-establish order, through our speech. If we speak carefully and precisely, we can sort things out, and put them in their proper place, and set a new goal, and navigate to it—often communally, if we negotiate; if we reach consensus. If we speak carelessly and imprecisely, however, things remain vague. The destination remains unproclaimed. The fog of uncertainty does not lift and there is no negotiating through the world.”</p><p id="a30750b3-243c-4310-99b9-46d608477dff" class="">Deal with problems early, do not leave them alone because they will grow and flourish and hit you at the worst time. Though dealing with them can be a little pain that you want to avoid, avoiding them will lead to a lot of pain.</p><p id="5732ba60-db34-48c1-8124-99fe137bc8bd" class="">No one can talk about everything and try and fix it, but you can be precise and fix a specific problem.</p><p id="7ea82314-9b2d-44aa-9f77-183cbba59e4a" class="">“You can’t go from point A to point B unless you are already at point A” So we must first figure out where we are, we can’t be anywhere so we have to be precise in our location.</p><p id="c5896f1e-9218-49c2-ad44-217b09552693" class="">“Confront the chaos of Being. Take aim against a sea of troubles. Specify your destination, and chart your course. Admit to what you want. Tell those around you who you are. Narrow, and gaze attentively, and move forward, forthrightly.”</p><p id="15593d8e-f93e-4b01-9d60-65c052b7ca96" class="">“We prefer to live on the edge. There, we can still be both confident in our experience and confronting the chaos that helps us develop”</p><h3 id="54b16d7a-e2d9-4b50-9236-d3e9435528b1" class="">RULE 11: Do Not Bother Children When They Are Skateboarding</h3><blockquote id="cf4da8cf-1b84-4736-b5c9-e07cb092cf01" class="">Girls can win by winning in their own hierarchy—by being good at what girls value, as girls. They can add to this victory by winning in the boys’ hierarchy. Boys, however, can only win by winning in the male hierarchy. They will lose status among girls <em>and </em>boys, by being good at what girls value. It costs them in reputation among the boys, and in attractiveness among the girls. Girls aren’t attracted to boys who are their friends, even though they might like them, whatever that means. They are attracted to boys who win status contests with other boys. If you’re a male, however, you just can’t hammer a female as hard as you would a male. Boys can’t (won’t) play truly competitive games with girls. It isn’t clear how they can win. As the game turns into a girls’ game, therefore, the boys leave.</blockquote><p id="6cb35877-6f6c-4450-83d5-38d28adc4960" class="">The above quote shows the situation applies in education which shows that woman take up more positions in universities in non-stem fields. This means they also get higher salaries so when they look for partners, they date across and up the economic hierarchy. This means that marriage has slowly become a luxury of the rich.</p><p id="616818dd-9cf9-485e-a12c-c0df262b98af" class="">“Any hierarchy creates winners and losers. The winners are of course more likely to justify the hierarchy and the losers to criticize it. Absolute equality will therefore require the sacrifice of value itself, then there would be nothing worth living for.”</p><p id="d939e6a8-2c88-4a50-9af5-a9d20a7c39dd" class="">“Beware of single cause interpretations — and beware the people who purvey them.” Most things don’t just have one cause that explains them fully.</p><p id="8fcce07e-3fbd-4fd2-aaba-99d1accba3b8" class="">“An endless number of interpretations, certainly: that is not different than saying an endless number of problems. <em>But a seriously bounded number of viable solutions. </em>Otherwise, life would be easy. And it’s not.”</p><p id="5c91976a-f850-4c56-9e0d-0c2f23eabe0c" class="">Some ‘wants’ are innate and culture shouldn’t try to change them. (aggression, hunger, thirst, sexual desire, etc) </p><p id="e7f89edb-23cd-42dc-a2c7-7b296e616fcf" class="">“If it was too good at home, you’d never leave.”</p><p id="600e92f5-9501-4f50-8e36-6387fa6ce4fb" class="">Men should not be dependent, (they get no girls) “Men have to toughen up. Men demand it, and women want it”</p><p id="6f9d03d1-3eaf-480a-bc42-e5eebd67f02c" class="">Women want men who can provide something they (the woman) can’t already provide</p><p id="7b3b14a4-663c-4eb8-af00-4c6bab03933c" class="">If tough men are dangerous, wait and see what weak men are capable of. </p><p id="50b63351-56b3-4c6f-889e-a8832846a0c3" class="">Leave children alone when they are skateboarding as it allows them to build a social hierarchy, push themselves, be risky and improve.</p><h3 id="d78108c4-b808-4ae8-ab39-818ac5564b21" class="">RULE 12: Pet A Cat When You Encounter One On The Street</h3><p id="b48a2d81-8691-4b36-8eb9-dfba705dbe81" class="">“Being of any reasonably sort appears to require limitation. Perhaps this is because Being requires Becoming.”</p><p id="53577b8b-eebf-4625-826e-0b78c3163b21" class="">Petting a cat or dog for that manner, reminds you of the little joys in life and through the damp and dark existence of being it allows us to appreciate the wonders of Being.</p><p id="4c77c926-fc79-4cc2-a135-fd2dbb8ef9dd" class="">Actually this can be any small good in life when you are suffering to just get out and enjoy other parts of Being for 15 seconds and not fall into the hole of useless, suffering Being. (thinking that living is purposeless, and that people are bad, and make themselves suffer)</p><h3 id="85ba0688-f285-4b1b-9759-d2f5ac03eaf2" class="">Coda</h3><p id="d0ec76c7-0316-4bb5-ad92-a051267bbb70" class="">“What have I done wrong, and what can I do now to set things at least a little bit more right?”</p><p id="f59a1697-ef99-488b-b535-21f145667cd0" class="">“It is better to rule your own spirit than to rule a city”</p><p id="25ab4105-07bc-4370-8a82-c6cbcbaf09d2" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

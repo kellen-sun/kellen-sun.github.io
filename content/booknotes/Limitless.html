@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Limitless: Upgrade Your Brain, Learn Anything Faster, And Unlock Your Exceptional Life</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f64add08-2a2a-49bf-86e8-1e6df9b29fc5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🧠</span></div><h1 class="page-title">Limitless: Upgrade Your Brain, Learn Anything Faster, And Unlock Your Exceptional Life</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Jim Kwik</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-orange">Productivity</span><span class="selected-value select-value-color-gray">Self-Help</span><span class="selected-value select-value-color-pink">Study</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-yellow">5-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@November 18, 2022 → December 8, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>285</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2020</td></tr></tbody></table></header><div class="page-body"><h1 id="2bb76092-d24e-4682-b67e-0a5030ebd2ad" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="6ce7d468-66c4-40ef-a5a8-fc4be8d8a9a4" class="numbered-list" start="1"><li>Your belief that you are not limitless is limiting you.</li></ol><ol type="1" id="814fb799-7ea9-47b0-8e3a-222e79ea11c5" class="numbered-list" start="2"><li>The education never taught us how to learn properly.</li></ol><ol type="1" id="1843ded2-b821-4124-b34b-1da84e359e1a" class="numbered-list" start="3"><li>Everyone can learn to be extraordinary.</li></ol><h1 id="e53f7e7f-31c8-4761-b63e-743c3b2c8a1b" class="">🎨 Impressions</h1><p id="bec17ffd-d9bf-4306-b574-498c1df8932b" class="">There’s a ton of alliteration through the book.</p><h2 id="ed8c1386-a9af-4440-9681-7fcf22b5eed5" class="">How I Discovered It </h2><p id="30f1640e-0047-4da7-b7de-225403954c92" class="">I don’t remember. I think I found this book from a book list online.</p><h2 id="32f70566-1a27-4f19-ae38-84ffff95a147" class="">Who Should Read It? </h2><p id="74780ca1-dce2-4490-8263-21619580feee" class="">I think anyone who knows deep inside that they deserve more and can do more in life, but don’t know how to approach the issue should read this book. Those who have a will to change will change by reading this book, but those who don’t probably won’t benefit as much.</p><h1 id="f6fa9bf8-9458-4503-9aab-a41374dde337" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9a48771a-9bca-431f-b196-e93e526be5b2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="b82b9ae6-4cdd-47ff-a4a2-aae3c796d1c6" class="bulleted-list"><li style="list-style-type:disc">When you are experiencing joy, contentment, etc in life you see way more possibilities to life. While in fear and anger you see less possibilities.</li></ul><ul id="799ff242-c4ec-4dab-a262-ba4322e22331" class="bulleted-list"><li style="list-style-type:disc">It’s not how smart you are, it’s how you are smart.</li></ul><ul id="2a324213-f944-48a8-b96f-e62f3a6f123c" class="bulleted-list"><li style="list-style-type:disc">“With competence comes confidence”</li></ul><ul id="1ea52bbf-6109-4205-a4c4-8f9fd89d77e4" class="bulleted-list"><li style="list-style-type:disc">Reinforce the lesson from think and grow rich that my mindset is the limit.</li></ul><h1 id="a4467f94-0930-49db-9c0d-680711fac81f" class="">✍️ My Top 4 Quotes</h1><ul id="be5aba8b-8712-4492-8223-ed6c33b53dde" class="bulleted-list"><li style="list-style-type:disc">“While our brains take up very little of our total body weight, (3lbs), they use 20 percent of the energy we take in.”</li></ul><ul id="b229e28d-ab53-4ffa-9a6a-f445851bf06f" class="bulleted-list"><li style="list-style-type:disc">Life is C between B and D” C is choices, B is birth, D is death.</li></ul><ul id="f65c171b-93d5-4526-8f27-ad011baff760" class="bulleted-list"><li style="list-style-type:disc">“We first make our habits, and then our habits make us”</li></ul><ul id="fd4597b2-7dfa-4b62-9ab5-835e1e64c6b6" class="bulleted-list"><li style="list-style-type:disc">“If an egg is broken by an outside force, life ends. If broken by an inside force, life begins. Great things always begin from the inside.”</li></ul><h1 id="f56c1e31-0db3-40f7-933c-cc9ca15246de" class="">📒 Summary + Notes</h1><p id="27d5a6df-cd94-43e0-83e1-c398dcece8ad" class="">Our brain allows us the capacity to deeply experience life.</p><p id="00275ec6-cf2e-419a-a9f8-407b8e38b2ec" class="">The digital world is robbing us of our focus, attention, learning and ability to truly think.</p><p id="cd4cba2f-30c1-4b18-837e-7abd0fe7cb4d" class="">Our lives can be mapped to the hero journey and by doing so we also map some of the hero’s purpose to our lives.</p><p id="96792132-9d35-4335-82d3-0ae6c684ebd3" class="">The potential of the human mind is the only infinite resource.</p><h2 id="6f98db68-ad6a-446f-9a98-ab257795a40a" class="">Part 1:</h2><h3 id="8354bae3-090a-447a-8108-4518c327711d" class="">Chapter 1: Becoming Limitless</h3><p id="2fd25404-8f38-4512-a474-1eae6d7dcbd2" class="">“If an egg is broken by an outside force, life ends. If broken by an inside force, life begins. Great things always begin from the inside.”</p><p id="6b1d5916-e752-4b8d-9b10-a440cee40c27" class="">“No problem can be solved from the same level of consciousness that created it.” - Albert Einstein</p><p id="e8e8cb7c-b4c0-4745-85d1-fec8f5295480" class="">“How does my brain work, so I can work my brain?”</p><p id="1ac112a5-955d-4259-b438-5101d582e58a" class="">“If knowledge is power, then learning is out superpower.”</p><p id="2364e598-3a39-4b50-8fe2-bae3368268df" class="">Unlimiting: The act of process of casting aside inaccurate and restrictive perceptions of one’s potential and embracing the reality that, with the right mindset, motivation, and methods, there are no limitations.</p><p id="6c417b4c-08f6-40de-9bda-04c7143882c9" class="">Jim’s friend’s dad set him down the right path as a mentor when he asked Jim to write down goals and read them as a second person. Having others find out about his closest and deepest goals kind of motivated Jim.</p><p id="4d74370e-c8dd-48a4-93ca-aeb1f0ab4643" class="">Being limitless is about progressing beyond what you currently believe is possible.</p><p id="dce56875-4689-410e-aae3-efa9a06328d7" class="">Most people limit and shrink their dream to their current realities. Probably mean that by doing so we’re making future reality the same as the current reality.</p><p id="fc63fad3-e33b-4d24-a7f7-c0b022a829b4" class="">The 3Ms that must be unlimited for success:</p><p id="b9abfd2b-59f4-477b-9344-b3be6470ee23" class="">Mindset: What is possible</p><p id="bd1c8d5f-e007-4be0-9e30-3dfc83368720" class="">Motivation Why it’s being done</p><p id="44ecd697-4507-4d9b-80ec-0370404b0722" class="">Method: How it will be done</p><p id="bb6b2b1f-1bbe-4664-8bd1-273c5978c40c" class="">Each two of the three Ms can intersect into one of the I sections.</p><figure id="666b7716-75eb-494b-9b8d-494b1dbaabb9" class="image"><a href="Limitless%20Upgrade%20Your%20Brain,%20Learn%20Anything%20Faste%20f64add082a2a49bf86e81e6df9b29fc5/Untitled.png"><img style="width:480px" src="Limitless%20Upgrade%20Your%20Brain,%20Learn%20Anything%20Faste%20f64add082a2a49bf86e81e6df9b29fc5/Untitled.png"/></a></figure><h3 id="c6c5af70-548f-47d2-becb-941234b96e1f" class="">Chapter 2: Why This Matters Now</h3><p id="12335c3b-575e-407b-9706-1a4656082498" class="">The four villains stopping your path to being unlimited are:</p><ol type="1" id="eac7d74d-1d6f-4101-836e-6274cfec7147" class="numbered-list" start="1"><li>Digital deluge</li></ol><ol type="1" id="258d1247-cf52-46d2-9831-429e5f8d9f02" class="numbered-list" start="2"><li>Digital distraction</li></ol><ol type="1" id="32a9eac8-7d59-44b3-89af-9eb23a34ed4e" class="numbered-list" start="3"><li>Digital dementia</li></ol><ol type="1" id="685aca16-1a21-4ac6-ad19-639b6dd26266" class="numbered-list" start="4"><li>Digital deduction</li></ol><p id="82295ac9-de74-4997-a425-75c48c9d3782" class="">30 Minutes away from technology a week is not a lot and absolutely crucial to reset the mind, relax, be creative, etc. Let your mind wander and process and be bored.</p><p id="0b910d5d-1991-460c-b21a-2ce567dd6354" class="">We now feel fear that if we’re not online and reachable we would lose out. People now spend more and more time online. The dopamine we get from texts, and likes, etc are not helping us however. They just make us wanna stay online even more. This removes the every loose and enjoyable moment of life for shining new stimulus from our phones. This causes us to need to multi task, which burns oxygenated glucose in our brain which reduces our ability to deep work and makes us more tired and disoriented.</p><p id="0db1d9d7-cffd-4b48-8617-e2097bcad2a1" class="">Digital age has made us lose the ability to remember a lot of things as our phones can remember it all for us.</p><p id="8f961ad3-1b47-4d8b-9079-33f5dc34ff37" class="">“Too often, we outsource out brains to our smart devices, and our smart devices are making us, well, a little bit stupid.”</p><p id="fafa871c-226d-48d5-854c-5391b7f9d4dc" class="">It’s like always relying on the elevator instead of using the stairs. </p><p id="a07dde96-93af-4a01-856f-edbc50a3cff5" class="">The ability to critically think is being outsourced to the internet and the digital world. Many people no longer think critically and just rely on technology to gather’s others opinions.</p><p id="c7a845f2-e0a8-4502-9b25-fbeb65e71a99" class="">Whatever we let our devices do for us, we lose the ability to do ourselves basically.</p><p id="9804d216-fd59-4612-92d1-4857a3b8d7f5" class="">Our critical thinking ability developed through early teens are being taken away by digital media. I personally feel that the digital age is pushing teens to develop that ability to think later and later. Only recently, do I feel like I can truly think for myself. (17 years old)</p><p id="45f46e6b-ce48-46d8-828d-41ab3f8e42da" class="">5th: Digital depression; the constant comparison of ourselves with others on social media makes us feel less worthy and depressed.</p><p id="62259c27-91bc-4c86-94e5-42219229fa9d" class="">“Like any tool, technology itself isn’t good or bad, but we must consciously control how it’s used. If we don’t then who becomes the tool?”</p><h3 id="e7131493-40b1-4147-952b-e4f01d344e12" class="">Chapter 3: Your Limitless Brain</h3><p id="055391fc-a6ee-43b4-815d-8b0600d44cea" class="">Our brains distinguish us from other animals. We don’t have their strength, speed or abilities but we can think.</p><p id="bd0b2ef7-92a1-4d10-8a9f-2360c831ce6a" class="">The brain is always changing to the demands put on it and depending on our surroundings and actions. (Neuroplasticity)</p><p id="8797b383-12d0-4403-949d-8ed83cc2e374" class="">Each brain is different</p><p id="a7a44b55-4231-4cf6-b0f8-4607c9ecfe2b" class="">Brain most complex known object in the universe</p><p id="13d6f42e-6fe5-4c62-8536-8b6e2cd4692f" class="">Neuroplasticity means that we can always change our brain and push through our limits.</p><p id="a392924b-111e-44e4-ae79-e4259036bca3" class="">The nutrients we eat greatly affect our brain. Our gut has a 100 million nerve cells connected to our brain forming a second brain that has neurons and structure very similar to our brain.</p><p id="df3ad538-67a9-4b7e-8486-058343f7b229" class="">“While our brains take up very little of our total body weight, (3lbs), they use 20 percent of the energy we take in.”</p><p id="57eb3b8e-8943-4783-baa0-aeef1c7c3574" class="">“Give a person an idea, and you enrich their day. Teach a person how to learn, and they enrich their entire life”</p><p id="8baa2687-29a5-43bf-9def-77b3ff3a85d8" class="">“Your ability to think, solve problems, make the right decisions, create, innovate, and imagine is how we add value. The faster you can learn, the faster you can earn.”</p><h3 id="e6f17145-677c-4002-943f-36e8a6538ef7" class="">Chapter 4: How to Read and Remember This (and any) Book</h3><p id="24877988-45f1-42ca-bfe2-a6bb4b5fc845" class="">The forgetting curve: after one hour we remember 50% of what we learnt and after 24h we forgot 70% of what we learnt.</p><p id="9f5e3af4-8f06-4708-9c1b-1f1ffd2ead3b" class="">Our natural ability to concentrate is for around 10 to 40 minutes</p><p id="5b00baa2-7334-463b-98ef-6adf03f95e8e" class="">We remember primacy and recency, the first thing we learn and the last. This is why the Pomodoro technique works because we start and end more times so there’s more places where we can remember stuff.</p><p id="789cf71f-b703-4a80-9bb8-5454264996df" class="">Breaks create more primacy and recency. </p><p id="f2019ff5-11a5-4d91-a9db-ef2c1e3497da" class="">Whenever you read the range of your mind stretches</p><p id="375911b8-ffca-475f-aec0-282eb19bd446" class="">FASTER method: Forget, Act, State, Teach, Enter, Review</p><p id="ab05227d-9214-42f2-94ae-b9878aa38e8a" class="">When you forget you let your mind be open to learn new things</p><p id="f088bab3-ff26-4d18-b623-f879c7bb1d5d" class="">Have a notebook nearby when you’re learning so that if you get distracted you can write down the thing to relieve your mind and address the issue later.</p><p id="5c048897-27bc-496f-9887-7b987453cba2" class="">Actively learn instead of passively consume information.</p><p id="56d79f30-461a-49a3-8d94-a2ad5a48a8ca" class="">States and emotions of joy, fascination and curiosity will help learn much better than boredom, disinterest, etc (which are usually present in schools)</p><p id="e33cc5db-8ba4-46ac-9477-93ade5f3e74f" class="">Approach something to learn with the intention of teaching it to someone else. Learning with someone else helps too.</p><p id="4c0317fe-9933-4911-9073-a78d6fb97d2b" class="">Schedule time for your personal growth and development.</p><p id="89d8299d-9559-4d77-8829-f82d010b8131" class="">Review what you’ve learnt, read, etc.</p><p id="ca6ace19-45d5-4c5d-a2d3-6a9f2aacbc31" class="">“Life is C between B and D” C is choices, B is birth, D is death.”</p><p id="5071df86-ac21-440f-ad72-01881b3d7507" class="">Jim presents a story where when his awareness was brought to something (in this case a dog) he started seeing the dogs everywhere in his life. The dogs did not just appear they were always there, it just depended what Jim focused on. What we see in the outside world depends on the question we internalize in ourselves.</p><p id="79250530-c75f-4394-821b-9b7259c6b8a5" class="">Your dominant question, the one you ask yourself the most, shows a lot about yourself as a person and who you are. The questions direct your focus.</p><h2 id="b7d0c6ed-cc6b-4ac3-8b38-6989246a9fe1" class="">Part II: Limitless Mindset: The What</h2><p id="0592b728-d681-4c34-8665-31375defc5dd" class="">Mindset: The deeply held beliefs, attitudes, and assumptions we create about who we are, how the world works, what we are capable of and deserve, and what is possible.</p><p id="6b1cf34f-ab23-43ac-94a1-1ff6da9293da" class="">“You are entertaining ideas about yourself that define you as something less than what you truly have the potential to achieve.”</p><p id="e0176f6f-6696-4835-8763-d0910aae7d8f" class="">With great power comes great responsibility, but with great responsibility comes great power too.</p><p id="197f18d9-4b7c-4289-b6a1-67d1780637c6" class="">We develop a perception of what is possible, and that limits what we can achieve.</p><h3 id="8bb79905-5e58-4ead-9ef7-6ccfe5e14c33" class="">Chapter 5: The Spell of Belief Systems</h3><p id="0eba044d-fc0e-4c2c-b5ea-828ab4553420" class="">Once someone broke the 4min mile a lot of people started running sub 4. This is because they all had a mental block that it was impossible, but were then showed that it was thus unlimiting their minds.</p><p id="a3636953-1d68-4dfd-aa79-6d1b7924efc9" class="">Iceberg beliefs is when a huge number of beliefs are hidden and we aren’t aware of them but they limit us in visible ways. If don’t believe we can do something then we won’t.</p><p id="c0a35c18-4903-4ce5-8ed3-e1a9a684a811" class="">The inner critic in our heads isn’t harmless, it limits and stops you from pursuing the life you truly want.</p><p id="044dcdcb-4f7b-4811-aea0-0ee192fac5ed" class="">By conquering the beliefs that limit you, you become limitless and your true superpowers shine through.</p><p id="d6a93782-4598-495a-aa11-25a97a5e532e" class="">There’s different type of geniuses and we all have a genius in ourselves in a different way.</p><p id="db9f74c1-b403-4ee1-b016-09efa58f9b99" class="">To unlimit yourself identify the limit first and realize those aren’t facts about yourself but rather opinions. Then debunk the lies as what they are and create a new belief that’s more beneficial and truer.</p><p id="f62e01dd-4748-4b80-a2b5-235f68164df6" class="">“Life has no limitations except the ones you make.”</p><p id="bf290800-8b0c-41d6-9aca-de08818d0278" class="">It’s really bad to say “I know myself, and…” and then announce a limiting belief. You’ll be way more successful at quieting your inner critic if you separate it from yourself.</p><p id="e42e9ba1-f278-4b9b-afb5-2896e3e1e3fa" class="">When you are experiencing joy, contentment, etc in life you see way more possibilities to life. While in fear and anger you see less possibilities.</p><p id="33e83d64-4118-40a4-90ce-9700d2f54109" class="">(Your body is literally designed to invest more into broadening skills, developing new possibilities for life when you’re happy because when you’re not it has to focus on survival and fight/flight.)</p><p id="e0c68eb3-9dda-40e1-a04b-ef59af988ac0" class="">When on positive emotions you can seize more opportunities</p><h3 id="63e0a763-a2eb-467d-a963-1b9abaed7689" class="">Chapter 6: The 7 Lies of Learning</h3><ol type="1" id="0a367719-7ac8-4bd1-9d91-7b83d45bb124" class="numbered-list" start="1"><li>Intelligence is fixed. We get a fixed mindset, not a growth mindset. This means instead of working to improve, we tell ourselves, we can’t and go do something else that makes us feel good. “The reason we prefer to believe that we’re a genius or we’re not, or that we’re either talented or not, is because it relieves us from the responsibility of taking control of our own life.” Intelligence is not fixed, it’s fluid.</li></ol><ol type="1" id="94440bbc-c6f2-4685-b266-11bced112b56" class="numbered-list" start="2"><li>We only use 10% of our Brains. We don’t, we use our whole brain.</li></ol><ol type="1" id="767d82be-c334-4ba8-9cf5-e5b09cc16a6c" class="numbered-list" start="3"><li>Mistakes Are Failures. ”A person who never made a mistake never tried anything new”-Albert Einstein who made countless mistakes in his work on fluids, relativity, etc and no one remembers that, everyone just remembers his contributions to science. Mistakes aren’t a sign of failure, but of trying something new. There’s no such thing as failure. Only failure to learn.</li></ol><ol type="1" id="86e2b69a-414e-4bee-a81a-d5676e8e810f" class="numbered-list" start="4"><li>Knowledge is Power. Having knowledge doesn’t differentiate you from others. What matters is how you use that knowledge. It’s easy to talk about what you learn but harder to do it, to show that we learned it. Don’t promise, prove. Your results will speak for themselves. Knowledge x Action = Power.</li></ol><ol type="1" id="efd74ed4-2002-4042-aeb5-6873a29d8cda" class="numbered-list" start="5"><li>Learning new things is very difficult. Learning new things can be hard., but can be made easier when the process and method are well set. It can also be treated as a fun challenge.</li></ol><ol type="1" id="1c8fec7f-4724-4988-8544-db84728711c0" class="numbered-list" start="6"><li>The criticism of other people matters. People preventing and limiting themselves from expressing who they really are because they’re afraid of what other people think. Fastest learners are children because they aren’t scared of what others say of them and scared of failing. “Creating the life you want can be scary. But you know what’s scarier. Regret.” People have a hard time reconciliating what is possible.</li></ol><ol type="1" id="6fa36cbc-93eb-4967-a86d-a9469575763f" class="numbered-list" start="7"><li>Genius is born. Genius actually leaves clues with hints as to how they got where they are. A genius is made through deep practice.</li></ol><h2 id="311f9ffb-0343-4cc0-80a7-6b368c7d0bd8" class="">Part III: Limitless Motivation</h2><blockquote id="a09b773f-8ee0-4d79-8020-04267684000b" class="">Motivation: The purpose one has for taking action. The energy required for someone to behave in a particular way.</blockquote><p id="a0f93a2c-7101-4799-b8a1-a2bd8b4640d2" class="">Motivation doesn’t mean you enjoy it</p><p id="53bfebba-92ce-4802-a297-d044e9486833" class="">“When people say they are unmotivated, it’s not completely true. They could have a high level of motivation to stay in bed and watch television.”</p><p id="f28ca700-1b55-4824-8f66-50cc3a5e6a23" class="">Our motivation to different things can change from day to day in a controllable manner.</p><p id="b9cdb379-b667-4cdd-9805-3d8f5a61e369" class="">Motivation = Purpose x Energy x S^3</p><p id="cfac8e29-d413-4e11-8616-9a0ddb27f131" class="">where S^3 is small simple steps.</p><h3 id="cdbf2213-4c93-49c9-b50b-96a7c936e125" class="">Chapter 7: Purpose</h3><p id="ac5fd951-fbc0-4086-827b-5220d39b7816" class="">Importance to convey to others why you do what you do </p><p id="61d6ef6a-4d84-40a2-87b3-efaa0952a17c" class="">“People don’t buy what you do, they buy why you do it, so it follows that if you don’t know why you do what you do, how will anyone else?”</p><p id="ca6cdaf1-df9a-457a-8bf1-dc777fbea91b" class="">A goal is the point one wishes to achieve.</p><p id="236e9d19-74eb-4d1a-8d0a-0137f933cfb3" class="">A purpose is the reason one aims at to achieve a goal.</p><p id="a42bd694-60d5-4897-ac20-973a1cefe10b" class="">set SMART goals. (specific, measurable, actionable, realistic, time-based)</p><p id="0ae3fc59-fa14-4c02-bbd3-f76e52b3691d" class="">but follow them with your HEART:</p><p id="918e7561-bef5-433f-8c5c-e0f473847587" class="">Healthy: Your goals should contribute to improving your mental, physical and emotional health.</p><p id="88c9a557-6ad2-4bb6-a129-349c41603175" class="">Enduring: Goal should inspire and sustain you when you feel like quitting</p><p id="9f70ba82-2083-4c41-b083-103aa17cd434" class="">Alluring: Your goals should be enticing and engaging that you’re pulled toward them, not pushing yourself towards them</p><p id="80d99059-7f04-4a53-bb49-a9740b5105a1" class="">Relevant: Your goal should relate to your core values, purpose or fix challenges you’re facing. Don’t set goals without knowing why</p><p id="428b5008-2f82-49eb-914a-9e69a4d1f903" class="">Truth: Make sure your goal is true to you. Not someone else who wants you to do it. Make sure it’s something you truly want to achieve.</p><p id="d318f4d1-b103-4a45-83d2-65201238089d" class="">We all basically have the same purpose: To help other people through our passion.</p><p id="bfa4c834-8694-465e-85ed-74ffc3cbebbf" class="">The words “I am” are very powerful. By saying I am something you identify with that value making you likely to do those actions. For example, if you say I am a smoker then you are likely to identify as one. </p><p id="23df1770-2e66-416a-95df-73f26db29303" class="">Important to write down “I am” statements and repeat them to yourself.</p><p id="48b32348-57d9-47be-b204-e6021543244d" class="">Core values should drive you. Also differences in values with those close to you often leads to conflict. Even the shade of the value you each find important can lead to conflict.</p><p id="2be9f330-9ef3-4a11-951a-adadb6a31e22" class="">If you find it difficult to do something it’s often because you haven’t uncovered the <strong><strong><strong>why</strong></strong></strong> in that task.</p><p id="08385326-7344-4107-a345-4e197fbddb96" class="">Beware of FOMO learn to beat it by finding true purpose behind what you do and an understanding that being careful as to how you spend your energy and time is a great sense of self love. When you say yes to activities other propose you might be saying no to yourself and your own purpose which saps you of your limited time and energy.</p><p id="01cdcd15-5740-4271-ab61-24a588de53b2" class="">Motivation can be painful or pleasurable emotions…</p><p id="20236be6-b580-42ab-b954-e2dcb0213b3d" class="">When you connect your purpose to values, and feelings make sure to feel them and have them drive you because to our core we are emotional beings. Practice writing those down too when you want to drive yourself to accomplish a goal.</p><h3 id="945c0829-5d37-4e22-9d0f-94cd0088b026" class="">Chapter 8: Energy</h3><p id="560a255f-76f7-4443-b1b2-d2a6d4e9c176" class="">“Motivation is all about energy management and optimization.”</p><ol type="1" id="228cf756-e35e-4a50-8a36-4a4d7874baf7" class="numbered-list" start="1"><li>A good brain diet. The brain is like an expensive sport car that works best with premium fuel. Subpar fuel can even hurt the function of your body. Important to eat healthy and avoid processed foods especially sugars.</li></ol><ol type="1" id="bdca98fe-fb49-4b8b-9553-4e174e69efbf" class="numbered-list" start="2"><li>Brain nutrients, look into supplements if you can’t fit foods to your diet</li></ol><ol type="1" id="7fb3a551-0265-4a58-884a-82f882b4d26d" class="numbered-list" start="3"><li>Exercise, hugely benefit the brain.</li></ol><ol type="1" id="bead0ac3-6d64-4f8b-9b24-20b90123d8c2" class="numbered-list" start="4"><li>Killing ants, automatic negative thoughts. Removing them from your life will automatically improve your life as you remove the limitations of the negative thoughts. Especially when those thoughts are about what you can and cannot do.</li></ol><ol type="1" id="9646ec48-ae09-46d6-95c7-f41cef695e9f" class="numbered-list" start="5"><li>A clean environment. Remove distractions and clutter from the environment to focus and try to breathe clean air that improves your focus. Imagine trying to work when a smoker is beside you vs with the air in the mountains.</li></ol><ol type="1" id="d6fffb8a-befb-4504-acac-f8ae1fc1bd6c" class="numbered-list" start="6"><li>A positive peer group. Friends can affect your internal self talk, how much you eat, sleep, the activities you do, etc.</li></ol><ol type="1" id="f35bae85-6cd1-4c1b-ae30-7f9dc381475d" class="numbered-list" start="7"><li>Brain protection. Don’t break your brain simple. Take precautions when doing contact sports, etc</li></ol><ol type="1" id="ab0aca5b-9782-4f93-9586-d48f4311112b" class="numbered-list" start="8"><li>New learning. Helps keep the neuroplasticity of the brain active.</li></ol><ol type="1" id="05260193-90f6-4938-b191-713251731d09" class="numbered-list" start="9"><li>Stress management. Stress can rewire your brain by making it focus more on survival task and less on higher level thinking from the prefrontal cortex.</li></ol><ol type="1" id="4a92f5ee-92c5-4046-aa95-8caef06fbe9f" class="numbered-list" start="10"><li>Sleep. The brain needs rest to perform optimally, where it develops and grows during sleep and also does housekeeping by removing harmful toxins that built up during the day. good sleep will allow better focus, and thinking skills. Lack of sleep leads to a ton of mental and physical disorders. Exercise can improve the quality of sleep. Giving the mind a break by meditating also helps with sleep.</li></ol><h3 id="02a2d099-cc7e-49da-adce-55a901387881" class="">Chapter 9: Small Simple Steps</h3><p id="83018020-e74d-4aa5-8ba6-e9995f39dc35" class="">“We first make our habits, and then our habits make us”</p><p id="295310e1-8159-4034-aa27-baaa4b86a49c" class="">We can be motivated, have energy and have a strong purpose, but still not work on goals when we don’t know how to start. </p><p id="d752d8bf-3de0-46fd-beae-53a3b79b7a7d" class="">When faced with huge tasks we are often unmotivated, but if broken down into simpler steps it becomes easier to accomplish.</p><p id="fa55496a-bc64-44d4-9946-dcf1ebd9df9d" class="">When there’s a big task on our mind it saps our focus making us less capable of working on other things. At the same time, we have difficulty completing the big task due to its size. At this time, it’s important to make small steps towards the big task in order to make progress and give us some relieve from it.</p><p id="7143bd60-b061-4981-a330-f7c1aa258426" class="">If everything required conscious thought to do, (ie: we didn’t have habits) we would be mentally exhausted by 10 in the morning.</p><p id="10fa89b6-c39c-4eaa-963c-29e54f9629b4" class="">A habit is a solution to a recurring problem in life</p><p id="c483e517-2a9f-443a-a9a1-2601e0e118dc" class="">Habits have huge repercussions on the outcome of one’s life</p><p id="25baa8a9-01bb-4cf7-922e-bd763235f934" class="">Morning routines are important as they get you in the momentum of getting things accomplished from the morning.</p><p id="e033df81-8fe2-44b8-86e5-25dd8e451afe" class="">The keys to a morning routine are to: analyze dreams, </p><ol type="1" id="49add4df-aa9c-42cf-8372-d62497cc2dea" class="numbered-list" start="2"><li>be hydrated and oxygenated, (small workout, shower, meditation/breathing)</li></ol><ol type="1" id="123f6b05-13f1-4869-903b-4a0907f20b66" class="numbered-list" start="3"><li>nourished with brain foods, (smoothie, tea, breakfast, etc)</li></ol><ol type="1" id="00af81c2-3409-4993-ae53-a08f295dc4d8" class="numbered-list" start="4"><li>set a plan (journaling, reading, meditation)</li></ol><h3 id="755b0447-c923-428b-a7fc-880777928ac4" class="">Chapter 10: Flow</h3><p id="eb456c0b-9f51-45d2-a2be-bda4c264253f" class="">Flow is optimal experience (of life)</p><p id="3f30e6a7-9d15-40d4-930a-8196a36251c0" class="">It can be described by:</p><ol type="1" id="5fc7e14e-5966-42ac-b4e3-2fedbe0832ce" class="numbered-list" start="1"><li>Absolute concentration</li></ol><ol type="1" id="494e2703-00d5-40c3-8662-f8ccb008f7ad" class="numbered-list" start="2"><li>Total focus on goals</li></ol><ol type="1" id="0cae10d6-b8b5-4541-bfb4-9d38b86dd538" class="numbered-list" start="3"><li>The sense that time is either speeding up or slowing down</li></ol><ol type="1" id="0cb20e6d-f84e-49e0-999b-6ba1d6407844" class="numbered-list" start="4"><li>A feeling of reward from the experience</li></ol><ol type="1" id="d6cec4ce-f349-4299-9713-62af6849a754" class="numbered-list" start="5"><li>A sense of effortlessness</li></ol><ol type="1" id="cefc4200-fdea-4a99-942d-8b890f5b505d" class="numbered-list" start="6"><li>The experience is challenging but not overly so</li></ol><ol type="1" id="69fe3e44-c3ba-4cfa-b383-74af3dca6343" class="numbered-list" start="7"><li>Your actions almost seem to be happening on their own</li></ol><ol type="1" id="c53ab724-4b94-4789-b92f-a11d360852b3" class="numbered-list" start="8"><li>You feel comfort with what you are doing</li></ol><p id="9b00c214-e7f0-4d1b-b6a5-976d633e08bf" class="">Flow happens in four steps, a struggle on a problem, a short relaxation (not distraction), flow itself, and consolidation (where you feel let down, and off the high that flow gave you)</p><p id="7b0e4e85-afc3-4709-a2b2-04d0a39ea53a" class="">To achieve flow, eliminate distractions, set yourself enough time to get into flow (90 minutes min), do something you love, have a clear goal and challenge yourself a bit. (if you easy you get bored, if too hard you get frustrated, neither frustration nor boredom is gonna get you to a flow state)</p><p id="999546fe-5429-47d7-87cd-9e3296a69e0e" class="">Flow can’t happen when you are stressed because that distracts you from the task at hand. Also you shouldn’t try and multitask as you can’t focus on more than one thing at once when trying to get into a flow state so you should have time blocked out specifically for the task you want to accomplish. Fear of failure means that you won’t challenge yourself and will seek perfectionism which slows down your flow state and lack of conviction means a decreased belief in your ability to do something and that makes your brain release chemicals that decreases your productivity. Also how would you accomplish a goal if you don’t believe you will.</p><h2 id="a3054737-0d1c-4840-b8f1-76f75f685cba" class="">Part IV: Limitless Methods</h2><p id="54a45075-ae86-4581-a4fd-6ab1c2a861cd" class="">A specific process for accomplishing something, especially an orderly, logical, or systematic way of instruction</p><p id="0f6e8121-4f8d-40f6-872d-ada147dd1119" class="">With the correct methods we can learn to learn faster which will unlock us to become limitless.</p><h3 id="5bc22887-c067-432b-9ee4-97ddfe6a4e0b" class="">Chapter 11: Focus</h3><p id="1691f5d5-35d0-4404-bc4c-189a4a21d908" class="">The primary enemy of focus is distraction</p><p id="6b2960fa-77e6-42ce-8240-4b7f900dde97" class="">Concentration becomes better the more we train it. It’s our ability to keep your awareness on one thing for an extended period of time.</p><p id="c6870b77-e90e-4572-a270-bb6f3aa1d99a" class="">To improve focus deliberately practice to concentrate on one thing in your daily life whether that be talking to someone with full focus or reading a report, without being distracted by outside sources.</p><p id="f8c64f8b-5c74-44b8-96cb-a8074a2b5d19" class="">Also remove physical clutter around your workspace as those visual cues compete and saps away your focus. All the distractions around you such as social media, emails, different apps, etc also make us stressed and anxious.</p><p id="6330e319-777a-40c2-b063-6391dca9d890" class="">It’s important to have times when our minds aren’t cluttered as it helps our mental health and productivity.</p><p id="fe889a6f-e0c0-4cdc-95d2-fb45995a4523" class="">Some tips to improve focus are to do a controlled breathing (counting your inhalation, hold and exhalation time), do the thing that’s been causing stress (and then get back to work) and schedule time for distractions (specific time to check your emails, texts, etc)</p><h3 id="c73eca6e-ca69-4e25-ae9f-5a4424ee7237" class="">Chapter 12: Study</h3><p id="f142390b-5ae6-44b7-bf22-eb0dea90680a" class="">“With competence comes confidence”</p><p id="351e42dc-800b-4cf4-b31b-73f13398b0d1" class="">“This isn’t an ability you either do or don’t have. Instead, it’s an ability you’ve either cultivated or haven’t”</p><p id="b7e89131-5d5e-4043-b7b9-bef5823fce73" class="">4 Levels of competence (or learning)</p><ol type="1" id="1750de71-a381-449e-9bfc-d3c76c85a17a" class="numbered-list" start="1"><li>Unconscious incompetence (you don’t know that you you don’t know)</li></ol><ol type="1" id="081a53c9-f4c2-4d10-b3cd-5dbeb64222f4" class="numbered-list" start="2"><li>Conscious incompetence (You know that you don’t know)</li></ol><ol type="1" id="c849952f-78eb-4413-bf86-365f972d1b70" class="numbered-list" start="3"><li>Conscious competence (you know it but need to be consciously focusing to do it)</li></ol><ol type="1" id="ce7ff76a-d314-4991-9dc3-37c324e4db1a" class="numbered-list" start="4"><li>Unconscious competence (You can do the task unconsciously, without focusing)</li></ol><p id="01e31c22-7164-4e68-b15e-83d519236fa9" class="">The best learners are life long learners.</p><p id="609d5a1f-e9da-4aa4-8e60-468799cc5412" class="">7 studying tips:</p><ol type="1" id="c5c84c38-c411-4604-b11c-230e9bd3f8b7" class="numbered-list" start="1"><li>Active Recall; review material and directly check to see how much you’ve remembered. Active recall means you have to generate the correct answer, not identify it (as would be in a multiple choice test)</li></ol><ol type="1" id="c7e23946-a5e3-45c3-9f50-fba4dd1b8570" class="numbered-list" start="2"><li>Spaced repetition; repeat reviewing the materials separated by a duration of time.</li></ol><ol type="1" id="a421dbc5-efed-4755-bf93-e7f1143a49ec" class="numbered-list" start="3"><li>Manage the State you’re in; put yourself in a position to learn and treat like you’re learning crucial information. Sitting with good posture and intention.</li></ol><ol type="1" id="8b6feed2-e8df-469b-bac9-cdf051dc689d" class="numbered-list" start="4"><li>Use your sense of smell; the olfactory nerves connect through your amygdala and hippocampus leading to strong emotions and memory recall.</li></ol><ol type="1" id="fbde2f55-424a-4375-90b3-682809c43ff9" class="numbered-list" start="5"><li>Music for the mind; learn by forming the lessons as songs, etc music links to mood and mood links to learning. Additionally, Baroque music can stabilize mental, physical and emotional rhythms for better concentration</li></ol><ol type="1" id="2f666d98-d52e-469a-ade5-61fe6654bc17" class="numbered-list" start="6"><li>Listen with your whole brain; <strong>HEAR: H</strong>alt, remember that you can only pick up all the verbal and nonverbal cues if you fully focus on listening; <strong>E</strong>mpathy, put yourself in the speaker’s shows; <strong>A</strong>nticipate, be eager to hear what the speaker has to share; <strong><strong>R</strong></strong>eview, review what the speaker said by asking question, taking notes, or imagining teaching it to someone else.</li></ol><ol type="1" id="8a5d5e0c-afe5-4f12-aa28-cdc0ee42cd61" class="numbered-list" start="7"><li>Take Note of Taking notes, Notes allow you to organize and process information in a way that makes it most likely that you can use this information afterward. It tailors the things you learn to your brain specifically making it easier to remember. Don’t write everything down, write a bit in your own words so that you process the information thus helping you in learning it. Actually intently listen, when taking notes to see the verbal/nonverbal cues and where emphasis is placed. also take notes by hand instead of typing as the processing makes you learn better. split the page in half where one side is to take notes and the other is to make notes (an impression of what you’re writing) Have a goal for your note taking, different situations will need you to take notes in different ways.</li></ol><h3 id="0dda0145-e9ec-4130-97a3-763de33f8adc" class="">Chapter 13: Memory</h3><p id="f9df0203-1f12-4a3b-a807-c97f95a2941b" class="">Memory is fundamentally important to brain’s function</p><p id="a596f321-57cf-4a63-bf3c-a4be9dc76fde" class="">The brain is an organ but behaves like a muscle as in the more you use it the better it becomes</p><p id="4077b2ca-733d-4561-90b9-1ec146770d47" class="">Memory is important because our knowledge forms a base of what thoughts we can conjure.</p><p id="c9ee8b83-f0f7-49ca-94e6-fb79997597a7" class="">Be motivated to remember something by telling you there’s a large reward for doing so. Ie: If you remember xyz, then you’ll get $500 makes you more likely to remember it.</p><p id="96439ead-f670-46c8-93fa-7db193ef759a" class="">We learn best by associating concepts with old ones and visualizing them. </p><p id="31009fe5-44c7-4bc9-84a3-3143b0c8a001" class="">Also adding emotion can help, or add a location to a memory. Our brains are good at remembering locations because it was a critical skill back in hunter-gatherer times.</p><p id="b15a9493-8c2e-48e9-bfac-ea88c08da120" class="">Loci method for remembering things consists of matching specific points to points in a location you know well. Then as you imagine yourself walking around that location you can recall the points from the items at that place. ie: A lamp in your room can represent a quote you wish to remember.</p><p id="49fdfcc4-fc88-49da-8a36-323721f9a6e1" class="">To remember names; use it in your conversation with them, double check the name after they tell you and ask them where their name is from, try to attach the name to something more than just them.</p><h3 id="ba4db7dd-a8b0-4d56-8352-ccdb02d3419e" class="">Chapter 14: Speed-Reading</h3><p id="fc3411d4-3cfc-40f3-befb-79148de3e87e" class="">The reading improves memory, focus, vocabulary, imagination, and understanding</p><p id="54fd2a83-3b87-4d0c-b73e-811893fed190" class="">My current reading speed is 246 wpm</p><p id="82e4db91-a67c-445a-b8b7-b0bbe8d8f936" class="">Sub vocalization limits reading speed to your talking speed. </p><p id="c5b514ae-1313-4b8c-b84d-653c2fdaf916" class="">Faster readers have better focus, because by taking in more information the brain cannot afford to be distracted. Faster reading also takes less effort because you spend less time and allows you to better appreciate a book. When you can read fast you have the choice to either read fast or not.</p><p id="91a700d5-f615-49b8-b845-fc57d886a8b5" class="">Reading improves with deliberate practice.</p><p id="f6d586c5-b0ce-4a50-95f9-2e9a94870dec" class="">Use a finger to track where you’re at to not regress in your reading and reread the same words.</p><p id="660e92af-b52d-4c64-abe2-48ee0b21c34d" class="">My new reading speed is 1006 wpm.</p><h3 id="b95a3be2-1756-4d4c-82e8-4f2ee758153d" class="">Chapter 15: Thinking</h3><p id="2b8c60ec-406c-4eac-a8b9-437b94c14f53" class="">“We can’t solve problems by using the same kind of thinking we used when we created them”</p><p id="0727db6b-efdd-4384-b888-bba300aac126" class="">There’s different ways of thinking and its important to identify how you’re thinking of something and often experiment and use the other methods to solve your problems.</p><p id="11be237d-bd7f-4c55-beed-9a2bac266ab5" class="">Tackle problems with different thinking hats. Imagine yourself putting on different colored hats and thinking in different ways, emotionally, analytically, looking at the good, or looking at the bad, etc</p><p id="902137fd-1c57-4146-9514-380aa05491cb" class="">“The life which is unexamined is not worth living” Plato</p><p id="937fe040-09bd-417a-b122-369b3dfce804" class="">40/70 rule: States to not make decisions with less than 40% of information and to not wait until you have more than 70% in which case you can make a good decision without potentially missing out on an opportunity.</p><p id="ee283b89-56bb-4ef0-91e6-b2460b4ac2ea" class="">to not do list: A list of things that you would do, but shouldn’t go on your to-do list because they’re so common and do not advance you further in life.</p><p id="01514de7-1709-488a-84cb-ea58ef677f9e" class="">Look at your mistakes</p><p id="185cd4a3-537d-4fa6-adb3-f494b0e72507" class="">Second order thinking is about looking at the consequences of your actions and looking further down the line</p><p id="3203eced-db44-4873-9f17-22d62d504d5f" class="">Think exponentially. Get to the underlying problem. Posit a new approach; what if. Then research it and extrapolate to your situation.</p><p id="8b6f571e-973b-431c-b8c7-bfa65c905ed2" class="">“The life you live are the lessons you teach.”</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

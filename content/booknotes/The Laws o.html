@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>The Laws of Human Nature</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+} */
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f3135d10-4491-4839-8399-4f19979a366c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">☀️</span></div><h1 class="page-title">The Laws of Human Nature</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Author</th><td>Robert Greene</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Fiction?</th><td><span class="selected-value select-value-color-gray">Non-Fiction</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Genres</th><td><span class="selected-value select-value-color-blue">Psychology</span><span class="selected-value select-value-color-gray">Self-Help</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Rating</th><td><span class="selected-value select-value-color-gray">4-Star</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Finished</th><td><time>@May 6, 2022 → June 4, 2022</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th><td><span class="selected-value select-value-color-pink">Notes Done</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>586</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Year</th><td>2018</td></tr></tbody></table></header><div class="page-body"><h1 id="f3980752-fbf6-4fe2-86a4-9f8c1df4e90e" class="">🚀 The Book in 3 Sentences</h1><ol type="1" id="d0ba7939-db35-4a82-bcfe-7cb7f2b9e6b9" class="numbered-list" start="1"><li></li></ol><h1 id="4315b792-a3f8-4741-8895-c05d55aca327" class="">🎨 Impressions</h1><p id="9eaa8689-eee2-4724-8240-2a686864ba1a" class="">
+</p><h2 id="d9b94e89-ade6-4f60-83db-7d40bc4b22c9" class="">How I Discovered It </h2><p id="fe284cec-32d0-4e60-841d-e30dbf3f144d" class="">Book feed on instagram</p><h2 id="b7319cb1-145e-4c23-ac1c-a342610e7a8c" class="">Who Should Read It? </h2><p id="f95c86b1-2010-409e-bacc-91433ee8df17" class="">Not sure</p><h1 id="eb4e0ee7-7c00-41df-8344-e8d682fb6eca" class="">☘️ How the Book Changed Me </h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="515ea11a-94a1-4e68-8fe0-136d0af031fc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">How my life / behaviour / thoughts / ideas have changed as a result of reading the book.</div></figure><ul id="aacbe21a-b760-4e87-a98c-ecc8e2935e35" class="bulleted-list"><li style="list-style-type:disc">Makes me think that observing someone carefully to understand them is very important, but also to look at your own actions to understand yourself.</li></ul><ul id="495cd5a6-abb4-48c0-be0f-8590042b5828" class="bulleted-list"><li style="list-style-type:disc"><strong>You want to tell them exactly how they feel about themselves</strong></li></ul><h1 id="017e218c-0748-40a5-a8e4-28612d5dc4e0" class="">✍️ My Top 3 Quotes</h1><ul id="d2ed3eda-5f45-4ceb-8986-0d153f46727d" class="bulleted-list"><li style="list-style-type:disc">“Instead of focusing on what you want and covet in the world, you must train yourself to focus on others, on their repressed desires and unmet fantasies.”</li></ul><ul id="282ffb24-9bf0-40e0-90a7-7a0a065d8acd" class="bulleted-list"><li style="list-style-type:disc">Put the focus on others. Let them talk, be the star of the shows, emulate their values and opinions often showing the things they like in yourself to lower their guard</li></ul><ul id="dd1fb8d4-38cb-4f3d-a12a-852fd28dd106" class="bulleted-list"><li style="list-style-type:disc">Our attitude has a self-fulfilling dynamic</li></ul><h1 id="716a256c-080d-424d-bde4-ebb77f4829bc" class="">📒 Summary + Notes</h1><p id="8432994e-30c2-450a-9746-1083948b3675" class="">First, the Laws will work to transform you into a calmer and more strategic observer of people, helping to free you from all the emotional drama that needlessly drains you.</p><p id="e31bb6a9-a074-4552-99db-6982ee4973ae" class="">Second, the Laws will make you a master interpreter of the cues that people continually emit, giving you a much greater ability to judge their character.</p><p id="827f758c-ca3b-4712-9db6-8c9262de85c1" class="">Third, the Laws will empower you to take on and outthink the toxic types who inevitably cross your path.</p><p id="9b3db2af-a6be-4501-b70c-45a9f0955072" class="">Fourth, the Laws will teach you the true levers for motivating and influencing people.</p><p id="a5fb4505-f01a-49cb-9c70-3fe02d24f517" class="">Fifth, the Laws will give you the power to alter your own negative patterns.</p><p id="ae4b4530-d0bd-4aec-972c-6c5e3ed0dddf" class="">Sixth, the Laws will transform you into a more empathetic individual, creating deeper and more satisfying bonds with the people around you.</p><p id="0f437537-b9fa-479f-8c03-a313aa61b5e2" class="">Finally, the Laws will alter how you see your own potential, making you aware of a higher, ideal self within you that you will want to bring out.</p><h3 id="fb059c96-2a52-4f0d-8159-d8af43d575e8" class="">1: Master Your Emotional Self; The Law of Irrationality</h3><p id="eb54b9b3-f5af-4256-9c2b-3d94276b2b57" class="">We are all consumed by something, but Pericles has decided to be consumed by intelligence and rationality.</p><p id="56cf4085-840d-470e-b924-c196290088c9" class="">To be rational you often have to retreat yourself from the situation and think deeply in order for your emotions to wash away. You have to question why you have the emotions you do that are making you do the things they are. Why are you angry, sad, etc? and only then can you start questioning the situation itself rationally.</p><p id="2d88fb95-2bd6-4ae3-9e57-1aeffc9ac895" class="">Humans are fundamentally not rational, which must be understood to become rational</p><p id="6a7456dc-137d-4914-9798-d534b4a357a8" class="">The brain structure itself reveals this with older parts being for emotion that leads to direct action instead (this part of the brain is for deep desires, animalistic wants and needs, survival, etc...) of the thought and rationality that the newer part of the brain has.</p><p id="324be161-04af-4222-b03d-981cd5cf10be" class="">Our emotions are thus hidden from our rational self. The inability for humans to transfer emotions and language between the two parts of the brain creates more friction between them making the emotions less precise, and last longer.</p><p id="8da019e8-f77d-4aed-ae6e-813acf2745fb" class="">The most common emotion is just desiring pleasure and avoiding pain. (helps satisfy our egos)</p><p id="a99cf3dc-7189-4240-afc4-8b5b01c45877" class="">Confirmation bias: searching for evidence to support our points and discrediting evidence against our points. We should instead search for arguments against our ideas and contemplate them as objectively as possible. This often happens when asking for advice, (only taking the advice we want to hear)</p><p id="bd956aca-2519-4f22-ada8-4f1f6aa43fa9" class="">Conviction bias: Those who speak like the know a lot, and are very convinced of what they say are trusted more. (think advertisements, leaders, politics, etc)</p><p id="243df9a4-e086-4b5c-bd6a-bd01f44e6941" class="">Appearance bias: we don’t see people as they are but as they appear. People usually show the best of themselves thus we are biased in seeing that part of them. And this can also create the halo effect where if a person has some quality we assume they also have some other quality.</p><p id="ef0e725b-7075-442f-b057-a702ea03de2f" class="">Group bias: as social animals we follow the group while thinking that our ideas are our own to satisfy our ego when many members of the group will do similarly.</p><p id="d1c5fbd8-7862-4ab1-a4d0-6e423ca0dbb3" class="">Blame bias: it’s painful to relive mistakes, so we blame them on someone else while thinking that we learn from our mistakes.</p><p id="86eef440-9459-4d7c-8949-7e50635e22cb" class="">Superiority bias: we can’t see our own faults and biases only those of others. we think of ourselves as more rational, ethical, etc. This is partly because if we think so otherwise and show that we do not think of ourselves as good then we are put at a disadvantage in society. </p><p id="e61952eb-ec19-4246-ba33-9c08f3e5f8e9" class="">Love your rationality so that it can be easy to aim for.</p><p id="71aea780-57b9-40fa-a077-8802091a2941" class="">Search for the roots of your emotions.</p><h3 id="5dcf1024-c50c-4f15-840e-690d14cd8c71" class="">2: Transform Self-Love into Empathy; The Law of Narcissism</h3><p id="06d57476-5186-47dd-8cbf-a610f1e6380e" class="">At a young age people develop an inner self which they can come to love when in difficult situations. (retrieved from social interactions, depressed, stress, hard work) this self is usually better than their actual self but not by too much, it allows people to feel comfortable and worthy. Deep narcissists do not have this inner self so when they face through difficult times they don’t have anything to comfort themselves and are always searching for the approval of others. Those who have well constructed this inner self can redirect their energy outwards not fearing usual failure and this creates a positive feedback loop as they are more and more like by society. Note that the development of technology/internet has lead people to be more narcissist as they lack more and more regular social interactions.</p><p id="f12fdbd2-d12f-4ead-b11d-b6247f19d233" class="">relationships themselves can be empathic or narcissistic depending on how the people treat each other this brings out the narcissistic or empathic side of them. </p><h3 id="72a8be4e-21d1-4256-b5f0-5a75cb1cdff0" class="">3: See Through People’s Masks; The Law of Role-playing</h3><p id="e0cf662a-80a8-4283-85f7-794c3022acc9" class="">In modern society we have to hide our true self in order to appease others and to seem like we are acting normally in social situations. It is our goal to figure out the true intentions of others by paying attention to body language especially the following:</p><ul id="4a978746-06a6-4751-a42c-dc8c89782823" class="bulleted-list"><li style="list-style-type:disc">authenticity of a smile</li></ul><ul id="0e823100-0576-46e9-b322-d23931c29847" class="bulleted-list"><li style="list-style-type:disc">eye, shape and size</li></ul><ul id="a99cdef4-d16b-4474-a746-d2551357e180" class="bulleted-list"><li style="list-style-type:disc">cheeks</li></ul><ul id="ee34412d-b00a-44a8-9150-1f4d8cfc8384" class="bulleted-list"><li style="list-style-type:disc">eyebrow</li></ul><ul id="4e686379-c2a0-4e71-a956-24854f06f9d4" class="bulleted-list"><li style="list-style-type:disc">tensing of legs, neck, arms</li></ul><ul id="911f88ef-fa78-488d-9506-d4ef9828a0ad" class="bulleted-list"><li style="list-style-type:disc">crossing legs or arms</li></ul><ul id="2245c83f-98f7-4fcc-9cf6-8798e59fd52f" class="bulleted-list"><li style="list-style-type:disc">breathing</li></ul><ul id="f9a91384-a369-475e-b214-30dfe31c1594" class="bulleted-list"><li style="list-style-type:disc">tense facial muscle</li></ul><ul id="7ac99a35-28c8-4763-bb47-3f4b64208d64" class="bulleted-list"><li style="list-style-type:disc">brushing back of hair</li></ul><p id="b1c9233b-2153-4475-b2c2-7aa99b726bae" class="">Additionally, the mirroring of your own actions can show interest.</p><p id="666150e8-3758-40d0-b8ba-2f9757c1fcbe" class="">Seeing through other’s people’s acts into their true intention can save us a lot of pain if they are directed against us. We must look for micro signs that are dropped or contradictory acts, (saying something but body language showing something else, or some body part showing something but some other part shows the opposite)</p><p id="2cb0cd25-1061-49bb-aa98-4a5cdf46b961" class="">So we have to pay very careful attention (without making it obvious that we are) to people’s nonverbal cues that they accidentally drop.</p><h3 id="67f38e06-4687-42c7-9a40-dcc453298541" class="">4: Determine the Strength of People’s Character; The Law of Compulsive Behavior</h3><p id="33812956-db90-4976-b128-2a1fb03b7577" class="">everyone puts on a mask which hides their true character;</p><p id="7a9831df-2369-4ac3-a954-6b0f28100f41" class="">this character is ever present and they try to hide flaws for better characteristics</p><p id="cc092166-c29a-4269-9b70-1a08d69bfa2d" class="">when they slip they’ll make it seem like it was a one time thing but if you pay attention it happens often.</p><p id="8064b127-d627-44e5-be88-09aa757aa9c6" class="">The character is developed mainly in early childhood, by genes and early adolescence. </p><p id="2a5c4515-116b-40ef-bace-3c404cdb5701" class="">Observe people as when they have power and in a good position where they are more likely to feel comfortable showing their true character.</p><p id="b9315b18-88ce-417d-a2d4-5d12c109134f" class="">“So often we think that power has changed people, when in fact it simply reveals more of who they are.”</p><h3 id="aedbd451-a7d8-4ddf-b075-587f449c39a6" class="">5: Become an Elusive Object of Desire; The Law of Covetousness</h3><blockquote id="3ae8a8f3-ff85-4a8a-90c5-17f2d63ee06c" class="">cov·et (/ˈkəvət/), <em>verb: </em>yearn to possess or have (something).</blockquote><figure id="5a388607-ad61-48b2-a4ee-5fa2dcd32c0b" class="image"><a href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8cG9seWdvbiBpZD0ic21hbGwtdmlzZW1lLXYzLWEiIHBvaW50cz0iMCAwIDMyIDAgMzIgMzIgMCAzMiIvPgogIDwvZGVmcz4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPG1hc2sgaWQ9InNtYWxsLXZpc2VtZS12My1iIiBmaWxsPSIjZmZmIj4KICAgICAgPHVzZSB4bGluazpocmVmPSIjc21hbGwtdmlzZW1lLXYzLWEiLz4KICAgIDwvbWFzaz4KICAgIDx1c2UgZmlsbD0iIzQyODVGNCIgeGxpbms6aHJlZj0iI3NtYWxsLXZpc2VtZS12My1hIi8+CiAgICA8cGF0aCBmaWxsPSIjRDJFM0ZDIiBkPSJNMCwxNS4yMzk3OTYzIEMyLjU0Mzg1NzE0LDE4Ljg3MDUyMDMgNS42NTIsMjIuMDgyMTk0NiA5LjIwMjI4NTcxLDI0Ljc0NDg3NjkgQzEzLjIxMTU3MTQsMjcuNzUxNzA3NyAxOC43ODg0Mjg2LDI3Ljc1MTcwNzcgMjIuNzk3NzE0MywyNC43NDQ4NzY5IEMyNi4zNDgsMjIuMDgyMTk0NiAyOS40NTYxNDI5LDE4Ljg3MDUyMDMgMzIsMTUuMjM5Nzk2MyBMMzIsLTcgTDAsLTcgTDAsMTUuMjM5Nzk2MyBaIiBtYXNrPSJ1cmwoI3NtYWxsLXZpc2VtZS12My1iKSIvPgogICAgPHBhdGggZmlsbD0iIzQyODVGNCIgZmlsbC1vcGFjaXR5PSIuNiIgZD0iTTE2LDIxLjIzMDY0OTIgQzE2LjkyNjA5OTEsMjEuMjMwNjQ5MiAxNy43OTEyNDY3LDIxLjQ5NDMxNTcgMTguNTI3MjEzNSwyMS45NTE1MDE5IEMxOC44MTA0NDEsMjIuMTI3MzMwOSAxOS4xMzYyNzM4LDIxLjc4ODc0ODUgMTguOTQwMzc5OSwyMS41MTY0Njc0IEMxOC4yNzg1NTU2LDIwLjU5NzMyNjMgMTcuMjA4MTEzNiwyMCAxNiwyMCBDMTQuNzkxODg2NCwyMCAxMy43MjE0NDQ0LDIwLjU5NzMyNjMgMTMuMDU5NjIwMSwyMS41MTY0Njc0IEMxMi44NjM3MjYyLDIxLjc4ODc0ODUgMTMuMTg5NTU5LDIyLjEyNzMzMDkgMTMuNDcyNzg2NSwyMS45NTE1MDE5IEMxNC4yMDg3NTMzLDIxLjQ5NDMxNTcgMTUuMDczOTAwOSwyMS4yMzA2NDkyIDE2LDIxLjIzMDY0OTIiIG1hc2s9InVybCgjc21hbGwtdmlzZW1lLXYzLWIpIi8+CiAgICA8cGF0aCBzdHJva2U9IiM0Mjg1RjQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIGQ9Ik0yNSwxMyBDMjMsMTUuMzMzMzMzMyAyMCwxNi41IDE2LDE2LjUgQzEyLDE2LjUgOSwxNS4zMzMzMzMzIDcsMTMgTDEzLDEwLjUgTDE5LDEwLjUgTDI1LDEzIFoiIG1hc2s9InVybCgjc21hbGwtdmlzZW1lLXYzLWIpIi8+CiAgICA8cG9seWdvbiBmaWxsPSIjNDI4NUY0IiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iOCAxNCA3IDEzIDI1IDEzIDI0IDE0IiBtYXNrPSJ1cmwoI3NtYWxsLXZpc2VtZS12My1iKSIvPgogICAgPHBhdGggc3Ryb2tlPSIjNDI4NUY0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Ik0yMCwzIEwxNy43Njc4NzUsNS4yNTg5MjYyMiBDMTYuNzkxNSw2LjI0NzAyNDU5IDE1LjIwODUsNi4yNDcwMjQ1OSAxNC4yMzIxMjUsNS4yNTg5MjYyMiBMMTIsMyIgbWFzaz0idXJsKCNzbWFsbC12aXNlbWUtdjMtYikiLz4KICA8L2c+Cjwvc3ZnPgo="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8cG9seWdvbiBpZD0ic21hbGwtdmlzZW1lLXYzLWEiIHBvaW50cz0iMCAwIDMyIDAgMzIgMzIgMCAzMiIvPgogIDwvZGVmcz4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPG1hc2sgaWQ9InNtYWxsLXZpc2VtZS12My1iIiBmaWxsPSIjZmZmIj4KICAgICAgPHVzZSB4bGluazpocmVmPSIjc21hbGwtdmlzZW1lLXYzLWEiLz4KICAgIDwvbWFzaz4KICAgIDx1c2UgZmlsbD0iIzQyODVGNCIgeGxpbms6aHJlZj0iI3NtYWxsLXZpc2VtZS12My1hIi8+CiAgICA8cGF0aCBmaWxsPSIjRDJFM0ZDIiBkPSJNMCwxNS4yMzk3OTYzIEMyLjU0Mzg1NzE0LDE4Ljg3MDUyMDMgNS42NTIsMjIuMDgyMTk0NiA5LjIwMjI4NTcxLDI0Ljc0NDg3NjkgQzEzLjIxMTU3MTQsMjcuNzUxNzA3NyAxOC43ODg0Mjg2LDI3Ljc1MTcwNzcgMjIuNzk3NzE0MywyNC43NDQ4NzY5IEMyNi4zNDgsMjIuMDgyMTk0NiAyOS40NTYxNDI5LDE4Ljg3MDUyMDMgMzIsMTUuMjM5Nzk2MyBMMzIsLTcgTDAsLTcgTDAsMTUuMjM5Nzk2MyBaIiBtYXNrPSJ1cmwoI3NtYWxsLXZpc2VtZS12My1iKSIvPgogICAgPHBhdGggZmlsbD0iIzQyODVGNCIgZmlsbC1vcGFjaXR5PSIuNiIgZD0iTTE2LDIxLjIzMDY0OTIgQzE2LjkyNjA5OTEsMjEuMjMwNjQ5MiAxNy43OTEyNDY3LDIxLjQ5NDMxNTcgMTguNTI3MjEzNSwyMS45NTE1MDE5IEMxOC44MTA0NDEsMjIuMTI3MzMwOSAxOS4xMzYyNzM4LDIxLjc4ODc0ODUgMTguOTQwMzc5OSwyMS41MTY0Njc0IEMxOC4yNzg1NTU2LDIwLjU5NzMyNjMgMTcuMjA4MTEzNiwyMCAxNiwyMCBDMTQuNzkxODg2NCwyMCAxMy43MjE0NDQ0LDIwLjU5NzMyNjMgMTMuMDU5NjIwMSwyMS41MTY0Njc0IEMxMi44NjM3MjYyLDIxLjc4ODc0ODUgMTMuMTg5NTU5LDIyLjEyNzMzMDkgMTMuNDcyNzg2NSwyMS45NTE1MDE5IEMxNC4yMDg3NTMzLDIxLjQ5NDMxNTcgMTUuMDczOTAwOSwyMS4yMzA2NDkyIDE2LDIxLjIzMDY0OTIiIG1hc2s9InVybCgjc21hbGwtdmlzZW1lLXYzLWIpIi8+CiAgICA8cGF0aCBzdHJva2U9IiM0Mjg1RjQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIGQ9Ik0yNSwxMyBDMjMsMTUuMzMzMzMzMyAyMCwxNi41IDE2LDE2LjUgQzEyLDE2LjUgOSwxNS4zMzMzMzMzIDcsMTMgTDEzLDEwLjUgTDE5LDEwLjUgTDI1LDEzIFoiIG1hc2s9InVybCgjc21hbGwtdmlzZW1lLXYzLWIpIi8+CiAgICA8cG9seWdvbiBmaWxsPSIjNDI4NUY0IiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iOCAxNCA3IDEzIDI1IDEzIDI0IDE0IiBtYXNrPSJ1cmwoI3NtYWxsLXZpc2VtZS12My1iKSIvPgogICAgPHBhdGggc3Ryb2tlPSIjNDI4NUY0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Ik0yMCwzIEwxNy43Njc4NzUsNS4yNTg5MjYyMiBDMTYuNzkxNSw2LjI0NzAyNDU5IDE1LjIwODUsNi4yNDcwMjQ1OSAxNC4yMzIxMjUsNS4yNTg5MjYyMiBMMTIsMyIgbWFzaz0idXJsKCNzbWFsbC12aXNlbWUtdjMtYikiLz4KICA8L2c+Cjwvc3ZnPgo="/></a></figure><blockquote id="3646e350-90c7-4271-9156-7f01cf1038bb" class="">They were desirable because someone else desired them.</blockquote><p id="95c4f9f2-406d-48c8-ab0a-695f68349889" class="">“Instead of focusing on what you want and covet in the world, you must train yourself to focus on others, on their repressed desires and unmet fantasies.”</p><p id="cf27077f-fe29-4981-8924-723c8bdfd586" class="">“something positive generates a contrasting negative image in our mind.”</p><p id="3f1eee4a-fb93-4214-9d1d-0c5fcb5e69fb" class="">“More people have come to believe that others should simply desire them for who they are. This means revealing as much as they can about themselves, exposing all of their likes and dislikes, and making themselves as familiar as possible. They leave no room for imagination or fantasy.”</p><p id="273ad1cd-6788-4b17-8723-91b0eae222fa" class="">The key to making this law work is to <strong>objectify yourself</strong> and what you produce. view yourself from the perspective of others.</p><p id="a37bd86f-dd91-435f-a7f9-fc1af04132cb" class="">know how and when to withdraw, leaving an air of mystery that others desire.</p><p id="f98a42c7-eccf-48e0-9c6d-f94468d91f17" class="">when we see people or things desired by others, it drives up their value</p><p id="69528c2d-70a0-4e0a-8588-a02d8fc5d025" class="">people always want more of what is close or is impossible, banned, not allowed, illicit, taboo, etc... by presenting them those things they desire it, but remember that as they get it the lines will shift and they’ll desire more due to the inevitable dissatisfaction of people.</p><p id="dd495fdf-8447-4859-b666-1a43c073bb2c" class="">If everything is good and easy people no longer desire it much, they want things that are more challenging (kinda like the 5:1 positive to negative interactive interaction of Dr. Peterson) if there’s too much good the value of a relationship will decrease.</p><p id="eef8048f-7729-4719-9f8b-f7b4ab1a3f76" class="">Also watch out for what you yourself are coveting for, and make sure to not fall in the basic traps of wanting that clouds your judgement.</p><h3 id="301231a1-8c76-44d3-b5d2-446e18e1cd64" class="">6: Elevate Your Perspective; The Law of Shortsightedness</h3><p id="26e4d711-b0c0-4687-9afd-1f4e634e5cdd" class="">By waiting and allowing time to pass we get a much better perspective on things. It is the human nature to rush and live in the moment, seeking instant gratification. This only got worse with the advent of recent technologies, (social media, internet, etc.)</p><p id="9affc280-fa20-441f-92f4-71c5c4ee908f" class="">However, we often cannot wait for time to pass by and must get something done while still doing it well. It’s important to have time/perspective to do something well. In order to do that we must be very considerate about different possible situations and people involved in the situations who can act in various often unpredictable ways. Considering more scenarios other than the one we want and hope for will often makes us realize flaws in our plans. Often we are just blinded by a single possibility and we take action firmly believing that will happen. Also look longer down the line a few years.</p><p id="3ced32b9-4ff4-4c34-980e-a1e9452d3485" class="">Additionally, when setting goals and future plans make sure they are concrete this shows that you are connecting fully with the future. Slow down when you have to make some more important decisions instead of acting directly, taking in a few days to think more this will allow decisions to be much better. Don’t always think about those one scenarios but of multiple. See the passage of time as an ally something that helps you not something that you are losing. Taking time to think will also avoid emotional decisions.</p><h3 id="0e4bc822-1da7-4a51-84c4-064058f7f146" class="">7: Soften People’s Resistance by Confirming Their Self-opinion: The Law of Defensiveness</h3><p id="b1c4828f-bf0e-4d3c-bd8c-cc8213b798e8" class="">“Normally we try to charm people with our own ideas, showing ourselves off in the best light. We hype our past accomplishments. We promise great things about ourselves. We ask for favors, believing that being honest is the best policy. What we do not realize is that we are putting all of the attention on ourselves. In a world where people are increasingly self-absorbed, this only has the effect of making others turn more inward in return and think more of their own interests than ours.”</p><p id="c0c4c651-c82b-4b61-85ff-2e238ac3a898" class="">Put the focus on others. Let them talk, be the star of the shows, emulate their values and opinions often showing the things they like in yourself to lower their guard. (sports, political views, music, etc) People are hungry for such attention</p><p id="38b9e37a-f114-48e2-9011-ba05d6453849" class="">Subtly step back and assume an inferior position to the other person, ask for advice this will make them believe in their own great capabilities. Once they are they are addicted to your attention start doing favors for them. They will want to reciprocate those favors and they will continue doing so believing they are helping themselves. They won’t change as that would admit stupidity from their previous decision.</p><p id="2dfae431-1e72-4019-98d8-90e75ad24782" class="">Instill in people a feeling of inner security by mirroring their values and exercising empathy by getting into their perspective. You can create mutual emotions and when they decide to help you they feel like it’s from their own free will.</p><p id="1a44bacb-a36a-4236-969d-190d3fd707d3" class="">Everyone wants to be confirmed that they have: </p><ol type="1" id="70680e3b-0bf5-4732-a8d4-3094fcc0c2f3" class="numbered-list" start="1"><li>free will, act of their own decisions</li></ol><ol type="1" id="6dead3e7-4356-4a4d-a6a0-520ed8ac441b" class="numbered-list" start="2"><li>are intelligent, in their own ways</li></ol><ol type="1" id="222ad1d0-5b92-431b-8ee5-0d6277ae3aed" class="numbered-list" start="3"><li>are good, and do what is morally right</li></ol><p id="e147b2b5-4499-452f-8784-2139c9202de7" class="">Confirm those traits to people and they will lower their defenses.</p><ol type="1" id="c3b94c84-caee-4297-905e-73a60bbbb7e2" class="numbered-list" start="1"><li>Transform yourself into a deep listener. Everyone has incredible unknown stories to tell and by listening closely we can figure them out. Instead of listening to our own monologue which we know already too well and thinking about what we’ll say next. at the end of the convo they should feel better about themselves.</li></ol><ol type="1" id="5145899a-6835-4658-abf1-d42ef321ef15" class="numbered-list" start="2"><li>Infect people with the proper mood. Either make both parties joyful or relaxed. Either warm feelings with shared pleasures, or relaxing deep understanding.</li></ol><ol type="1" id="deac130a-e768-4fde-ab4a-7687634ee805" class="numbered-list" start="3"><li>Confirm their self-opinion. Make sure people think they are helping you for their own good by their own decisions. For example, instead of pleading with someone for them to do something make it seem like what you are doing is important, something they would want to do themselves. then they would plead with you to get to the job. Make it seem like people are making very intelligent decisions having a say with what you suggested even making it seem like you made some small mistakes, but in the end you’ll get to change their larger viewpoint. Asking for advice will make it seem like you value their wisdom and intelligence. When appealing to people’s “good” remind them of the good things they’ve done in the past and they will want to reinforce their generosity.</li></ol><ol type="1" id="56657d84-fe17-43ac-9223-0aacd53a1f96" class="numbered-list" start="4"><li>Allay their insecurities. Once those are identified do not talk about them whether its looks (height, weight or physicality) intelligence, creativity etc. Praise and flatter those qualities they are insecure about focusing on their own hard work instead of talent, but don’t overdo or they will know that you are not being realistic. <strong>You want to tell them exactly how they feel about themselves. </strong>with those who are your superior (bosses, etc) just agree with their opinions to validate their wisdom, flattering is too transparent. Don’t directly follow the flattering with call for help let a bit of time to pass. when they ask for opinion on their work, they do not want the truth they want support and confirmation of what they see of it.</li></ol><ol type="1" id="057d96e2-0cd2-42bd-81d5-d439ee3290a6" class="numbered-list" start="5"><li>Use people’s resistance and stubbornness: basically reverse psychology. </li></ol><h3 id="98e14bcc-85ac-4eda-b486-29ad96a9e03f" class="">8: Change Your Circumstances By Changing Your Attitude; The Law of Self-sabotage</h3><p id="cdb2c702-d812-44f2-8e83-588b713e7343" class="">Your attitude is a way you view the world, how your perception affects reality and adds or remove colors to it. How you focus on some things and blur out others. In other words, <strong>your attitude is the lens through which you see reality.</strong></p><p id="416e051e-19ec-4c0e-bfe4-17dbe73d69da" class="">“Our attitude has a self-fulfilling dynamic”</p><p id="4940a332-cdd5-4fb0-a3a5-4fa24cf21c51" class="">“The way we think about people tend to have a like effect upon them” because of how we treat them, talk to them and view them.</p><p id="3a4b8d2b-3620-42eb-a314-53eb69bea984" class="">negative attitudes constrict and limits worldview and new experiences. These people are scared of new things and failing, being criticized, etc. </p><p id="dedca912-d1cc-4677-8380-02c7d9d7f8f3" class="">the positive, expansive attitude is to view everything as an explorer as if you know very little and that you must explore and learn. </p><p id="67e75a1d-5016-44f6-b8c3-f6e994008ba4" class="">embrace all obstacles as way to get stronger and learn new experience.</p><p id="70f186bb-37a8-4d2d-b716-14ec73c4d195" class="">“Although adversity and pain are generally beyond your control, you have the power to determine your response and the fate that comes from that.”</p><p id="6ab73b05-d033-40de-a707-7f0f705e9232" class="">“feel that you are destined for something great or important will give you a degree of resilience when people oppose or resist you.”</p><h3 id="84ebf1a6-a8e0-40ef-99a6-9326d7f86c6c" class="">9: Confront Your Dark Side; The Law of Repression</h3><p id="a50e4457-195b-429a-a744-f0a472f5c491" class="">Contradictory behavior: When people act in a way that contradicts how they usual act watch out as it could be a sign of their shadow. They can act this way then blame it on the situation, accidents, stress, etc but what they said or do truly reflects the beliefs of their shadow. </p><p id="8fba2a74-6695-4af6-9496-58494b6a926f" class="">people yearn to be around those who can combine the child and adult within themselves. The intensity of experience, open mind, energy, spontaneity, etc. being able to blame ourselves, laugh at ourselves admit our errors and mistakes. being playful, a true smile, etc.  This is because we all yearn for the child within us and we wish to be around those people in hopes it will rub off on us and regain our happy childhood.</p><p id="08a74329-f3f7-4ed6-a126-88f242ea0837" class="">Sense your shadow when you feel like something has struck a chord within you and you feel uncomfortably, emotionally and mentally. This is a sign of deep insecurity.</p><p id="a87440e5-b8d5-4668-b3a8-96c528b167dd" class="">“You have become more like others as you have gotten older, and you must rediscover the lost authentic parts of yourself.”</p><p id="cd237af8-fa31-4976-9f06-41b36d0fb857" class="">“You pay a greater price for being so nice and deferential than for consciously showing your Shadow.” to let the shadow shine through:</p><ol type="1" id="94c31fe0-772a-43a9-ad70-6070673025f9" class="numbered-list" start="1"><li>respect your own opinions more and those of others less.</li></ol><ol type="1" id="0464fc79-5dc3-4d34-8334-5833b6598dc8" class="numbered-list" start="2"><li>assert yourself more and compromise less</li></ol><ol type="1" id="64d5bfe3-12a9-4fce-934d-8a7e0c050b09" class="numbered-list" start="3"><li>care less about what people think of you</li></ol><ol type="1" id="0166646a-9299-4200-a79d-314380eec944" class="numbered-list" start="4"><li>realize that at times you must offend and hurt people who block your path, who have ugly values, etc</li></ol><ol type="1" id="21460f71-a52b-493d-8cf3-0671922270b2" class="numbered-list" start="5"><li>play the impudent child and mock the stupidity and hypocrisy of others</li></ol><ol type="1" id="6cfb36d0-4d6c-4263-aff1-1442ab3d5893" class="numbered-list" start="6"><li>flout the conventions other people follow</li></ol><p id="527af10f-ba6e-414c-89ba-c01c51206f2f" class="">
+</p><h3 id="f6b51766-d42e-4e1f-ab2f-57fcd6623c51" class="">Only got to read half.</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
