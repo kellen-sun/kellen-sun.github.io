@@ -118,7 +118,7 @@
 
   .headerContainer a:hover {
     text-decoration: none;
-    background-color: #121619;
+    /* background-color: #121619; */
     color: aqua;
     padding: 0px;
     border-radius: 5px;

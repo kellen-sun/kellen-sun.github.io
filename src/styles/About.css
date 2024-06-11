@@ -37,6 +37,9 @@
     margin: 0%;
     margin-top: 1%;
   }
+  .aboutBottom h2 {
+    width: 70%;
+  }
   
   .aboutBottom a:link {
     text-decoration: none;
@@ -50,8 +53,8 @@
 
   .aboutBottom a:hover {
     text-decoration: none;
-    background-color: #121619;
-    color: aqua;
+    /* background-color: #121619; */
+    color: orange;
     padding: 0px;
     border-radius: 5px;
   }
@@ -61,11 +64,16 @@
   }
 
   .aboutBottom h1 {
+    width: 80%;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 60px;
     color: black;
-    height: 30px;
     display: flex;
     justify-content: center;
     transform: translateY(-20px);
+  }
+
+  .aboutBottom h4 {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }

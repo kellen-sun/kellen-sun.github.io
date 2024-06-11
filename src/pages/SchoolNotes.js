@@ -6,10 +6,10 @@ import Mando from '../assets/mando.PNG';
 function SchoolNotes() {
 
   return (
-    <div className="about">
+    <div className="about" style={{ backgroundColor: '#f0d0d0' }}>
       <div className='aboutTop' style={{ backgroundImage: `url(${Mando})` }}></div>
       <div className='aboutBottom'>
-        <h1>Notes I took relating to the material I learned in my classes.</h1>
+        <h1>Notes I took relating to the material I learned in university.</h1>
         <h2>Term 1A:</h2>
         <Link to="/writings/schoolnotes/m145">MATH 145</Link>
         <br></br>

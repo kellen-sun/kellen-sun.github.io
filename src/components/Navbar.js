@@ -13,13 +13,14 @@ function Navbar() {
     <div className='navbar'>
       
       <div className='leftSide'>
-        <Link to='/'> <img src={Pfp}/> </Link>
+        <Link to='/'> <img src={Pfp} alt=""/> </Link>
       </div>
       <div className='rightSide' id={openLinks ? "open" : "close"}>
-        <Link to="/resume">Resume</Link>
-        <Link to="/portfolio">Portfolio</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        {/* <Link to="/resume">Resume</Link> */}
+        <Link to="/portfolio">Projects</Link>
+        <Link to="/writings">Writings</Link>
+        {/* <Link to="/about">About</Link> 
+        <Link to="/contact">Contact</Link>*/}
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

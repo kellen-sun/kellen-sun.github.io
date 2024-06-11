@@ -5,10 +5,29 @@ import Mando from '../assets/mando.PNG';
 
 function BookNote() {
   return (
-    <div className='about'>
+    <div className='about' style={{ backgroundColor: '#f0d0d0' }}>
         <div className='aboutTop' style={{ backgroundImage: `url(${Mando})` }}></div>
       <div className='aboutBottom'>
-        <h2>Notes I took from books I've read in the last few years.</h2>
+        <h2>Book Highlights:</h2>
+        <h3>Influences on my life</h3>
+        <h4>
+                - 12 Rules for Life by Jordan Peterson <br></br>
+                - Think and Grow Rich by Napoleon Hill <br></br>
+                - Deep Work by Cal Newport
+        </h4>
+        <h3>Knowledge</h3>
+        <h4>
+                Mainly evolutionary topics: <br></br>
+                - The Evolution of Desire by David Buss <br></br>
+                - Sapiens by Yuval Noah Harari
+        </h4>
+        <h3>Fiction</h3>
+        <h4>
+                - 1984 by George Orwell <br></br>
+                - Looking for Alaska by John Green
+        </h4>
+        <br></br>
+        <h2>Notes I took from (almost all) books I've read in the last few years. These are available on a live Notion page <a href="https://kellensun.notion.site/0e8a5e98906142c3a2bf753233a2e04c?v=50bd49b2d69443a69dddf9e5a10b7833">here</a>.</h2>
         
         <Link to="/writings/booknotes/Set for Li">Set for Life: Dominate Life, Money, and The American Dream</Link>
         <br></br>
