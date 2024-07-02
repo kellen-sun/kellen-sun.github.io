@@ -23,9 +23,9 @@
 
   .pageNotFound a:hover {
     text-decoration: none;
-    background-color: #121619;
-    color: aqua;
-    padding: 5px;
+    /* background-color: #121619; */
+    color: orange;
+    padding: 0px;
     border-radius: 5px;
   }
   
