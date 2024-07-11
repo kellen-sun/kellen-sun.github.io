@@ -15,6 +15,7 @@ import SchoolNotes from './pages/SchoolNotes';
 import ClassNotes from './components/ClassNotes';
 import BookNotes from './components/BookNotes';
 import BookNote from './pages/BookNote'
+import Drawings from './pages/Drawings';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ function App() {
           <Route path="/contact" exact element={<Contact/>} />
           <Route path="/resume" exact element={<Resume/>} />
           <Route path="/writings" exact element={<Writings/>} />
+          <Route path="/drawings" exact element={<Drawings/>} />
           <Route path="/writings/schoolnotes" exact element={<SchoolNotes/>}/>
           <Route path="/writings/schoolnotes/:id" exact element={ <ClassNotes/> } />
           <Route path="/writings/booknotes" exact element={<BookNote/>}/>
