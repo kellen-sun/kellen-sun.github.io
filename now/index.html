@@ -37,6 +37,9 @@
     .line {
       min-height: 1.5em;
       margin: 0;
+      cursor: default;
+      user-select: none;
+      touch-action: manipulation;
     }
 
     .updated {
@@ -44,6 +47,9 @@
       font-size: 0.78rem;
       font-style: italic;
       color: var(--muted);
+      cursor: default;
+      user-select: none;
+      touch-action: manipulation;
     }
 
     .cursor {
@@ -223,6 +229,33 @@
     toggle.addEventListener("click", function () {
       var dark = document.documentElement.classList.toggle("dark");
       localStorage.setItem("theme", dark ? "dark" : "light");
+    });
+
+    // Hold any /now text ~2s → /about
+    var holdTimer = null;
+    var holdTargets = document.querySelectorAll(".line, .updated");
+
+    function startHold(e) {
+      if (e.type === "mousedown" && e.button !== 0) return;
+      holdTimer = setTimeout(function () {
+        window.location.href = "/about/";
+      }, 2000);
+    }
+
+    function cancelHold() {
+      if (holdTimer) {
+        clearTimeout(holdTimer);
+        holdTimer = null;
+      }
+    }
+
+    holdTargets.forEach(function (el) {
+      el.addEventListener("mousedown", startHold);
+      el.addEventListener("touchstart", startHold, { passive: true });
+      el.addEventListener("mouseup", cancelHold);
+      el.addEventListener("mouseleave", cancelHold);
+      el.addEventListener("touchend", cancelHold);
+      el.addEventListener("touchcancel", cancelHold);
     });
 
     loop();
