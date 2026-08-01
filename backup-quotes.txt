@@ -1,0 +1,31 @@
+# Leftover quotes / facts — not live on the site yet.
+# Live placements (Aug 2026):
+#   Zig Zag deaths → through / far I've come / blessings / Excel
+#   404 → original game quotes + "Press up to start..."
+#   Theme ×7 → water / stretch / sunshine / breath
+
+## Stoic / sharp
+The only way out is through.  [LIVE in zigzag]
+How silly of me to forget how far I've come, just because I still have far to go.  [LIVE in zigzag]
+Count your blessings before you curse the world.  [LIVE in zigzag]
+Stop complaining about results you didn't get from work you didn't put in.
+One must imagine Sisyphus happy.
+Your worst sin is that you have destroyed and betrayed yourself for nothing.
+Hilarious are the weak who think they are good because they have no claws.
+I have stability. Ability to stab.
+Calm waters have never made good sailors.
+Isn't it lovely.
+
+## Fun facts
+More fiction has been written in Excel than in Word.  [LIVE in zigzag]
+The Apollo 11 computer had 4KB of RAM.
+The shiniest living thing on earth is the Pollia condensata, an African fruit.
+In 2010, it was proven that no Rubik's cube combination takes more than 20 moves to solve.
+The body temperature of a chicken is 41°C.
+Humans are topologically the same as donuts.
+"Forty" is the only number with its letters in alphabetical order.
+
+## Needs rewrite
+Don't be a jerk. (That's d³x/dt³.)
+# was: Third derivative of position with respect to time is "jerk"
+# cut for now: "give that girl from the asylum a chance"
