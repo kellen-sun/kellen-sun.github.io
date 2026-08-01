@@ -11,6 +11,8 @@
       --muted: #666;
       --sep: #bbb;
       --link: #333;
+      --panel: rgba(255, 255, 255, 0.96);
+      --panel-border: #e5e5e5;
     }
 
     html.dark {
@@ -19,6 +21,8 @@
       --muted: #999;
       --sep: #555;
       --link: #ddd;
+      --panel: rgba(22, 22, 22, 0.96);
+      --panel-border: #333;
     }
 
     body {
@@ -33,6 +37,24 @@
       transition: background 0.45s ease, color 0.45s ease;
     }
 
+    .corner-tr,
+    .corner-br {
+      position: fixed;
+      width: 130px;
+      height: 130px;
+      z-index: 18;
+    }
+
+    .corner-tr {
+      top: 0;
+      right: 0;
+    }
+
+    .corner-br {
+      right: 0;
+      bottom: 0;
+    }
+
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -44,7 +66,83 @@
       background: transparent;
       cursor: pointer;
       color: var(--fg);
+      z-index: 20;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
     }
+
+    .theme-toggle.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .scratch-card {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 9.5rem;
+      height: 7.25rem;
+      padding: 0.55rem 0.7rem 0;
+      border-top: 1px solid var(--panel-border);
+      border-left: 1px solid var(--panel-border);
+      border-right: 0;
+      border-bottom: 0;
+      border-top-left-radius: 2px;
+      background: var(--panel);
+      box-shadow: -6px -6px 24px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+      color: var(--muted);
+      z-index: 20;
+      pointer-events: none;
+      transform: translate(72%, 68%) rotate(8deg);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+      display: block;
+      overflow: hidden;
+    }
+
+    html.dark .scratch-card {
+      box-shadow: -6px -6px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .scratch-card.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(28%, 32%) rotate(6deg);
+    }
+
+    .scratch-card:hover {
+      transform: translate(22%, 26%) rotate(3deg);
+      color: var(--fg);
+    }
+
+    .scratch-card .label {
+      margin: 0 0 0.55rem;
+      font-size: 0.7rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .scratch-card .lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+    }
+
+    .scratch-card .lines i {
+      display: block;
+      height: 1px;
+      background: var(--sep);
+      font-style: normal;
+    }
+
+    .scratch-card .lines i:nth-child(1) { width: 92%; }
+    .scratch-card .lines i:nth-child(2) { width: 78%; }
+    .scratch-card .lines i:nth-child(3) { width: 86%; }
+    .scratch-card .lines i:nth-child(4) { width: 64%; }
+    .scratch-card .lines i:nth-child(5) { width: 74%; }
+    .scratch-card .lines i:nth-child(6) { width: 50%; }
 
     .theme-toggle svg {
       width: 1.35rem;
@@ -97,6 +195,82 @@
       transform: scale(0.2);
     }
 
+    .theme-toggle.burst svg {
+      animation: celestial-spin 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes celestial-spin {
+      0% { transform: scale(1) rotate(0deg); }
+      40% { transform: scale(1.55) rotate(140deg); }
+      100% { transform: scale(1) rotate(360deg); }
+    }
+
+    .orbit {
+      position: fixed;
+      top: 2.25rem;
+      right: 2.25rem;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    .orbit span {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--fg);
+      opacity: 0;
+    }
+
+    .orbit.play span {
+      animation: orbit-fly 1s ease-out forwards;
+    }
+
+    .orbit span:nth-child(1) { --a: 0deg; }
+    .orbit span:nth-child(2) { --a: 45deg; }
+    .orbit span:nth-child(3) { --a: 90deg; }
+    .orbit span:nth-child(4) { --a: 135deg; }
+    .orbit span:nth-child(5) { --a: 180deg; }
+    .orbit span:nth-child(6) { --a: 225deg; }
+    .orbit span:nth-child(7) { --a: 270deg; }
+    .orbit span:nth-child(8) { --a: 315deg; }
+
+    @keyframes orbit-fly {
+      0% {
+        opacity: 0.9;
+        transform: rotate(var(--a)) translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(var(--a)) translateY(-48px) scale(0.3);
+      }
+    }
+
+    .theme-quote {
+      position: fixed;
+      top: 3.6rem;
+      right: 1rem;
+      max-width: 14rem;
+      margin: 0;
+      font-size: 0.78rem;
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--muted);
+      text-align: right;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .theme-quote.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .hero {
       text-align: center;
       user-select: none;
@@ -127,6 +301,88 @@
       text-decoration: underline;
     }
 
+    .gh-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .gh-activity {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 0.65rem);
+      transform: translateX(-50%) translateY(4px);
+      width: min(22rem, 84vw);
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--panel-border);
+      background: var(--panel);
+      color: var(--fg);
+      text-align: left;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.68rem;
+      line-height: 1.45;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+      z-index: 10;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    html.dark .gh-activity {
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .gh-wrap:hover .gh-activity,
+    .gh-wrap:focus-within .gh-activity {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    .gh-activity .label {
+      margin: 0 0 0.4rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .gh-activity ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gh-activity li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+      padding: 0.18rem 0;
+      border-top: 1px solid var(--panel-border);
+    }
+
+    .gh-activity li:first-child {
+      border-top: 0;
+    }
+
+    .gh-activity .what {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .gh-activity .when {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .gh-activity .status {
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+    }
+
     .primary {
       font-size: 0.95rem;
     }
@@ -147,13 +403,14 @@
     }
   </style>
   <script>
-    // Apply theme before paint to avoid flash
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.add("dark");
     }
   </script>
 </head>
 <body>
+  <div class="corner-tr" id="corner-tr" aria-hidden="true"></div>
+  <div class="corner-br" id="corner-br" aria-hidden="true"></div>
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
@@ -170,12 +427,21 @@
       <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
     </svg>
   </button>
+  <a class="scratch-card" id="scratch-card" href="/scratchpad/" title="Open scratchpad">
+    <p class="label">scratchpad</p>
+    <div class="lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </a>
+  <div class="orbit" id="orbit" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <p class="theme-quote" id="theme-quote"></p>
 
   <div class="hero">
     <p class="hello" id="hello">Hi, I'm Kellen</p>
     <div class="links" id="links">
       <div class="primary">
-        <a href="https://www.linkedin.com/in/kellen-sun/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span><a href="mailto:kellen.sun@uwaterloo.ca">Email</a><span class="sep">·</span><a href="https://github.com/kellen-sun" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kellen-sun/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span><a href="mailto:kellen.sun@uwaterloo.ca">Email</a><span class="sep">·</span><span class="gh-wrap"><a href="https://github.com/kellen-sun" target="_blank" rel="noopener" id="github-link">GitHub</a><div class="gh-activity" id="gh-activity" role="tooltip"><p class="label">recent activity</p><p class="status">Loading…</p></div></span>
       </div>
       <div class="secondary">
         <a href="https://instagram.com/kellensun" target="_blank" rel="noopener">Instagram @kellensun</a><span class="sep">·</span><span>Discord @kellensun</span>
@@ -189,6 +455,13 @@
       var links = document.getElementById("links");
       var holdTimer = null;
       var holdFired = false;
+      var themeClicks = 0;
+      var themeQuotes = [
+        "Drink some water.",
+        "Stand up and stretch.",
+        "Enjoy some sunshine.",
+        "Take a deep breath."
+      ];
 
       function revealLinks() {
         links.classList.add("visible");
@@ -203,7 +476,6 @@
         if (clicks >= 5) revealLinks();
       });
 
-      // Hold ~2s → /now
       function startHold(e) {
         if (e.type === "mousedown" && e.button !== 0) return;
         holdFired = false;
@@ -227,12 +499,149 @@
       hello.addEventListener("touchend", cancelHold);
       hello.addEventListener("touchcancel", cancelHold);
 
-      document.getElementById("theme-toggle").addEventListener("click", function () {
+      var toggle = document.getElementById("theme-toggle");
+      var orbit = document.getElementById("orbit");
+      var quoteEl = document.getElementById("theme-quote");
+      var cornerTr = document.getElementById("corner-tr");
+      var cornerBr = document.getElementById("corner-br");
+      var scratchCard = document.getElementById("scratch-card");
+      var themeHideTimer = null;
+      var scratchHideTimer = null;
+
+      function showTheme() {
+        clearTimeout(themeHideTimer);
+        toggle.classList.add("visible");
+      }
+
+      function hideThemeSoon() {
+        clearTimeout(themeHideTimer);
+        themeHideTimer = setTimeout(function () {
+          if (!toggle.matches(":hover") && !cornerTr.matches(":hover")) {
+            toggle.classList.remove("visible");
+          }
+        }, 350);
+      }
+
+      function showScratch() {
+        clearTimeout(scratchHideTimer);
+        scratchCard.classList.add("visible");
+      }
+
+      function hideScratchSoon() {
+        clearTimeout(scratchHideTimer);
+        scratchHideTimer = setTimeout(function () {
+          if (!scratchCard.matches(":hover") && !cornerBr.matches(":hover")) {
+            scratchCard.classList.remove("visible");
+          }
+        }, 350);
+      }
+
+      cornerTr.addEventListener("mouseenter", showTheme);
+      cornerTr.addEventListener("mouseleave", hideThemeSoon);
+      toggle.addEventListener("mouseenter", showTheme);
+      toggle.addEventListener("mouseleave", hideThemeSoon);
+
+      cornerBr.addEventListener("mouseenter", showScratch);
+      cornerBr.addEventListener("mouseleave", hideScratchSoon);
+      scratchCard.addEventListener("mouseenter", showScratch);
+      scratchCard.addEventListener("mouseleave", hideScratchSoon);
+
+      toggle.addEventListener("click", function () {
         var dark = document.documentElement.classList.toggle("dark");
         localStorage.setItem("theme", dark ? "dark" : "light");
+        themeClicks += 1;
+        if (themeClicks >= 7) {
+          themeClicks = 0;
+          toggle.classList.remove("burst");
+          void toggle.offsetWidth;
+          toggle.classList.add("burst");
+          orbit.classList.remove("play");
+          void orbit.offsetWidth;
+          orbit.classList.add("play");
+          quoteEl.textContent = themeQuotes[Math.floor(Math.random() * themeQuotes.length)];
+          quoteEl.classList.add("show");
+          setTimeout(function () {
+            quoteEl.classList.remove("show");
+          }, 3200);
+        }
       });
 
-      // ← ← → → unlocks /zigzag
+      // GitHub activity on hover
+      var ghWrap = document.querySelector(".gh-wrap");
+      var ghPanel = document.getElementById("gh-activity");
+      var ghLoaded = false;
+
+      function timeAgo(dateStr) {
+        var seconds = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
+        if (seconds < 60) return "just now";
+        var minutes = Math.floor(seconds / 60);
+        if (minutes < 60) return minutes + "m ago";
+        var hours = Math.floor(minutes / 60);
+        if (hours < 24) return hours + "h ago";
+        var days = Math.floor(hours / 24);
+        if (days < 30) return days + "d ago";
+        return Math.floor(days / 30) + "mo ago";
+      }
+
+      function describeEvent(ev) {
+        var repo = (ev.repo && ev.repo.name) ? ev.repo.name.replace(/^kellen-sun\//, "") : "repo";
+        switch (ev.type) {
+          case "PushEvent": {
+            var n = ev.payload && ev.payload.commits ? ev.payload.commits.length : 1;
+            return "pushed " + n + " commit" + (n === 1 ? "" : "s") + " to " + repo;
+          }
+          case "CreateEvent":
+            return "created " + ((ev.payload && ev.payload.ref_type) || "something") + " in " + repo;
+          case "WatchEvent":
+            return "starred " + repo;
+          case "ForkEvent":
+            return "forked " + repo;
+          case "IssuesEvent":
+            return (ev.payload && ev.payload.action ? ev.payload.action + " " : "") + "issue in " + repo;
+          case "PullRequestEvent":
+            return (ev.payload && ev.payload.action ? ev.payload.action + " " : "") + "PR in " + repo;
+          case "IssueCommentEvent":
+          case "CommitCommentEvent":
+          case "PullRequestReviewCommentEvent":
+            return "commented on " + repo;
+          case "DeleteEvent":
+            return "deleted " + ((ev.payload && ev.payload.ref_type) || "ref") + " in " + repo;
+          case "PublicEvent":
+            return "open-sourced " + repo;
+          default:
+            return ev.type.replace(/Event$/, "").toLowerCase() + " · " + repo;
+        }
+      }
+
+      function loadActivity() {
+        if (ghLoaded) return;
+        ghLoaded = true;
+        fetch("https://api.github.com/users/kellen-sun/events/public?per_page=5")
+          .then(function (r) {
+            if (!r.ok) throw new Error("bad status");
+            return r.json();
+          })
+          .then(function (events) {
+            if (!events || !events.length) {
+              ghPanel.innerHTML = '<p class="label">recent activity</p><p class="status">No public events yet.</p>';
+              return;
+            }
+            var html = '<p class="label">recent activity</p><ul>';
+            events.slice(0, 5).forEach(function (ev) {
+              html += '<li><span class="what">' + describeEvent(ev) + '</span><span class="when">' + timeAgo(ev.created_at) + "</span></li>";
+            });
+            html += "</ul>";
+            ghPanel.innerHTML = html;
+          })
+          .catch(function () {
+            ghLoaded = false;
+            ghPanel.innerHTML = '<p class="label">recent activity</p><p class="status">Couldn’t load GitHub right now.</p>';
+          });
+      }
+
+      ghWrap.addEventListener("mouseenter", loadActivity);
+      ghWrap.addEventListener("focusin", loadActivity);
+
       var sequence = ["ArrowLeft", "ArrowLeft", "ArrowRight", "ArrowRight"];
       var progress = 0;
       window.addEventListener("keydown", function (e) {

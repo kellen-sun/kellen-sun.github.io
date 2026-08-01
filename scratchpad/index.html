@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scratchpad — Kellen Sun</title>
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --fg: #111;
+      --muted: #777;
+      --box: #fff;
+      --border: #ddd;
+      --btn: #d8d8d8;
+      --btn-hover: #c8c8c8;
+      --btn-text: #333;
+      --danger: #888;
+    }
+
+    html.dark {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --muted: #888;
+      --box: #1a1a1a;
+      --border: #333;
+      --btn: #2a2a2a;
+      --btn-hover: #3a3a3a;
+      --btn-text: #ddd;
+      --danger: #aaa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background 0.45s ease, color 0.45s ease;
+    }
+
+    .page {
+      width: min(66.666vw, 48rem);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .copy-all {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.8rem;
+      font-style: italic;
+      cursor: pointer;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .copy-all:hover { color: var(--fg); }
+
+    #boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .box {
+      position: relative;
+      background: var(--box);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.5rem 0.85rem 0.65rem;
+    }
+
+    .box-btn {
+      position: absolute;
+      top: 0.35rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 0;
+      background: transparent;
+      color: var(--danger);
+      font-size: 0.95rem;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.12s linear, color 0.12s ease;
+      padding: 0;
+      z-index: 2;
+    }
+
+    .box-btn.is-near { color: var(--fg); }
+
+    .box-close { left: 0.35rem; }
+    .box-copy { right: 0.35rem; font-size: 0.75rem; font-style: italic; width: auto; padding: 0 0.25rem; }
+
+    .counts {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 0 0 0.45rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      min-height: 8rem;
+      height: 10rem;
+      resize: vertical;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 0;
+    }
+
+    .add {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0.7rem 1rem;
+      border: 0;
+      border-radius: 2px;
+      background: var(--btn);
+      color: var(--btn-text);
+      font-size: 1.25rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .add:hover:not(:disabled) { background: var(--btn-hover); }
+    .add:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .hint {
+      margin: 0.6rem 0 0;
+      text-align: center;
+      font-size: 0.7rem;
+      font-style: italic;
+      color: var(--muted);
+      min-height: 1em;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      color: var(--fg);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 20;
+    }
+
+    .theme-toggle.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .theme-toggle svg {
+      width: 1.35rem;
+      height: 1.35rem;
+      display: block;
+      margin: auto;
+      overflow: visible;
+    }
+
+    .theme-toggle .sun,
+    .theme-toggle .moon {
+      transform-origin: center;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    }
+
+    .theme-toggle .ray {
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: center;
+    }
+
+    html:not(.dark) .theme-toggle .moon { opacity: 0; transform: scale(0.4) rotate(-30deg); }
+    html:not(.dark) .theme-toggle .sun { opacity: 1; }
+    html:not(.dark) .theme-toggle .ray { opacity: 1; }
+    html.dark .theme-toggle .sun { opacity: 0; transform: scale(0.4) rotate(40deg); }
+    html.dark .theme-toggle .moon { opacity: 1; }
+    html.dark .theme-toggle .ray { opacity: 0; transform: scale(0.2); }
+
+    .corner-tr {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      z-index: 19;
+    }
+  </style>
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+<body>
+  <div class="corner-tr" id="corner-tr" aria-hidden="true"></div>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
+      <g class="rays">
+        <line class="ray" x1="12" y1="2.5" x2="12" y2="5"></line>
+        <line class="ray" x1="12" y1="19" x2="12" y2="21.5"></line>
+        <line class="ray" x1="2.5" y1="12" x2="5" y2="12"></line>
+        <line class="ray" x1="19" y1="12" x2="21.5" y2="12"></line>
+        <line class="ray" x1="4.8" y1="4.8" x2="6.6" y2="6.6"></line>
+        <line class="ray" x1="17.4" y1="17.4" x2="19.2" y2="19.2"></line>
+        <line class="ray" x1="4.8" y1="19.2" x2="6.6" y2="17.4"></line>
+        <line class="ray" x1="17.4" y1="6.6" x2="19.2" y2="4.8"></line>
+      </g>
+      <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
+    </svg>
+  </button>
+
+  <div class="page">
+    <header>
+      <h1>scratchpad</h1>
+      <button type="button" class="copy-all" id="copy-all">copy all</button>
+    </header>
+    <div id="boxes"></div>
+    <button type="button" class="add" id="add" title="Add box">+</button>
+    <p class="hint" id="hint"></p>
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = "scratchpad-v1";
+      var MAX_BOXES = 42;
+      var saveTimer = null;
+      var boxesEl = document.getElementById("boxes");
+      var addBtn = document.getElementById("add");
+      var hint = document.getElementById("hint");
+      var boxes = [];
+
+      function uid() {
+        return "b" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+      }
+
+      function countWords(text) {
+        var t = text.trim();
+        if (!t) return 0;
+        return t.split(/\s+/).length;
+      }
+
+      function load() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return [{ id: uid(), text: "", height: 160 }];
+          var data = JSON.parse(raw);
+          if (!Array.isArray(data) || !data.length) {
+            return [{ id: uid(), text: "", height: 160 }];
+          }
+          return data.slice(0, MAX_BOXES).map(function (b) {
+            return {
+              id: b.id || uid(),
+              text: typeof b.text === "string" ? b.text : "",
+              height: typeof b.height === "number" ? b.height : 160
+            };
+          });
+        } catch (e) {
+          return [{ id: uid(), text: "", height: 160 }];
+        }
+      }
+
+      function scheduleSave() {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(persist, 300);
+      }
+
+      function persist() {
+        var payload = boxes.map(function (b) {
+          var ta = document.querySelector('textarea[data-id="' + b.id + '"]');
+          return {
+            id: b.id,
+            text: ta ? ta.value : b.text,
+            height: ta ? ta.offsetHeight : b.height
+          };
+        });
+        boxes = payload;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      }
+
+      function updateCounts(id) {
+        var ta = document.querySelector('textarea[data-id="' + id + '"]');
+        var el = document.querySelector('.counts[data-id="' + id + '"]');
+        if (!ta || !el) return;
+        var text = ta.value;
+        el.textContent = countWords(text) + " words · " + text.length + " chars";
+      }
+
+      function proximityOpacity(btn, x, y) {
+        var r = btn.getBoundingClientRect();
+        var cx = r.left + r.width / 2;
+        var cy = r.top + r.height / 2;
+        var dist = Math.hypot(x - cx, y - cy);
+        var start = 72;
+        var full = 22;
+        if (dist >= start) return 0;
+        if (dist <= full) return 1;
+        return 1 - (dist - full) / (start - full);
+      }
+
+      function bindProximity(wrap, buttons) {
+        wrap.addEventListener("mousemove", function (e) {
+          buttons.forEach(function (btn) {
+            if (btn.disabled) {
+              btn.style.opacity = "0";
+              btn.classList.remove("is-near");
+              return;
+            }
+            var op = proximityOpacity(btn, e.clientX, e.clientY);
+            btn.style.opacity = String(op);
+            if (op > 0.55) btn.classList.add("is-near");
+            else btn.classList.remove("is-near");
+          });
+        });
+        wrap.addEventListener("mouseleave", function () {
+          buttons.forEach(function (btn) {
+            btn.style.opacity = "0";
+            btn.classList.remove("is-near");
+          });
+        });
+      }
+
+      function render() {
+        boxesEl.innerHTML = "";
+        boxes.forEach(function (b) {
+          var wrap = document.createElement("div");
+          wrap.className = "box";
+          wrap.dataset.id = b.id;
+
+          var close = document.createElement("button");
+          close.type = "button";
+          close.className = "box-btn box-close";
+          close.title = "Close box";
+          close.setAttribute("aria-label", "Close box");
+          close.textContent = "×";
+          close.disabled = boxes.length <= 1;
+          close.addEventListener("click", function () {
+            if (boxes.length <= 1) return;
+            boxes = boxes.filter(function (x) { return x.id !== b.id; });
+            render();
+            persist();
+          });
+
+          var copy = document.createElement("button");
+          copy.type = "button";
+          copy.className = "box-btn box-copy";
+          copy.title = "Copy box";
+          copy.textContent = "copy";
+          copy.addEventListener("click", function () {
+            var ta = document.querySelector('textarea[data-id="' + b.id + '"]');
+            if (!ta) return;
+            navigator.clipboard.writeText(ta.value).then(function () {
+              copy.textContent = "copied";
+              setTimeout(function () { copy.textContent = "copy"; }, 1000);
+            });
+          });
+
+          var counts = document.createElement("p");
+          counts.className = "counts";
+          counts.dataset.id = b.id;
+
+          var ta = document.createElement("textarea");
+          ta.dataset.id = b.id;
+          ta.spellcheck = true;
+          ta.value = b.text;
+          ta.style.height = (b.height || 160) + "px";
+          ta.addEventListener("input", function () {
+            updateCounts(b.id);
+            scheduleSave();
+          });
+          ta.addEventListener("mouseup", function () {
+            scheduleSave();
+          });
+
+          wrap.appendChild(close);
+          wrap.appendChild(copy);
+          wrap.appendChild(counts);
+          wrap.appendChild(ta);
+          bindProximity(wrap, [close, copy]);
+          boxesEl.appendChild(wrap);
+          updateCounts(b.id);
+        });
+
+        addBtn.disabled = boxes.length >= MAX_BOXES;
+        hint.textContent = boxes.length >= MAX_BOXES ? "42 boxes. nice." : "";
+      }
+
+      addBtn.addEventListener("click", function () {
+        if (boxes.length >= MAX_BOXES) return;
+        persist();
+        boxes.push({ id: uid(), text: "", height: 160 });
+        render();
+        persist();
+        var list = boxesEl.querySelectorAll("textarea");
+        var last = list[list.length - 1];
+        if (last) last.focus();
+      });
+
+      document.getElementById("copy-all").addEventListener("click", function () {
+        persist();
+        var all = boxes.map(function (b) { return b.text; }).filter(function (t) { return t.trim(); }).join("\n\n———\n\n");
+        var btn = document.getElementById("copy-all");
+        navigator.clipboard.writeText(all).then(function () {
+          btn.textContent = "copied";
+          setTimeout(function () { btn.textContent = "copy all"; }, 1000);
+        });
+      });
+
+      // Theme corner reveal
+      var toggle = document.getElementById("theme-toggle");
+      var corner = document.getElementById("corner-tr");
+      var hideTimer = null;
+
+      function showTheme() {
+        clearTimeout(hideTimer);
+        toggle.classList.add("visible");
+      }
+
+      function hideThemeSoon() {
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(function () {
+          if (!toggle.matches(":hover") && !corner.matches(":hover")) {
+            toggle.classList.remove("visible");
+          }
+        }, 400);
+      }
+
+      corner.addEventListener("mouseenter", showTheme);
+      corner.addEventListener("mouseleave", hideThemeSoon);
+      toggle.addEventListener("mouseenter", showTheme);
+      toggle.addEventListener("mouseleave", hideThemeSoon);
+      toggle.addEventListener("click", function () {
+        var dark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", dark ? "dark" : "light");
+      });
+
+      boxes = load();
+      render();
+    })();
+  </script>
+</body>
+</html>

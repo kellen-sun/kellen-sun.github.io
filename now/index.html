@@ -8,11 +8,13 @@
     :root {
       --bg: #fff;
       --fg: #111;
+      --muted: #888;
     }
 
     html.dark {
       --bg: #111;
       --fg: #f2f2f2;
+      --muted: #777;
     }
 
     body {
@@ -27,10 +29,21 @@
       transition: background 0.45s ease, color 0.45s ease;
     }
 
+    .stack {
+      text-align: center;
+      max-width: 90vw;
+    }
+
     .line {
       min-height: 1.5em;
-      max-width: 90vw;
-      text-align: center;
+      margin: 0;
+    }
+
+    .updated {
+      margin: 1.1rem 0 0;
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--muted);
     }
 
     .cursor {
@@ -45,6 +58,15 @@
       50% { opacity: 0; }
     }
 
+    .corner-tr {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      z-index: 19;
+    }
+
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -56,6 +78,15 @@
       background: transparent;
       cursor: pointer;
       color: var(--fg);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 20;
+    }
+
+    .theme-toggle.visible {
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .theme-toggle svg {
@@ -94,6 +125,7 @@
   </script>
 </head>
 <body>
+  <div class="corner-tr" id="corner-tr" aria-hidden="true"></div>
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
@@ -110,7 +142,10 @@
       <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
     </svg>
   </button>
-  <p class="line"><span id="text"></span><span class="cursor"></span></p>
+  <div class="stack">
+    <p class="line"><span id="text"></span><span class="cursor"></span></p>
+    <p class="updated">updated Aug 2026</p>
+  </div>
   <script>
     // Edit this list anytime — one string per status update.
     var items = [
@@ -163,7 +198,29 @@
       }
     }
 
-    document.getElementById("theme-toggle").addEventListener("click", function () {
+    var toggle = document.getElementById("theme-toggle");
+    var corner = document.getElementById("corner-tr");
+    var hideTimer = null;
+
+    function showTheme() {
+      clearTimeout(hideTimer);
+      toggle.classList.add("visible");
+    }
+
+    function hideThemeSoon() {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(function () {
+        if (!toggle.matches(":hover") && !corner.matches(":hover")) {
+          toggle.classList.remove("visible");
+        }
+      }, 350);
+    }
+
+    corner.addEventListener("mouseenter", showTheme);
+    corner.addEventListener("mouseleave", hideThemeSoon);
+    toggle.addEventListener("mouseenter", showTheme);
+    toggle.addEventListener("mouseleave", hideThemeSoon);
+    toggle.addEventListener("click", function () {
       var dark = document.documentElement.classList.toggle("dark");
       localStorage.setItem("theme", dark ? "dark" : "light");
     });
