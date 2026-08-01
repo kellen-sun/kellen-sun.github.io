@@ -15,9 +15,80 @@
       color: #111;
       background: #fff;
     }
+
+    .hero {
+      text-align: center;
+      user-select: none;
+    }
+
+    .hello {
+      margin: 0;
+      cursor: default;
+    }
+
+    .links {
+      display: none;
+      margin-top: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .links.visible {
+      display: block;
+    }
+
+    .links a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .primary {
+      font-size: 0.95rem;
+    }
+
+    .secondary {
+      margin-top: 0.35rem;
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .secondary a {
+      color: #666;
+    }
+
+    .sep {
+      margin: 0 0.4em;
+      color: #bbb;
+    }
   </style>
 </head>
 <body>
-  <p>Hi, I'm Kellen</p>
+  <div class="hero">
+    <p class="hello" id="hello">Hi, I'm Kellen</p>
+    <div class="links" id="links">
+      <div class="primary">
+        <a href="https://www.linkedin.com/in/kellen-sun/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span><a href="mailto:kellen.sun@uwaterloo.ca">Email</a><span class="sep">·</span><a href="https://github.com/kellen-sun" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="secondary">
+        <a href="https://instagram.com/kellensun" target="_blank" rel="noopener">Instagram @kellensun</a><span class="sep">·</span><span>Discord @kellensun</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var clicks = 0;
+      var hello = document.getElementById('hello');
+      var links = document.getElementById('links');
+      hello.addEventListener('click', function () {
+        clicks += 1;
+        if (clicks >= 5) {
+          links.classList.add('visible');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

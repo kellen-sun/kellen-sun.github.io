@@ -442,8 +442,9 @@ function repaint() {
 }
 
 function resizeCanvas() {
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	var game = document.getElementById("game");
+	canvas.width = game.clientWidth;
+	canvas.height = game.clientHeight;
 	centerX = canvas.width / 2;
 	centerY = canvas.height / 2;
 	maxRadius = Math.sqrt(centerX * centerX + centerY * centerY);
@@ -453,6 +454,22 @@ function resizeCanvas() {
 		drawStartButton();
 	}
 	window.focus();
+}
+
+function toggleFullscreen() {
+	var game = document.getElementById("game");
+	var doc = document;
+	if (doc.fullscreenElement || doc.webkitFullscreenElement) {
+		if (doc.exitFullscreen) {
+			doc.exitFullscreen();
+		} else if (doc.webkitExitFullscreen) {
+			doc.webkitExitFullscreen();
+		}
+	} else if (game.requestFullscreen) {
+		game.requestFullscreen();
+	} else if (game.webkitRequestFullscreen) {
+		game.webkitRequestFullscreen();
+	}
 }
 
 function hexChar(i) {
@@ -714,10 +731,13 @@ function handleTap(x) {
 	if (!isLoaded) {
 		return;
 	}
+	var game = document.getElementById("game");
+	var rect = game.getBoundingClientRect();
+	var localX = x - rect.left;
 	if (!isGameRunning) {
 		startGame();
 	} else {
-		if (x < centerX) {
+		if (localX < centerX) {
 			handleMove(1);
 		} else {
 			handleMove(-1);
@@ -727,7 +747,7 @@ function handleTap(x) {
 
 function init(helpText) {
 	defaultHelpText = helpText;
-	document.body.innerHTML = '<canvas id="canvas"></canvas><div id="overlay"><div id="title">Z<span style="left:0.5vw">I</span><span style="left:-0.3vw">G</span><span style="left:-0.5vw">Z</span><span style="left:0.5vw">A</span>G</div><div id="time"><span id="time1"></span><span id="time2"></span></div><div id="help">Loading...</div></div><div id="debug" style="position:absolute;top:40px;left:20px;color:white;font-family:sans-serif;font-size:20px;" onmousedown="event.stopPropagation()"></div>';
+	document.getElementById("game").innerHTML = '<canvas id="canvas"></canvas><div id="overlay"><div id="title">Z<span style="left:0.5vw">I</span><span style="left:-0.3vw">G</span><span style="left:-0.5vw">Z</span><span style="left:0.5vw">A</span>G</div><div id="time"><span id="time1"></span><span id="time2"></span></div><div id="help">Loading...</div></div><div id="debug" style="position:absolute;top:40px;left:20px;color:white;font-family:sans-serif;font-size:20px;" onmousedown="event.stopPropagation()"></div>';
 	
 	var itemsToLoad = 2;
 	function itemLoaded() {
@@ -745,6 +765,8 @@ function init(helpText) {
 	canvas = document.getElementById("canvas");
 	ctx = canvas.getContext("2d");
 	window.addEventListener('resize', resizeCanvas, false);
+	document.addEventListener('fullscreenchange', resizeCanvas);
+	document.addEventListener('webkitfullscreenchange', resizeCanvas);
 	setPalette(Math.floor(Math.random() * palettes.length));
 	snapToColors();
 	resizeCanvas();
