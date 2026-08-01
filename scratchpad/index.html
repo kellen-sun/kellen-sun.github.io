@@ -149,17 +149,24 @@
       transition: background 0.15s ease;
     }
 
-    .add:hover:not(:disabled) { background: var(--btn-hover); }
-    .add:disabled { opacity: 0.4; cursor: not-allowed; }
+    .add:hover { background: var(--btn-hover); }
 
-    .hint {
-      margin: 0.6rem 0 0;
+    .add.hidden { display: none; }
+
+    .forty-two {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
       text-align: center;
-      font-size: 0.7rem;
+      font-size: 0.92rem;
       font-style: italic;
+      line-height: 1.45;
       color: var(--muted);
-      min-height: 1em;
+      border: 1px solid var(--border);
+      background: var(--box);
     }
+
+    .forty-two.visible { display: block; }
 
     .theme-toggle {
       position: fixed;
@@ -253,7 +260,7 @@
     </header>
     <div id="boxes"></div>
     <button type="button" class="add" id="add" title="Add box">+</button>
-    <p class="hint" id="hint"></p>
+    <p class="forty-two" id="forty-two">The Answer to the Ultimate Question of Life, the Universe, and Everything is 42.</p>
   </div>
 
   <script>
@@ -263,7 +270,7 @@
       var saveTimer = null;
       var boxesEl = document.getElementById("boxes");
       var addBtn = document.getElementById("add");
-      var hint = document.getElementById("hint");
+      var fortyTwo = document.getElementById("forty-two");
       var boxes = [];
 
       function uid() {
@@ -417,8 +424,9 @@
           updateCounts(b.id);
         });
 
-        addBtn.disabled = boxes.length >= MAX_BOXES;
-        hint.textContent = boxes.length >= MAX_BOXES ? "42 boxes. nice." : "";
+        var atMax = boxes.length >= MAX_BOXES;
+        addBtn.classList.toggle("hidden", atMax);
+        fortyTwo.classList.toggle("visible", atMax);
       }
 
       addBtn.addEventListener("click", function () {

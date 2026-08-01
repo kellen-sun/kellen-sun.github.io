@@ -52,16 +52,10 @@ var songLength = 104 * measureLength;
 var palettes = [["#00eac7","#2bffdf","#ff0060"],["#6aedff","#d5faff","#ff0053"],["#00eaea","#80fff9","#de3682"],["#092b4d","#15385b","#fff89c"],["#004022","#004f29","#fafa85"],["#102870","#13348c","#ffffff"],["#b80707","#d02209","#fffff4"],["#7c002b","#a5003c","#ffb700"],["#ff8017","#ff9326","#ffffff"],["#630068","#74107e","#ffffff"],["#003239","#004048","#ffffaa"],["#660043","#820054","#ffff5e"],["#88250d","#9f2c0f","#ffff80"]];
 
 var quotes = [
-	"To be great is to be misunderstood.",
-	"There are more stars in the Milky Way than there are atoms in the universe.",
-	"On the sea of life, sometimes the best ships, are friendships.",
-	"It's hard to be someone's everything. It's easier to be everyone's nothing.",
-	"We are infinitely complicated in every possible and impossible way.",
-	"If you love someone, put their name in a circle, instead of a heart, because hearts can break, but circles go on forever.",
-	"Follow your dreams. They know the way.",
-	"Take love, multiply it by infinity and take it to the depths of forever.",
-	"Every exit is an entrance to new experiences.",
-	"The world is a beautiful book for those who read it.",
+	"The only way out is through.",
+	"How silly of me to forget how far I've come, just because I still have far to go.",
+	"Count your blessings before you curse the world.",
+	"More fiction has been written in Excel than in Word.",
 ];
 
 function getPoint(radial, angular) {
