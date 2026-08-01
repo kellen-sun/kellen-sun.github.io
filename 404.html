@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>404 — Kellen Sun</title>
+  <script src="/assets/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/chrome.css">
   <style>
     :root {
       --bg: #fff;
@@ -64,7 +66,7 @@
   </style>
 </head>
 <body>
-  <div class="box">
+<div class="box">
     <p class="code">404</p>
     <p class="quote" id="quote"></p>
     <a class="home" href="/">home</a>
@@ -87,10 +89,7 @@
 
     document.getElementById("quote").textContent =
       quotes[Math.floor(Math.random() * quotes.length)];
-
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-    }
   </script>
+  <script src="/assets/chrome.js" defer></script>
 </body>
 </html>

@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Kellen Sun</title>
+  <script src="/assets/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/chrome.css">
   <style>
     :root {
       --bg: #fff;
@@ -155,93 +157,10 @@
       color: var(--fg);
       text-decoration: underline;
     }
-
-    .corner-tr {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 120px;
-      height: 120px;
-      z-index: 19;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      cursor: pointer;
-      color: var(--fg);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      z-index: 20;
-    }
-
-    .theme-toggle.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .theme-toggle svg {
-      width: 1.35rem;
-      height: 1.35rem;
-      display: block;
-      margin: auto;
-      overflow: visible;
-    }
-
-    .theme-toggle .sun,
-    .theme-toggle .moon {
-      transform-origin: center;
-      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
-    }
-
-    .theme-toggle .ray {
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-      transform-origin: center;
-    }
-
-    html:not(.dark) .theme-toggle .moon { opacity: 0; transform: scale(0.4) rotate(-30deg); }
-    html:not(.dark) .theme-toggle .sun { opacity: 1; }
-    html:not(.dark) .theme-toggle .ray { opacity: 1; }
-    html.dark .theme-toggle .sun { opacity: 0; transform: scale(0.4) rotate(40deg); }
-    html.dark .theme-toggle .moon { opacity: 1; }
-    html.dark .theme-toggle .ray { opacity: 0; transform: scale(0.2); }
   </style>
-  <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-  </script>
 </head>
 <body>
-  <div class="corner-tr" id="corner-tr" aria-hidden="true"></div>
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
-      <g class="rays">
-        <line class="ray" x1="12" y1="2.5" x2="12" y2="5"></line>
-        <line class="ray" x1="12" y1="19" x2="12" y2="21.5"></line>
-        <line class="ray" x1="2.5" y1="12" x2="5" y2="12"></line>
-        <line class="ray" x1="19" y1="12" x2="21.5" y2="12"></line>
-        <line class="ray" x1="4.8" y1="4.8" x2="6.6" y2="6.6"></line>
-        <line class="ray" x1="17.4" y1="17.4" x2="19.2" y2="19.2"></line>
-        <line class="ray" x1="4.8" y1="19.2" x2="6.6" y2="17.4"></line>
-        <line class="ray" x1="17.4" y1="6.6" x2="19.2" y2="4.8"></line>
-      </g>
-      <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
-    </svg>
-  </button>
-
-  <div class="page">
+<div class="page">
     <h1>about</h1>
 
     <ul class="timeline">
@@ -317,35 +236,6 @@
     </p>
   </div>
 
-  <script>
-    (function () {
-      var toggle = document.getElementById("theme-toggle");
-      var corner = document.getElementById("corner-tr");
-      var hideTimer = null;
-
-      function showTheme() {
-        clearTimeout(hideTimer);
-        toggle.classList.add("visible");
-      }
-
-      function hideThemeSoon() {
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(function () {
-          if (!toggle.matches(":hover") && !corner.matches(":hover")) {
-            toggle.classList.remove("visible");
-          }
-        }, 350);
-      }
-
-      corner.addEventListener("mouseenter", showTheme);
-      corner.addEventListener("mouseleave", hideThemeSoon);
-      toggle.addEventListener("mouseenter", showTheme);
-      toggle.addEventListener("mouseleave", hideThemeSoon);
-      toggle.addEventListener("click", function () {
-        var dark = document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", dark ? "dark" : "light");
-      });
-    })();
-  </script>
+  <script src="/assets/chrome.js" defer></script>
 </body>
 </html>

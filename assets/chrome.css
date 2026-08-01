@@ -1,0 +1,178 @@
+.corner-tr,
+.corner-tl {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  z-index: 19;
+}
+
+.corner-tr {
+  top: 0;
+  right: 0;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+}
+
+.theme-toggle,
+.home-link {
+  position: fixed;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--fg, #111);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 20;
+  text-decoration: none;
+}
+
+.theme-toggle {
+  right: 1rem;
+}
+
+.home-link {
+  left: 1rem;
+}
+
+.theme-toggle.visible,
+.home-link.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.theme-toggle svg,
+.home-link svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+  margin: auto;
+  overflow: visible;
+}
+
+.theme-toggle .sun,
+.theme-toggle .moon {
+  transform-origin: center;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.theme-toggle .ray {
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+html:not(.dark) .theme-toggle .moon {
+  opacity: 0;
+  transform: scale(0.4) rotate(-30deg);
+}
+
+html:not(.dark) .theme-toggle .sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+html:not(.dark) .theme-toggle .ray {
+  opacity: 1;
+}
+
+html.dark .theme-toggle .sun {
+  opacity: 0;
+  transform: scale(0.4) rotate(40deg);
+}
+
+html.dark .theme-toggle .moon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+html.dark .theme-toggle .ray {
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+.theme-toggle.burst svg {
+  animation: celestial-spin 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes celestial-spin {
+  0% { transform: scale(1) rotate(0deg); }
+  40% { transform: scale(1.55) rotate(140deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+.orbit {
+  position: fixed;
+  top: 2.25rem;
+  right: 2.25rem;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.orbit span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--fg, #111);
+  opacity: 0;
+}
+
+.orbit.play span {
+  animation: orbit-fly 1s ease-out forwards;
+}
+
+.orbit span:nth-child(1) { --a: 0deg; }
+.orbit span:nth-child(2) { --a: 45deg; }
+.orbit span:nth-child(3) { --a: 90deg; }
+.orbit span:nth-child(4) { --a: 135deg; }
+.orbit span:nth-child(5) { --a: 180deg; }
+.orbit span:nth-child(6) { --a: 225deg; }
+.orbit span:nth-child(7) { --a: 270deg; }
+.orbit span:nth-child(8) { --a: 315deg; }
+
+@keyframes orbit-fly {
+  0% {
+    opacity: 0.9;
+    transform: rotate(var(--a)) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--a)) translateY(-48px) scale(0.3);
+  }
+}
+
+.theme-quote {
+  position: fixed;
+  top: 3.6rem;
+  right: 1rem;
+  max-width: 14rem;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--muted, #666);
+  text-align: right;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.theme-quote.show {
+  opacity: 1;
+  transform: translateY(0);
+}

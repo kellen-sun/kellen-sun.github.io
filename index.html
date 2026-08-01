@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kellen Sun</title>
+  <script src="/assets/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/chrome.css">
   <style>
     :root {
       --bg: #fff;
@@ -37,44 +39,13 @@
       transition: background 0.45s ease, color 0.45s ease;
     }
 
-    .corner-tr,
     .corner-br {
       position: fixed;
+      right: 0;
+      bottom: 0;
       width: 130px;
       height: 130px;
       z-index: 18;
-    }
-
-    .corner-tr {
-      top: 0;
-      right: 0;
-    }
-
-    .corner-br {
-      right: 0;
-      bottom: 0;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      cursor: pointer;
-      color: var(--fg);
-      z-index: 20;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-    }
-
-    .theme-toggle.visible {
-      opacity: 1;
-      pointer-events: auto;
     }
 
     .scratch-card {
@@ -143,133 +114,6 @@
     .scratch-card .lines i:nth-child(4) { width: 64%; }
     .scratch-card .lines i:nth-child(5) { width: 74%; }
     .scratch-card .lines i:nth-child(6) { width: 50%; }
-
-    .theme-toggle svg {
-      width: 1.35rem;
-      height: 1.35rem;
-      display: block;
-      margin: auto;
-      overflow: visible;
-    }
-
-    .theme-toggle .sun,
-    .theme-toggle .moon {
-      transform-origin: center;
-      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
-    }
-
-    .theme-toggle .ray {
-      stroke: currentColor;
-      stroke-width: 1.6;
-      stroke-linecap: round;
-      transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-      transform-origin: center;
-    }
-
-    html:not(.dark) .theme-toggle .moon {
-      opacity: 0;
-      transform: scale(0.4) rotate(-30deg);
-    }
-
-    html:not(.dark) .theme-toggle .sun {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-
-    html:not(.dark) .theme-toggle .ray {
-      opacity: 1;
-    }
-
-    html.dark .theme-toggle .sun {
-      opacity: 0;
-      transform: scale(0.4) rotate(40deg);
-    }
-
-    html.dark .theme-toggle .moon {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-
-    html.dark .theme-toggle .ray {
-      opacity: 0;
-      transform: scale(0.2);
-    }
-
-    .theme-toggle.burst svg {
-      animation: celestial-spin 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    @keyframes celestial-spin {
-      0% { transform: scale(1) rotate(0deg); }
-      40% { transform: scale(1.55) rotate(140deg); }
-      100% { transform: scale(1) rotate(360deg); }
-    }
-
-    .orbit {
-      position: fixed;
-      top: 2.25rem;
-      right: 2.25rem;
-      width: 0;
-      height: 0;
-      pointer-events: none;
-      z-index: 15;
-    }
-
-    .orbit span {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--fg);
-      opacity: 0;
-    }
-
-    .orbit.play span {
-      animation: orbit-fly 1s ease-out forwards;
-    }
-
-    .orbit span:nth-child(1) { --a: 0deg; }
-    .orbit span:nth-child(2) { --a: 45deg; }
-    .orbit span:nth-child(3) { --a: 90deg; }
-    .orbit span:nth-child(4) { --a: 135deg; }
-    .orbit span:nth-child(5) { --a: 180deg; }
-    .orbit span:nth-child(6) { --a: 225deg; }
-    .orbit span:nth-child(7) { --a: 270deg; }
-    .orbit span:nth-child(8) { --a: 315deg; }
-
-    @keyframes orbit-fly {
-      0% {
-        opacity: 0.9;
-        transform: rotate(var(--a)) translateY(0) scale(1);
-      }
-      100% {
-        opacity: 0;
-        transform: rotate(var(--a)) translateY(-48px) scale(0.3);
-      }
-    }
-
-    .theme-quote {
-      position: fixed;
-      top: 3.6rem;
-      right: 1rem;
-      max-width: 14rem;
-      margin: 0;
-      font-size: 0.78rem;
-      font-style: italic;
-      line-height: 1.35;
-      color: var(--muted);
-      text-align: right;
-      opacity: 0;
-      transform: translateY(-4px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      pointer-events: none;
-      z-index: 20;
-    }
-
-    .theme-quote.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     .hero {
       text-align: center;
@@ -402,40 +246,13 @@
       color: var(--sep);
     }
   </style>
-  <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-  </script>
 </head>
 <body>
-  <div class="corner-tr" id="corner-tr" aria-hidden="true"></div>
   <div class="corner-br" id="corner-br" aria-hidden="true"></div>
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
-      <g class="rays">
-        <line class="ray" x1="12" y1="2.5" x2="12" y2="5"></line>
-        <line class="ray" x1="12" y1="19" x2="12" y2="21.5"></line>
-        <line class="ray" x1="2.5" y1="12" x2="5" y2="12"></line>
-        <line class="ray" x1="19" y1="12" x2="21.5" y2="12"></line>
-        <line class="ray" x1="4.8" y1="4.8" x2="6.6" y2="6.6"></line>
-        <line class="ray" x1="17.4" y1="17.4" x2="19.2" y2="19.2"></line>
-        <line class="ray" x1="4.8" y1="19.2" x2="6.6" y2="17.4"></line>
-        <line class="ray" x1="17.4" y1="6.6" x2="19.2" y2="4.8"></line>
-      </g>
-      <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
-    </svg>
-  </button>
   <a class="scratch-card" id="scratch-card" href="/scratchpad/" title="Open scratchpad">
     <p class="label">scratchpad</p>
     <div class="lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   </a>
-  <div class="orbit" id="orbit" aria-hidden="true">
-    <span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span>
-  </div>
-  <p class="theme-quote" id="theme-quote"></p>
 
   <div class="hero">
     <p class="hello" id="hello">Hi, I'm Kellen</p>
@@ -455,13 +272,6 @@
       var links = document.getElementById("links");
       var holdTimer = null;
       var holdFired = false;
-      var themeClicks = 0;
-      var themeQuotes = [
-        "Drink some water.",
-        "Stand up and stretch.",
-        "Enjoy some sunshine.",
-        "Take a deep breath."
-      ];
 
       function revealLinks() {
         links.classList.add("visible");
@@ -498,27 +308,9 @@
       hello.addEventListener("mouseleave", cancelHold);
       hello.addEventListener("touchend", cancelHold);
       hello.addEventListener("touchcancel", cancelHold);
-
-      var toggle = document.getElementById("theme-toggle");
-      var orbit = document.getElementById("orbit");
-      var quoteEl = document.getElementById("theme-quote");
-      var cornerTr = document.getElementById("corner-tr");
       var cornerBr = document.getElementById("corner-br");
       var scratchCard = document.getElementById("scratch-card");
-      var themeHideTimer = null;
       var scratchHideTimer = null;
-
-      function showTheme() {
-        clearTimeout(themeHideTimer);
-        toggle.classList.add("visible");
-      }
-
-      function hideThemeSoon() {
-        clearTimeout(themeHideTimer);
-        themeHideTimer = setTimeout(function () {
-          if (!toggle.matches(":hover") && !cornerTr.matches(":hover")) {
-            toggle.classList.remove("visible");
-          }
         }, 350);
       }
 
@@ -536,35 +328,10 @@
         }, 350);
       }
 
-      cornerTr.addEventListener("mouseenter", showTheme);
-      cornerTr.addEventListener("mouseleave", hideThemeSoon);
-      toggle.addEventListener("mouseenter", showTheme);
-      toggle.addEventListener("mouseleave", hideThemeSoon);
-
       cornerBr.addEventListener("mouseenter", showScratch);
       cornerBr.addEventListener("mouseleave", hideScratchSoon);
       scratchCard.addEventListener("mouseenter", showScratch);
       scratchCard.addEventListener("mouseleave", hideScratchSoon);
-
-      toggle.addEventListener("click", function () {
-        var dark = document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", dark ? "dark" : "light");
-        themeClicks += 1;
-        if (themeClicks >= 7) {
-          themeClicks = 0;
-          toggle.classList.remove("burst");
-          void toggle.offsetWidth;
-          toggle.classList.add("burst");
-          orbit.classList.remove("play");
-          void orbit.offsetWidth;
-          orbit.classList.add("play");
-          quoteEl.textContent = themeQuotes[Math.floor(Math.random() * themeQuotes.length)];
-          quoteEl.classList.add("show");
-          setTimeout(function () {
-            quoteEl.classList.remove("show");
-          }, 3200);
-        }
-      });
 
       // GitHub activity on hover
       var ghWrap = document.querySelector(".gh-wrap");
@@ -656,5 +423,6 @@
       });
     })();
   </script>
+  <script src="/assets/chrome.js" defer></script>
 </body>
 </html>
