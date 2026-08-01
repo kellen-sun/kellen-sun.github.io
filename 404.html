@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Kellen Sun</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --fg: #111;
+      --muted: #666;
+    }
+
+    html.dark {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --muted: #999;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background 0.45s ease, color 0.45s ease;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+
+    .box {
+      max-width: 28rem;
+      text-align: center;
+    }
+
+    .code {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .quote {
+      margin: 0;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .home {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p class="code">404</p>
+    <p class="quote" id="quote"></p>
+    <a class="home" href="/">home</a>
+  </div>
+  <script>
+    // Easy to update: just add/remove strings in this list.
+    var quotes = [
+      "To be great is to be misunderstood.",
+      "There are more stars in the Milky Way than there are atoms in the universe.",
+      "On the sea of life, sometimes the best ships, are friendships.",
+      "It's hard to be someone's everything. It's easier to be everyone's nothing.",
+      "We are infinitely complicated in every possible and impossible way.",
+      "If you love someone, put their name in a circle, instead of a heart, because hearts can break, but circles go on forever.",
+      "Follow your dreams. They know the way.",
+      "Take love, multiply it by infinity and take it to the depths of forever.",
+      "Every exit is an entrance to new experiences.",
+      "The world is a beautiful book for those who read it.",
+      "You found a page that doesn't exist. Relatable."
+    ];
+
+    document.getElementById("quote").textContent =
+      quotes[Math.floor(Math.random() * quotes.length)];
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</body>
+</html>

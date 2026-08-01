@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kellen Sun</title>
   <style>
+    :root {
+      --bg: #fff;
+      --fg: #111;
+      --muted: #666;
+      --sep: #bbb;
+      --link: #333;
+    }
+
+    html.dark {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --muted: #999;
+      --sep: #555;
+      --link: #ddd;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -12,8 +28,73 @@
       place-items: center;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.5rem;
-      color: #111;
-      background: #fff;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background 0.45s ease, color 0.45s ease;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      color: var(--fg);
+    }
+
+    .theme-toggle svg {
+      width: 1.35rem;
+      height: 1.35rem;
+      display: block;
+      margin: auto;
+      overflow: visible;
+    }
+
+    .theme-toggle .sun,
+    .theme-toggle .moon {
+      transform-origin: center;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    }
+
+    .theme-toggle .ray {
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: center;
+    }
+
+    html:not(.dark) .theme-toggle .moon {
+      opacity: 0;
+      transform: scale(0.4) rotate(-30deg);
+    }
+
+    html:not(.dark) .theme-toggle .sun {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    html:not(.dark) .theme-toggle .ray {
+      opacity: 1;
+    }
+
+    html.dark .theme-toggle .sun {
+      opacity: 0;
+      transform: scale(0.4) rotate(40deg);
+    }
+
+    html.dark .theme-toggle .moon {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    html.dark .theme-toggle .ray {
+      opacity: 0;
+      transform: scale(0.2);
     }
 
     .hero {
@@ -24,6 +105,7 @@
     .hello {
       margin: 0;
       cursor: default;
+      touch-action: manipulation;
     }
 
     .links {
@@ -37,7 +119,7 @@
     }
 
     .links a {
-      color: #333;
+      color: var(--link);
       text-decoration: none;
     }
 
@@ -52,20 +134,43 @@
     .secondary {
       margin-top: 0.35rem;
       font-size: 0.75rem;
-      color: #666;
+      color: var(--muted);
     }
 
     .secondary a {
-      color: #666;
+      color: var(--muted);
     }
 
     .sep {
       margin: 0 0.4em;
-      color: #bbb;
+      color: var(--sep);
     }
   </style>
+  <script>
+    // Apply theme before paint to avoid flash
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
 </head>
 <body>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle class="sun" cx="12" cy="12" r="4" fill="currentColor"></circle>
+      <g class="rays">
+        <line class="ray" x1="12" y1="2.5" x2="12" y2="5"></line>
+        <line class="ray" x1="12" y1="19" x2="12" y2="21.5"></line>
+        <line class="ray" x1="2.5" y1="12" x2="5" y2="12"></line>
+        <line class="ray" x1="19" y1="12" x2="21.5" y2="12"></line>
+        <line class="ray" x1="4.8" y1="4.8" x2="6.6" y2="6.6"></line>
+        <line class="ray" x1="17.4" y1="17.4" x2="19.2" y2="19.2"></line>
+        <line class="ray" x1="4.8" y1="19.2" x2="6.6" y2="17.4"></line>
+        <line class="ray" x1="17.4" y1="6.6" x2="19.2" y2="4.8"></line>
+      </g>
+      <path class="moon" fill="currentColor" d="M14.3 3.2a8.2 8.2 0 1 0 6.5 14.1A7 7 0 0 1 14.3 3.2z"></path>
+    </svg>
+  </button>
+
   <div class="hero">
     <p class="hello" id="hello">Hi, I'm Kellen</p>
     <div class="links" id="links">
@@ -80,12 +185,64 @@
   <script>
     (function () {
       var clicks = 0;
-      var hello = document.getElementById('hello');
-      var links = document.getElementById('links');
-      hello.addEventListener('click', function () {
+      var hello = document.getElementById("hello");
+      var links = document.getElementById("links");
+      var holdTimer = null;
+      var holdFired = false;
+
+      function revealLinks() {
+        links.classList.add("visible");
+      }
+
+      hello.addEventListener("click", function () {
+        if (holdFired) {
+          holdFired = false;
+          return;
+        }
         clicks += 1;
-        if (clicks >= 5) {
-          links.classList.add('visible');
+        if (clicks >= 5) revealLinks();
+      });
+
+      // Hold ~2s → /now
+      function startHold(e) {
+        if (e.type === "mousedown" && e.button !== 0) return;
+        holdFired = false;
+        holdTimer = setTimeout(function () {
+          holdFired = true;
+          window.location.href = "/now/";
+        }, 2000);
+      }
+
+      function cancelHold() {
+        if (holdTimer) {
+          clearTimeout(holdTimer);
+          holdTimer = null;
+        }
+      }
+
+      hello.addEventListener("mousedown", startHold);
+      hello.addEventListener("touchstart", startHold, { passive: true });
+      hello.addEventListener("mouseup", cancelHold);
+      hello.addEventListener("mouseleave", cancelHold);
+      hello.addEventListener("touchend", cancelHold);
+      hello.addEventListener("touchcancel", cancelHold);
+
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var dark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", dark ? "dark" : "light");
+      });
+
+      // ← ← → → unlocks /zigzag
+      var sequence = ["ArrowLeft", "ArrowLeft", "ArrowRight", "ArrowRight"];
+      var progress = 0;
+      window.addEventListener("keydown", function (e) {
+        if (e.key === sequence[progress]) {
+          progress += 1;
+          if (progress === sequence.length) {
+            window.location.href = "/zigzag/";
+          }
+        } else {
+          progress = e.key === sequence[0] ? 1 : 0;
         }
       });
     })();
