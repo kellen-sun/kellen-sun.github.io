@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Kellen Sun</title>
-    <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="/assets/theme-init.js"></script>
@@ -106,6 +106,27 @@
       font-size: 0.92rem;
     }
 
+    .detail {
+      display: block;
+      max-height: 0;
+      margin: 0;
+      overflow: hidden;
+      opacity: 0;
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: var(--muted);
+      transition: max-height 0.28s ease, opacity 0.22s ease, margin 0.28s ease;
+    }
+
+    .timeline li:hover .detail,
+    .timeline li:focus-within .detail,
+    .projects li:hover .detail,
+    .projects li:focus-within .detail {
+      max-height: 5em;
+      margin-top: 0.35rem;
+      opacity: 1;
+    }
+
     .section {
       margin-top: 2.75rem;
     }
@@ -173,6 +194,7 @@
           <a href="https://www.tesla.com/Ai" target="_blank" rel="noopener">Tesla</a>
           <span class="role"> · (incoming) ai compiler intern</span>
         </p>
+        <p class="detail">will build ai inference stack for autonomy and robotics</p>
       </li>
       <li>
         <span class="when">may – aug 2026</span>
@@ -180,6 +202,7 @@
           <a href="https://www.aven.com/" target="_blank" rel="noopener">Aven</a>
           <span class="role"> · software intern</span>
         </p>
+        <p class="detail">shipping in-app travel portal and aven.com/rewards-checking</p>
       </li>
       <li>
         <span class="when">jan – apr 2026</span>
@@ -187,6 +210,7 @@
           <a href="https://www.enchargeai.com/" target="_blank" rel="noopener">EnCharge AI</a>
           <span class="role"> · ml compilers intern</span>
         </p>
+        <p class="detail">expanded compiler with optimizations and support for a variety of convolutions</p>
       </li>
       <li>
         <span class="when">sept – dec 2024 · may – aug 2025</span>
@@ -194,6 +218,7 @@
           <a href="https://www.ford.ca" target="_blank" rel="noopener">Ford</a>
           <span class="role"> · software / firmware intern</span>
         </p>
+        <p class="detail">wrote and tested common software for multiple ecus</p>
       </li>
       <li>
         <span class="when">sept 2023 – apr 2028</span>
@@ -201,6 +226,7 @@
           University of Waterloo
           <span class="role"> · bachelor's, computer science, co-op</span>
         </p>
+        <p class="detail">3.9 gpa</p>
       </li>
       <li>
         <span class="when">june 2023</span>
@@ -208,6 +234,7 @@
           Earl of March Secondary School
           <span class="role"> · graduated</span>
         </p>
+        <p class="detail">math club president, schulich nominee</p>
       </li>
     </ul>
 
@@ -217,6 +244,7 @@
         <li>
           <a href="https://github.com/kellen-sun/Forge" target="_blank" rel="noopener">Forge</a>
           <span class="note"> · array framework for apple silicon gpu</span>
+          <span class="detail">a python tensor library with eager execution and jit graph compilation</span>
         </li>
         <li>
           Contests
@@ -224,6 +252,7 @@
             <a href="https://www2.cms.math.ca/Competitions/COMC/2021/results.html/CAN" target="_blank" rel="noopener">COMC</a> (top 1%),
             <a href="https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023CCCResults.pdf" target="_blank" rel="noopener">CCC Senior</a> (top 5%)
           </span>
+          <span class="detail">solved hard math/cs problems</span>
         </li>
       </ul>
     </div>

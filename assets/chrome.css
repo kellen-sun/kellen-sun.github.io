@@ -19,11 +19,14 @@
 .theme-toggle,
 .home-link {
   position: fixed;
-  top: 1rem;
+  top: 0.7rem;
   width: 2.5rem;
   height: 2.5rem;
+  display: grid;
+  place-items: center;
   border: 0;
   padding: 0;
+  margin: 0;
   background: transparent;
   cursor: pointer;
   color: var(--fg, #111);
@@ -32,6 +35,9 @@
   transition: opacity 0.25s ease;
   z-index: 20;
   text-decoration: none;
+  line-height: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .theme-toggle {
@@ -53,7 +59,6 @@
   width: 1.35rem;
   height: 1.35rem;
   display: block;
-  margin: auto;
   overflow: visible;
 }
 
@@ -112,8 +117,8 @@ html.dark .theme-toggle .ray {
 
 .orbit {
   position: fixed;
-  top: 2.25rem;
-  right: 2.25rem;
+  top: 1.95rem;
+  right: 1.95rem;
   width: 0;
   height: 0;
   pointer-events: none;
@@ -155,7 +160,7 @@ html.dark .theme-toggle .ray {
 
 .theme-quote {
   position: fixed;
-  top: 3.6rem;
+  top: 3.3rem;
   right: 1rem;
   max-width: 14rem;
   margin: 0;

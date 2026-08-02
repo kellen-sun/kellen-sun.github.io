@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Now — Kellen Sun</title>
-    <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <script src="/assets/theme-init.js"></script>
@@ -47,6 +47,10 @@
       touch-action: manipulation;
     }
 
+    .line i {
+      font-style: italic;
+    }
+
     .updated {
       margin: 1.1rem 0 0;
       font-size: 0.78rem;
@@ -77,14 +81,50 @@
   </div>
   <script src="/assets/chrome.js" defer></script>
   <script>
+    // Segment lists: strings, or { i: "italic title" }
     var items = [
-      "Interning at Aven.",
-      "Learning parallel computing."
+      ["Interning at Aven."],
+      ["Learning parallel computing."],
+      ["Reading ", { i: "What Is the Gospel?" }, " by Greg Gilbert."],
+      ["Listening to ", { i: "Through the Gryffindoor" }, "."]
     ];
 
     var textEl = document.getElementById("text");
     var current = -1;
     var typing = false;
+
+    function flatten(parts) {
+      var out = [];
+      parts.forEach(function (part) {
+        if (typeof part === "string") {
+          for (var i = 0; i < part.length; i++) {
+            out.push({ ch: part[i], italic: false });
+          }
+        } else if (part && part.i) {
+          for (var j = 0; j < part.i.length; j++) {
+            out.push({ ch: part.i[j], italic: true });
+          }
+        }
+      });
+      return out;
+    }
+
+    function renderChars(chars) {
+      var html = "";
+      var inItalic = false;
+      chars.forEach(function (c) {
+        if (c.italic && !inItalic) {
+          html += "<i>";
+          inItalic = true;
+        } else if (!c.italic && inItalic) {
+          html += "</i>";
+          inItalic = false;
+        }
+        html += c.ch === "<" ? "&lt;" : c.ch === "&" ? "&amp;" : c.ch;
+      });
+      if (inItalic) html += "</i>";
+      textEl.innerHTML = html;
+    }
 
     function pickNext() {
       if (items.length === 1) return 0;
@@ -99,18 +139,18 @@
       return new Promise(function (resolve) { setTimeout(resolve, ms); });
     }
 
-    async function typeText(str) {
-      textEl.textContent = "";
-      for (var i = 0; i < str.length; i++) {
-        textEl.textContent += str[i];
+    async function typeText(parts) {
+      var chars = flatten(parts);
+      for (var i = 0; i <= chars.length; i++) {
+        renderChars(chars.slice(0, i));
         await wait(38 + Math.random() * 40);
       }
     }
 
     async function eraseText() {
-      var str = textEl.textContent;
-      for (var i = str.length; i >= 0; i--) {
-        textEl.textContent = str.slice(0, i);
+      var chars = flatten(items[current]);
+      for (var i = chars.length; i >= 0; i--) {
+        renderChars(chars.slice(0, i));
         await wait(22);
       }
     }
@@ -121,7 +161,7 @@
       while (true) {
         current = pickNext();
         await typeText(items[current]);
-        await wait(7000);
+        await wait(5500);
         await eraseText();
         await wait(280);
       }
