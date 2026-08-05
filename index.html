@@ -286,7 +286,7 @@
           return;
         }
         clicks += 1;
-        if (clicks >= 5) revealLinks();
+        if (clicks >= 2) revealLinks();
       });
 
       function startHold(e) {
@@ -295,7 +295,7 @@
         holdTimer = setTimeout(function () {
           holdFired = true;
           window.location.href = "/now/";
-        }, 2000);
+        }, 1500);
       }
 
       function cancelHold() {
