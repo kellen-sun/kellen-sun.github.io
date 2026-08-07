@@ -56,6 +56,7 @@ var quotes = [
 	"How silly of me to forget how far I've come, just because I still have far to go.",
 	"Count your blessings before you curse the world.",
 	"More fiction has been written in Excel than in Word.",
+	"Don't cry because it happened, smile because it's over.",
 ];
 
 function getPoint(radial, angular) {
