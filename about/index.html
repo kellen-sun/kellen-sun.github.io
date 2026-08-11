@@ -44,11 +44,28 @@
     }
 
     h1 {
-      margin: 0 0 2rem;
+      margin: 0;
       font-size: 1.1rem;
       font-weight: normal;
       font-style: italic;
       color: var(--muted);
+      width: fit-content;
+      cursor: default;
+    }
+
+    .intro {
+      margin: 0 0 2rem;
+    }
+
+    .intro .detail {
+      max-width: 28rem;
+    }
+
+    .intro:hover .detail,
+    .intro:focus-within .detail {
+      max-height: 8em;
+      margin-top: 0.55rem;
+      opacity: 1;
     }
 
     .timeline {
@@ -185,7 +202,10 @@
 </head>
 <body>
 <div class="page">
-    <h1>about</h1>
+    <div class="intro">
+      <h1>about</h1>
+      <p class="detail">hi, i'm kellen — cs at waterloo, into ai, compilers and systems. outside of that: reading, lifting, drawing, and a bit of guitar.</p>
+    </div>
 
     <ul class="timeline">
       <li>
