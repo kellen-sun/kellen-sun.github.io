@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XML — Kellen Sun</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="/assets/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/chrome.css">
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --fg: #111;
+      --muted: #777;
+      --box: #fff;
+      --border: #ddd;
+      --btn: #d8d8d8;
+      --btn-hover: #c8c8c8;
+      --btn-text: #333;
+      --err: #b33;
+    }
+
+    html.dark {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --muted: #888;
+      --box: #1a1a1a;
+      --border: #333;
+      --btn: #2a2a2a;
+      --btn-hover: #3a3a3a;
+      --btn-text: #ddd;
+      --err: #f88;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background 0.45s ease, color 0.45s ease;
+    }
+
+    .page {
+      width: min(66.666vw, 48rem);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .actions button {
+      border: 0;
+      border-radius: 2px;
+      background: var(--btn);
+      color: var(--btn-text);
+      font: inherit;
+      font-size: 0.8rem;
+      font-style: italic;
+      padding: 0.35rem 0.7rem;
+      cursor: pointer;
+    }
+
+    .actions button:hover { background: var(--btn-hover); }
+
+    textarea {
+      display: block;
+      width: 100%;
+      min-height: 60vh;
+      resize: vertical;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: var(--box);
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      padding: 1rem;
+      outline: none;
+    }
+
+    .status {
+      margin: 0.65rem 0 0;
+      min-height: 1.2em;
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .status.error { color: var(--err); }
+  </style>
+</head>
+<body>
+<div class="page">
+    <header>
+      <h1>xml</h1>
+      <div class="actions">
+        <button type="button" id="format">format</button>
+        <button type="button" id="minify">minify</button>
+        <button type="button" id="copy">copy</button>
+      </div>
+    </header>
+    <textarea id="input" spellcheck="false"></textarea>
+    <p class="status" id="status"></p>
+  </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById("input");
+      var status = document.getElementById("status");
+
+      function setStatus(msg, isError) {
+        status.textContent = msg || "";
+        status.classList.toggle("error", !!isError);
+      }
+
+      function parse() {
+        var raw = input.value.trim();
+        if (!raw) {
+          setStatus("");
+          return null;
+        }
+        var doc = new DOMParser().parseFromString(raw, "application/xml");
+        var err = doc.getElementsByTagName("parsererror")[0];
+        if (err) {
+          var msg = (err.textContent || "invalid xml").replace(/\s+/g, " ").trim();
+          setStatus(msg, true);
+          return undefined;
+        }
+        return doc;
+      }
+
+      function escapeAttr(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/"/g, "&quot;")
+          .replace(/</g, "&lt;");
+      }
+
+      function escapeText(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      function attrs(el) {
+        var out = "";
+        for (var i = 0; i < el.attributes.length; i++) {
+          var a = el.attributes[i];
+          out += " " + a.name + "=\"" + escapeAttr(a.value) + "\"";
+        }
+        return out;
+      }
+
+      function isIgnorableText(node) {
+        return node.nodeType === 3 && !node.nodeValue.replace(/\s+/g, "");
+      }
+
+      function realChildren(el) {
+        var kids = [];
+        for (var i = 0; i < el.childNodes.length; i++) {
+          var n = el.childNodes[i];
+          if (!isIgnorableText(n)) kids.push(n);
+        }
+        return kids;
+      }
+
+      function serialize(node, pretty, depth) {
+        var pad = pretty ? Array(depth + 1).join("  ") : "";
+        var nl = pretty ? "\n" : "";
+
+        if (node.nodeType === 9) {
+          var out = "";
+          if (node.xmlVersion && node.xmlEncoding) {
+            out += "<?xml version=\"" + node.xmlVersion + "\" encoding=\"" + node.xmlEncoding + "\"?>" + nl;
+          } else if (/<\?xml\b/i.test(input.value)) {
+            out += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + nl;
+          }
+          for (var i = 0; i < node.childNodes.length; i++) {
+            var child = node.childNodes[i];
+            if (child.nodeType === 10) continue;
+            if (isIgnorableText(child)) continue;
+            if (out && pretty && out.slice(-1) !== "\n") out += nl;
+            out += serialize(child, pretty, 0);
+            if (pretty && out.slice(-1) !== "\n") out += nl;
+          }
+          return out.replace(/\n+$/, pretty ? "\n" : "");
+        }
+
+        if (node.nodeType === 8) {
+          return pad + "<!--" + node.nodeValue + "-->";
+        }
+
+        if (node.nodeType === 7) {
+          return pad + "<?" + node.nodeName + (node.nodeValue ? " " + node.nodeValue : "") + "?>";
+        }
+
+        if (node.nodeType === 4) {
+          return pad + "<![CDATA[" + node.nodeValue + "]]>";
+        }
+
+        if (node.nodeType === 3) {
+          var text = pretty ? node.nodeValue.trim() : node.nodeValue.replace(/\s+/g, " ").trim();
+          return text ? (pretty ? pad + escapeText(text) : escapeText(text)) : "";
+        }
+
+        if (node.nodeType !== 1) return "";
+
+        var kids = realChildren(node);
+        var open = "<" + node.tagName + attrs(node);
+        if (!kids.length) return pad + open + "/>";
+
+        var onlyText = kids.length === 1 && kids[0].nodeType === 3;
+        if (onlyText) {
+          var inner = pretty ? kids[0].nodeValue.trim() : kids[0].nodeValue.replace(/\s+/g, " ").trim();
+          return pad + open + ">" + escapeText(inner) + "</" + node.tagName + ">";
+        }
+
+        if (!pretty) {
+          var compact = open + ">";
+          kids.forEach(function (k) { compact += serialize(k, false, 0); });
+          return compact + "</" + node.tagName + ">";
+        }
+
+        var prettyOut = pad + open + ">" + nl;
+        kids.forEach(function (k) {
+          prettyOut += serialize(k, true, depth + 1) + nl;
+        });
+        return prettyOut + pad + "</" + node.tagName + ">";
+      }
+
+      document.getElementById("format").addEventListener("click", function () {
+        var doc = parse();
+        if (doc === undefined || doc === null) return;
+        input.value = serialize(doc, true, 0);
+        setStatus("formatted");
+      });
+
+      document.getElementById("minify").addEventListener("click", function () {
+        var doc = parse();
+        if (doc === undefined || doc === null) return;
+        input.value = serialize(doc, false, 0);
+        setStatus("minified");
+      });
+
+      document.getElementById("copy").addEventListener("click", function () {
+        navigator.clipboard.writeText(input.value).then(function () {
+          setStatus("copied");
+        });
+      });
+
+      input.addEventListener("keydown", function (e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+          e.preventDefault();
+          document.getElementById("format").click();
+        }
+      });
+    })();
+  </script>
+  <script src="/assets/chrome.js" defer></script>
+</body>
+</html>
