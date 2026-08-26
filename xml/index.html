@@ -121,6 +121,7 @@
         <button type="button" id="format">format</button>
         <button type="button" id="minify">minify</button>
         <button type="button" id="copy">copy</button>
+        <button type="button" id="clear">clear</button>
       </div>
     </header>
     <textarea id="input" spellcheck="false"></textarea>
@@ -131,10 +132,22 @@
     (function () {
       var input = document.getElementById("input");
       var status = document.getElementById("status");
+      var STORAGE_KEY = "xml-input";
 
       function setStatus(msg, isError) {
         status.textContent = msg || "";
         status.classList.toggle("error", !!isError);
+      }
+
+      function save() {
+        try { localStorage.setItem(STORAGE_KEY, input.value); } catch (e) {}
+      }
+
+      function load() {
+        try {
+          var stored = localStorage.getItem(STORAGE_KEY);
+          if (stored) input.value = stored;
+        } catch (e) {}
       }
 
       function parse() {
@@ -257,6 +270,7 @@
         var doc = parse();
         if (doc === undefined || doc === null) return;
         input.value = serialize(doc, true, 0);
+        save();
         setStatus("formatted");
       });
 
@@ -264,6 +278,7 @@
         var doc = parse();
         if (doc === undefined || doc === null) return;
         input.value = serialize(doc, false, 0);
+        save();
         setStatus("minified");
       });
 
@@ -273,12 +288,23 @@
         });
       });
 
+      document.getElementById("clear").addEventListener("click", function () {
+        input.value = "";
+        try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+        setStatus("");
+        input.focus();
+      });
+
+      input.addEventListener("input", save);
+
       input.addEventListener("keydown", function (e) {
         if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
           e.preventDefault();
           document.getElementById("format").click();
         }
       });
+
+      load();
     })();
   </script>
   <script src="/assets/chrome.js" defer></script>
