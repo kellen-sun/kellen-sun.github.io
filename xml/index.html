@@ -86,11 +86,15 @@
 
     .actions button:hover { background: var(--btn-hover); }
 
-    textarea {
+    .pane {
+      position: relative;
+    }
+
+    textarea,
+    .tree {
       display: block;
       width: 100%;
       min-height: 60vh;
-      resize: vertical;
       border: 1px solid var(--border);
       border-radius: 2px;
       background: var(--box);
@@ -101,6 +105,71 @@
       padding: 1rem;
       outline: none;
     }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .pane.tree-on textarea { display: none; }
+    .pane:not(.tree-on) .tree { display: none; }
+
+    .tree {
+      overflow: auto;
+      padding: 1rem 1rem 1rem 0.45rem;
+      white-space: nowrap;
+      user-select: text;
+    }
+
+    .node {
+      position: relative;
+      padding-left: 1.05rem;
+    }
+
+    .toggle {
+      position: absolute;
+      left: 0;
+      top: 0.12em;
+      width: 1rem;
+      height: 1.2em;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.16s ease;
+    }
+
+    .node:has(> .line:hover) > .toggle,
+    .node.collapsed > .toggle,
+    .node:has(> .toggle:focus) > .toggle {
+      opacity: 1;
+    }
+
+    .toggle::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin: 0.35em auto 0;
+      border-style: solid;
+      border-width: 4px 0 4px 6px;
+      border-color: transparent transparent transparent currentColor;
+      transform: rotate(90deg);
+      transition: transform 0.16s ease;
+    }
+
+    .node.collapsed > .toggle::before {
+      transform: rotate(0deg);
+    }
+
+    .kids { margin: 0; }
+    .node.collapsed > .kids,
+    .node.collapsed > .end { display: none; }
+    .preview { display: none; color: var(--muted); font-style: italic; }
+    .node.collapsed > .line .preview { display: inline; }
+
+    .muted { color: var(--muted); }
 
     .status {
       margin: 0.65rem 0 0;
@@ -124,13 +193,18 @@
         <button type="button" id="clear">clear</button>
       </div>
     </header>
-    <textarea id="input" spellcheck="false"></textarea>
+    <div class="pane" id="pane">
+      <textarea id="input" spellcheck="false"></textarea>
+      <div class="tree" id="tree" aria-label="Formatted XML"></div>
+    </div>
     <p class="status" id="status"></p>
   </div>
 
   <script>
     (function () {
       var input = document.getElementById("input");
+      var tree = document.getElementById("tree");
+      var pane = document.getElementById("pane");
       var status = document.getElementById("status");
       var STORAGE_KEY = "xml-input";
 
@@ -180,10 +254,10 @@
           .replace(/>/g, "&gt;");
       }
 
-      function attrs(el) {
+      function attrs(elNode) {
         var out = "";
-        for (var i = 0; i < el.attributes.length; i++) {
-          var a = el.attributes[i];
+        for (var i = 0; i < elNode.attributes.length; i++) {
+          var a = elNode.attributes[i];
           out += " " + a.name + "=\"" + escapeAttr(a.value) + "\"";
         }
         return out;
@@ -193,10 +267,10 @@
         return node.nodeType === 3 && !node.nodeValue.replace(/\s+/g, "");
       }
 
-      function realChildren(el) {
+      function realChildren(elNode) {
         var kids = [];
-        for (var i = 0; i < el.childNodes.length; i++) {
-          var n = el.childNodes[i];
+        for (var i = 0; i < elNode.childNodes.length; i++) {
+          var n = elNode.childNodes[i];
           if (!isIgnorableText(n)) kids.push(n);
         }
         return kids;
@@ -266,11 +340,113 @@
         return prettyOut + pad + "</" + node.tagName + ">";
       }
 
+      function el(tag, cls, text) {
+        var n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (text != null) n.textContent = text;
+        return n;
+      }
+
+      function bindToggle(wrap) {
+        var btn = el("button", "toggle");
+        btn.type = "button";
+        btn.title = "Collapse";
+        btn.setAttribute("aria-label", "Collapse");
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          wrap.classList.toggle("collapsed");
+          var closed = wrap.classList.contains("collapsed");
+          btn.title = closed ? "Expand" : "Collapse";
+          btn.setAttribute("aria-label", closed ? "Expand" : "Collapse");
+        });
+        wrap.appendChild(btn);
+      }
+
+      function buildXml(node) {
+        if (node.nodeType === 8) {
+          return el("div", "node muted", "<!--" + node.nodeValue + "-->");
+        }
+        if (node.nodeType === 7) {
+          return el("div", "node muted", "<?" + node.nodeName + (node.nodeValue ? " " + node.nodeValue : "") + "?>");
+        }
+        if (node.nodeType === 4) {
+          return el("div", "node", "<![CDATA[" + node.nodeValue + "]]>");
+        }
+        if (node.nodeType === 3) {
+          var t = node.nodeValue.trim();
+          return t ? el("div", "node", t) : null;
+        }
+        if (node.nodeType !== 1) return null;
+
+        var kids = realChildren(node);
+        var wrap = el("div", "node");
+        var line = el("div", "line");
+        var open = "<" + node.tagName + attrs(node);
+        var onlyText = kids.length === 1 && kids[0].nodeType === 3;
+        var collapsible = kids.length > 0 && !onlyText;
+
+        if (collapsible) bindToggle(wrap);
+
+        if (!kids.length) {
+          line.textContent = open + "/>";
+          wrap.appendChild(line);
+          return wrap;
+        }
+
+        if (onlyText) {
+          line.textContent = open + ">" + kids[0].nodeValue.trim() + "</" + node.tagName + ">";
+          wrap.appendChild(line);
+          return wrap;
+        }
+
+        line.appendChild(document.createTextNode(open + ">"));
+        var preview = el("span", "preview", " … ");
+        line.appendChild(preview);
+        line.appendChild(el("span", "preview", "</" + node.tagName + ">"));
+        wrap.appendChild(line);
+
+        var kidsEl = el("div", "kids");
+        kids.forEach(function (k) {
+          var child = buildXml(k);
+          if (child) kidsEl.appendChild(child);
+        });
+        wrap.appendChild(kidsEl);
+
+        var end = el("div", "end node");
+        end.style.paddingLeft = "1.05rem";
+        end.appendChild(el("div", "line", "</" + node.tagName + ">"));
+        wrap.appendChild(end);
+        return wrap;
+      }
+
+      function showTree(doc) {
+        var frag = document.createDocumentFragment();
+        if (doc.xmlVersion && doc.xmlEncoding) {
+          frag.appendChild(el("div", "node muted", "<?xml version=\"" + doc.xmlVersion + "\" encoding=\"" + doc.xmlEncoding + "\"?>"));
+        } else if (/<\?xml\b/i.test(input.value)) {
+          frag.appendChild(el("div", "node muted", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"));
+        }
+        for (var i = 0; i < doc.childNodes.length; i++) {
+          var child = doc.childNodes[i];
+          if (child.nodeType === 10) continue;
+          if (isIgnorableText(child)) continue;
+          var built = buildXml(child);
+          if (built) frag.appendChild(built);
+        }
+        tree.replaceChildren(frag);
+        pane.classList.add("tree-on");
+      }
+
+      function showEditor() {
+        pane.classList.remove("tree-on");
+      }
+
       document.getElementById("format").addEventListener("click", function () {
         var doc = parse();
         if (doc === undefined || doc === null) return;
         input.value = serialize(doc, true, 0);
         save();
+        showTree(doc);
         setStatus("formatted");
       });
 
@@ -279,6 +455,7 @@
         if (doc === undefined || doc === null) return;
         input.value = serialize(doc, false, 0);
         save();
+        showEditor();
         setStatus("minified");
       });
 
@@ -291,11 +468,20 @@
       document.getElementById("clear").addEventListener("click", function () {
         input.value = "";
         try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+        showEditor();
         setStatus("");
         input.focus();
       });
 
-      input.addEventListener("input", save);
+      input.addEventListener("input", function () {
+        showEditor();
+        save();
+      });
+
+      tree.addEventListener("dblclick", function () {
+        showEditor();
+        input.focus();
+      });
 
       input.addEventListener("keydown", function (e) {
         if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
@@ -305,6 +491,10 @@
       });
 
       load();
+      var loaded = parse();
+      if (loaded && input.value.indexOf("\n") !== -1) {
+        showTree(loaded);
+      }
     })();
   </script>
   <script src="/assets/chrome.js" defer></script>
