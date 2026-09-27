@@ -61,11 +61,6 @@
       color: var(--link);
     }
 
-    .you {
-      margin: 0 0 1.4rem;
-      font-size: 0.95rem;
-    }
-
     form {
       display: flex;
       flex-wrap: wrap;
@@ -119,11 +114,17 @@
 
     li {
       display: grid;
-      grid-template-columns: 2.1rem 1fr auto;
+      grid-template-columns: 3rem 1fr auto;
       gap: 0.6rem;
       padding: 0.45rem 0;
       border-bottom: 1px solid var(--line);
       font-size: 1.05rem;
+    }
+
+    li.ellipsis {
+      border-bottom: 0;
+      padding: 0.15rem 0;
+      color: var(--muted);
     }
 
     .rank {
@@ -137,7 +138,7 @@
     }
 
     li.mine .name {
-      font-style: italic;
+      font-weight: bold;
     }
 
     .status {

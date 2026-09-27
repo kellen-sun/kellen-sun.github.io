@@ -6,12 +6,6 @@
     return localStorage.getItem(ZIGZAG_LB_NAME_KEY) || "";
   }
 
-  function showClaimed(name) {
-    claimEl.innerHTML =
-      '<p class="you">you are <strong></strong>. times sync from this browser when you beat your record.</p>';
-    claimEl.querySelector("strong").textContent = name;
-  }
-
   function showClaimForm(message) {
     claimEl.innerHTML =
       '<form>' +
@@ -31,24 +25,52 @@
       boardEl.innerHTML = '<p class="status">no times yet.</p>';
       return;
     }
+
+    var topN = 10;
+    var myIndex = -1;
+    if (mine) {
+      for (var i = 0; i < rows.length; i++) {
+        if (nameKey(rows[i].name) === mine) {
+          myIndex = i;
+          break;
+        }
+      }
+    }
+
+    var entries = [];
+    var shown = Math.min(topN, rows.length);
+    for (var j = 0; j < shown; j++) {
+      entries.push({ rank: j + 1, row: rows[j], mine: myIndex === j });
+    }
+    if (myIndex >= topN) {
+      entries.push({ ellipsis: true });
+      entries.push({ rank: myIndex + 1, row: rows[myIndex], mine: true });
+    }
+
     var html = "<ol>";
-    for (var i = 0; i < rows.length; i++) {
-      var row = rows[i];
-      var isMine = mine && nameKey(row.name) === mine;
+    for (var e = 0; e < entries.length; e++) {
+      var item = entries[e];
+      if (item.ellipsis) {
+        html += '<li class="ellipsis"><span class="rank">...</span></li>';
+        continue;
+      }
       html +=
         '<li' +
-        (isMine ? ' class="mine"' : "") +
+        (item.mine ? ' class="mine"' : "") +
         '><span class="rank">' +
-        (i + 1) +
+        item.rank +
         '</span><span class="name"></span><span class="time">' +
-        zigzagLbFormatTime(row.seconds) +
+        zigzagLbFormatTime(item.row.seconds) +
         "</span></li>";
     }
     html += "</ol>";
     boardEl.innerHTML = html;
     var names = boardEl.querySelectorAll(".name");
-    for (var j = 0; j < names.length; j++) {
-      names[j].textContent = rows[j].name;
+    var ni = 0;
+    for (var k = 0; k < entries.length; k++) {
+      if (entries[k].ellipsis) continue;
+      names[ni].textContent = entries[k].row.name;
+      ni += 1;
     }
   }
 
@@ -99,7 +121,7 @@
         }
         localStorage.setItem(ZIGZAG_LB_NAME_KEY, data.name || name);
         localStorage.setItem(ZIGZAG_LB_TOKEN_KEY, token);
-        showClaimed(data.name || name);
+        claimEl.innerHTML = "";
         var record = Number(localStorage.getItem("zigzagRecord") || 0);
         return zigzagLbSubmitRecord(record).then(loadBoard);
       })
@@ -111,9 +133,7 @@
   var name = savedName();
   if (!zigzagLbConfigured()) {
     claimEl.innerHTML = "";
-  } else if (name) {
-    showClaimed(name);
-  } else {
+  } else if (!name) {
     showClaimForm();
   }
   loadBoard();
