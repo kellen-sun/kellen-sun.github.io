@@ -600,6 +600,9 @@ function gameOver() {
 	var isNewRecord = Math.floor(seconds) > Math.floor(record);
 	record = Math.max(record, seconds);
 	window.localStorage.setItem('zigzagRecord', record);
+	if (isNewRecord && typeof zigzagLbSubmitRecord === "function") {
+		zigzagLbSubmitRecord(record);
+	}
 	document.getElementById("time1").innerHTML = formatTime(seconds);
 	document.getElementById("time2").innerHTML = isNewRecord ? "(new record)" : ("(record " + formatTime(record) + ")");
 	if (seconds >= getFirstPaletteChangeTime()) {

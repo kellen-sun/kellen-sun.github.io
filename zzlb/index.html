@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zigzag leaderboard — Kellen Sun</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="/assets/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/chrome.css">
+  <style>
+    :root {
+      --bg: #fff;
+      --fg: #111;
+      --muted: #777;
+      --line: #ddd;
+      --link: #333;
+    }
+
+    html.dark {
+      --bg: #111;
+      --fg: #f2f2f2;
+      --muted: #888;
+      --line: #333;
+      --link: #ddd;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background 0.45s ease, color 0.45s ease;
+    }
+
+    .page {
+      width: min(34rem, 88vw);
+      margin: 0 auto;
+      padding: 4.5rem 0 5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .intro {
+      margin: 0.85rem 0 1.6rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro a {
+      color: var(--link);
+    }
+
+    .you {
+      margin: 0 0 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.55rem;
+      align-items: center;
+      margin: 0 0 1.4rem;
+    }
+
+    input[type="text"] {
+      font: inherit;
+      font-size: 1rem;
+      padding: 0.25rem 0.4rem;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      color: var(--fg);
+      min-width: 10rem;
+      outline: none;
+    }
+
+    button {
+      font: inherit;
+      font-size: 0.95rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--fg);
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--fg);
+    }
+
+    .error {
+      width: 100%;
+      margin: 0;
+      font-size: 0.9rem;
+      color: #b44;
+    }
+
+    html.dark .error {
+      color: #e88;
+    }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: 2.1rem 1fr auto;
+      gap: 0.6rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.05rem;
+    }
+
+    .rank {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .time {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+    }
+
+    li.mine .name {
+      font-style: italic;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>zigzag leaderboard</h1>
+    <p class="intro">survival time on <a href="/zigzag/">zigzag</a>. pick a name to join.</p>
+    <div id="claim"></div>
+    <div id="board" class="status">loading…</div>
+  </div>
+  <script src="/assets/chrome.js" defer></script>
+  <script src="/zzlb/api.js"></script>
+  <script src="/zzlb/page.js"></script>
+</body>
+</html>
