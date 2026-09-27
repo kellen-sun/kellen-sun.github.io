@@ -44,21 +44,26 @@
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 1.6rem;
       font-size: 1.1rem;
       font-weight: normal;
       font-style: italic;
       color: var(--muted);
     }
 
-    .intro {
-      margin: 0.85rem 0 1.6rem;
-      color: var(--muted);
-      font-size: 0.95rem;
+    h1 a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .intro a {
-      color: var(--link);
+    h1 a:hover {
+      text-decoration: underline;
+    }
+
+    .intro {
+      margin: -0.75rem 0 1.6rem;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     form {
@@ -149,8 +154,8 @@
 </head>
 <body>
   <div class="page">
-    <h1>zigzag leaderboard</h1>
-    <p class="intro">survival time on <a href="/zigzag/">zigzag</a>. pick a name to join.</p>
+    <h1><a href="/zigzag/">zigzag leaderboard</a></h1>
+    <p class="intro">pick a name to join.</p>
     <div id="claim"></div>
     <div id="board" class="status">loading…</div>
   </div>

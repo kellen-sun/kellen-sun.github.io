@@ -1,9 +1,16 @@
 (function () {
   var claimEl = document.getElementById("claim");
   var boardEl = document.getElementById("board");
+  var introEl = document.querySelector(".intro");
 
   function savedName() {
     return localStorage.getItem(ZIGZAG_LB_NAME_KEY) || "";
+  }
+
+  function syncIntro() {
+    if (introEl) {
+      introEl.hidden = Boolean(savedName());
+    }
   }
 
   function showClaimForm(message) {
@@ -122,6 +129,7 @@
         localStorage.setItem(ZIGZAG_LB_NAME_KEY, data.name || name);
         localStorage.setItem(ZIGZAG_LB_TOKEN_KEY, token);
         claimEl.innerHTML = "";
+        syncIntro();
         var record = Number(localStorage.getItem("zigzagRecord") || 0);
         return zigzagLbSubmitRecord(record).then(loadBoard);
       })
@@ -136,5 +144,6 @@
   } else if (!name) {
     showClaimForm();
   }
+  syncIntro();
   loadBoard();
 })();
