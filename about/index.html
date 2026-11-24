@@ -138,7 +138,9 @@
     .timeline li:hover .detail,
     .timeline li:focus-within .detail,
     .projects li:hover .detail,
-    .projects li:focus-within .detail {
+    .projects li:focus-within .detail,
+    .contests li:hover .detail,
+    .contests li:focus-within .detail {
       max-height: 5em;
       margin-top: 0.35rem;
       opacity: 1;
@@ -156,28 +158,33 @@
       color: var(--muted);
     }
 
-    .projects {
+    .projects,
+    .contests {
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    .projects li {
+    .projects li,
+    .contests li {
       margin: 0 0 0.65rem;
       font-size: 1.02rem;
       line-height: 1.35;
     }
 
-    .projects a {
+    .projects a,
+    .contests a {
       color: var(--link);
       text-decoration: none;
     }
 
-    .projects a:hover {
+    .projects a:hover,
+    .contests a:hover {
       text-decoration: underline;
     }
 
-    .projects .note {
+    .projects .note,
+    .contests .note {
       color: var(--muted);
       font-size: 0.88rem;
     }
@@ -204,7 +211,7 @@
 <div class="page">
     <div class="intro">
       <h1>about</h1>
-      <p class="detail">hi, i'm kellen — cs at waterloo, into ai, compilers and systems. outside of that: reading, lifting, drawing, and a bit of guitar.</p>
+      <p class="detail">hi, i'm kellen. cs at waterloo, into ml compilers and systems. outside of that: reading, lifting, drawing, and a bit of guitar.</p>
     </div>
 
     <ul class="timeline">
@@ -274,13 +281,16 @@
           <span class="note"> · array framework for apple silicon gpu</span>
           <span class="detail">a python tensor library with eager execution and jit graph compilation</span>
         </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>contests</h2>
+      <ul class="contests">
         <li>
-          Contests
-          <span class="note"> ·
-            <a href="https://www2.cms.math.ca/Competitions/COMC/2021/results.html/CAN" target="_blank" rel="noopener">COMC</a> (top 1%),
-            <a href="https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023CCCResults.pdf" target="_blank" rel="noopener">CCC Senior</a> (top 5%)
-          </span>
-          <span class="detail">solved hard math/cs problems</span>
+          <a href="https://www2.cms.math.ca/Competitions/COMC/2021/results.html/CAN" target="_blank" rel="noopener">COMC</a> (top 1%),
+          <a href="https://cemc.uwaterloo.ca/sites/default/files/documents/2023/2023CCCResults.pdf" target="_blank" rel="noopener">CCC Senior</a> (top 5%)
+          <span class="detail">solved math/cs problems</span>
         </li>
       </ul>
     </div>
